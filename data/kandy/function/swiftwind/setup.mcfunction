@@ -1,0 +1,1 @@
+scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm "Sprinting"

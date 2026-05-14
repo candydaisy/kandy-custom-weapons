@@ -1,0 +1,5 @@
+execute as @a[scores={sprint=250..}] if items entity @s container.* *[custom_data~{ability: "Momentum"}] run effect give @s minecraft:speed 2 0 true
+execute as @a[scores={sprint=500..}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:entity_interaction_range modifier add momentum 2 add_value
+execute as @a[scores={sprint=750..}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:attack_speed modifier add momentum 0.5 add_value
+execute as @a[scores={sprint=..500}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:attack_speed modifier remove momentum
+execute as @a[scores={sprint=..500}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:entity_interaction_range modifier remove momentum

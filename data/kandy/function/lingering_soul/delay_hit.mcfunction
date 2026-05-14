@@ -1,0 +1,1 @@
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Echo"}] at @s run execute as @e[nbt={HurtTime:10s},distance=..4] run scoreboard players add @s echo_stacks 1

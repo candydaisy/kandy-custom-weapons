@@ -1,0 +1,2 @@
+execute as @e[scores={echo_stacks=1..}] at @s run particle minecraft:witch ~ ~1 ~ 0.3 0.5 0.3 0.01 10
+execute as @e[scores={echo_timer=0,echo_stacks=1..}] at @s run particle minecraft:large_smoke ~ ~1 ~ 0.2 0.3 0.2 0.02 15

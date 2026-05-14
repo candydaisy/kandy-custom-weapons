@@ -1,0 +1,3 @@
+execute as @e[nbt={HurtTime:10s}] at @s if entity @a[distance=..5] run execute if items entity @a[distance=..5] weapon.mainhand *[custom_data~{ability:"Gravity"}] run scoreboard players set @s grav_pull 60
+execute as @a if items entity @s container.* *[custom_data~{ability:"Gravity"}] at @s as @e[type=!#minecraft:arrows,type=!minecraft:wind_charge,scores={grav_pull=1..}] at @s facing entity @a[distance=..15] eyes rotated ~ 0 run tp @s ^ ^ ^0.05
+execute as @e[scores={grav_pull=1..}] run scoreboard players remove @s grav_pull 1
