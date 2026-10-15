@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:flags": {
+      "is_sneaking": true,
+      "is_on_ground": false,
+      "is_fall_flying": false
+    }
+  }
+}

@@ -1,0 +1,1 @@
+give @s minecraft:spawner[item_model="minecraft:blaze_powder",custom_name={text:"Ignis Core",color:"#ffa751",italic:false},lore=[{text:"Smithing Table: Core + Magma Cream + Lava Bucket",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"MoltenCore"}]

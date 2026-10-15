@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kandy_cores",
+  "pattern": [
+    "AGA",
+    "GBG",
+    "AGA"
+  ],
+  "key": {
+    "A": "minecraft:amethyst_cluster",
+    "G": "minecraft:golden_carrot",
+    "B": "minecraft:brewing_stand"
+  },
+  "result": {
+    "id": "minecraft:trial_spawner",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:brewing_stand",
+      "minecraft:custom_name": {
+        "text": "Apothecary Core",
+        "color": "#8e44ad",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Smithing Table: Core + Amethyst Shard + Honey Bottle",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "kandy_core": "AlchemistCatalyst"
+      }
+    }
+  }
+}

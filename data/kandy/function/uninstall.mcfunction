@@ -27,4 +27,11 @@ advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/pyroclast
 
+function kandy:zephyr/uninstall
+function kandy:berserker/uninstall
+function kandy:abyssal_pearl/uninstall
+function kandy:molten_core/uninstall
+function kandy:void_talisman/uninstall
+function kandy:alchemist/uninstall
+
 tellraw @a "Kandy uninstalled. Now run /datapack disable on this pack."

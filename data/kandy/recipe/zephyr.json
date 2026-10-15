@@ -1,0 +1,98 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:test_block",
+  "base": "minecraft:feather",
+  "addition": "minecraft:wind_charge",
+  "result": {
+    "id": "minecraft:feather",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "Z",
+          "italic": false,
+          "color": "#e0f7fa"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#c6f0f6"
+        },
+        {
+          "text": "p",
+          "italic": false,
+          "color": "#ace9f1"
+        },
+        {
+          "text": "h",
+          "italic": false,
+          "color": "#91e3ed"
+        },
+        {
+          "text": "y",
+          "italic": false,
+          "color": "#78dce9"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#5fd5e4"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#47cfe0"
+        },
+        {
+          "text": "C",
+          "italic": false,
+          "color": "#2ec8db"
+        },
+        {
+          "text": "h",
+          "italic": false,
+          "color": "#1fc1d5"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#15bacf"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#0ab3c8"
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "color": "#00acc1"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Carried anywhere: no fall damage.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Landing from 12+ blocks releases a wind burst (4 damage, knockback).",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak while falling to glide down gently.",
+          "color": "aqua",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "charm": "Zephyr",
+        "type": "talisman"
+      }
+    }
+  }
+}

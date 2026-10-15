@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "attack": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:effects": {
+              "minecraft:invisibility": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:void_talisman/break_cloak"
+  }
+}

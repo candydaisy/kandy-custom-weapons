@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:test_instance_block",
+  "base": "minecraft:ghast_tear",
+  "addition": "minecraft:enchanted_golden_apple",
+  "result": {
+    "id": "minecraft:ghast_tear",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "B",
+          "italic": false,
+          "color": "#e74c3c"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#df4838"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#d64435"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#ce4031"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#c63c2d"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#c33e2a"
+        },
+        {
+          "text": "k",
+          "italic": false,
+          "color": "#cb4d28"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#d35c26"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#db6a25"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#e37923"
+        },
+        {
+          "text": "T",
+          "italic": false,
+          "color": "#e88220"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#eb891c"
+        },
+        {
+          "text": "k",
+          "italic": false,
+          "color": "#ed8f19"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#f09615"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#f39c12"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Carried: at 4 hearts or less, enter Battle Frenzy for 8s.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Frenzy: Strength I, Speed I, Night Vision. Charged hits heal 2 hearts (3s cooldown).",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Then an Adrenaline Crash: Slowness and Weakness for 3s. Recharges in 60s.",
+          "color": "dark_red",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "charm": "Berserker",
+        "type": "talisman"
+      }
+    }
+  }
+}

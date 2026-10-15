@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kandy_cores",
+  "pattern": [
+    "NMN",
+    "MBM",
+    "NMN"
+  ],
+  "key": {
+    "N": "minecraft:nether_brick",
+    "M": "minecraft:magma_block",
+    "B": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "minecraft:spawner",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:blaze_powder",
+      "minecraft:custom_name": {
+        "text": "Ignis Core",
+        "color": "#ffa751",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Smithing Table: Core + Magma Cream + Lava Bucket",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "kandy_core": "MoltenCore"
+      }
+    }
+  }
+}

@@ -8,9 +8,11 @@ Each weapon and charm is crafted through the signature two-step system:
 
 ## Progress
 
-**In the pack:** Swiftwind, Dagger of Lingering Souls, Blood Pact Blade, World Breaker, and **Pyroclast Cleaver** (the first design from this folder to be built).
+**Weapons in the pack:** Swiftwind, Dagger of Lingering Souls, Blood Pact Blade, World Breaker, and **Pyroclast Cleaver** (the first design from this folder to be built).
 
-**Not started:** the other five weapons and all six charms below.
+**Charms:** all six are in the pack.
+
+**Not started:** the other five weapons (Tempest Pike, Frostveil Scythe, Eclipse Longbow, Chronos Stiletto, Abyssal Bulwark).
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -19,6 +21,15 @@ Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP
 - Magma Fissure: sneak + jump-attack only (sneaking cancels sprint), 8 damage / 16 with 50% Heat (not 12 / 24), 10s cooldown (not 6s).
 - The Core is a structure block that looks like a magma block, so a plain magma block can't be used to forge it.
 - Death message uses vanilla "burned to a crisp" text, and the molten blade is shown with particles; custom text or textures would need a resource pack.
+
+The charms also changed from their docs, mostly toned down for PvP or limited by what a datapack can do:
+- **Zephyr:** fall immunity via the fall_damage_multiplier attribute; glide via a gravity modifier while sneaking; shockwave 4 damage (not 6) with vanilla wind-charge knockback, 3s cooldown, hits players too.
+- **Berserker:** Strength I + Speed I for 8s (not Strength II / Speed II / Haste II / Resistance I for 12s); lifesteal is Instant Health once per 3s on charged hits; 60s cooldown from trigger.
+- **Abyssal Pearl:** mining speed via the submerged_mining_speed attribute (not Haste II); no Conduit Power; dash 8 blocks with a 5s cooldown (not 12 blocks / 3s).
+- **Molten Core:** retaliation 2 damage + 4s fire with a 1s cooldown (not 4 damage + 6s); players can't be set on fire by commands; flaming arrows are extinguished, not deleted.
+- **Void Talisman:** End Ward (enderman pacification) left out, it can't be done reliably; rescue cooldown 120s (not 60s); Overworld threshold Y -70 (not -60, which is inside bedrock); cloak needs a 2s sneak and breaks on attacking or taking damage.
+- **Alchemist Catalyst:** weaker, shorter converted buffs with a 15s cooldown; Weakness is only cleansed (never becomes Strength); potion extension capped at 8 min; the Absorption heart became +1 max heart; Aura of Vitality dropped.
+- Every core uses its own unobtainable item as the smithing template so a plain vanilla item can't forge it. The Molten Core core (spawner) and Alchemist core (trial spawner) can be placed in survival, which loses them.
 
 ---
 
@@ -41,12 +52,12 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 
 | Charm | Status | Base Item | Category / Focus | Key Powers & Effects Preset | Document |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Zephyr Charm** | Planned | Feather | Fall Damage Immunity & Wind | **Zero Fall Damage:** Fall distance is continuously nullified.<br>**Kinetic Shockwave:** Falls >12 blocks detonate a breeze blast on landing.<br>**Aerial Glide:** Sneak while falling to slow descent. | [charm_zephyr_feather.md](charm_zephyr_feather.md) |
-| **Berserker Token** | Planned | Ghast Tear | Combat Preset & Lifesteal | **Battle Frenzy Preset:** Triggered when HP ≤40%: grants Strength II, Speed II, Haste II, Resistance I, Night Vision for 12s.<br>**Vampirism:** +1.5 hearts heal on melee hits during frenzy.<br>**Exhaustion:** 45s cooldown with brief adrenaline crash. | [charm_berserker_token.md](charm_berserker_token.md) |
-| **Abyssal Pearl** | Planned | Heart of the Sea | Oceanic Mastery & Drowning | **Aquatic Preset:** Permanent Water Breathing, Night Vision, & Dolphin's Grace submerged.<br>**Aqua Haste:** Mine underwater as fast as on land.<br>**Bubble Burst:** Double-jump swimming dash. | [charm_abyssal_pearl.md](charm_abyssal_pearl.md) |
-| **Molten Core** | Planned | Magma Cream | Fire & Lava Immunity | **Thermal Immunity:** Complete immunity to Fire, Magma, and Lava.<br>**Thermal Surge:** Lava immersion grants Speed II and Regeneration I.<br>**Molten Retaliation:** Melee attackers are set ablaze for 6 seconds.<br>**Cinder Ward:** Burns incoming projectiles. | [charm_molten_core.md](charm_molten_core.md) |
-| **Void Talisman** | Planned | Echo Shard | Void Protection & Stealth | **Void Rescue:** Falling into the Void (< Y -40 End, < Y -60 Overworld) teleports you back to surface safety.<br>**End Ward:** Endermen never aggro on gaze.<br>**Shadow Cloak:** Sneaking in low light (<5) grants Invisibility. | [charm_void_talisman.md](charm_void_talisman.md) |
-| **Alchemist Catalyst** | Planned | Amethyst Shard | Status Debuff Inversion | **Toxin Transmutation:** Inverts harmful debuffs into buffs (Poison → Regen, Wither → Absorption, Slowness → Speed, Weakness → Strength).<br>**Potion Potency:** +50% duration on all beneficial potions. | [charm_alchemist_catalyst.md](charm_alchemist_catalyst.md) |
+| **Zephyr Charm** | Implemented | Feather | Fall Damage Immunity & Wind | **Zero Fall Damage:** Fall distance is continuously nullified.<br>**Kinetic Shockwave:** Falls >12 blocks detonate a breeze blast on landing.<br>**Aerial Glide:** Sneak while falling to slow descent. | [charm_zephyr_feather.md](charm_zephyr_feather.md) |
+| **Berserker Token** | Implemented | Ghast Tear | Combat Preset & Lifesteal | **Battle Frenzy Preset:** Triggered when HP ≤40%: grants Strength II, Speed II, Haste II, Resistance I, Night Vision for 12s.<br>**Vampirism:** +1.5 hearts heal on melee hits during frenzy.<br>**Exhaustion:** 45s cooldown with brief adrenaline crash. | [charm_berserker_token.md](charm_berserker_token.md) |
+| **Abyssal Pearl** | Implemented | Heart of the Sea | Oceanic Mastery & Drowning | **Aquatic Preset:** Permanent Water Breathing, Night Vision, & Dolphin's Grace submerged.<br>**Aqua Haste:** Mine underwater as fast as on land.<br>**Bubble Burst:** Double-jump swimming dash. | [charm_abyssal_pearl.md](charm_abyssal_pearl.md) |
+| **Molten Core** | Implemented | Magma Cream | Fire & Lava Immunity | **Thermal Immunity:** Complete immunity to Fire, Magma, and Lava.<br>**Thermal Surge:** Lava immersion grants Speed II and Regeneration I.<br>**Molten Retaliation:** Melee attackers are set ablaze for 6 seconds.<br>**Cinder Ward:** Burns incoming projectiles. | [charm_molten_core.md](charm_molten_core.md) |
+| **Void Talisman** | Implemented | Echo Shard | Void Protection & Stealth | **Void Rescue:** Falling into the Void (< Y -40 End, < Y -60 Overworld) teleports you back to surface safety.<br>**End Ward:** Endermen never aggro on gaze.<br>**Shadow Cloak:** Sneaking in low light (<5) grants Invisibility. | [charm_void_talisman.md](charm_void_talisman.md) |
+| **Alchemist Catalyst** | Implemented | Amethyst Shard | Status Debuff Inversion | **Toxin Transmutation:** Inverts harmful debuffs into buffs (Poison → Regen, Wither → Absorption, Slowness → Speed, Weakness → Strength).<br>**Potion Potency:** +50% duration on all beneficial potions. | [charm_alchemist_catalyst.md](charm_alchemist_catalyst.md) |
 
 ---
 
@@ -57,4 +68,4 @@ Both weapons and charms adhere to the same architecture:
 - Hit abilities fire from a `player_hurt_entity` advancement gated on `damage.dealt` (about 85% of full-charge damage) and `blocked: false`, so only fully charged, unblocked hits count.
 - Extra damage that must land in the same tick as the hit uses a custom damage type in `#minecraft:bypasses_cooldown` (e.g. `kandy:magma`). Damage types only load when the world is opened, not on `/reload`.
 - Every weapon needs `give` and `give_core` functions and a line in `kandy:menu` so it shows up in the chat menu.
-- Charms will need their own `charm` checks added to `holders.mcfunction`; none exist yet.
+- Charms are detected in `holders.mcfunction` as `kandy.charm.<key>` (inventory or offhand); each charm has `setup`, `tick`, `uninstall`, `give` and `give_core` functions wired into load/tick/uninstall.

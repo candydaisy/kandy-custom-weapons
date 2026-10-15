@@ -1,0 +1,109 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:command_block_minecart",
+  "base": "minecraft:echo_shard",
+  "addition": "minecraft:chorus_fruit",
+  "result": {
+    "id": "minecraft:echo_shard",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "V",
+          "italic": false,
+          "color": "#8a4fe0"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#8246d4"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#7a3ec8"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#7236bc"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#6a2db0"
+        },
+        {
+          "text": "T",
+          "italic": false,
+          "color": "#5048ac"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#3564a8"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#1a7fa4"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#009aa0"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#00aaa2"
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "color": "#00b9a4"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#00c8a6"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#00d8a8"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Charm: works from anywhere in your inventory.",
+          "color": "dark_gray",
+          "italic": false
+        },
+        {
+          "text": "Void Rescue: falling into the void returns you to safe ground (120s cooldown).",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Shadow Cloak: sneak in low light for 2s to turn Invisible.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Standing up, attacking or taking damage breaks the cloak.",
+          "color": "dark_gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "charm": "VoidTalisman",
+        "type": "talisman"
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 {
   "values": [
     "kandy:magma",
-    "kandy:echo"
+    "kandy:echo",
+    "kandy:molten_core_burn"
   ]
 }

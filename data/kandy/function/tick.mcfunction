@@ -19,3 +19,10 @@ function kandy:worldbreaker/visual
 function kandy:pyroclast/heat
 function kandy:pyroclast/effect
 function kandy:pyroclast/visual
+
+function kandy:zephyr/tick
+function kandy:berserker/tick
+function kandy:abyssal_pearl/tick
+function kandy:molten_core/tick
+function kandy:void_talisman/tick
+function kandy:alchemist/tick

@@ -6,6 +6,12 @@ tag @a remove kandy.inv.swiftwind
 tag @a remove kandy.main.worldbreaker
 tag @a remove kandy.inv.worldbreaker
 tag @a remove kandy.main.pyroclast
+tag @a remove kandy.charm.zephyr
+tag @a remove kandy.charm.berserker
+tag @a remove kandy.charm.abyssal_pearl
+tag @a remove kandy.charm.molten_core
+tag @a remove kandy.charm.void_talisman
+tag @a remove kandy.charm.alchemist
 tag @a remove kandy.immune
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"BloodPact"}] run tag @s add kandy.main.bloodpact
@@ -21,6 +27,20 @@ execute as @a if items entity @s container.* *[custom_data~{ability:"Gravity"}] 
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Gravity"}] run tag @s add kandy.inv.worldbreaker
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Pyroclast"}] run tag @s add kandy.main.pyroclast
+
+# Charms work from anywhere in the inventory, offhand included
+execute as @a if items entity @s container.* *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr
+execute as @a if items entity @s container.* *[custom_data~{charm:"Berserker"}] run tag @s add kandy.charm.berserker
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Berserker"}] run tag @s add kandy.charm.berserker
+execute as @a if items entity @s container.* *[custom_data~{charm:"AbyssalPearl"}] run tag @s add kandy.charm.abyssal_pearl
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AbyssalPearl"}] run tag @s add kandy.charm.abyssal_pearl
+execute as @a if items entity @s container.* *[custom_data~{charm:"MoltenCore"}] run tag @s add kandy.charm.molten_core
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoltenCore"}] run tag @s add kandy.charm.molten_core
+execute as @a if items entity @s container.* *[custom_data~{charm:"VoidTalisman"}] run tag @s add kandy.charm.void_talisman
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VoidTalisman"}] run tag @s add kandy.charm.void_talisman
+execute as @a if items entity @s container.* *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
 
 # Creative/spectator players can't be pulled
 tag @a[gamemode=creative] add kandy.immune

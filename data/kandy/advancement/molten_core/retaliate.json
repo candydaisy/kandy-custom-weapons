@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "melee_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "is_direct": true,
+            "source_entity": {},
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
+              }
+            ]
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:molten_core/retaliate"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "brewed_potion": {
+      "trigger": "minecraft:brewed_potion"
+    },
+    "has_amethyst_cluster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_cluster"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:alchemist_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "brewed_potion",
+      "has_amethyst_cluster",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:alchemist_core"
+    ]
+  }
+}
