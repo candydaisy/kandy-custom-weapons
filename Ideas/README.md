@@ -1,14 +1,16 @@
-# Custom Weapons & Charms Design Directory (Ideas)
+# Custom Weapons, Charms & PvP Utilities (Ideas)
 
-This directory contains complete design documents for new custom weapons and passive charms tailored specifically for the **Kandy Custom Weapons** data pack framework.
+This directory contains design documents for custom weapons, passive charms and tactical PvP utilities for the **Kandy Custom Weapons** data pack.
 
-Each weapon and charm is crafted through the signature two-step system:
+Each item is crafted through the signature two-step system:
 1. **Core Crafting:** 3×3 crafting table grid with rare materials.
 2. **Smithing Forge:** Smithing table pairing Core + Base Item + Catalyst.
 
 ## Progress
 
-**Everything in this folder is now in the pack:** all six weapons (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
+**In the pack:** all six weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
+
+**Not started:** the six Tactical PvP Utilities.
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -64,9 +66,24 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 
 ---
 
+## Tactical PvP Utilities
+
+Specialized combat utilities engineered to disrupt enemy positioning, counter meta strategies (shields, end crystals, elytra dives, and golden apple healing spam).
+
+| Utility | Status | Base Item | PvP Role | Core Crafting | Key Mechanics & Counterplay | Document |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Shadow Smoke Grenade** | Planned | Snowball / Potion | Obscurity & Anti-Pearl | Wither Rose + Gunpowder | **Smoke Veil:** 7×7 blind/darkness screen.<br>**Anti-Pearl:** Intercepts & kills passing ender pearls in mid-air.<br>**Cleanse:** Clears glowing effects on allies. | [pvp_smoke_grenade.md](pvp_smoke_grenade.md) |
+| **Entanglement Bola** | Planned | Lead | Anti-Elytra & Rooting | Iron Bars + Chains | **Ground Root:** Immobility (stops sprinting/jumping) for 2.5s.<br>**Anti-Elytra Grounder:** Instantly forces gliding fliers to land.<br>**Pearl Lock:** Puts enemy ender pearls on 3s cooldown. | [pvp_entanglement_bola.md](pvp_entanglement_bola.md) |
+| **Barbed Caltrops Pouch** | Planned | Iron Nugget / Dripstone | Area Denial & Anti-Sprint | Pointed Dripstone + Iron Bars | **Hazard Field:** 5×5 ground perimeter lasting 15s.<br>**Puncture:** 3 armor-piercing damage + Slowness III.<br>**Cripple Bleed:** Sprinting while crippled deals 2 bleed damage/sec. | [pvp_caltrops.md](pvp_caltrops.md) |
+| **Bloodhound's Whistle** | Planned | Goat Horn | Anti-Stealth & Hunting | Sculk Sensor + Amethyst | **Sonar Scan:** Strips Invisibility and applies Glowing for 8s in a 30-block sphere.<br>**Blood Trail:** Directional particle path to lowest-HP runner.<br>**Pack Rush:** Grants allies Speed II. | [pvp_tracking_whistle.md](pvp_tracking_whistle.md) |
+| **Decay Dart** | Planned | Spectral Arrow | Anti-Heal & Shield Piercing | Fermented Spider Eye + Poison Potato | **Shield Phasing:** Bypasses shields completely with 5 true damage and disables shield for 3s.<br>**Necrosis:** Shuts down all potion, gapple, & saturation healing for 6s.<br>**Totem Diminisher:** Halves totem bonus HP. | [pvp_decay_dart.md](pvp_decay_dart.md) |
+| **Repulsor Mine** | Planned | Wind Charge / Plate | Anti-Crystal & Kinetic Blast | Crying Obsidian + Breeze Rods | **Anti-Crystal:** Vaporizes placed End Crystals safely.<br>**Kinetic Repulse:** Hurls rushers 10 blocks backward.<br>**Projectile Deflector:** Reflects incoming arrows back at shooters. | [pvp_repulsor_mine.md](pvp_repulsor_mine.md) |
+
+---
+
 ## Datapack Technical Integration
-Both weapons and charms adhere to the same architecture:
-- Checked each tick via `data/kandy/function/holders.mcfunction` using `custom_data~{charm:"..."}` or `{ability:"..."}`.
+All items follow the same architecture:
+- Checked each tick via `data/kandy/function/holders.mcfunction` using `custom_data~{ability:"..."}`, `{charm:"..."}` or (for PvP utilities) `{utility:"..."}`.
 - Supports passive inventory carriers (`kandy.inv.*`) and active hand holders (`kandy.main.*`).
 - Hit abilities fire from a `player_hurt_entity` advancement gated on `damage.dealt` (about 85% of full-charge damage) and `blocked: false`, so only fully charged, unblocked hits count.
 - Extra damage that must land in the same tick as the hit uses a custom damage type in `#minecraft:bypasses_cooldown` (e.g. `kandy:magma`). Damage types only load when the world is opened, not on `/reload`.
