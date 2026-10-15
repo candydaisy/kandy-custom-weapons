@@ -10,4 +10,10 @@ scoreboard objectives remove ecl_id
 scoreboard objectives remove ecl_pid
 scoreboard objectives remove ecl_life
 scoreboard objectives remove ecl_tmp
+data remove storage kandy:eclipse me
+data remove storage kandy:eclipse cmp
+data remove storage kandy:eclipse owner
+scoreboard objectives remove ecl_n
+scoreboard objectives remove ecl_ws
+scoreboard objectives remove ecl_ss
 advancement revoke @a only kandy:hit/eclipse

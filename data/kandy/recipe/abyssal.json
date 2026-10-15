@@ -111,17 +111,31 @@
       "minecraft:attribute_modifiers": [
         {
           "type": "minecraft:knockback_resistance",
-          "id": "kandy:bulwark_kb",
+          "id": "kandy:bulwark_kb_main",
           "amount": 0.25,
           "operation": "add_value",
-          "slot": "hand"
+          "slot": "mainhand"
         },
         {
           "type": "minecraft:armor_toughness",
-          "id": "kandy:bulwark_toughness",
+          "id": "kandy:bulwark_toughness_main",
           "amount": 2.0,
           "operation": "add_value",
-          "slot": "hand"
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:knockback_resistance",
+          "id": "kandy:bulwark_kb_off",
+          "amount": 0.25,
+          "operation": "add_value",
+          "slot": "offhand"
+        },
+        {
+          "type": "minecraft:armor_toughness",
+          "id": "kandy:bulwark_toughness_off",
+          "amount": 2.0,
+          "operation": "add_value",
+          "slot": "offhand"
         }
       ],
       "minecraft:blocks_attacks": {

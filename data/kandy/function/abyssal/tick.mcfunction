@@ -18,12 +18,13 @@ scoreboard players remove @a[scores={bulw_scd=1..}] bulw_scd 1
 scoreboard players remove @a[scores={bulw_pcd=1..}] bulw_pcd 1
 scoreboard players remove @a[scores={bulw_lock=1..}] bulw_lock 1
 
-# Parry window: tapping Sneak opens 8 ticks; a whiffed tap locks new windows for 1.5s so spamming doesn't work
-scoreboard players set @a[scores={bulw_brace=1}] bulw_lock 30
+# Parry window: tapping Sneak opens 16 ticks (0.8s); a whiffed tap locks new windows for 1s so spamming doesn't work
+scoreboard players set @a[scores={bulw_brace=1}] bulw_lock 20
 scoreboard players remove @a[scores={bulw_brace=1..}] bulw_brace 1
 scoreboard players set @a bulw_tmp 0
 execute as @a[tag=kandy.bulw_hold] if predicate kandy:sneaking run scoreboard players set @s bulw_tmp 1
-execute as @a[tag=kandy.bulw_hold,scores={bulw_tmp=1,bulw_snk=0,bulw_lock=0,bulw_pcd=0}] run scoreboard players set @s bulw_brace 8
+execute as @a[tag=kandy.bulw_hold,scores={bulw_tmp=1,bulw_snk=0,bulw_lock=0,bulw_pcd=0}] run scoreboard players set @s bulw_brace 16
+execute as @a[scores={bulw_brace=16}] at @s run playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.8
 execute as @a store result score @s bulw_snk run scoreboard players get @s bulw_tmp
 
 # Tidal Surge: press Jump while sneaking with at least 1 charge

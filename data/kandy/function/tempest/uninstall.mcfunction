@@ -3,6 +3,8 @@ tag @a remove kandy.tem_nofall
 tag @a remove kandy.tem_busy
 kill @e[type=marker,tag=kandy.tem_strike]
 scoreboard objectives remove tem_air
+data remove storage kandy:tempest me
+data remove storage kandy:tempest cmp
 scoreboard objectives remove tem_dcd
 scoreboard objectives remove tem_scd
 scoreboard objectives remove tem_jump

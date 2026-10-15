@@ -20,5 +20,6 @@ execute as @e[type=marker,tag=ecl.tracker] at @s run function kandy:eclipse/trac
 execute as @e[type=marker,tag=ecl.vortex] at @s run function kandy:eclipse/vortex
 
 execute as @a[tag=kandy.inv.eclipse] run function kandy:eclipse/warp_input
+execute as @a[tag=kandy.inv.eclipse] at @s run function kandy:eclipse/status
 
 tag @e[tag=ecl.recent] remove ecl.recent
