@@ -1,2 +1,0 @@
-execute as @a run attribute @s minecraft:attack_damage modifier remove blood_dmg
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"BloodPact"}] run attribute @s minecraft:attack_damage modifier add blood_dmg 3.0 add_value

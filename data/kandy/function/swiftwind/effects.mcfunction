@@ -1,5 +1,7 @@
-execute as @a[scores={sprint=250..}] if items entity @s container.* *[custom_data~{ability: "Momentum"}] run effect give @s minecraft:speed 2 0 true
-execute as @a[scores={sprint=500..}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:entity_interaction_range modifier add momentum 2 add_value
-execute as @a[scores={sprint=750..}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:attack_speed modifier add momentum 0.5 add_value
-execute as @a[scores={sprint=..500}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:attack_speed modifier remove momentum
-execute as @a[scores={sprint=..500}] if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run attribute @s minecraft:entity_interaction_range modifier remove momentum
+effect give @a[tag=kandy.inv.swiftwind,scores={sprint=250..}] minecraft:speed 2 0 true
+
+# Reach at 500+, attack speed at 750+, only while Swiftwind is in hand
+execute as @a unless entity @s[tag=kandy.main.swiftwind,scores={sprint=500..}] run attribute @s minecraft:entity_interaction_range modifier remove kandy:momentum
+execute as @a unless entity @s[tag=kandy.main.swiftwind,scores={sprint=750..}] run attribute @s minecraft:attack_speed modifier remove kandy:momentum
+execute as @a[tag=kandy.main.swiftwind,scores={sprint=500..}] run attribute @s minecraft:entity_interaction_range modifier add kandy:momentum 2 add_value
+execute as @a[tag=kandy.main.swiftwind,scores={sprint=750..}] run attribute @s minecraft:attack_speed modifier add kandy:momentum 0.5 add_value

@@ -1,1 +1,6 @@
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Echo"}] at @s run execute as @e[nbt={HurtTime:10s},distance=..4] run scoreboard players set @s echo_timer 20
+# Advancement reward: mark every entity the wielder just hurt with an echo
+advancement revoke @s only kandy:hit/lingering_soul
+function kandy:util/tag_victims
+scoreboard players add @e[tag=kandy.victim] echo_stacks 1
+scoreboard players set @e[tag=kandy.victim] echo_timer 20
+tag @e[tag=kandy.victim] remove kandy.victim
