@@ -1,0 +1,73 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:chain_command_block",
+  "base": "minecraft:diamond_sword",
+  "addition": "minecraft:phantom_membrane",
+  "result": {
+    "id": "minecraft:diamond_sword",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "S",
+          "italic": false,
+          "color": "#08fd9e"
+        },
+        {
+          "text": "w",
+          "italic": false,
+          "color": "#0cfda7"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#10fcb1"
+        },
+        {
+          "text": "f",
+          "italic": false,
+          "color": "#14fbbb"
+        },
+        {
+          "text": "t",
+          "italic": false,
+          "color": "#18fac5"
+        },
+        {
+          "text": "w",
+          "italic": false,
+          "color": "#1bf9ce"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#1ff8d8"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#23f8e2"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#27f7ec"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Sprint to build Momentum: speed, then reach, then attack speed.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:unbreakable": {},
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "ability": "Momentum"
+      }
+    }
+  }
+}

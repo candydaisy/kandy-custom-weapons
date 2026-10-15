@@ -1,0 +1,93 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:jigsaw",
+  "base": "minecraft:mace",
+  "addition": "minecraft:anvil",
+  "result": {
+    "id": "minecraft:mace",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "W",
+          "italic": false,
+          "color": "dark_gray"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#5b5b6e"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#626287"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#6868a1"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#6e6eba"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#7575d3"
+        },
+        {
+          "text": "Br",
+          "italic": false,
+          "color": "#7b7bec"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#957ce6"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#b07ddf"
+        },
+        {
+          "text": "k",
+          "italic": false,
+          "color": "#ca7ed9"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#e57fd2"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#ff80cc"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Hits drag enemies toward you.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak to pull nearby entities in. Sneak-attack midair to slam.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:unbreakable": {},
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "ability": "Gravity"
+      }
+    }
+  }
+}

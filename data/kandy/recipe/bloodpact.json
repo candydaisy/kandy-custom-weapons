@@ -1,0 +1,129 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:command_block",
+  "base": "minecraft:netherite_sword",
+  "addition": "minecraft:golden_apple",
+  "result": {
+    "id": "minecraft:netherite_sword",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "B",
+          "italic": false,
+          "color": "#e40000"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#db0000"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#d20000"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#c90000"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#c00000"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#b70000"
+        },
+        {
+          "text": "P",
+          "italic": false,
+          "color": "#af0000"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#a60000"
+        },
+        {
+          "text": "c",
+          "italic": false,
+          "color": "#9d0000"
+        },
+        {
+          "text": "t",
+          "italic": false,
+          "color": "#940000"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#8b0000"
+        },
+        {
+          "text": "B",
+          "italic": false,
+          "color": "#820000"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#790000"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#700000"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#670000"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#5e0000"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "+3 attack damage. Each hit costs 2 HP for brief Absorption.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Carrying it at low health brings weakness, slowness and darkness.",
+          "color": "dark_red",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:unbreakable": {},
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "ability": "BloodPact"
+      },
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:attack_damage",
+          "id": "minecraft:base_attack_damage",
+          "amount": 10.0,
+          "operation": "add_value",
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:attack_speed",
+          "id": "minecraft:base_attack_speed",
+          "amount": -2.4,
+          "operation": "add_value",
+          "slot": "mainhand"
+        }
+      ]
+    }
+  }
+}

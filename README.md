@@ -6,9 +6,25 @@ A custom weapons data pack for Minecraft Java Edition 26.1 – 26.3 (data pack f
 
 Drop the pack folder (or zip) into your world's `datapacks` folder and run `/reload`.
 
-## Weapons
+## Crafting
 
-Get a weapon with `/function kandy:<weapon>/give`.
+Each weapon is made in two steps:
+
+1. **Craft a Core** at a crafting table. The recipe shows up in your recipe book once you pick up its key material.
+2. **Forge it** at a smithing table: put the Core in the template slot, the plain weapon in the base slot, and the extra item in the addition slot.
+
+The weapon keeps its enchantments, but forged weapons can't be used in an anvil, so **enchant first, then forge**.
+
+| Core | Recipe (crafting table) | Unlocks when you get | Forge with (smithing table) |
+| --- | --- | --- | --- |
+| **Swiftwind Core** | Diamond Block center, 4 Breeze Rods on the sides, 4 Feathers in the corners | Breeze Rod | Diamond Sword + Phantom Membrane |
+| **Soul Core** | Sculk Catalyst center, 4 Ghast Tears on the sides, 4 Echo Shards in the corners | Echo Shard | Golden Sword + Block of Gold |
+| **Blood Core** | Wither Skeleton Skull center, 4 Redstone Blocks on the sides, 4 Nether Wart in the corners | Wither Skeleton Skull | Netherite Sword + Golden Apple |
+| **Gravity Core** | Nether Star center, 4 Crying Obsidian on the sides, 4 Obsidian in the corners | Nether Star | Mace + Anvil |
+
+Operators can also skip crafting with `/function kandy:<weapon>/give`.
+
+## Weapons
 
 | Weapon | Command | Ability |
 | --- | --- | --- |
