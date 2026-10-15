@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_poisonous_potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:poisonous_potato"
+          }
+        ]
+      }
+    },
+    "brewed_potion": {
+      "trigger": "minecraft:brewed_potion"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:decay_dart_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_poisonous_potato",
+      "brewed_potion",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:decay_dart_core"
+    ]
+  }
+}

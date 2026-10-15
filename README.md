@@ -28,7 +28,7 @@ The weapon keeps its enchantments, but forged weapons can't be used in an anvil,
 | **Chronos Core** | Recovery Compass center, 4 Clocks on the sides, 4 Amethyst Shards in the corners | Clock or Suspicious Sand | Golden Sword + Echo Shard |
 | **Abyssal Core** | Sponge center, 4 Dark Prismarine on the sides, 4 Prismarine Crystals in the corners | Killing an Elder Guardian or getting Dark Prismarine | Shield + Heart of the Sea |
 
-Operators can also skip crafting: `/function kandy:menu` opens a clickable chat menu that hands out every weapon, charm and core, or use `/function kandy:<weapon>/give` and `/function kandy:<weapon>/give_core` directly.
+Operators can also skip crafting: `/function kandy:menu` opens a clickable chat menu that hands out every weapon, charm, utility and core, or use `/function kandy:<weapon>/give` and `/function kandy:<weapon>/give_core` directly.
 
 Weapon abilities only trigger on fully charged hits that aren't blocked by a shield, so spam-clicking won't apply them.
 
@@ -61,6 +61,21 @@ Charms work from anywhere in your inventory (offhand included). They're crafted 
 | **Alchemist Catalyst** | Brewing Stand / Golden Carrots / Amethyst Clusters | Brew a potion or get an Amethyst Cluster | Amethyst Shard + Honey Bottle | Cleanses Poison, Wither, Slowness, Weakness, Mining Fatigue, Darkness and Blindness into brief buffs (15s cooldown); leaves Blood Pact / World Breaker drawbacks alone. Beneficial potions (drunk, splash or lingering) last 50% longer (max 8 min). Carrying 3+ brewed potions: +1 max heart. |
 
 Charms are still their base item underneath, so don't put one in a crafting grid or brewing stand: it would be used up like a normal feather, ghast tear, etc.
+
+## PvP Utilities
+
+> **Untested:** the PvP utilities haven't been tested in game yet. Expect bugs; please report anything that doesn't work.
+
+Consumables and gadgets for fights. Crafted the same two-step way (Core at a crafting table, then Core + base item + extra item at a smithing table); most forges make several. Get them from `/function kandy:menu` or `/function kandy:<utility>/give`. There's no team system, so "enemies" means everyone except the user.
+
+| Utility | Core recipe (center / sides / corners) | Unlocks when you | Forge with (makes) | What it does |
+| --- | --- | --- | --- | --- |
+| **Shadow Smoke Grenade** (snowball) | Wither Rose / Gunpowder / Ink Sacs | Get a Wither Rose or brew a potion | Snowball + Fermented Spider Eye (4) | Throw it: a 3-block smoke cloud for 5s that blinds other players inside. Enemy Ender Pearls flying through it are destroyed. Standing in your own smoke clears Glowing. 12s cooldown. |
+| **Entanglement Bola** (thrown) | Iron Bars / Iron Chains / Iron Ingots | Get an Iron Chain or kill a spider jockey | Lead + Slime Ball (3) | Throw it: the first creature hit is snared for 1.5s (-85% speed, no jumping), then immune for 4s. Elytra fliers are grounded safely, and the target's Ender Pearls fizzle (refunded) for 3s. 14s cooldown. |
+| **Barbed Caltrops** (iron nugget) | Pointed Dripstone / Iron Bars / Flint | Get Pointed Dripstone or an Iron Nugget | Iron Nugget + Leather (4) | Right-click: a 5x5 spike field where you look for 12s (max 2 per player, 10s cooldown). Others stepping in take 2 armor-piercing damage and are crippled (-35% speed, 4s); sprinting while crippled bleeds 1 HP/s. |
+| **Bloodhound's Whistle** (goat horn) | Sculk Sensor / Copper Ingots / Amethyst Shards | Get a Sculk Sensor or a Bell | Goat Horn + Echo Shard | Sound it: players within 20 blocks lose Invisibility (including the Void Talisman cloak) and Glow for 5s. A scent trail only you can see points to the weakest of them for 4s, and you get Speed II for 4s. 30s cooldown. |
+| **Decay Dart** (spectral arrow) | Fermented Spider Eye / Poisonous Potatoes / Nether Wart | Get a Poisonous Potato or brew a potion | Spectral Arrow + Spider Eye (4) | Bow/crossbow ammo. A dart blocked by a shield still pierces for 3 true damage. Hits inflict 4s of Necrosis: any health the target regains is taken back. A totem popped under Necrosis gives only Absorption I and Regeneration I. |
+| **Repulsor Mine** (wind charge) | Crying Obsidian / Breeze Rods / Iron Blocks | Kill a Breeze or get Crying Obsidian | Wind Charge + Slime Ball (2) | Right-click the ground to place (max 2, 15s cooldown, lasts 2 min); arms after 1s. Another player within 3 blocks sets it off: 5 damage and a wind burst; player-placed End Crystals within 6 are removed without exploding, and projectiles are reflected for 2.5s. Sneak on your own mine for 1s to pick it up. |
 
 ## Uninstalling
 

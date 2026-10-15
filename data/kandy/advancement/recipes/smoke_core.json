@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_wither_rose": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wither_rose"
+          }
+        ]
+      }
+    },
+    "brewed_potion": {
+      "trigger": "minecraft:brewed_potion"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:smoke_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wither_rose",
+      "brewed_potion",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:smoke_core"
+    ]
+  }
+}

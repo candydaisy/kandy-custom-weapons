@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "minecraft:nbt": "{item:{components:{\"minecraft:custom_data\":{utility:\"DecayDart\"}}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:decay_dart/hit"
+  }
+}

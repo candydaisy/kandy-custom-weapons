@@ -1,0 +1,1 @@
+give @s minecraft:silverfish_spawn_egg[item_model="minecraft:pointed_dripstone",custom_name={text:"Spike Core",color:"#c23616",italic:false},lore=[{text:"Smithing Table: Core + Iron Nugget + Leather (makes 4)",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"Caltrops"}]

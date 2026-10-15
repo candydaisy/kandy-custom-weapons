@@ -32,6 +32,12 @@ function kandy:frostveil/uninstall
 function kandy:eclipse/uninstall
 function kandy:chronos/uninstall
 function kandy:abyssal/uninstall
+function kandy:smoke/uninstall
+function kandy:bola/uninstall
+function kandy:caltrops/uninstall
+function kandy:whistle/uninstall
+function kandy:decay_dart/uninstall
+function kandy:repulsor/uninstall
 function kandy:zephyr/uninstall
 function kandy:berserker/uninstall
 function kandy:abyssal_pearl/uninstall
