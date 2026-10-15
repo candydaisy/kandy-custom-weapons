@@ -136,7 +136,7 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Each hit leaves an echo that strikes again a second later.",
+          "text": "Each hit leaves an echo (max 3) that strikes again a second later.",
           "color": "gray",
           "italic": false
         }

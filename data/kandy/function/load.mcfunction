@@ -1,8 +1,15 @@
-tellraw @a "Kandy Loaded!!"
+tellraw @a [{"text":"Kandy Loaded!! "},{"text":"[Open menu]","color":"light_purple","click_event":{"action":"run_command","command":"/function kandy:menu"},"hover_event":{"action":"show_text","value":"Weapons and cores, one click away"}}]
 function kandy:swiftwind/setup
 function kandy:lingering_soul/setup
 function kandy:bloodpact/setup
 function kandy:worldbreaker/setup
+function kandy:pyroclast/setup
+
+# A hit advancement stays granted if its reward function failed to run, which disables that weapon
+advancement revoke @a only kandy:hit/bloodpact
+advancement revoke @a only kandy:hit/lingering_soul
+advancement revoke @a only kandy:hit/worldbreaker
+advancement revoke @a only kandy:hit/pyroclast
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

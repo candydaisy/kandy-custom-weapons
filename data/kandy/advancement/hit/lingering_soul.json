@@ -15,6 +15,12 @@
               }
             }
           }
+        },
+        "damage": {
+          "dealt": {
+            "min": 3.4
+          },
+          "blocked": false
         }
       }
     }

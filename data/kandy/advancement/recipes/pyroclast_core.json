@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lava_in_nether": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "dimension": "minecraft:the_nether"
+            }
+          }
+        },
+        "items": [
+          {
+            "items": "minecraft:lava_bucket"
+          }
+        ]
+      }
+    },
+    "killed_magma_cube": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:magma_cube"
+          }
+        }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:pyroclast_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lava_in_nether",
+      "killed_magma_cube",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:pyroclast_core"
+    ]
+  }
+}

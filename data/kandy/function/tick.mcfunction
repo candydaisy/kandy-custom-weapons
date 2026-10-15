@@ -15,3 +15,7 @@ function kandy:bloodpact/visual
 function kandy:worldbreaker/pull
 function kandy:worldbreaker/skill
 function kandy:worldbreaker/visual
+
+function kandy:pyroclast/heat
+function kandy:pyroclast/effect
+function kandy:pyroclast/visual

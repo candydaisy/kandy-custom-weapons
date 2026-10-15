@@ -91,7 +91,7 @@
       ],
       "minecraft:lore": [
         {
-          "text": "+3 attack damage. Each hit costs 2 HP for brief Absorption.",
+          "text": "+2 attack damage. Each hit costs 2 HP for brief Absorption.",
           "color": "gray",
           "italic": false
         },
@@ -112,7 +112,7 @@
         {
           "type": "minecraft:attack_damage",
           "id": "minecraft:base_attack_damage",
-          "amount": 10.0,
+          "amount": 9.0,
           "operation": "add_value",
           "slot": "mainhand"
         },

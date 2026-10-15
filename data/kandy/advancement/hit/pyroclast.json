@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ability:\"Pyroclast\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "dealt": {
+            "min": 8.5
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:pyroclast/hit"
+  }
+}
