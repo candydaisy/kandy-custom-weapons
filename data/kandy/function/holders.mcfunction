@@ -6,6 +6,17 @@ tag @a remove kandy.inv.swiftwind
 tag @a remove kandy.main.worldbreaker
 tag @a remove kandy.inv.worldbreaker
 tag @a remove kandy.main.pyroclast
+tag @a remove kandy.main.tempest
+tag @a remove kandy.inv.tempest
+tag @a remove kandy.main.frostveil
+tag @a remove kandy.inv.frostveil
+tag @a remove kandy.main.eclipse
+tag @a remove kandy.inv.eclipse
+tag @a remove kandy.main.chronos
+tag @a remove kandy.inv.chronos
+tag @a remove kandy.main.abyssal
+tag @a remove kandy.inv.abyssal
+tag @a remove kandy.off.abyssal
 tag @a remove kandy.charm.zephyr
 tag @a remove kandy.charm.berserker
 tag @a remove kandy.charm.abyssal_pearl
@@ -27,6 +38,29 @@ execute as @a if items entity @s container.* *[custom_data~{ability:"Gravity"}] 
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Gravity"}] run tag @s add kandy.inv.worldbreaker
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Pyroclast"}] run tag @s add kandy.main.pyroclast
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Tempest"}] run tag @s add kandy.main.tempest
+execute as @a if items entity @s container.* *[custom_data~{ability:"Tempest"}] run tag @s add kandy.inv.tempest
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Tempest"}] run tag @s add kandy.inv.tempest
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.main.frostveil
+execute as @a if items entity @s container.* *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.inv.frostveil
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.inv.frostveil
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.main.eclipse
+execute as @a if items entity @s container.* *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.inv.eclipse
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.inv.eclipse
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.main.chronos
+execute as @a if items entity @s container.* *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.main.abyssal
+execute as @a if items entity @s container.* *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.inv.abyssal
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.inv.abyssal
+
+# Shields are usually held in the offhand
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.off.abyssal
 
 # Charms work from anywhere in the inventory, offhand included
 execute as @a if items entity @s container.* *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr

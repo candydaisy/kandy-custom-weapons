@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:flags": {
+      "is_on_ground": false,
+      "is_sprinting": false
+    },
+    "minecraft:movement": {
+      "fall_distance": {
+        "min": 0.01
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# Electric ring shrinking toward the strike point while it charges
+execute if score @s tem_t matches 11..14 rotated 0 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 30 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 60 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 90 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 120 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 150 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 180 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 210 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 240 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 270 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 300 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 11..14 rotated 330 0 positioned ^ ^0.1 ^3.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 0 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 30 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 60 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 90 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 120 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 150 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 180 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 210 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 240 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 270 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 300 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 6..10 rotated 330 0 positioned ^ ^0.1 ^2.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 0 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 30 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 60 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 90 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 120 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 150 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 180 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 210 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 240 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 270 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 300 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+execute if score @s tem_t matches 1..5 rotated 330 0 positioned ^ ^0.1 ^1.0 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1
+particle minecraft:wax_off ~ ~6 ~ 0.2 3 0.2 0 4
+execute if score @s tem_t matches 5 run playsound minecraft:block.beacon.activate player @a[distance=..24] ~ ~ ~ 0.6 2

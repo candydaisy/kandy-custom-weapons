@@ -4,6 +4,11 @@ function kandy:lingering_soul/setup
 function kandy:bloodpact/setup
 function kandy:worldbreaker/setup
 function kandy:pyroclast/setup
+function kandy:tempest/setup
+function kandy:frostveil/setup
+function kandy:eclipse/setup
+function kandy:chronos/setup
+function kandy:abyssal/setup
 function kandy:zephyr/setup
 function kandy:berserker/setup
 function kandy:abyssal_pearl/setup
@@ -16,6 +21,11 @@ advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/lingering_soul
 advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:hit/pyroclast
+advancement revoke @a only kandy:hit/tempest
+advancement revoke @a only kandy:hit/frostveil
+advancement revoke @a only kandy:hit/eclipse
+advancement revoke @a only kandy:hit/chronos
+advancement revoke @a only kandy:hit/abyssal
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

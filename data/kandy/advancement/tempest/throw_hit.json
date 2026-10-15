@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "minecraft:entity_type": "minecraft:trident",
+              "minecraft:nbt": "{Tags:[\"kandy.tem_proj\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:tempest/throw_hit"
+  }
+}

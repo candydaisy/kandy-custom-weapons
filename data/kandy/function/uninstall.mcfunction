@@ -27,6 +27,11 @@ advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/pyroclast
 
+function kandy:tempest/uninstall
+function kandy:frostveil/uninstall
+function kandy:eclipse/uninstall
+function kandy:chronos/uninstall
+function kandy:abyssal/uninstall
 function kandy:zephyr/uninstall
 function kandy:berserker/uninstall
 function kandy:abyssal_pearl/uninstall

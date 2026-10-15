@@ -1,0 +1,57 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:any_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "mainhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{ability:\"Eclipse\"}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "offhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{ability:\"Eclipse\"}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "dealt": {
+            "min": 5.0
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:eclipse/hit"
+  }
+}

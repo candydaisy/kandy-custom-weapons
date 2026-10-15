@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "blocked": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "type": "minecraft:any_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "mainhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{ability:\"Abyssal\"}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "offhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{ability:\"Abyssal\"}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "damage": {
+          "blocked": true
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:abyssal/block"
+  }
+}

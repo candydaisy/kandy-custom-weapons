@@ -20,6 +20,12 @@ function kandy:pyroclast/heat
 function kandy:pyroclast/effect
 function kandy:pyroclast/visual
 
+function kandy:tempest/tick
+function kandy:frostveil/tick
+function kandy:eclipse/tick
+function kandy:chronos/tick
+function kandy:abyssal/tick
+
 function kandy:zephyr/tick
 function kandy:berserker/tick
 function kandy:abyssal_pearl/tick

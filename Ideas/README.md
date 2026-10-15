@@ -8,11 +8,7 @@ Each weapon and charm is crafted through the signature two-step system:
 
 ## Progress
 
-**Weapons in the pack:** Swiftwind, Dagger of Lingering Souls, Blood Pact Blade, World Breaker, and **Pyroclast Cleaver** (the first design from this folder to be built).
-
-**Charms:** all six are in the pack.
-
-**Not started:** the other five weapons (Tempest Pike, Frostveil Scythe, Eclipse Longbow, Chronos Stiletto, Abyssal Bulwark).
+**Everything in this folder is now in the pack:** all six weapons (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -22,6 +18,13 @@ Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP
 - The Core is a structure block that looks like a magma block, so a plain magma block can't be used to forge it.
 - Death message uses vanilla "burned to a crisp" text, and the molten blade is shown with particles; custom text or textures would need a resource pack.
 
+The other five weapons also changed from their docs:
+- **Tempest Pike:** chain hits 2 targets within 6 blocks for 3 (not 3 / 8 / 4); Skyward Wrath is called with a sneaking charged melee hit (detecting a sneak-throw wasn't reliable) and strikes the nearest other creature near your target instead of an aimed spot; Gale Surge is a fresh Jump press after 0.2s in the air (a trident's right-click is the throw), 6 blocks with a 4s cooldown (not 10 blocks / 3s); Skyward Wrath does 8 within 3 blocks on a 10s cooldown (not 14 / 4 / 6s) and the bolt is particles and thunder only, since a real bolt starts fires and converts mobs; +0.5 reach (not +1).
+- **Frostveil Scythe:** diamond hoe only; 8 damage (not 8.5), +0.5 entity reach; -10% speed per stack instead of Slowness I-IV; Frozen Solid lasts 1.5s (not 2.5s) with a 5s re-freeze immunity, and frozen targets can still attack; Shatter is a flat 6 true damage + 3 splash (not +150% + 5); Frost Nova 5 blocks, 4 damage, +2 stacks, 8s cooldown (not 6 / 6 / +3 / 5s); ice spikes are particles only.
+- **Eclipse Longbow:** arrows pierce up to 3 targets with vanilla damage +15% (not infinite pierce with 10 void damage); Darkness 1s on full-draw hits only; vortex 5 blocks, 2.5s, weak pull on players, 1 per pulse, 6 implosion, 12s cooldown (not 8 / 3.5s / full pull / 2 / 12 / 8s); Shadow Warp has a 10s cooldown (not 4s), only lands on safe spots, and doesn't keep momentum.
+- **Chronos Stiletto:** 6 damage at 1.8 speed (not 7 at 2.0), +5% speed (not +10%); Paradox is 1.5 per stiletto hit, max 3 stacks (not 40% of all damage taken); rewind heals up to about 4 HP (player health can't be set directly), doesn't restore hunger, and has a 20s cooldown (not 15s); stasis on players is a 1s heavy slow, and frozen projectiles / buffered damage aren't implemented.
+- **Abyssal Bulwark:** a datapack can't detect raising or releasing a shield, so Parry is "tap Sneak just before a blocked melee hit" and Tidal Surge is "Sneak + Jump"; Parry staggers with Slowness IV + Weakness II for 2s instead of a full stun, and doesn't re-enable a disabled shield (axes disable it for half as long instead); Resistance is capped at II (the doc's +1 per charge reached Resistance V, full immunity); surge 4/7/10 damage, ~90 degree cone, 7 blocks, 8s cooldown (not 6/12/20, 120 degrees, 8 blocks, no cooldown); knockback resistance +0.25, armor toughness +2 (not +0.4 / +3).
+
 The charms also changed from their docs, mostly toned down for PvP or limited by what a datapack can do:
 - **Zephyr:** fall immunity via the fall_damage_multiplier attribute; glide via a gravity modifier while sneaking; shockwave 4 damage (not 6) with vanilla wind-charge knockback, 3s cooldown, hits players too.
 - **Berserker:** Strength I + Speed I for 8s (not Strength II / Speed II / Haste II / Resistance I for 12s); lifesteal is Instant Health once per 3s on charged hits; 60s cooldown from trigger.
@@ -29,7 +32,7 @@ The charms also changed from their docs, mostly toned down for PvP or limited by
 - **Molten Core:** retaliation 2 damage + 4s fire with a 1s cooldown (not 4 damage + 6s); players can't be set on fire by commands; flaming arrows are extinguished, not deleted.
 - **Void Talisman:** End Ward (enderman pacification) left out, it can't be done reliably; rescue cooldown 120s (not 60s); Overworld threshold Y -70 (not -60, which is inside bedrock); cloak needs a 2s sneak and breaks on attacking or taking damage.
 - **Alchemist Catalyst:** weaker, shorter converted buffs with a 15s cooldown; Weakness is only cleansed (never becomes Strength); potion extension capped at 8 min; the Absorption heart became +1 max heart; Aura of Vitality dropped.
-- Every core uses its own unobtainable item as the smithing template so a plain vanilla item can't forge it. The Molten Core core (spawner) and Alchemist core (trial spawner) can be placed in survival, which loses them.
+- Every core uses its own unobtainable item as the smithing template so a plain vanilla item can't forge it. Some cores (Molten Core, Alchemist, and the five newer weapons) use blocks that can be placed in survival, which loses the core but never drops a usable template.
 
 ---
 
@@ -37,12 +40,12 @@ The charms also changed from their docs, mostly toned down for PvP or limited by
 
 | Weapon | Status | Base Item | Theme / Element | Core Crafting | Playstyle & Signature Skill | Document |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Tempest Pike** | Planned | Trident | Storms & Static Electricity | Heart of the Sea + Lightning Rods | Chain lightning on hit, Gale Surge aerial dash, Skyward Wrath lightning strike. | [tempest_pike.md](tempest_pike.md) |
-| **Frostveil Scythe** | Planned | Diamond Hoe / Axe | Permafrost & Cryomancy | Blue Ice + Packed Ice + Snow | Hypothermia freeze stacks, Frozen Solid immobilization, Shatter execution crit, Frost Nova ring. | [frostveil_scythe.md](frostveil_scythe.md) |
-| **Eclipse Longbow** | Planned | Bow | Void Singularity & Shadow | Ender Eye + Crying Obsidian + Pearls | Infinite piercing void arrows, Event Horizon black hole vortex, mid-air Shadow Warp teleport. | [eclipse_longbow.md](eclipse_longbow.md) |
+| **Tempest Pike** | Implemented | Trident | Storms & Static Electricity | Heart of the Sea + Lightning Rods | Chain lightning on hit, Gale Surge aerial dash, Skyward Wrath lightning strike. | [tempest_pike.md](tempest_pike.md) |
+| **Frostveil Scythe** | Implemented | Diamond Hoe / Axe | Permafrost & Cryomancy | Blue Ice + Packed Ice + Snow | Hypothermia freeze stacks, Frozen Solid immobilization, Shatter execution crit, Frost Nova ring. | [frostveil_scythe.md](frostveil_scythe.md) |
+| **Eclipse Longbow** | Implemented | Bow | Void Singularity & Shadow | Ender Eye + Crying Obsidian + Pearls | Infinite piercing void arrows, Event Horizon black hole vortex, mid-air Shadow Warp teleport. | [eclipse_longbow.md](eclipse_longbow.md) |
 | **Pyroclast Cleaver** | Implemented | Netherite Axe | Volcanic Rupture & Magma | Respawn Anchor + Blaze Rods + Magma | Heat Gauge mechanic, 100% Heat Overdrive mode, Magma Fissure ground eruptor. | [pyroclast_cleaver.md](pyroclast_cleaver.md) |
-| **Chronos Stiletto** | Planned | Golden Sword | Time Dilation & Chronomancy | Recovery Compass + Clocks + Amethyst | Paradox delayed wound burst, Temporal Anchor & Rewind snapshot, Chrono Stasis time-freeze. | [chronos_stiletto.md](chronos_stiletto.md) |
-| **Abyssal Bulwark** | Planned | Shield | Ocean Depths & Guard Counter | Sponge/Conduit + Dark Prismarine | Kinetic pressure charge accumulation, 0.35s Perfect Parry stagger, Tidal Surge cone blast. | [abyssal_bulwark.md](abyssal_bulwark.md) |
+| **Chronos Stiletto** | Implemented | Golden Sword | Time Dilation & Chronomancy | Recovery Compass + Clocks + Amethyst | Paradox delayed wound burst, Temporal Anchor & Rewind snapshot, Chrono Stasis time-freeze. | [chronos_stiletto.md](chronos_stiletto.md) |
+| **Abyssal Bulwark** | Implemented | Shield | Ocean Depths & Guard Counter | Sponge/Conduit + Dark Prismarine | Kinetic pressure charge accumulation, 0.35s Perfect Parry stagger, Tidal Surge cone blast. | [abyssal_bulwark.md](abyssal_bulwark.md) |
 
 ---
 
