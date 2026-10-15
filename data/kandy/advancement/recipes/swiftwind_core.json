@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "kandy:swiftwind_core"
+        "recipes": "kandy:swiftwind_core"
       }
     }
   },

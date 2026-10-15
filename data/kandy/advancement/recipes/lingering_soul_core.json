@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "kandy:lingering_soul_core"
+        "recipes": "kandy:lingering_soul_core"
       }
     }
   },
