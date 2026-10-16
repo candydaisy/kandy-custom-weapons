@@ -38,7 +38,6 @@ tag @a remove kandy.charm.hearthstone
 tag @a remove kandy.charm.wayfarers_compass
 tag @a remove kandy.charm.prism_mirror
 tag @a remove kandy.charm.predators_fang
-tag @a remove kandy.charm.rimeheart
 tag @a remove kandy.charm.moonlit_pendant
 tag @a remove kandy.charm.tinkers_whetstone
 tag @a remove kandy.charm.enderbrace
@@ -125,8 +124,6 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
 execute as @a if items entity @s container.* *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
-execute as @a if items entity @s container.* *[custom_data~{charm:"Rimeheart"}] run tag @s add kandy.charm.rimeheart
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Rimeheart"}] run tag @s add kandy.charm.rimeheart
 execute as @a if items entity @s container.* *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
 execute as @a if items entity @s container.* *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone

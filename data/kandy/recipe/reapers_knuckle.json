@@ -91,7 +91,7 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Each kill harvests a soul: +1 heart of Absorption (max 4, lasts 30s).",
+          "text": "Each kill harvests a soul: +1 max heart (max 4, lasts 45s).",
           "color": "gray",
           "italic": false
         },

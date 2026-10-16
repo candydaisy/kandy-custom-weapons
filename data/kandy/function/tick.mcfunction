@@ -44,7 +44,6 @@ function kandy:hearthstone/tick
 function kandy:wayfarers_compass/tick
 function kandy:prism_mirror/tick
 function kandy:predators_fang/tick
-function kandy:rimeheart/tick
 function kandy:moonlit_pendant/tick
 function kandy:tinkers_whetstone/tick
 function kandy:enderbrace/tick

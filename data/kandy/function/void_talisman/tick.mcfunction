@@ -7,7 +7,7 @@ scoreboard players remove @a[scores={void_cd=1..}] void_cd 1
 execute as @a[tag=kandy.charm.void_talisman] if predicate kandy:void_talisman_on_ground unless predicate kandy:void_talisman_in_void at @s if block ~ ~ ~ #kandy:passable if block ~ ~1 ~ #kandy:passable unless block ~ ~ ~ minecraft:lava unless block ~ ~1 ~ minecraft:lava run function kandy:void_talisman/save_ground
 
 # Void Rescue
-execute as @a[tag=kandy.charm.void_talisman,tag=!kandy.immune,scores={void_cd=0}] if predicate kandy:void_talisman_in_void at @s run function kandy:void_talisman/rescue
+execute as @a[tag=kandy.charm.void_talisman,gamemode=!spectator,scores={void_cd=0}] if predicate kandy:void_talisman_in_void at @s run function kandy:void_talisman/rescue
 
 # Shadow Cloak: hold sneak in the dark for 2s to turn invisible, it lasts only while you keep holding
 scoreboard players add @a[tag=kandy.charm.void_talisman] void_cloak_cd 0

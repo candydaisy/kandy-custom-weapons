@@ -1,6 +1,6 @@
-# Run as and at the player: step up to 6 blocks along the view, never into blocks
+# Run as and at the player: step up to 10 blocks along the view, never into blocks
 scoreboard players set @s ebr_tap 0
-scoreboard players set #steps ebr_tmp 12
+scoreboard players set #steps ebr_tmp 20
 scoreboard players set #moved ebr_tmp 0
 function kandy:enderbrace/step
 execute if score #moved ebr_tmp matches 0 run return run playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.6 0.6

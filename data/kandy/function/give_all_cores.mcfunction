@@ -27,7 +27,6 @@ function kandy:hearthstone/give_core
 function kandy:wayfarers_compass/give_core
 function kandy:prism_mirror/give_core
 function kandy:predators_fang/give_core
-function kandy:rimeheart/give_core
 function kandy:moonlit_pendant/give_core
 function kandy:tinkers_whetstone/give_core
 function kandy:enderbrace/give_core

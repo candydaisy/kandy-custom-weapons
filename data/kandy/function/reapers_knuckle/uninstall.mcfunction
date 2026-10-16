@@ -1,4 +1,5 @@
 execute as @a run attribute @s minecraft:max_absorption modifier remove kandy:reapers_cap
+execute as @a run attribute @s minecraft:max_health modifier remove kandy:reapers_soul
 scoreboard objectives remove rpr_s
 scoreboard objectives remove rpr_t
 scoreboard objectives remove rpr_death

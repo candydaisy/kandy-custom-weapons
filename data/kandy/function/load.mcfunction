@@ -28,7 +28,6 @@ function kandy:hearthstone/setup
 function kandy:wayfarers_compass/setup
 function kandy:prism_mirror/setup
 function kandy:predators_fang/setup
-function kandy:rimeheart/setup
 function kandy:moonlit_pendant/setup
 function kandy:tinkers_whetstone/setup
 function kandy:enderbrace/setup

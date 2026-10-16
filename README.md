@@ -28,7 +28,7 @@ The weapon keeps its enchantments, but forged weapons can't be used in an anvil,
 | **Chronos Core** | Recovery Compass center, 4 Clocks on the sides, 4 Amethyst Shards in the corners | Clock or Suspicious Sand | Golden Sword + Echo Shard |
 | **Abyssal Core** | Sponge center, 4 Dark Prismarine on the sides, 4 Prismarine Crystals in the corners | Killing an Elder Guardian or getting Dark Prismarine | Shield + Heart of the Sea |
 
-Operators can also skip crafting: `/function kandy:menu` opens a clickable chat menu that hands out every weapon, charm and core, or use `/function kandy:<weapon>/give` and `/function kandy:<weapon>/give_core` directly. `/function kandy:give_all` gives every weapon and charm at once (32 items), and `/function kandy:give_all_cores` gives every core.
+Operators can also skip crafting: `/function kandy:menu` opens a clickable chat menu that hands out every weapon, charm and core, or use `/function kandy:<weapon>/give` and `/function kandy:<weapon>/give_core` directly. `/function kandy:give_all` gives every weapon and charm at once (31 items), and `/function kandy:give_all_cores` gives every core.
 
 Weapon abilities only trigger on fully charged hits that aren't blocked by a shield, so spam-clicking won't apply them.
 
@@ -67,16 +67,15 @@ Charms work from anywhere in your inventory (offhand included). They're crafted 
 | **Verdant Sprig** | Moss Block / Oak Saplings / Vines | Get Moss or a sapling | Stick + Glow Berries | On grass, moss or leaves under open sky: 1 HP every 5s. Sneaking there gives +50% knockback resistance. **Downside:** Hunger I after 60s without open sky. |
 | **Stormcaller Coil** | Lightning Rod / Copper Blocks / Redstone | Get a Lightning Rod or be in a thunderstorm | Copper Ingot + Glowstone Dust | Sprinting builds Static; at 100% your next charged hit adds +4 armor-piercing lightning damage and Slowness II. Speed I in the rain. **Downside:** in thunderstorms, a 1-in-5 chance every 30s of being struck for 3. |
 | **Deepdelver Lamp** | Lantern / Glow Ink Sacs / Raw Iron | Get deepslate or loot a mineshaft chest | Glowstone Dust + Amethyst Shard | Night Vision below Y 40 in the dark. Sneak still for 2s: ores within 6 blocks glow for 5s (30s cooldown). **Downside:** you glow to other players while underground. |
-| **Reaper's Knuckle** | Skeleton Skull / Bone Blocks / Soul Sand | Kill a Skeleton or Zombie | Bone + Echo Shard | Each kill adds 1 heart of Absorption (max 4, 30s); a player kill fills all 4. **Downside:** undead deal +1 damage to you. |
+| **Reaper's Knuckle** | Skeleton Skull / Bone Blocks / Soul Sand | Kill a Skeleton or Zombie | Bone + Echo Shard | Each kill adds 1 max heart (max 4, 45s) and heals it; a player kill gives all 4. **Downside:** undead deal +1 damage to you. |
 | **Hare's Foot** | Rabbit Hide / Carrots / Feathers | Get a Rabbit's Foot | Rabbit's Foot + Sugar | Jump Boost I and +10% speed; a sprint-jump gives a 1.5s Speed II burst (4s cooldown). **Downside:** -2 armor. |
 | **Hearthstone** | Campfire / Coal Blocks / Bread | Get cooked food | Charcoal + Baked Potato | Eating gives a little extra Saturation; near a lit campfire, furnace or smoker you get Regeneration I. **Downside:** hunger drains ~20% faster. |
 | **Wayfarer's Compass** | Recovery Compass / Maps / Gold Ingots | Sleep in a bed or use a respawn anchor | Compass + Ender Pearl | Sneak still for 3s to recall to your bed or respawn anchor (same dimension, 10 min cooldown). **Downside:** each recall costs 5 levels. |
 | **Prism Mirror** | Glass / Quartz Blocks / Amethyst Shards | Get Nether Quartz | Nether Quartz + Glass Pane | Projectiles that hit you reflect 30% of their damage at the shooter; every 15s one projectile hit is healed straight back. **Downside:** melee hits deal +1 damage to you. |
 | **Predator's Fang** | Goat Horn / Bones / Flint | Kill a Wolf, Fox or Ocelot | Flint + Rotten Flesh | Charged hits on targets below 30% health deal +3 damage; kills that way give Speed I for 3s. **Downside:** -2 max health. |
-| **Rimeheart** | Blue Ice / Packed Ice / Snowballs | Get Blue Ice or Powder Snow | Prismarine Crystals + Powder Snow Bucket | Freeze damage is healed straight back; sneaking over water freezes it into frosted ice. **Downside:** Slowness I in the Nether. |
 | **Moonlit Pendant** | Phantom Membrane / Iron Ingots / Glowstone Dust | Kill a Phantom or be outside at midnight | Firework Star + Nether Star | At night under open sky: Strength I and Night Vision, plus Speed I on a full moon. **Downside:** Slowness I and -10% attack speed in daylight. |
 | **Tinker's Whetstone** | Anvil / Iron Ingots / Flint | Get an Anvil or Grindstone | Brick + Grindstone | Mends your held item by 1 durability every 5s. Sneak still for 2s with a weapon: +1 attack damage for 20s (60s cooldown). **Downside:** -10% attack speed. |
-| **Enderbrace** | Chorus Flower / Ender Pearls / Popped Chorus Fruit | Eat Chorus Fruit or enter the End | Popped Chorus Fruit + Shulker Shell | Double-tap Sneak: blink up to 6 blocks where you look, never into blocks (12s cooldown). **Downside:** 1 damage every 2s in water or rain. |
+| **Enderbrace** | Chorus Flower / Ender Pearls / Popped Chorus Fruit | Eat Chorus Fruit or enter the End | Popped Chorus Fruit + Shulker Shell | Double-tap Sneak: blink up to 10 blocks where you look, never into blocks (12s cooldown). **Downside:** 2 damage every 2s in water or rain. |
 
 Charms are still their base item underneath, so don't put one in a crafting grid or brewing stand: it would be used up like a normal feather, ghast tear, etc.
 

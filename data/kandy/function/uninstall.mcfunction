@@ -56,7 +56,6 @@ function kandy:hearthstone/uninstall
 function kandy:wayfarers_compass/uninstall
 function kandy:prism_mirror/uninstall
 function kandy:predators_fang/uninstall
-function kandy:rimeheart/uninstall
 function kandy:moonlit_pendant/uninstall
 function kandy:tinkers_whetstone/uninstall
 function kandy:enderbrace/uninstall

@@ -10,7 +10,7 @@ Each item is crafted through the signature two-step system:
 
 **In the pack:** all six weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
 
-**Everything in this folder is now in the pack**, including the 16 newer charms (untested in game so far).
+**Everything in this folder is now in the pack**, including the 15 newer charms (untested in game so far).
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -34,10 +34,9 @@ The 16 newer charms mostly follow their docs; the main differences:
 - **Verdant Sprig / Moonlit Pendant / Enderbrace / Stormcaller Coil:** "under open sky" uses `can_see_sky`; weather is global, so rain checks also pass in deserts while it rains elsewhere.
 - **Stormcaller Coil:** the discharge works on any charged hit (dealt 6+), and the storm strike is visual only.
 - **Deepdelver Lamp:** ore outlines are visible to nearby players too.
-- **Reaper's Knuckle:** stacks use Absorption II capped with a `max_absorption` modifier, so other Absorption is capped too while souls are active.
+- **Reaper's Knuckle:** souls are real max hearts (+1 per soul, up to 4) for 45s, each filled with a short Regeneration, instead of Absorption hearts for 30s.
 - **Hare's Foot:** the Speed II burst is a +40% speed attribute for exactly 1.5s.
 - **Hearthstone:** Regeneration near a hearth is topped up only when absent (~1 HP per 3-4s); food is detected with a tag of vanilla foods.
-- **Rimeheart:** freeze damage is healed back after it lands rather than prevented.
 - **Prism Mirror / Predator's Fang:** damage taken is measured from health, and the extra damage is credited to you.
 - **Tinker's Whetstone:** unlocks on getting an anvil or grindstone rather than using one.
 - Cores use spawn eggs of low-value mobs (squid, bat, silverfish, endermite, cod, salmon, tropical fish, pufferfish, glow squid, frog, tadpole, chicken, rabbit, pig, sheep, axolotl) as templates.
@@ -90,7 +89,6 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 | **Wayfarer's Compass** | Implemented | Compass | Homeward Recall | **Homeward Recall:** sneak still 3s to teleport to your bed/anchor in the same dimension (10 min cooldown).<br>**Downside:** each recall costs 5 levels. | [charm_wayfarers_compass.md](charm_wayfarers_compass.md) |
 | **Prism Mirror** | Implemented | Nether Quartz | Projectile Reflection | **Reflection:** shooters take 30% of the projectile damage you take.<br>**Glancing Facet:** every 15s, one projectile hit is negated.<br>**Downside:** melee hits deal +1 damage to you. | [charm_prism_mirror.md](charm_prism_mirror.md) |
 | **Predator's Fang** | Implemented | Flint | Execute the Wounded | **Execution:** +3 damage on charged hits vs targets below 30% health.<br>**Bloodscent:** execute kills give Speed I for 3s.<br>**Downside:** -2 max health. | [charm_predators_fang.md](charm_predators_fang.md) |
-| **Rimeheart** | Implemented | Prismarine Crystals | Cold Immunity & Frost Path | **Frostborn:** no freeze damage.<br>**Frost Path:** sneaking on water freezes it beneath you.<br>**Downside:** Slowness I in the Nether. | [charm_rimeheart.md](charm_rimeheart.md) |
 | **Moonlit Pendant** | Implemented | Firework Star | Night Hunter | **Moonlight:** Strength I and Night Vision at night under open sky; Speed I during a full moon.<br>**Downside:** Slowness I and -10% attack speed in daylight. | [charm_moonlit_pendant.md](charm_moonlit_pendant.md) |
 | **Tinker's Whetstone** | Implemented | Brick | Field Repairs | **Field Mending:** +1 durability every 5s on your held item.<br>**Sharpen:** sneak still 2s for +1 attack damage for 20s (60s cooldown).<br>**Downside:** -10% attack speed. | [charm_tinkers_whetstone.md](charm_tinkers_whetstone.md) |
 | **Enderbrace** | Implemented | Popped Chorus Fruit | Short-range Blink | **Blink:** double-tap Sneak to teleport up to 6 blocks where you look (12s cooldown).<br>**Downside:** 1 damage every 2s in water or rain. | [charm_enderbrace.md](charm_enderbrace.md) |

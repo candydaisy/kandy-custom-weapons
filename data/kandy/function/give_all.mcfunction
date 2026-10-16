@@ -1,4 +1,4 @@
-# Give yourself every Kandy weapon and charm (32 items; make room in your inventory first)
+# Give yourself every Kandy weapon and charm (31 items; make room in your inventory first)
 # Weapons
 function kandy:swiftwind/give
 function kandy:lingering_soul/give
@@ -29,7 +29,6 @@ function kandy:hearthstone/give
 function kandy:wayfarers_compass/give
 function kandy:prism_mirror/give
 function kandy:predators_fang/give
-function kandy:rimeheart/give
 function kandy:moonlit_pendant/give
 function kandy:tinkers_whetstone/give
 function kandy:enderbrace/give
