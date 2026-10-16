@@ -1,5 +1,6 @@
-# Curses while the blade is carried anywhere (they wear off on their own above the thresholds)
-effect give @a[tag=kandy.inv.bloodpact,scores={hp=..8}] minecraft:weakness 2 1 true
+# While the blade is carried anywhere (these wear off on their own above the thresholds):
+# low health empowers you, but slows and blinds you as it gets worse
+effect give @a[tag=kandy.inv.bloodpact,scores={hp=..8}] minecraft:strength 2 0 true
 effect give @a[tag=kandy.inv.bloodpact,scores={hp=..10}] minecraft:slowness 2 0 true
 effect give @a[tag=kandy.inv.bloodpact,scores={hp=..6}] minecraft:darkness 3 0 true
 

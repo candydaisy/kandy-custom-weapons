@@ -91,12 +91,12 @@
       ],
       "minecraft:lore": [
         {
-          "text": "+2 attack damage. Each hit costs 2 HP for brief Absorption.",
+          "text": "+2 attack damage. Charged hits grant brief Absorption.",
           "color": "gray",
           "italic": false
         },
         {
-          "text": "Carrying it at low health brings weakness, slowness and darkness.",
+          "text": "At low health it grants Strength, but brings slowness and darkness.",
           "color": "dark_red",
           "italic": false
         }
