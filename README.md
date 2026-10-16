@@ -34,7 +34,7 @@ Weapon abilities only trigger on fully charged hits that aren't blocked by a shi
 
 ## Weapons
 
-Holding a weapon shows its meter and cooldowns in a boss bar at the top of your screen (only you see it); it hides when you put the weapon away. The Abyssal Bulwark shows it from either hand.
+Each skill has its own boss bar at the top of your screen (only you see them). Holding a weapon shows all of its bars; a weapon that's only carried shows bars just for skills that are recharging, and each disappears when the skill is ready. The Abyssal Bulwark counts as held in either hand. Charms show a bar only while one of their abilities is recharging (and the Berserker's Frenzy while it lasts).
 
 | Weapon | Command | Ability |
 | --- | --- | --- |
