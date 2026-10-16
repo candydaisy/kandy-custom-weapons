@@ -9,6 +9,8 @@ execute as @e[scores={pyro_melt=0..}] run attribute @s minecraft:armor modifier 
 scoreboard objectives remove sprint
 scoreboard objectives remove echo_timer
 scoreboard objectives remove echo_stacks
+scoreboard objectives remove echo_owner
+scoreboard objectives remove soul_pid
 scoreboard objectives remove blood_hit
 scoreboard objectives remove blood_bleed
 scoreboard objectives remove hp
@@ -21,14 +23,17 @@ scoreboard objectives remove pyro_od
 scoreboard objectives remove pyro_cd
 scoreboard objectives remove pyro_melt
 scoreboard objectives remove pyro_tmp
+scoreboard objectives remove pyro_oh
 
 advancement revoke @a only kandy:hit/lingering_soul
+advancement revoke @a only kandy:swiftwind/hurt
 advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/pyroclast
 
 function kandy:tempest/uninstall
 function kandy:frostveil/uninstall
+scoreboard objectives remove frost_chill
 function kandy:eclipse/uninstall
 function kandy:chronos/uninstall
 function kandy:abyssal/uninstall

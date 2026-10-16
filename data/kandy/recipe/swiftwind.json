@@ -59,6 +59,11 @@
           "text": "Sprint to build Momentum: speed, then reach, then attack speed.",
           "color": "gray",
           "italic": false
+        },
+        {
+          "text": "Taking a hit drains 250 Momentum.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",
@@ -67,7 +72,30 @@
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
         "ability": "Momentum"
-      }
+      },
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:attack_damage",
+          "id": "minecraft:base_attack_damage",
+          "amount": 8.0,
+          "operation": "add_value",
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:attack_speed",
+          "id": "minecraft:base_attack_speed",
+          "amount": -2.4,
+          "operation": "add_value",
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:entity_interaction_range",
+          "id": "kandy:swiftwind_reach",
+          "amount": 1.0,
+          "operation": "add_value",
+          "slot": "mainhand"
+        }
+      ]
     }
   }
 }

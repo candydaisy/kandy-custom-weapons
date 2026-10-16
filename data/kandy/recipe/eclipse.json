@@ -104,6 +104,11 @@
           "text": "Sneak while your arrow flies: Shadow Warp to it (10s).",
           "color": "light_purple",
           "italic": false
+        },
+        {
+          "text": "Shadow Warp costs 2 HP.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",

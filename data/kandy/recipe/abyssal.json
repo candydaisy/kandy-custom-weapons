@@ -99,6 +99,11 @@
           "text": "Sneak + Jump: Tidal Surge spends all Pressure in a crushing wave.",
           "color": "aqua",
           "italic": false
+        },
+        {
+          "text": "Heavy: -10% speed while held. Tidal Surge's recoil slows you.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",
@@ -136,6 +141,20 @@
           "amount": 2.0,
           "operation": "add_value",
           "slot": "offhand"
+        },
+        {
+          "type": "minecraft:movement_speed",
+          "id": "kandy:bulwark_heavy_main",
+          "amount": -0.1,
+          "operation": "add_multiplied_total",
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:movement_speed",
+          "id": "kandy:bulwark_heavy_off",
+          "amount": -0.1,
+          "operation": "add_multiplied_total",
+          "slot": "offhand"
         }
       ],
       "minecraft:blocks_attacks": {
@@ -150,6 +169,11 @@
         "bypassed_by": "#minecraft:bypasses_shield",
         "block_sound": "minecraft:item.shield.block",
         "disabled_sound": "minecraft:item.shield.break"
+      },
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:attribute_modifiers"
+        ]
       }
     }
   }

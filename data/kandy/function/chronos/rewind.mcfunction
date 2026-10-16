@@ -26,6 +26,8 @@ effect clear @s minecraft:darkness
 effect clear @s minecraft:nausea
 effect clear @s minecraft:mining_fatigue
 effect clear @s minecraft:hunger
+# Time debt: Weakness I for 3s after a rewind
+effect give @s minecraft:weakness 3 0 true
 
 execute at @s run particle minecraft:dust{color:[1.0,0.84,0.0],scale:1.4} ~ ~1 ~ 0.4 0.8 0.4 0 30
 execute at @s run playsound minecraft:block.amethyst_block.chime player @a[distance=..16] ~ ~ ~ 1.5 0.5

@@ -23,7 +23,6 @@ tag @e[tag=kandy.victim] remove kandy.victim
 
 # +10% heat per hit, Overdrive at 100%
 execute if score @s pyro_od matches 0 run scoreboard players add @s pyro_heat 10
-scoreboard players set @s pyro_idle 0
 execute if score @s pyro_od matches 0 if score @s pyro_heat matches 100.. run function kandy:pyroclast/overdrive
 
 # Magma Fissure: sneaking jump-attack, 10s cooldown

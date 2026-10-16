@@ -109,6 +109,11 @@
           "text": "Critical hits freeze the target in time (10s per target).",
           "color": "gold",
           "italic": false
+        },
+        {
+          "text": "Rewinding leaves you weakened for 3s.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",

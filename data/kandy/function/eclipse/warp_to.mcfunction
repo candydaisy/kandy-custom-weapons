@@ -1,6 +1,8 @@
 # Run as the warper, positioned at the safe spot
 execute at @s run function kandy:eclipse/decoy
 tp @s ~ ~ ~
+# Void tax: warping costs 2 HP
+damage @s 2 minecraft:magic
 effect give @s minecraft:slow_falling 1 0 true
 scoreboard players set @s ecl_warp 200
 kill @e[type=#minecraft:arrows,tag=ecl.chosen]

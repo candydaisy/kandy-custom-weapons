@@ -1,5 +1,5 @@
 # Run as a chained target: 3 lightning damage and a brief stagger
-damage @s 3 minecraft:lightning_bolt by @p[tag=kandy.tem_wielder]
+damage @s 3 kandy:tempest_lightning by @p[tag=kandy.tem_wielder]
 effect give @s minecraft:slowness 2 1 true
 particle minecraft:electric_spark ~ ~1 ~ 0.3 0.5 0.3 0.1 10
 particle minecraft:glow ~ ~1 ~ 0.3 0.5 0.3 0 3

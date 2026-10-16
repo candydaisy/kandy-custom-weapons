@@ -17,3 +17,12 @@ scoreboard players remove @e[type=minecraft:marker,tag=kandy.frost_ice,scores={f
 execute as @e[type=minecraft:marker,tag=kandy.frost_ice,scores={frost_ice=..0}] at @s run function kandy:frostveil/melt
 
 function kandy:frostveil/visual
+
+# Chill: holding the scythe in powder snow deals an extra 1 freeze damage every second
+execute as @a[tag=kandy.main.frostveil] at @s if block ~ ~ ~ minecraft:powder_snow run tag @s add kandy.frost_insnow
+execute as @a[tag=kandy.main.frostveil] at @s if block ~ ~1 ~ minecraft:powder_snow run tag @s add kandy.frost_insnow
+scoreboard players add @a[tag=kandy.frost_insnow] frost_chill 1
+scoreboard players set @a[tag=!kandy.frost_insnow] frost_chill 0
+execute as @a[scores={frost_chill=20..}] run damage @s 1 minecraft:freeze
+scoreboard players set @a[scores={frost_chill=20..}] frost_chill 0
+tag @a remove kandy.frost_insnow

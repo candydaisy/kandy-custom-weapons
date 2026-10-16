@@ -109,6 +109,11 @@
           "text": "Sneak + jump-attack: Magma Fissure tears the ground ahead.",
           "color": "gold",
           "italic": false
+        },
+        {
+          "text": "Overdrive ends in Overheat: slowed, no Fire Resistance for 4s.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",

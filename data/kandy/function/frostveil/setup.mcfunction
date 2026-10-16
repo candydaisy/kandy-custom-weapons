@@ -1,4 +1,5 @@
 scoreboard objectives add frost_stacks dummy "Hypothermia"
+scoreboard objectives add frost_chill dummy
 scoreboard objectives add frost_timer dummy "Hypothermia Timer"
 scoreboard objectives add frost_frozen dummy "Frozen Solid"
 scoreboard objectives add frost_imm dummy "Freeze Immunity"

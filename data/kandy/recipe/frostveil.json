@@ -109,6 +109,11 @@
           "text": "Sneak-attack: Frost Nova chills everything within 5 blocks.",
           "color": "aqua",
           "italic": false
+        },
+        {
+          "text": "Its chill slows you 5%, and powder snow bites harder.",
+          "color": "red",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",
@@ -145,6 +150,13 @@
           "id": "kandy:frostveil_reach",
           "amount": 1.0,
           "operation": "add_value",
+          "slot": "mainhand"
+        },
+        {
+          "type": "minecraft:movement_speed",
+          "id": "kandy:frostveil_chill",
+          "amount": -0.05,
+          "operation": "add_multiplied_total",
           "slot": "mainhand"
         }
       ]

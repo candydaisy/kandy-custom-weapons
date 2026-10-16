@@ -1,6 +1,8 @@
 # Tidal Surge: spend all Pressure in a ~90 degree wave reaching 7 blocks ahead
 tag @s add kandy.bulw_src
 scoreboard players set @s bulw_scd 160
+# Recoil: Slowness II for 2s
+effect give @s minecraft:slowness 2 1 true
 execute rotated ~ 0 positioned ^ ^ ^1 run tag @e[distance=..1.2,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
 execute rotated ~ 0 positioned ^ ^ ^2 run tag @e[distance=..1.6,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
 execute rotated ~ 0 positioned ^ ^ ^3 run tag @e[distance=..2.0,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
