@@ -100,6 +100,39 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 
 ---
 
+## Proposed (not implemented yet)
+
+New ideas waiting for review. Numbers are first drafts. Every one has a downside, like the rest of the pack.
+
+**Allies** (support weapons): other players on your scoreboard team plus your tamed pets. With no team, every other player counts, so in PvP put allies on a team.
+
+**PvE-only charms** never affect players or PvP damage, so they can't tip a fight.
+
+### Weapons
+
+| Weapon | Role | Base Item | Signature Skills | Downside | Document |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Chainwarden Arbalest** | Ranged / control | Crossbow | Bolts Shackle (Slowness I); charged bolt Tethers a creature, sneak to Reel it in (or yourself to heavy targets); Grapple to a bolt in a block. | -15% speed while Tethered | [chainwarden_arbalest.md](chainwarden_arbalest.md) |
+| **Falconer's Recurve** | Ranged / single target | Bow | Lock On while drawing; full-draw arrows home in for -15% damage; sneak shot Falcon Volley (3 homing arrows). | You glow to players you lock onto | [falconers_recurve.md](falconers_recurve.md) |
+| **Lifebloom Staff** | Healer | Golden Hoe | Right-click Mending Pulse (2 hearts to allies, 12s); hold for Sanctuary healing circle (30s); hits on monsters heal your most hurt ally. | 4 damage; your own healing is halved | [lifebloom_staff.md](lifebloom_staff.md) |
+| **Oathbound Warhorn** | Support / buffer | Goat Horn | War Cry: allies get Strength I + Speed I 8s; sneak Rally: cleanse + Resistance I 6s (45s shared). | Monsters nearby speed up, you glow | [oathbound_warhorn.md](oathbound_warhorn.md) |
+| **Dragoon's Wyrmspear** | Spear / melee reach | Netherite Spear | Jabs stack Puncture (+1 each, max 3); charge hits Skewer (-15% armor); Sneak + Jump Leap, attack to Dive for 6 area damage (12s). | Rooted after a Dive | [dragoon_wyrmspear.md](dragoon_wyrmspear.md) |
+
+### PvE-only charms
+
+| Charm | Base Item | Focus | Key Powers | Downside | Document |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Angler's Lure** | Lily Pad | Fishing | Luck II with a rod; 20% chance of a second catch; catches restore hunger. | Slowness I while holding a rod | [charm_anglers_lure.md](charm_anglers_lure.md) |
+| **Harvester's Sheaf** | Wheat | Farming | Nearby crops randomly grow; 25% chance of twins when breeding. | -1 attack damage | [charm_harvesters_sheaf.md](charm_harvesters_sheaf.md) |
+| **Plunderer's Coin** | Gold Nugget | Mob loot | 25% chance a mob drops its loot twice; +50% mob XP (bosses excluded). | Each mob kill costs 1 hunger | [charm_plunderers_coin.md](charm_plunderers_coin.md) |
+| **Slayer's Tally** | Paper | Monster hunting | +2% damage per kill against that kind of mob, up to +30%; never against players. | Death resets the tally | [charm_slayers_tally.md](charm_slayers_tally.md) |
+| **Beastmaster's Whistle** | Lead | Pets | Wolves get Resistance I and +3 damage vs mobs; pets regenerate; sneak to Recall all pets (60s). | Weakness I when a pet dies | [charm_beastmasters_whistle.md](charm_beastmasters_whistle.md) |
+| **Wardlight Lantern** | Soul Lantern | Monster ward | No natural hostile spawns within 16 blocks; undead nearby burn slowly. | Night Vision doesn't work on you | [charm_wardlight_lantern.md](charm_wardlight_lantern.md) |
+
+Core templates for these use spawn eggs the pack doesn't use yet (turtle, parrot, bee, goat, strider, cow, llama, fox, armadillo, camel, sniffer).
+
+---
+
 ## Datapack Technical Integration
 All items follow the same architecture:
 - Checked each tick via `data/kandy/function/holders.mcfunction` using `custom_data~{ability:"..."}` or `{charm:"..."}`.
