@@ -112,7 +112,8 @@
       "minecraft:custom_data": {
         "charm": "MerchantSigil",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_merchant_sigil"
     }
   }
 }

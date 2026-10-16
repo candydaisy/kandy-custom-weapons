@@ -16,7 +16,7 @@
     "id": "minecraft:axolotl_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:chorus_flower",
+      "minecraft:item_model": "kandy:charm_core_chorus",
       "minecraft:custom_name": {
         "text": "Chorus Core",
         "color": "#c77dff",

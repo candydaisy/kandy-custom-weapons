@@ -117,7 +117,8 @@
       "minecraft:custom_data": {
         "charm": "StormcallerCoil",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_stormcaller_coil"
     }
   }
 }

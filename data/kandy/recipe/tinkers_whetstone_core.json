@@ -16,7 +16,7 @@
     "id": "minecraft:sheep_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:anvil",
+      "minecraft:item_model": "kandy:charm_core_tinker",
       "minecraft:custom_name": {
         "text": "Tinker Core",
         "color": "#e76f51",

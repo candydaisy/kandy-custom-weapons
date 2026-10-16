@@ -16,7 +16,7 @@
     "id": "minecraft:frog_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:recovery_compass",
+      "minecraft:item_model": "kandy:charm_core_wayfarer",
       "minecraft:custom_name": {
         "text": "Wayfarer Core",
         "color": "#2a9d8f",

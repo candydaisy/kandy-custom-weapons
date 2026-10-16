@@ -117,7 +117,8 @@
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
         "ability": "Eclipse"
-      }
+      },
+      "minecraft:item_model": "kandy:eclipse"
     }
   }
 }

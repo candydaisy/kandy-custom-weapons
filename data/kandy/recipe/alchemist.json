@@ -127,7 +127,8 @@
       "minecraft:custom_data": {
         "charm": "AlchemistCatalyst",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_alchemist_catalyst"
     }
   }
 }

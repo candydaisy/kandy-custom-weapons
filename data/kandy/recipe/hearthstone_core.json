@@ -16,7 +16,7 @@
     "id": "minecraft:glow_squid_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:campfire",
+      "minecraft:item_model": "kandy:charm_core_hearth",
       "minecraft:custom_name": {
         "text": "Hearth Core",
         "color": "#fb8500",

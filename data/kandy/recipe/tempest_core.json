@@ -16,7 +16,7 @@
     "id": "minecraft:frogspawn",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:heart_of_the_sea",
+      "minecraft:item_model": "kandy:core_tempest",
       "minecraft:custom_name": {
         "text": "Tempest Core",
         "color": "#38b6ff",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first — it keeps its enchantments,",
+          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

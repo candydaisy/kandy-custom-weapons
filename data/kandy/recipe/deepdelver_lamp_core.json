@@ -16,7 +16,7 @@
     "id": "minecraft:salmon_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:lantern",
+      "minecraft:item_model": "kandy:charm_core_deepdelver",
       "minecraft:custom_name": {
         "text": "Delver Core",
         "color": "#3fa7a3",

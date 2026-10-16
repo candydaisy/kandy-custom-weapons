@@ -16,7 +16,7 @@
     "id": "minecraft:vault",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:ender_eye",
+      "minecraft:item_model": "kandy:core_eclipse",
       "minecraft:custom_name": {
         "text": "Eclipse Core",
         "color": "#a855f7",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first — it keeps its enchantments,",
+          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

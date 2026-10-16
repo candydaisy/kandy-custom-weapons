@@ -107,7 +107,8 @@
       "minecraft:custom_data": {
         "charm": "MoonlitPendant",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_moonlit_pendant"
     }
   }
 }

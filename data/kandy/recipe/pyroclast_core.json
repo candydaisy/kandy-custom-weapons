@@ -16,7 +16,7 @@
     "id": "minecraft:structure_block",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:magma_block",
+      "minecraft:item_model": "kandy:core_pyroclast",
       "minecraft:custom_name": {
         "text": "Pyroclast Core",
         "color": "#ff5200",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first — it keeps its enchantments,",
+          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

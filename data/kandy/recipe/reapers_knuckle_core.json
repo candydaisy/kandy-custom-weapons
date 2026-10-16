@@ -16,7 +16,7 @@
     "id": "minecraft:tropical_fish_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:skeleton_skull",
+      "minecraft:item_model": "kandy:charm_core_reaper",
       "minecraft:custom_name": {
         "text": "Grave Core",
         "color": "#6c5b7b",

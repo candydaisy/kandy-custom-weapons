@@ -92,7 +92,8 @@
       "minecraft:custom_data": {
         "charm": "Zephyr",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_zephyr"
     }
   }
 }

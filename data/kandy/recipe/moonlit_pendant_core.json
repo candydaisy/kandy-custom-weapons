@@ -16,7 +16,7 @@
     "id": "minecraft:pig_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:end_crystal",
+      "minecraft:item_model": "kandy:charm_core_moon",
       "minecraft:custom_name": {
         "text": "Moon Core",
         "color": "#5e60ce",

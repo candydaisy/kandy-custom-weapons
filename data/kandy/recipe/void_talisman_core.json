@@ -16,7 +16,7 @@
     "id": "minecraft:command_block_minecart",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:sculk_catalyst",
+      "minecraft:item_model": "kandy:charm_core_void",
       "minecraft:custom_name": {
         "text": "Abyssal Echo Core",
         "color": "#009aa0",

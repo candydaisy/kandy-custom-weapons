@@ -16,7 +16,7 @@
     "id": "minecraft:bat_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "minecraft:emerald_block",
+      "minecraft:item_model": "kandy:charm_core_merchant",
       "minecraft:custom_name": {
         "text": "Guild Core",
         "color": "#2ecc71",

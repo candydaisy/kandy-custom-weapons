@@ -156,7 +156,8 @@
       "minecraft:use_effects": {
         "can_sprint": true,
         "speed_multiplier": 1.0
-      }
+      },
+      "minecraft:item_model": "kandy:chronos"
     }
   }
 }

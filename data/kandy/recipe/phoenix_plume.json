@@ -97,7 +97,8 @@
       "minecraft:custom_data": {
         "charm": "PhoenixPlume",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_phoenix_plume"
     }
   }
 }

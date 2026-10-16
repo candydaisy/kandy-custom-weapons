@@ -103,7 +103,8 @@
       "minecraft:custom_data": {
         "charm": "VoidTalisman",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_void_talisman"
     }
   }
 }

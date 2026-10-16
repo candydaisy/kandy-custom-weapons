@@ -107,7 +107,8 @@
       "minecraft:custom_data": {
         "charm": "PredatorsFang",
         "type": "talisman"
-      }
+      },
+      "minecraft:item_model": "kandy:charm_predators_fang"
     }
   }
 }
