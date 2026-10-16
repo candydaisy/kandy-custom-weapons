@@ -1,12 +1,14 @@
 # Work out once per tick who holds (main hand) or carries (anywhere) each weapon
 tag @a remove kandy.main.bloodpact
 tag @a remove kandy.main.lingering_soul
+tag @a remove kandy.inv.lingering_soul
 tag @a remove kandy.inv.bloodpact
 tag @a remove kandy.main.swiftwind
 tag @a remove kandy.inv.swiftwind
 tag @a remove kandy.main.worldbreaker
 tag @a remove kandy.inv.worldbreaker
 tag @a remove kandy.main.pyroclast
+tag @a remove kandy.inv.pyroclast
 tag @a remove kandy.main.tempest
 tag @a remove kandy.inv.tempest
 tag @a remove kandy.main.frostveil
@@ -31,6 +33,8 @@ execute as @a if items entity @s container.* *[custom_data~{ability:"BloodPact"}
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"BloodPact"}] run tag @s add kandy.inv.bloodpact
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Echo"}] run tag @s add kandy.main.lingering_soul
+execute as @a if items entity @s container.* *[custom_data~{ability:"Echo"}] run tag @s add kandy.inv.lingering_soul
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Echo"}] run tag @s add kandy.inv.lingering_soul
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Momentum"}] run tag @s add kandy.main.swiftwind
 execute as @a if items entity @s container.* *[custom_data~{ability:"Momentum"}] run tag @s add kandy.inv.swiftwind
@@ -41,6 +45,8 @@ execute as @a if items entity @s container.* *[custom_data~{ability:"Gravity"}] 
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Gravity"}] run tag @s add kandy.inv.worldbreaker
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Pyroclast"}] run tag @s add kandy.main.pyroclast
+execute as @a if items entity @s container.* *[custom_data~{ability:"Pyroclast"}] run tag @s add kandy.inv.pyroclast
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Pyroclast"}] run tag @s add kandy.inv.pyroclast
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Tempest"}] run tag @s add kandy.main.tempest
 execute as @a if items entity @s container.* *[custom_data~{ability:"Tempest"}] run tag @s add kandy.inv.tempest
