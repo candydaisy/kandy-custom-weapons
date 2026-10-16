@@ -14,8 +14,8 @@
 - **Lore Text:**
   ```json
   [
-    {"text": "Each kill grants 1 heart of Absorption (stacks to 4 hearts, lasts 30s).", "color": "gray", "italic": false},
-    {"text": "Killing a player grants all 4 at once.", "color": "gray", "italic": false},
+    {"text": "Each kill harvests a soul: +1 max heart (max 4, lasts 45s).", "color": "gray", "italic": false},
+    {"text": "Killing a player harvests all 4 at once.", "color": "gray", "italic": false},
     {"text": "Death clings to you: Undead deal +1 damage to you.", "color": "red", "italic": false}
   ]
   ```
@@ -45,7 +45,7 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Passive: Soul Harvest
 - **Trigger:** Killing any living creature (`player_killed_entity`).
-- **Mechanic:** Adds **1 heart (2 HP) of Absorption**, stacking up to **4 hearts**, refreshed to 30s on each kill. A player kill grants the full 4 hearts. Soul particles drift from the victim to you.
+- **Mechanic:** Adds **+1 max heart (2 max health)** per soul, up to **4 souls**, each filled straight away with a short Regeneration II. Every kill refreshes the timer to **45s**; when it runs out (or you die) all souls fade. A player kill harvests all 4 at once. Soul particles mark each harvest.
 
 ### Downside
 - **Grave Chill:** whenever an undead mob (`#minecraft:undead`) hits you, you take **+1 extra damage**.
@@ -56,5 +56,5 @@ Following the Kandy Custom Weapons two-step system:
 
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"ReapersKnuckle"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD while recharging, like the other charms.
-- **Stacks:** an `absorption` amount can't be set directly; track stacks in a score and give `minecraft:absorption 30 <stacks-1>` (Absorption I = 2 hearts, so use a `max_absorption`/`absorption` attribute approach or Absorption levels mapped to stacks).
-- **Downside:** `entity_hurt_player` advancement with `source_entity` in `#minecraft:undead` → `damage @s 1 minecraft:generic`.
+- **Stacks:** souls in `rpr_s`, a 900-tick timer in `rpr_t`; `max_health` modifier `kandy:reapers_soul` (+2 per soul), removed by `reapers_knuckle/expire` on timeout or death (`rpr_death`).
+- **Downside:** `entity_hurt_player` advancement with `source_entity` in `#minecraft:undead` → `damage @s 1 kandy:reapers_knuckle_chill`.

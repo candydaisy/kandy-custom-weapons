@@ -10,13 +10,15 @@
 - **Rarity:** `epic`
 - **Theme:** Void, Space Distortion, Singularity, Shadow Archery, Gravity
 - **Custom Data:** `{ability: "Eclipse"}`
-- **Display Gradient:** Obsidian Black to Cosmic Purple (`#1b0026` → `#390050` → `#6c0ba9` → `#a855f7` → `#d8b4fe`)
+- **Display Gradient:** Cosmic Purple to Pale Lilac (`#7a1fb0` → `#a855f7` → `#d8b4fe`)
 - **Lore Text:**
   ```json
   [
-    {"text": "Arrows leave a trail of cosmic void dust and pierce through all targets.", "color": "gray", "italic": false},
-    {"text": "Full Draw: Fires a Singularity Arrow that pulls enemies into an event horizon.", "color": "gray", "italic": false},
-    {"text": "Sneak while arrow flies: Shadow Swap places you where the arrow strikes.", "color": "gray", "italic": false}
+    {"text": "Arrows pierce up to 3 targets and trail void dust.", "color": "gray", "italic": false},
+    {"text": "Full-draw hits mark targets: Glowing 3s, Darkness 1s.", "color": "gray", "italic": false},
+    {"text": "Full draw: Singularity Arrow pulls enemies in, then implodes (12s).", "color": "light_purple", "italic": false},
+    {"text": "Sneak while your arrow flies: Shadow Warp to it (10s).", "color": "light_purple", "italic": false},
+    {"text": "Shadow Warp costs 2 HP.", "color": "red", "italic": false}
   ]
   ```
 
@@ -25,8 +27,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Eclipse Core** (`minecraft:ender_eye[custom_data={core:"eclipse"}]`)
-- **Unlock Trigger:** Acquiring an **Ender Eye** or **Dragon Breath**
+- **Item Name:** **Eclipse Core** (shown as `minecraft:ender_eye` via `item_model`; the real item is an unobtainable `minecraft:vault` template)
+- **Unlock Trigger:** Getting an **Ender Eye** or **Dragon's Breath**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:ender_eye`
   - **Sides (N, S, E, W):** 4× `minecraft:crying_obsidian`
@@ -41,55 +43,47 @@
 
 ## 3. Weapon Attributes & Stat Profile
 
-- **Draw Speed:** Fast-tuned (or vanilla bow with custom arrow velocity tag).
-- **Arrow Damage Multiplier:** +35% projectile velocity & damage.
-- **Components:**
-  - `unbreakable={}`
-  - `enchantment_glint_override=true`
-  - Built-in `infinity` or custom quiver mechanics.
+- **Arrow Damage:** vanilla bow damage **+15%** (arrow base damage 2.3 instead of 2.0)
+- **Piercing:** every arrow pierces up to **3 targets**
+- **Durability:** Unbreakable (`unbreakable={}`)
+- Keeps bow enchantments (Power, Infinity, Flame...).
 
 ---
 
 ## 4. Skills & Powers
 
-### Passive: Void Piercing & Phase Velocity
-- **Description:** Arrows shot from the Eclipse Longbow are transformed into ethereal void projectiles.
-- **Mechanic:**
-  - Arrows do not stop on impact with mobs; they pierce infinitely through all entities in their flight path.
-  - Arrows leave a heavy particle trail of `portal`, `witch`, and `reverse_portal`.
-  - Passing through an enemy deals **10 void damage** and afflicts them with **Darkness** and **Glow** for 3 seconds.
+### Passive: Void Piercing
+- Arrows pierce up to 3 targets and leave a void-dust trail.
+- **Full-draw hits** give targets **Glowing for 3s** and **Darkness for 1s**.
 
 ### Active Skill 1: Event Horizon (Singularity Arrow)
-- **Trigger:** Fully charging the bow (full draw) and releasing while standing still or aiming down sights.
-- **Cooldown:** 8.0 seconds.
+- **Trigger:** A full-draw (critical) shot while Singularity is ready. Works from either hand.
+- **Cooldown:** 12 seconds.
 - **Mechanic:**
-  - When the arrow strikes a surface or entity, it collapses into an **Event Horizon (Vortex)** lasting 3.5 seconds.
-  - The vortex generates a pulsating sphere of black/purple particles (`entity_effect{color:[0.3, 0.0, 0.5]}` and `dragon_breath`).
-  - Pulls all entities within an 8-block radius violently toward the center point every tick.
-  - Enemies inside take **2 void damage every 0.5 seconds**.
-  - At the end of the 3.5 seconds, the singularity implodes with a deafening void boom (`entity.warden.sonic_boom`), dealing **12 explosion damage** to everything caught at the core.
+  - Where the arrow lands (or the creature it hits), a **2.5s vortex** opens.
+  - It pulls everything within **5 blocks** toward the core: mobs fast, players gently, never the shooter.
+  - Everything inside takes **1 armor-piercing damage every 0.5s**.
+  - At the end it **implodes for 6 damage** at the core.
 
-### Active Skill 2: Shadow Warp (Spatial Swap)
-- **Trigger:** Pressing **Sneak** while any shot arrow is currently in mid-air.
-- **Cooldown:** 4.0 seconds.
+### Active Skill 2: Shadow Warp
+- **Trigger:** **Start** sneaking (holding Sneak doesn't repeat it) while one of your Eclipse arrows is flying, or landed within the last 3 seconds.
+- **Cooldown:** 10 seconds.
 - **Mechanic:**
-  - Instantly teleports the player to the exact coordinates of the arrow in mid-flight or at impact point.
-  - Swaps the player's momentum and leaves a shadow decoy at the departure spot that blinds nearby enemies.
-  - Allows traversing chasms, dodging incoming attacks, or instantly engaging flying targets (such as Phantoms or Withers).
+  - Teleports you to the arrow, only onto a safe spot (feet and head clear, no lava or fire). If the arrow is stuck in a wall, it backs off along the arrow's path.
+  - A shadow decoy at your departure spot gives **Blindness for 1s** to players right next to it.
+  - You get a moment of Slow Falling, and you don't keep your momentum.
+  - No safe spot means it fizzles without spending the cooldown.
+  - The arrow Shadow Warp would pick is highlighted (only you see it).
+
+### Downside: Void Tax
+- Each Shadow Warp costs **2 HP**.
 
 ---
 
-## 5. Technical Implementation Blueprint (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Bow Charge Detection:**
-  - Use scoreboard tracking `minecraft.used:minecraft.bow`.
-  - Read `player_weapon` when firing or track arrow spawn via `minecraft:arrow[custom_data={kandy_eclipse:1b}]`.
-- **Arrow Ticking Marker:**
-  - Spawn an `interaction` or `marker` riding the arrow:
-    `execute at @e[type=arrow,tag=!kandy.processed] run summon marker ~ ~ ~ {Tags:["kandy.eclipse_tracker"]}`
-- **Piercing Logic:**
-  - Use `damage @e[distance=..1.5,type=!#kandy:allies] 10 kandy:void` along the raycast path while retaining arrow flight.
-- **Singularity Gravity Pull:**
-  - When arrow lands (`inGround:1b`), summon a marker tagged `kandy.singularity` with lifetime 70 ticks.
-  - In `singularity/tick.mcfunction`:
-    Execute `facing entity @s` and apply subtle positive motion vector or `tp ^ ^ ^0.25` on non-player hostiles.
+- **Arrow pickup:** each new arrow is checked once (`eclipse/check_arrow`) for `weapon.components."minecraft:custom_data"{ability:"Eclipse"}`, then gets `PierceLevel:2b` and `damage:2.3d`.
+- **Ownership:** arrows store the shooter's `Owner` UUID, compared against the player's UUID (`execute on owner` doesn't resolve arrow owners in 26.3).
+- **Full-draw hits:** `advancement/hit/eclipse.json` (projectile damage ≥ 5, bow in either hand).
+- **Singularity:** a tracker marker follows the arrow and opens a vortex marker when the arrow lands or vanishes; `ecl_life` times it (50 ticks for the vortex).
+- **Scoreboards:** `ecl_cd` (240-tick Singularity cooldown), `ecl_warp` (200-tick Shadow Warp cooldown), `ecl_n` (warpable arrows in range, shown on the boss bar).

@@ -52,7 +52,7 @@ Following the Kandy Custom Weapons two-step system:
 - **Mechanic:** Drops **3 extra XP** at the villager. Limited to once every 5 seconds so mass-trading isn't an XP farm.
 
 ### Downside
-- **Marked Purse:** illagers (`#minecraft:illager` and raid members) within **16 blocks** of you get **Speed I**, refreshed while you're nearby. Raids and woodland mansions get noticeably harder while you carry it.
+- **Marked Purse:** raiders (the vanilla `#minecraft:raiders` tag, which includes ravagers and witches) within **16 blocks** of you get **Speed I**, refreshed while you're nearby. Raids and woodland mansions get noticeably harder while you carry it.
 
 ---
 
@@ -60,6 +60,6 @@ Following the Kandy Custom Weapons two-step system:
 
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"MerchantSigil"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD (`kandy:hud/b/...`) while recharging, like the other charms.
-- **Effects:** `effect give @a[tag=kandy.charm.merchant] minecraft:hero_of_the_village 6 0 true` only when the player doesn't already have a higher level (`minecraft:effects` predicate).
+- **Effects:** `effect give @a[tag=kandy.charm.merchant_sigil] minecraft:hero_of_the_village 6 0 true` only when the player doesn't already have a higher level (`minecraft:effects` predicate).
 - **Haggle:** `villager_trade` advancement reward → `experience add @s 3 points`, gated by a 100-tick cooldown score.
-- **Downside:** `execute at @a[tag=kandy.charm.merchant] run effect give @e[type=#minecraft:illager,distance=..16] minecraft:speed 2 0 true` (also pillagers/ravagers via a `kandy:raiders` entity tag).
+- **Downside:** `execute at @a[tag=kandy.charm.merchant_sigil] run effect give @e[type=#minecraft:raiders,distance=..16] minecraft:speed 3 0`.

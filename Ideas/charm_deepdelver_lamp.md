@@ -49,7 +49,7 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Active: Ore Ping
 - **Trigger:** Sneak without moving for **2 seconds**.
-- **Mechanic:** Every ore block within **6 blocks** (`#minecraft:*_ores`, ancient debris) gets a glowing outline for **5 seconds**, visible only to you, color-coded by ore type (diamond aqua, gold yellow, iron white, redstone red, etc.). Plays a low `block.amethyst_block.resonate` ping. **Cooldown: 30 seconds.**
+- **Mechanic:** Every ore block within **6 blocks** (`#minecraft:*_ores`, ancient debris) gets a glowing outline for **5 seconds**, color-coded by ore type (diamond aqua, gold yellow, iron white, redstone red, etc.). Plays a low `block.amethyst_block.resonate` ping. The outlines are visible to nearby players too. **Cooldown: 30 seconds.**
 
 ### Downside
 - **Lamplight:** while you're below Y 40 and the lamp is lit (Cave Eyes active), you have **Glowing** visible to other players within 32 blocks. Great for mining with friends, bad for hiding from enemies.
@@ -60,5 +60,5 @@ Following the Kandy Custom Weapons two-step system:
 
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"DeepdelverLamp"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD (`kandy:hud/b/...`) while recharging, like the other charms.
-- **Ping scan:** a recursive function over a 13×13×13 cube (2,197 checks) run once per ping, summoning a `block_display` with `Glowing:1b` and a `glow_color_override` on each ore; displays removed after 100 ticks. Only the pinging player sees them if spawned with a team/visibility trick, otherwise accept that nearby players see the outlines too (document whichever is used).
+- **Ping scan:** a recursive function over a 13×13×13 cube (2,197 checks) run once per ping, summoning a `block_display` with `Glowing:1b` and a `glow_color_override` on each ore; displays removed after 100 ticks (`dlv_life`). Nearby players see the outlines too. Ores come from the block tag `kandy:deepdelver_lamp_ores`; cooldown `dlv_cd` = 600 ticks.
 - **Downside:** `effect give @s minecraft:glowing 2 0 true` while Cave Eyes is active.

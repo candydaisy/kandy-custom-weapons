@@ -44,7 +44,7 @@ Following the Kandy Custom Weapons two-step system:
 ## 3. Skills & Powers
 
 ### Passive: Photosynthesis
-- **Trigger:** Standing on **grass, moss, mud, podzol, rooted dirt or leaves** with **sky light 12+** above you.
+- **Trigger:** Standing on **grass, moss, mud, rooted dirt or leaves** with open sky above you (`can_see_sky`).
 - **Mechanic:** Heals **1 HP every 5 seconds** (a short Regeneration pulse) and shows a few `happy_villager` / `spore_blossom_air` particles. Works day or night as long as the sky is open.
 
 ### Passive: Rooted Stance
@@ -60,6 +60,6 @@ Following the Kandy Custom Weapons two-step system:
 
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"VerdantSprig"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD (`kandy:hud/b/...`) while recharging, like the other charms.
-- **Ground check:** a block tag `kandy:verdant_ground` (grass_block, moss_block, mud, podzol, rooted_dirt, #minecraft:leaves) tested with `if block ~ ~-1 ~ #kandy:verdant_ground`.
+- **Ground check:** a block tag `kandy:verdant_sprig_ground` (`#minecraft:grass_blocks`, `#minecraft:moss_blocks`, `#minecraft:mud`, rooted_dirt, `#minecraft:leaves`) tested with `if block ~ ~-1 ~ #kandy:verdant_sprig_ground`.
 - **Sky check:** location predicate `minecraft:location {light:{...}}` won't distinguish sky light; use `can_see_sky` (`minecraft:location` field) for both Photosynthesis and Withering.
 - **Heal:** `effect give @s minecraft:regeneration 3 0 true` every 100 ticks (Regeneration I heals ~1 HP per 2.5s, so a 3s pulse ≈ 1 HP).

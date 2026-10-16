@@ -16,6 +16,7 @@
   [
     {"text": "At night under open sky: Strength I and Night Vision.", "color": "gray", "italic": false},
     {"text": "During a full moon: also Speed I.", "color": "gray", "italic": false},
+    {"text": "Overworld nights: +2 max hearts, even under a roof.", "color": "gray", "italic": false},
     {"text": "By day it weighs on you: Slowness I and -10% attack speed.", "color": "red", "italic": false}
   ]
   ```
@@ -47,6 +48,10 @@ Following the Kandy Custom Weapons two-step system:
 - **Trigger:** Night time (13000-23000) with open sky above you.
 - **Mechanic:** **Strength I** and **Night Vision**. During a **full moon** (moon phase 0), also **Speed I**.
 
+### Passive: Night Vigor
+- **Trigger:** Night time (13000-23000) in the **Overworld**, open sky or not.
+- **Mechanic:** **+4 max health (2 hearts)**. The new hearts start empty, and they vanish at dawn (or when you leave the Overworld), taking any health in them with them.
+
 ### Downside
 - **Daylight Burden:** during the day with open sky above you, **Slowness I** and **-10% attack speed** (attribute `kandy:moon_burden`). Underground or indoors you're unaffected either way.
 
@@ -59,3 +64,4 @@ Following the Kandy Custom Weapons two-step system:
 - **Time:** `minecraft:time_check` predicate with `value:{min:13000,max:23000}` and `period:24000`.
 - **Moon phase:** `(day count) % 8 == 0`; day count from `time query day`.
 - **Sky:** `minecraft:location {can_see_sky:true}`.
+- **Night Vigor:** `max_health` modifier `kandy:moon_vigor` (+4) while the night predicate passes in the Overworld, removed otherwise and in uninstall.

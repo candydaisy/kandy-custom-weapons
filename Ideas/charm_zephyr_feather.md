@@ -14,9 +14,9 @@
 - **Lore Text:**
   ```json
   [
-    {"text": "Carried in inventory: Grants total immunity to Fall Damage.", "color": "gray", "italic": false},
-    {"text": "High Falls (>12 blocks): Triggers a Kinetic Wind Shockwave upon landing.", "color": "gray", "italic": false},
-    {"text": "Sneak while airborne: Slows fall speed to a gentle glide.", "color": "gray", "italic": false}
+    {"text": "Carried anywhere: no fall damage.", "color": "gray", "italic": false},
+    {"text": "Landing from 12+ blocks releases a wind burst (4 damage, knockback).", "color": "gray", "italic": false},
+    {"text": "Sneak while falling to glide down gently.", "color": "gray", "italic": false}
   ]
   ```
 
@@ -24,11 +24,9 @@
 
 ## 2. Crafting & Forging
 
-Following the Kandy Custom Weapons two-step system:
-
 ### Step 1: Crafting the Core
-- **Item Name:** **Zephyr Core** (`minecraft:phantom_membrane[custom_data={core:"zephyr"}]`)
-- **Unlock Trigger:** Collecting a **Phantom Membrane** or **Breeze Rod**
+- **Item Name:** **Zephyr Core** (shown as `minecraft:phantom_membrane` via `item_model`; the real item is an unobtainable `minecraft:test_block` template)
+- **Unlock Trigger:** Getting a **Phantom Membrane** or a **Breeze Rod**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:breeze_rod`
   - **Sides (N, S, E, W):** 4× `minecraft:phantom_membrane`
@@ -44,46 +42,22 @@ Following the Kandy Custom Weapons two-step system:
 ## 3. Skills & Powers
 
 ### Passive: Featherweight (Zero Fall Damage)
-- **Description:** The laws of terminal velocity are softened around the carrier.
-- **Mechanic:**
-  - Carrying this charm anywhere in your inventory (`container.*`) completely eliminates all fall damage.
-  - The player's `FallDistance` tag is continuously dampened or set to `0.0f` before impact.
-  - No armor durability damage is taken from falling.
+- While the charm is anywhere in your inventory or offhand, you take **no fall damage**.
 
-### Passive: Kinetic Shockwave (Impact Burst)
-- **Description:** Stored kinetic potential energy explodes outward when landing from great heights.
-- **Mechanic:**
-  - If the player falls from a height of **12 blocks or greater**, the landing detonates a **Wind Blast** identical to a breeze burst.
-  - All hostile mobs within a **5-block radius** are thrown backwards 6 blocks and dealt **6 kinetic damage**.
-  - Creates a visible expanding ripple of `cloud` and `wind_charge` particles with sound `entity.breeze.wind_burst`.
+### Passive: Kinetic Shockwave
+- **Trigger:** Landing after a real fall of **12+ blocks** (gliding down doesn't count).
+- **Mechanic:** A wind burst hits everything within **5 blocks** (players included) for **4 damage** with vanilla wind-charge knockback, with `gust` / `cloud` particles and `entity.breeze.wind_burst`.
+- **Cooldown:** 3 seconds.
 
-### Active / Utility: Aerial Glide (Glider Mode)
-- **Trigger:** Holding **Sneak** while falling or mid-air.
-- **Mechanic:**
-  - Reduces downward velocity to terminal glide speed (similar to Slow Falling), granting total directional air-control.
-  - Allows players to bridge large gaps, leap from mountains safely, or maneuver smoothly during elytra transitions.
+### Active / Utility: Aerial Glide
+- **Trigger:** Hold **Sneak** while falling.
+- **Mechanic:** Your gravity drops to slow-falling levels. It only works on the way down, so it can't boost jumps.
 
 ---
 
-## 4. Technical Implementation Blueprint (Datapack)
+## 4. Technical Implementation (Datapack)
 
-- **Inventory Detection:**
-  In `data/kandy/function/holders.mcfunction`:
-  ```mcfunction
-  tag @a remove kandy.charm.zephyr
-  execute as @a if items entity @s container.* *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr
-  execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr
-  ```
-- **Damage Negation:**
-  In `data/kandy/function/charms/zephyr_tick.mcfunction`:
-  ```mcfunction
-  # Continuously reset fall distance or detect fall impact
-  execute as @a[tag=kandy.charm.zephyr] run data modify entity @s FallDistance set value 0.0f
-  ```
-- **High Fall Shockwave:**
-  - Track falling ticks via scoreboard objective: `scoreboard objectives add kandy.fall_ticks dummy`
-  - When airborne, increment `kandy.fall_ticks`.
-  - On landing (on ground), if `kandy.fall_ticks >= 20`, execute shockwave:
-    `execute at @s run damage @e[distance=0.1..5,type=!#kandy:friendly_types] 6 kandy:kinetic`
-    `execute at @s run particle wind_charge ~ ~0.2 ~ 1.5 0.2 1.5 0 25`
-    `scoreboard players set @s kandy.fall_ticks 0`
+- **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.zephyr` from `container.*` and `weapon.offhand`.
+- **No fall damage:** `fall_damage_multiplier` modifier `kandy:zephyr` (-100%), dropped as soon as the charm leaves the inventory.
+- **Glide:** `gravity` modifier `kandy:zephyr_glide` (-87.5%) while sneaking and falling.
+- **Shockwave:** fall height is tracked while airborne; on landing from 12+ blocks, `zephyr/shockwave` runs and sets `zeph_cd` (60 ticks).

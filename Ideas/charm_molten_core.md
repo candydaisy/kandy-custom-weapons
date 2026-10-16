@@ -7,17 +7,16 @@
 ## 1. Overview & Identity
 
 - **Item Type:** Passive Charm (Carried in Inventory or Offhand)
-- **Base Item:** `minecraft:magma_cream` (or `minecraft:fire_charge`)
+- **Base Item:** `minecraft:magma_cream`
 - **Rarity:** `rare`
 - **Custom Data:** `{charm: "MoltenCore", type: "talisman"}`
 - **Display Gradient:** Solar Flame Yellow to Magma Red (`#ffe259` → `#ffa751` → `#ff416c` → `#8a0000`)
 - **Lore Text:**
   ```json
   [
-    {"text": "Carried in inventory: Complete immunity to Fire, Magma, and Lava.", "color": "gray", "italic": false},
-    {"text": "Thermal Surge: Swimming in lava grants Speed II & Regeneration I.", "color": "gray", "italic": false},
-    {"text": "Flame Retaliation: Melee attackers are set ablaze for 6 seconds.", "color": "gray", "italic": false},
-    {"text": "Blaze Ward: Burning projectiles disintegrate before hitting you.", "color": "gray", "italic": false}
+    {"text": "Carried: Fire Resistance. In lava: Speed II and slow Regeneration.", "color": "gray", "italic": false},
+    {"text": "Melee attackers burn for 2 damage and catch fire (1s cooldown).", "color": "gray", "italic": false},
+    {"text": "Cinder Ward: fireballs nearby fizzle out, flaming arrows are snuffed.", "color": "gray", "italic": false}
   ]
   ```
 
@@ -26,8 +25,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Ignis Core** (`minecraft:blaze_powder[custom_data={core:"ignis"}]`)
-- **Unlock Trigger:** Entering the **Nether** or collecting **Blaze Rods**
+- **Item Name:** **Ignis Core** (shown as `minecraft:blaze_powder` via `item_model`; the real item is a `minecraft:spawner` template, which can be placed in survival but never drops a usable template)
+- **Unlock Trigger:** Entering the **Nether** or getting a **Blaze Rod**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:blaze_rod`
   - **Sides (N, S, E, W):** 4× `minecraft:magma_block`
@@ -42,46 +41,24 @@
 
 ## 3. Skills & Powers
 
-### Passive: Thermal Immunity & Lava Absorption
-- **Description:** Complete immunity to environmental extreme heat.
-- **Mechanic:**
-  - Grants permanent **Fire Resistance** while held or stored in the inventory.
-  - Stepping on `magma_block` deals 0 damage and does not slow down movement.
-  - Submerging into **Lava** converts danger into power:
-    - Grants **Speed II** and **Regeneration I** for the duration of lava submersion.
-    - Swimming in lava is smooth and buoyant without heavy liquid dragging.
+### Passive: Thermal Immunity
+- **Fire Resistance** while carried, which covers fire, magma blocks and lava.
 
-### Passive: Molten Retaliation (Fire Thorns)
-- **Description:** Stored thermal pressure lashes out when attacked.
-- **Mechanic:**
-  - Any mob or player hitting you with a direct melee strike is set ablaze for **6.0 seconds** and takes **4.0 fire retaliation damage**.
-  - Plays the sizzling audio `block.fire.extinguish` with smoke particles.
+### Passive: Thermal Surge
+- **In lava:** **Speed II** and a slow **Regeneration I** (only reapplied once it runs out, since refreshing it every tick would stop it from ever healing).
 
-### Passive: Cinder Ward (Arrow Incinerator)
-- **Description:** Incinerates incoming fireballs and flaming arrows.
-- **Mechanic:**
-  - Flaming arrows or Ghast fireballs entering within a 3-block radius of the carrier lose momentum, evaporate into smoke particles, and drop harmlessly or disintegrate.
+### Passive: Molten Retaliation
+- **Trigger:** A creature hits you in melee.
+- **Mechanic:** The attacker takes **2 fire damage** and catches fire for 4s. Players can't be set on fire by commands, so they only take the damage.
+- **Cooldown:** 1 second. Another carrier's retaliation doesn't bounce back.
+
+### Passive: Cinder Ward
+- Fireballs within **3 blocks** fizzle out, and flaming arrows are extinguished (not deleted). Your own flaming arrows are left alone.
 
 ---
 
-## 4. Technical Implementation Blueprint (Datapack)
+## 4. Technical Implementation (Datapack)
 
-- **Inventory Tagging:**
-  In `data/kandy/function/holders.mcfunction`:
-  ```mcfunction
-  tag @a remove kandy.charm.molten_core
-  execute as @a if items entity @s container.* *[custom_data~{charm:"MoltenCore"}] run tag @s add kandy.charm.molten_core
-  execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoltenCore"}] run tag @s add kandy.charm.molten_core
-  ```
-- **Passive Ticking (`molten_core_tick.mcfunction`):**
-  ```mcfunction
-  # Permanent Fire Resistance
-  effect give @a[tag=kandy.charm.molten_core] minecraft:fire_resistance 3 0 true
-
-  # Lava Submersion bonus
-  execute as @a[tag=kandy.charm.molten_core] at @s if block ~ ~ ~ minecraft:lava run effect give @s minecraft:speed 3 1 true
-  execute as @a[tag=kandy.charm.molten_core] at @s if block ~ ~ ~ minecraft:lava run effect give @s minecraft:regeneration 3 0 true
-  ```
-- **Retaliation Advancements:**
-  - Trigger `minecraft:entity_hurt_player` with condition that player carries the Molten Core.
-  - Rewards function `kandy:charms/molten_retaliate` that ignites the attacker entity.
+- **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.molten_core` from `container.*` and `weapon.offhand`.
+- **Retaliation:** an `entity_hurt_player` advancement for melee hits → `molten_core/retaliate` on the attacker (`execute on attacker`); damage type `kandy:molten_core_burn` (in `#minecraft:is_fire`); cooldown `molt_cd` (20 ticks).
+- **Regeneration check:** predicate `kandy:molten_core_has_regen`.

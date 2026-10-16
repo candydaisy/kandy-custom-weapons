@@ -6,7 +6,7 @@
 
 ## 1. Overview & Identity
 
-- **Base Item:** `minecraft:golden_sword` (or `minecraft:iron_sword`)
+- **Base Item:** `minecraft:golden_sword`
 - **Rarity:** `epic`
 - **Theme:** Chronomancy, Time Dilation, Stasis, Rewind, Paradox Bleed
 - **Custom Data:** `{ability: "Chronos"}`
@@ -14,10 +14,11 @@
 - **Lore Text:**
   ```json
   [
-    {"text": "Strikes apply Paradox: 25% of all damage dealt is repeated 3 seconds later.", "color": "gray", "italic": false},
-    {"text": "Right-click: Temporal Anchor marks your position and health.", "color": "gray", "italic": false},
-    {"text": "Sneak + Right-click: Rewind time back to your anchor instantly.", "color": "gray", "italic": false},
-    {"text": "Crit hit on immobilized target triggers Chrono Stasis (Time Freeze).", "color": "gray", "italic": false}
+    {"text": "Charged hits leave a Paradox: +1.5 damage per hit (max 3) strikes 3s later.", "color": "gray", "italic": false},
+    {"text": "Right-click: set a Temporal Anchor for 6s.", "color": "gray", "italic": false},
+    {"text": "Sneak + right-click: rewind to it and recover some health (20s cooldown).", "color": "gray", "italic": false},
+    {"text": "Critical hits freeze the target in time (10s per target).", "color": "gold", "italic": false},
+    {"text": "Rewinding leaves you weakened for 3s.", "color": "red", "italic": false}
   ]
   ```
 
@@ -26,8 +27,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Chronos Core** (`minecraft:clock[custom_data={core:"chronos"}]`)
-- **Unlock Trigger:** Crafting a **Clock** or finding **Suspicious Sand**
+- **Item Name:** **Chronos Core** (shown as `minecraft:clock` via `item_model`; the real item is an unobtainable `minecraft:budding_amethyst` template)
+- **Unlock Trigger:** Getting a **Clock** or **Suspicious Sand**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:recovery_compass`
   - **Sides (N, S, E, W):** 4× `minecraft:clock`
@@ -42,54 +43,42 @@
 
 ## 3. Weapon Attributes & Stat Profile
 
-- **Attack Damage:** +7.0
-- **Attack Speed:** 2.0 (Extremely fast, precise flurry attacks)
-- **Movement Speed:** +10% while held in mainhand
+- **Attack Damage:** 6
+- **Attack Speed:** 1.8
+- **Movement Speed:** +5% while held
 - **Durability:** Unbreakable (`unbreakable={}`)
 
 ---
 
 ## 4. Skills & Powers
 
-### Passive: Paradox Wound (Temporal Echo)
-- **Description:** Wounds inflicted by the stiletto do not fully settle in the present.
-- **Mechanic:**
-  - Whenever you damage an entity, an ethereal golden clock icon (`dust{color:[255, 215, 0]}` + tick sound) hovers above them.
-  - Exactly **3.0 seconds later**, the wound rips open again in a temporal paradox, instantly dealing **40% of the total damage taken during those 3 seconds** as true void damage.
-  - Visual: Spawns reverse portal particles snapping into the enemy with `block.amethyst_block.chime`.
+### Passive: Paradox Wound
+- **Trigger:** Fully charged, unblocked hits.
+- **Mechanic:** Each hit adds a Paradox stack (**max 3**). When the target's **3-second** window closes, the wound opens again for **1.5 damage per stack** (up to 4.5), ignoring armor. A golden mark hovers over wounds waiting to reopen.
 
-### Active Skill 1: Temporal Anchor & Rewind (Snapshot)
-- **Trigger:**
-  - **Anchor (Right-click):** Sets an anchor at your current position, recording your health, hunger, and location. Spawns a translucent ghost marker display of the player.
-  - **Rewind (Sneak + Right-click within 6 seconds):**
-    - Instantly teleports the player back to the anchored coordinate.
-    - Restores the player's health to whatever it was when the anchor was set (if health was higher).
-    - Removes negative debuffs accumulated during those seconds.
-    - Leaves behind a temporal shockwave where you teleported from, stunning nearby chasers for 1.5 seconds.
-- **Cooldown:** 15.0 seconds after rewind or expiry.
+### Active Skill 1: Temporal Anchor & Rewind
+- **Anchor (right-click):** marks your spot and health for **6 seconds**, shown as a ghost at the anchor.
+- **Rewind (sneak + right-click while an anchor is up):**
+  - Teleports you back to the anchor, if it's in the same dimension and the spot is still clear. Otherwise the timeline snaps and the cooldown starts anyway.
+  - Recovers some of the health lost since the anchor: Instant Health (4 HP) if you lost 4+, otherwise a short Regeneration II. Player health can't be set directly, so it's an approximation, and hunger isn't restored.
+  - Cleanses Poison, Wither, Slowness, Weakness, Blindness, Darkness, Nausea, Mining Fatigue and Hunger.
+  - A temporal shockwave where you left gives anything within 3 blocks **Slowness IV for 1s**.
+- **Cooldown:** 20 seconds, after a rewind or when the anchor expires. Dying drops the anchor.
 
-### Active Skill 2: Chrono Stasis (Time Freeze)
-- **Trigger:** Landing a critical falling strike.
-- **Cooldown:** 10.0 seconds per target.
-- **Mechanic:**
-  - Suspends the target in time for **2.0 seconds**.
-  - All motion for the entity is halted (`NoAI:1b` or zeroed `Motion:[0.0,0.0,0.0]`).
-  - Projectiles targeting them stop in mid-air around the entity.
-  - Once stasis expires, all stopped momentum and buffered damage instantly resumes at once.
+### Active Skill 2: Chrono Stasis
+- **Trigger:** A critical (falling) hit.
+- **Cooldown:** 10 seconds per target.
+- **Mechanic:** Mobs are **frozen in time for 2 seconds**. Players get a heavy slow (**Slowness V for 1s**) instead.
+
+### Downside: Time Debt
+- Each rewind leaves you with **Weakness I for 3 seconds**.
 
 ---
 
-## 5. Technical Implementation Blueprint (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Temporal Anchor:**
-  - On right-click detection (via carrot on a stick trigger or interaction entity / food component consumption):
-    - Spawn a marker tagged `kandy.chronos_anchor` at player position with data storage:
-      `data modify storage kandy:chronos PlayerPos set from entity @s Pos`
-      `data modify storage kandy:chronos PlayerHealth set from entity @s Health`
-    - Start countdown timer `kandy.anchor_timer` (120 ticks).
-  - On sneak right-click:
-    - Execute `tp @s` to stored coordinates.
-    - Restore health using custom regeneration or `data modify`.
-- **Paradox Damage Buffering:**
-  - Track damage taken on target using `minecraft:entity_hurt_player` or hurt criteria.
-  - Store accumulative damage in a scoreboard objective on the target and release it with `/damage` after a 60-tick countdown.
+- **Right-click:** the stiletto has a `consumable` component that never finishes, so a `using_item` advancement fires every tick it's held in use; only the first tick of a press counts (`chr_use`, `chr_held`).
+- **Anchor:** a `kandy.chr_anchor` marker per player (`chr_id`), with a 120-tick window (`chr_anc`); health is stored in `chr_ahp`.
+- **Paradox:** stacks in `chr_ps`, a 60-tick window in `chr_pt`; damage type `kandy:chronos_paradox` is in `#minecraft:bypasses_armor`.
+- **Stasis:** `chr_st` (40 ticks) on the target and `chr_scd` (200-tick per-target cooldown).
+- **Not implemented from the original idea:** frozen projectiles and buffered damage released when stasis ends.

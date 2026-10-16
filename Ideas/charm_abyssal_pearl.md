@@ -1,4 +1,4 @@
-# Abyssal Pearl (Aquatic Exploration & Depth Immunity Charm)
+# Abyssal Pearl (Aquatic Exploration Charm)
 
 > *"Pulled from the mantle of a submerged oceanic trench. Carries the blessing of the deepest abyssal waters."*
 
@@ -7,17 +7,17 @@
 ## 1. Overview & Identity
 
 - **Item Type:** Passive Charm (Carried in Inventory or Offhand)
-- **Base Item:** `minecraft:heart_of_the_sea` (or `minecraft:nautilus_shell`)
+- **Base Item:** `minecraft:heart_of_the_sea`
 - **Rarity:** `rare`
 - **Custom Data:** `{charm: "AbyssalPearl", type: "talisman"}`
-- **Display Gradient:** Deep Oceanic Teal to Aqua Glow (`#005c97` → `#363795` → `#00b4db` → `#0083b0`)
+- **Display Gradient:** Deep Oceanic Teal to Abyssal Dark (`#005c97` → `#363795` → `#00b4db` → dark gray)
 - **Lore Text:**
   ```json
   [
-    {"text": "Carried in inventory: Endless breath and aquatic mastery.", "color": "gray", "italic": false},
-    {"text": "Aquatic Preset: Permanent Water Breathing, Night Vision, & Dolphin's Grace in water.", "color": "gray", "italic": false},
-    {"text": "Aqua Haste: Break blocks underwater as fast as on dry land.", "color": "gray", "italic": false},
-    {"text": "Depths Ward: Completely prevents drowning and kinetic water damage.", "color": "gray", "italic": false}
+    {"text": "Charm: works anywhere in your inventory.", "color": "gray", "italic": false},
+    {"text": "In water: Water Breathing and Dolphin's Grace; Night Vision while submerged.", "color": "gray", "italic": false},
+    {"text": "Aqua Haste: mine underwater as fast as on land.", "color": "gray", "italic": false},
+    {"text": "Double-tap Jump in water: Bubble Burst dash (5s cooldown).", "color": "gray", "italic": false}
   ]
   ```
 
@@ -26,8 +26,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Trench Core** (`minecraft:conduit[custom_data={core:"trench"}]`)
-- **Unlock Trigger:** Finding a **Shipwreck Treasure** or harvesting **Prismarine**
+- **Item Name:** **Trench Core** (shown as `minecraft:conduit` via `item_model`; the real item is an unobtainable `minecraft:debug_stick` template)
+- **Unlock Trigger:** Looting **Shipwreck treasure** or getting **Prismarine Shards / Crystals**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:conduit`
   - **Sides (N, S, E, W):** 4× `minecraft:nautilus_shell`
@@ -43,47 +43,23 @@
 ## 3. Skills & Powers
 
 ### Passive: Deep Sea Preset
-- **Description:** Submerging in water immediately activates a suite of aquatic buffs.
-- **Preset Effects Granted:**
-  - **Water Breathing:** Infinite air supply (oxygen bubbles never deplete).
-  - **Night Vision (Submerged only):** Crystal-clear visibility in the murkiest oceans or deep trenches.
-  - **Dolphin's Grace:** High-speed swimming propulsion.
-  - **Conduit Power:** Grants increased attack speed and ambient underwater brightness.
+- **In water:** **Water Breathing** and **Dolphin's Grace**.
+- **With your head underwater:** also **Night Vision**.
+- No Conduit Power (left out of the original idea).
 
-### Passive: Ocean Miner (Aqua Haste)
-- **Description:** Water friction on tools is completely canceled.
-- **Mechanic:**
-  - While submerged, the player receives permanent **Haste II**, allowing mining underwater at identical speeds to mining on dry land even without Aqua Affinity or Depth Strider boots.
+### Passive: Aqua Haste
+- While carried, underwater mining runs at land speed, without needing Aqua Affinity.
 
-### Active / Utility: Abyssal Bubble Burst
-- **Trigger:** Double-tap Jump while swimming underwater.
-- **Cooldown:** 3.0 seconds.
-- **Mechanic:**
-  - Emits a sonic jet of pressurized bubbles (`bubble_pop`, `current_down`) launching the player 12 blocks forward.
-  - If bursting out of water into air, launches the player up to 8 blocks skyward (ideal for launching into elytra flight straight out of the ocean).
+### Active / Utility: Bubble Burst
+- **Trigger:** Double-tap **Jump** (two presses within 7 ticks) while in water.
+- **Cooldown:** 5 seconds.
+- **Mechanic:** Dashes up to **8 blocks** where you look, stopping at solid blocks. Bursting out of the water launches you skyward instead (good for opening an elytra), with Slow Falling so you land softly.
 
 ---
 
-## 4. Technical Implementation Blueprint (Datapack)
+## 4. Technical Implementation (Datapack)
 
-- **Inventory Tagging:**
-  In `data/kandy/function/holders.mcfunction`:
-  ```mcfunction
-  tag @a remove kandy.charm.abyssal_pearl
-  execute as @a if items entity @s container.* *[custom_data~{charm:"AbyssalPearl"}] run tag @s add kandy.charm.abyssal_pearl
-  execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AbyssalPearl"}] run tag @s add kandy.charm.abyssal_pearl
-  ```
-- **Water Check & Potion Application:**
-  In `data/kandy/function/charms/abyssal_pearl_tick.mcfunction`:
-  ```mcfunction
-  # Check if player is submerged or in water block
-  execute as @a[tag=kandy.charm.abyssal_pearl] at @s if block ~ ~ ~ minecraft:water run function kandy:charms/abyssal_pearl_apply
-  execute as @a[tag=kandy.charm.abyssal_pearl] at @s if block ~ ~1 ~ minecraft:water run function kandy:charms/abyssal_pearl_apply
-  ```
-- **Apply Function:**
-  ```mcfunction
-  effect give @s minecraft:water_breathing 3 0 true
-  effect give @s minecraft:night_vision 12 0 true
-  effect give @s minecraft:dolphins_grace 3 0 true
-  effect give @s minecraft:haste 3 1 true
-  ```
+- **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.abyssal_pearl` from `container.*` and `weapon.offhand`.
+- **Water check:** predicate `kandy:abyssal_pearl_in_water`.
+- **Aqua Haste:** `submerged_mining_speed` modifier `kandy:pearl_haste` (+0.8, from 0.2 to land speed 1.0).
+- **Bubble Burst:** jump input via predicate `kandy:abyssal_pearl_jump`; cooldown `pearl_cd` (100 ticks).

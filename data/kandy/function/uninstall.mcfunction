@@ -17,6 +17,10 @@ scoreboard objectives remove blood_bleed
 scoreboard objectives remove hp
 scoreboard objectives remove grav_pull
 scoreboard objectives remove grav_hit
+scoreboard objectives remove grav_vtx
+scoreboard objectives remove grav_cd
+scoreboard objectives remove grav_snk
+scoreboard objectives remove grav_prev
 scoreboard objectives remove sneak
 scoreboard objectives remove pyro_heat
 scoreboard objectives remove pyro_idle

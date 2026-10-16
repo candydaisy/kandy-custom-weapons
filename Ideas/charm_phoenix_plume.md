@@ -47,7 +47,7 @@ Following the Kandy Custom Weapons two-step system:
 - **Trigger:** Your health drops to **4 HP (2 hearts) or less** while the charm is carried and Rebirth is ready.
 - **Mechanic:**
   - Instantly grants **Regeneration III for 4s**, **Absorption II for 8s** and **Fire Resistance for 8s**.
-  - A ring of fire bursts out: everything within **4 blocks** (except you) takes **4 fire damage** and mobs are set on fire for 4s.
+  - A ring of fire bursts out: everything within **4 blocks** (except you) takes **4 fire damage** and mobs are set on fire for 4s. It uses vanilla `in_fire` damage, so fire-immune mobs ignore it.
   - Plays `item.totem.use` (pitch 1.4) with `flame`, `lava` and `totem_of_undying` particles.
   - **Cooldown: 5 minutes.** It does not stop a single hit that kills you outright from above 4 HP; it's a comeback tool, not a totem.
 
@@ -62,5 +62,5 @@ Following the Kandy Custom Weapons two-step system:
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"PhoenixPlume"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD (`kandy:hud/b/...`) while recharging, like the other charms.
 - **Trigger:** a `health` scoreboard objective; when it reads `..4` and the cooldown score is 0, run `phoenix/rebirth`.
-- **Ring of fire:** `damage @e[distance=..4,...] 4 kandy:phoenix_flame by <carrier>` plus `data merge entity @s {Fire:80s}` for non-players (players can't be set on fire by command).
+- **Ring of fire:** `damage @e[distance=..4,...] 4 minecraft:in_fire by <carrier>` plus `data merge entity @s {Fire:80s}` for non-players (players can't be set on fire by command).
 - **Ash Body:** `attribute @s minecraft:max_health modifier add kandy:phoenix_ash -4 add_value`, removed by a 1200-tick timer and in uninstall.

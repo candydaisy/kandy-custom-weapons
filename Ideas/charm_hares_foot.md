@@ -48,7 +48,7 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Passive: Hop Burst
 - **Trigger:** Jumping while sprinting.
-- **Mechanic:** **Speed II for 1.5s**. Cooldown **4 seconds**.
+- **Mechanic:** a **+40% speed** burst (like Speed II) for exactly **1.5s**. Cooldown **4 seconds**.
 
 ### Downside
 - **Frail:** **-2 armor** (attribute `kandy:hare_frail`) while carried.
@@ -60,4 +60,5 @@ Following the Kandy Custom Weapons two-step system:
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"HaresFoot"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD while recharging, like the other charms.
 - **Hop Burst:** detect the jump with the `type_specific/player` `input.jump` predicate (as Abyssal Pearl does) while the `is_sprinting` flag is set.
+- **Hop Burst attribute:** `movement_speed` modifier `kandy:hare_burst` (+40%) for 30 ticks (`hare_bt`); cooldown `hare_cd` = 80 ticks.
 - **Attributes:** added when the charm tag appears, removed when it goes away (like Abyssal Pearl's mining modifier).

@@ -8,15 +8,16 @@
 
 - **Base Item:** `minecraft:shield`
 - **Rarity:** `epic`
-- **Theme:** Ocean Depths, Pressure, Perfect Parry, Guard Counter, Tidal Shockwave
+- **Theme:** Ocean Depths, Pressure, Parry, Guard Counter, Tidal Shockwave
 - **Custom Data:** `{ability: "Abyssal"}`
-- **Display Gradient:** Deep Sea Cyan to Abyssal Navy (`#00f2fe` → `#4facfe` → `#0052d4` → `#001f3f`)
+- **Display Gradient:** Deep Sea Cyan to Abyssal Navy (`#00f2fe` → `#4facfe` → `#0052d4` → `#1b3a8a`)
 - **Lore Text:**
   ```json
   [
-    {"text": "Blocking stores kinetic energy as Abyssal Pressure (0–5 charges).", "color": "gray", "italic": false},
-    {"text": "Perfect Parry (block within 0.35s of hit): Negates damage and stuns the attacker.", "color": "gray", "italic": false},
-    {"text": "Crouch-Release Block: Releases a crushing Tidal Surge that sweeps enemies away.", "color": "gray", "italic": false}
+    {"text": "Blocking stores Abyssal Pressure (max 5) and brief Resistance.", "color": "gray", "italic": false},
+    {"text": "Parry: tap Sneak just before a blocked melee hit to stagger the attacker.", "color": "gray", "italic": false},
+    {"text": "Sneak + Jump: Tidal Surge spends all Pressure in a crushing wave.", "color": "aqua", "italic": false},
+    {"text": "Heavy: -10% speed while held. Tidal Surge's recoil slows you.", "color": "red", "italic": false}
   ]
   ```
 
@@ -25,68 +26,63 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Abyssal Core** (`minecraft:prismarine_shard[custom_data={core:"abyssal"}]`)
-- **Unlock Trigger:** Defeating an **Elder Guardian** or mining **Dark Prismarine**
+- **Item Name:** **Abyssal Core** (shown as `minecraft:prismarine_shard` via `item_model`; the real item is an unobtainable `minecraft:farmland` template)
+- **Unlock Trigger:** Killing an **Elder Guardian** or getting **Dark Prismarine**
 - **3x3 Crafting Table Grid:**
-  - **Center:** `minecraft:sponge` (or `minecraft:conduit`)
+  - **Center:** `minecraft:sponge`
   - **Sides (N, S, E, W):** 4× `minecraft:dark_prismarine`
   - **Corners:** 4× `minecraft:prismarine_crystals`
 
 ### Step 2: Forging at the Smithing Table
 - **Template:** `Abyssal Core`
 - **Base Weapon:** `minecraft:shield`
-- **Addition Catalyst:** `minecraft:heart_of_the_sea` (or `minecraft:echo_shard`)
+- **Addition Catalyst:** `minecraft:heart_of_the_sea`
 
 ---
 
 ## 3. Weapon Attributes & Stat Profile
 
-- **Knockback Resistance:** +0.4 (Prevents being knocked back when hit)
-- **Armor Toughness Bonus:** +3
+Works in **either hand**, so it pairs with any weapon:
+- **Knockback Resistance:** +0.25
+- **Armor Toughness:** +2
+- **Movement Speed:** -10% (Heavy)
+- **Axe disable:** axes disable it for half as long as a normal shield
 - **Durability:** Unbreakable (`unbreakable={}`)
-- **Shield Stun Immunity:** Cannot be disabled by axes when performing a Perfect Parry.
 
 ---
 
 ## 4. Skills & Powers
 
-### Passive: Abyssal Pressure Absorption
-- **Description:** Absorbs the force of blocked strikes.
-- **Mechanic:**
-  - Blocking any melee or projectile attack adds **+1 Charge of Abyssal Pressure** (up to 5 charges max).
-  - Charges are displayed above the hotbar with sea bubble icons.
-  - Each charge passively increases the wielder's **Resistance** level by 1 for 4 seconds after blocking.
+### Passive: Abyssal Pressure
+- Every blocked hit stores **+1 Pressure** (max 5). Pressure fades **10 seconds** after your last block.
+- Blocking gives **Resistance I for 3s**, or **Resistance II** at 4+ Pressure.
+- Pressure is shown on the boss bar HUD.
 
-### Active Skill 1: Perfect Parry & Riposte
-- **Trigger:** Raising the shield within **0.35 seconds (7 ticks)** before an incoming attack lands.
-- **Mechanic:**
-  - Completely nullifies the incoming attack damage and prevents shield cooldown (even against Axes!).
-  - Flashes a sharp oceanic burst of `splash` and `elder_guardian` curse ring particles.
-  - The attacking enemy is deflected, receiving **Heavy Stagger** (cannot attack or move for 1.8 seconds).
-  - Plays the resounding metallic bell chime `block.anvil.land` pitched high.
-  - Instantly grants the player **3 full Abyssal Pressure charges**.
+### Active Skill 1: Parry
+- **Trigger:** Tap **Sneak** just before a blocked melee hit lands. The tap opens a **0.8s** window; a tap that doesn't parry locks new windows for 1s, so spamming doesn't work.
+- **Cooldown:** 4 seconds.
+- **Mechanic:** The attacker is staggered with **Slowness IV + Weakness II for 2s**, and you gain **+3 Pressure** in total.
+- A datapack can't detect raising a shield, so this replaces the original "raise within 0.35s" timing. It staggers rather than fully stunning, and doesn't re-enable a disabled shield.
 
 ### Active Skill 2: Tidal Surge (Guard Counter)
-- **Trigger:** Releasing block while crouching with at least 1 Abyssal Pressure charge.
+- **Trigger:** Press **Jump while sneaking** with at least 1 Pressure.
+- **Cooldown:** 8 seconds.
 - **Mechanic:**
-  - Thrusts the shield forward, unleashing a massive concussive **Tidal Wave** in a 120-degree cone spanning 8 blocks forward.
-  - Each stored charge increases the wave's damage and knockback:
-    - **1–2 Charges:** Deals 6 drowned damage, knocks targets back 4 blocks.
-    - **3–4 Charges:** Deals 12 drowned damage, knocks targets back 8 blocks into walls (causing impact damage).
-    - **5 Charges (Max Depth Crush):** Deals **20 crushing damage**, launches enemies 6 blocks into the air, and inflicts `Mining Fatigue III` and `Slowness IV` for 6 seconds as ocean pressure crushes them.
-  - Floods the path with torrential water particles (`splash`, `bubble_pop`, `current_down`).
+  - Spends all Pressure in a **~90° wave reaching 7 blocks** ahead.
+  - Damage by Pressure: **1–2: 4**, **3–4: 7**, **5: 10**.
+  - Everything hit gets **Slowness II and Mining Fatigue II for 4s**. Mobs are shoved along the wave; players get the damage knockback and a brief Levitation.
+
+### Downside: Heavy
+- **-10% movement speed** while held in either hand.
+- Tidal Surge's recoil gives you **Slowness II for 2s**.
 
 ---
 
-## 5. Technical Implementation Blueprint (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Parry Detection:**
-  - Track `minecraft.used:minecraft.shield` in combination with `player_hurt_entity` / `entity_hurt_player` advancements.
-  - When shield is raised, start a tick timer `kandy.parry_window`. If hurt while `kandy.parry_window <= 7`, count as Perfect Parry.
-- **Tidal Surge Raycast / Cone:**
-  - On releasing sneak+block with charges:
-    - Execute `function kandy:abyssal/wave` expanding in fan angles `^ ^ ^` up to 8 blocks.
-    - Play `playsound entity.player.splash ambient @a ~ ~ ~ 2 0.8`.
-    - Apply custom damage and motion vectors to affected entities.
-- **Cooldown & Reset:**
-  - Resets charges to 0 and triggers shield cooldown animation if desired.
+- **Blocks:** an `entity_hurt_player` advancement on blocked damage stores Pressure (`bulw_chg`, fade timer `bulw_decay` = 200 ticks).
+- **Parry:** a rising edge of Sneak sets `bulw_brace` (16 ticks); a whiffed window sets `bulw_lock` (20 ticks). A blocked melee hit inside the window runs `abyssal/parry` on the attacker (found with `execute on attacker`).
+- **Tidal Surge:** Sneak + Jump input (`bulw_snk`, `bulw_jmp`) with Pressure ≥ 1; `bulw_scd` = 160 ticks; damage type `kandy:abyssal_surge`.
+- **Cooldowns:** `bulw_pcd` (80-tick Parry), `bulw_scd` (Tidal Surge).
+- **Axe disable:** the `blocks_attacks` component sets `disable_cooldown_scale:0.5f`.
+- **Attributes:** separate mainhand and offhand modifiers (`kandy:bulwark_*_main` / `_off`) so it works in either hand.

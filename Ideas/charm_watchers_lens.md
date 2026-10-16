@@ -44,7 +44,7 @@ Following the Kandy Custom Weapons two-step system:
 ## 3. Skills & Powers
 
 ### Passive: Hunter's Sense
-- **Mechanic:** Hostile mobs within **16 blocks** whose current target is **you** get **Glowing for 1s**, refreshed while they keep targeting you. Creepers that are about to explode within 8 blocks also play a warning click only you hear.
+- **Mechanic:** Any mob within **16 blocks** whose current attack target is **you** (angry wolves and golems too) gets **Glowing for 1s**, checked twice a second. A creeper targeting you within **5 blocks** also plays a warning click only you hear (a creeper's fuse state can't be read).
 - Only mobs, never players, so it doesn't work as a free wallhack in PvP.
 
 ### Active: Mark
@@ -60,5 +60,5 @@ Following the Kandy Custom Weapons two-step system:
 
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"WatchersLens"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD (`kandy:hud/b/...`) while recharging, like the other charms.
-- **Hunter's Sense:** `execute as @e[type=#kandy:hostile,distance=..16] on target if entity @s[tag=kandy.charm.watcher] ...` (verify `on target` resolves mob targets in 26.3; `on owner` didn't for projectiles).
-- **Mark:** detect spyglass use with `minecraft.used:minecraft.spyglass` or a `using_item` advancement; count ticks scoped; raycast from the eyes in 0.5-block steps to the first creature and give it Glowing.
+- **Hunter's Sense:** mobs within 16 blocks run `execute on target` and check for the carrier tagged `kandy.wat_self`.
+- **Mark:** a `using_item` advancement sets `wat_use` every tick the lens is scoped; after 1s, a raycast from the eyes in 0.5-block steps (up to 48 blocks, stopping at solid blocks) gives the first creature Glowing. Cooldown `wat_cd` = 400 ticks.

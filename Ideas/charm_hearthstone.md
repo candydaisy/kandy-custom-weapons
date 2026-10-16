@@ -28,7 +28,7 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Step 1: Crafting the Core
 - **Item Name:** **Hearth Core** (shown as `minecraft:campfire` via `item_model`; the real item is an unobtainable template, like the other cores)
-- **Unlock Trigger:** Cooking any food in a **Furnace, Smoker or Campfire**
+- **Unlock Trigger:** Getting any **cooked food**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:campfire`
   - **Sides (N, S, E, W):** 4× `minecraft:coal_block`
@@ -44,15 +44,15 @@ Following the Kandy Custom Weapons two-step system:
 ## 3. Skills & Powers
 
 ### Passive: Hearty Meals
-- **Trigger:** Finishing any food (`consume_item` with `#minecraft:food`-style check).
+- **Trigger:** Finishing any food (checked against a tag of vanilla foods).
 - **Mechanic:** **Saturation I for 2 seconds** (about +2 food points and saturation on top of the meal).
 
 ### Passive: Hearthside
 - **Trigger:** Within 4 blocks of a **lit** campfire, soul campfire, furnace, blast furnace or smoker.
-- **Mechanic:** **Regeneration I** while you stay there.
+- **Mechanic:** **Regeneration I** while you stay there, topped up only once it runs out (about 1 HP every 3-4s).
 
 ### Downside
-- **Quick Hunger:** a small constant exhaustion drain (Hunger effect pulses) equal to about **20% faster** hunger loss while carried.
+- **Quick Hunger:** a short **Hunger IV** pulse every 20 seconds, about **20% faster** hunger loss while carried.
 
 ---
 
@@ -61,5 +61,5 @@ Following the Kandy Custom Weapons two-step system:
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"Hearthstone"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD while recharging, like the other charms.
 - **Meals:** `consume_item` advancement (any item with the `food` component) → `effect give @s minecraft:saturation 2 0 true`.
-- **Hearthside:** check a 9×9×9 area cheaply with `execute if block` on nearby positions every 20 ticks, or require the block within 2 blocks (smaller scan) for performance; `lit=true` block state.
-- **Downside:** `effect give @s minecraft:hunger 1 1 true` once every 10 seconds.
+- **Hearthside:** once a second, `hearthstone/scan` checks nearby positions (within 4 blocks, 2 up or down, nearest first) for `#kandy:hearthstone_hearths[lit=true]` and tags the player `kandy.hth_warm`.
+- **Downside:** `effect give @a[tag=kandy.charm.hearthstone] minecraft:hunger 1 3 true` once every 400 ticks.

@@ -7,17 +7,17 @@
 ## 1. Overview & Identity
 
 - **Item Type:** Passive Charm / Emergency Lifesaver (Carried in Inventory or Offhand)
-- **Base Item:** `minecraft:echo_shard` (or `minecraft:ender_pearl`)
+- **Base Item:** `minecraft:echo_shard`
 - **Rarity:** `epic`
 - **Custom Data:** `{charm: "VoidTalisman", type: "talisman"}`
-- **Display Gradient:** Deep Void Purple to Sculk Cyan (`#0a001a` → `#2d004d` → `#005b60` → `#00b894`)
+- **Display Gradient:** Void Purple to Sculk Cyan (`#8a4fe0` → `#00d8a8`)
 - **Lore Text:**
   ```json
   [
-    {"text": "Carried in inventory: Falling into the Void instantly teleports you to safety.", "color": "gray", "italic": false},
-    {"text": "End Ward: Endermen become docile and will never aggro on direct gaze.", "color": "gray", "italic": false},
-    {"text": "Shadow Cloak: Crouching in low light (< light level 6) makes you Invisible.", "color": "gray", "italic": false},
-    {"text": "Void Rescue Cooldown: 60 seconds.", "color": "gray", "italic": false}
+    {"text": "Charm: works from anywhere in your inventory.", "color": "gray", "italic": false},
+    {"text": "Void Rescue: falling into the void returns you to safe ground (120s cooldown).", "color": "gray", "italic": false},
+    {"text": "Shadow Cloak: sneak in low light for 2s to turn Invisible.", "color": "gray", "italic": false},
+    {"text": "Standing up, attacking or taking damage breaks the cloak.", "color": "gray", "italic": false}
   ]
   ```
 
@@ -26,8 +26,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Abyssal Echo Core** (`minecraft:sculk_catalyst[custom_data={core:"abyssal_echo"}]`)
-- **Unlock Trigger:** Visiting **The End** or looting an **Ancient City**
+- **Item Name:** **Abyssal Echo Core** (shown as `minecraft:sculk_catalyst` via `item_model`; the real item is an unobtainable `minecraft:command_block_minecart` template)
+- **Unlock Trigger:** Entering **the End** or looting an **Ancient City** chest
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:sculk_catalyst`
   - **Sides (N, S, E, W):** 4× `minecraft:echo_shard`
@@ -36,60 +36,33 @@
 ### Step 2: Forging at the Smithing Table
 - **Template:** `Abyssal Echo Core`
 - **Base Item:** `minecraft:echo_shard`
-- **Addition Catalyst:** `minecraft:chorus_fruit` (or `minecraft:shulker_shell`)
+- **Addition Catalyst:** `minecraft:chorus_fruit`
 
 ---
 
 ## 3. Skills & Powers
 
-### Passive: Void Rescue (Chasm Lifesaver)
-- **Description:** Protects the player from dying in the void (The End or bottom of the Overworld).
-- **Cooldown:** 60.0 seconds.
+### Passive: Void Rescue
+- **Trigger:** Falling below **Y -70 in the Overworld**, **Y -6 in the Nether** or **Y -10 in the End**.
+- **Cooldown:** 120 seconds (keeps ticking even if the talisman is put away).
 - **Mechanic:**
-  - If the carrier falls below **Y = -40 in The End** or **Y = -60 in the Overworld**, the talisman activates instantly.
-  - Suspends all downward velocity and plays `entity.warden.sonic_charge`.
-  - Teleports the player to the nearest solid ground block directly above or at the island surface (up to Y = 70).
-  - Grants **Slow Falling** (5 seconds) and **Regeneration II** (6 seconds) to guarantee safe footing.
-  - Spawns a helix of `reverse_portal` and `sculk_soul` particles.
+  - Returns you to the **last safe spot you stood on** in this dimension, if it's still clear. Otherwise it finds the nearest surface around you (the End falls back to the main island).
+  - Grants **Slow Falling (5s)** and **Regeneration I (5s)**, with a sculk/portal helix and `entity.warden.sonic_charge`.
+  - If nothing safe is found, you float up with Levitation and Slow Falling and it tries again in 5s.
 
-### Passive: Gaze of the End (Enderman Pacification)
-- **Description:** Endermen sense the void frequency within the talisman.
-- **Mechanic:**
-  - Staring directly at Endermen will never cause them to aggro or teleport attack.
-  - You can walk safely among Endermen in the End dimension without wearing a carved pumpkin.
+### Passive: Shadow Cloak
+- **Trigger:** Hold **Sneak** in low light (light level 5 or lower) for **2 seconds**.
+- **Mechanic:** **Invisibility** for as long as you keep sneaking in the dark. Standing up ends it; attacking or getting hurt breaks it and blocks re-cloaking for 5s. Only the cloak's own Invisibility is cleared, never a potion's.
 
-### Passive: Shadow Cloak (Stealth Mode)
-- **Description:** Blends the carrier into darkness.
-- **Mechanic:**
-  - Crouching (Sneaking) in dark areas with a block light level of **5 or lower** grants **Invisibility** and dampens player footstep sounds.
-  - Standing up, sprinting, or attacking instantly breaks the cloak.
+### Left out
+- **End Ward** (enderman pacification) couldn't be done reliably in a datapack.
 
 ---
 
-## 4. Technical Implementation Blueprint (Datapack)
+## 4. Technical Implementation (Datapack)
 
-- **Inventory Tagging:**
-  In `data/kandy/function/holders.mcfunction`:
-  ```mcfunction
-  tag @a remove kandy.charm.void_talisman
-  execute as @a if items entity @s container.* *[custom_data~{charm:"VoidTalisman"}] run tag @s add kandy.charm.void_talisman
-  execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VoidTalisman"}] run tag @s add kandy.charm.void_talisman
-  ```
-- **Void Detection Logic (`void_talisman_tick.mcfunction`):**
-  ```mcfunction
-  # Check End dimension void threshold
-  execute as @a[tag=kandy.charm.void_talisman,scores={kandy.void_cd=0}] in minecraft:the_end if entity @s[y=-40,distance=..20] run function kandy:charms/void_rescue
-
-  # Check Overworld void threshold
-  execute as @a[tag=kandy.charm.void_talisman,scores={kandy.void_cd=0}] in minecraft:overworld if entity @s[y=-60,distance=..20] run function kandy:charms/void_rescue
-  ```
-- **Rescue Function (`void_rescue.mcfunction`):**
-  ```mcfunction
-  scoreboard players set @s kandy.void_cd 1200
-  # Search solid block upward using spreadplayers or raycast
-  execute at @s run spreadplayers ~ ~ 0 10 false @s
-  effect give @s minecraft:slow_falling 5 0 true
-  effect give @s minecraft:regeneration 6 1 true
-  playsound entity.enderman.teleport player @s ~ ~ ~ 2 1
-  particle portal ~ ~1 ~ 1 1 1 0.1 50
-  ```
+- **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.void_talisman` from `container.*` and `weapon.offhand`.
+- **Predicates:** `kandy:void_talisman_in_void` (per-dimension thresholds), `kandy:void_talisman_dark` (light ≤ 5), `kandy:void_talisman_on_ground`.
+- **Safe footing:** `void_talisman/save_ground` remembers the last clear spot each tick you're on the ground.
+- **Surface search:** `spreadplayers` lands on the highest safe block (no lava or fire); the Nether needs a ceiling under the bedrock roof.
+- **Scoreboards:** `void_cd` (2400 ticks), `void_cloak` (sneak-in-dark timer, 40 ticks), `void_cloak_cd` (100 ticks after a break).

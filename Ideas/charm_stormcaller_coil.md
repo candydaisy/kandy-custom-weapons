@@ -50,7 +50,7 @@ Following the Kandy Custom Weapons two-step system:
 - Shown on the boss bar HUD while carried.
 
 ### Passive: Storm Rider
-- **Mechanic:** While it's raining or thundering where you stand (`can_see_sky` + weather), you have **Speed I**.
+- **Mechanic:** While it's raining or thundering where you stand (`can_see_sky` + weather), you have **Speed I**. Weather is global in a datapack, so this also passes in deserts and cold biomes while it rains elsewhere.
 
 ### Downside
 - **Lightning Rod:** during a **thunderstorm** with open sky above you, every 30 seconds there's a **20% chance** a bolt finds you: **3 lightning damage**, visual bolt only (no fire, no mob conversion). Indoors or underground you're safe.

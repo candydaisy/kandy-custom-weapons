@@ -28,7 +28,7 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Step 1: Crafting the Core
 - **Item Name:** **Tinker Core** (shown as `minecraft:anvil` via `item_model`; the real item is an unobtainable template, like the other cores)
-- **Unlock Trigger:** Using an **Anvil** or **Grindstone**
+- **Unlock Trigger:** Getting an **Anvil** or **Grindstone**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:anvil`
   - **Sides (N, S, E, W):** 4× `minecraft:iron_ingot`

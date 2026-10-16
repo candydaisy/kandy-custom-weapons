@@ -14,9 +14,10 @@
 - **Lore Text:**
   ```json
   [
-    {"text": "Attacking builds Heat (0–100%). Higher heat ignites your swings.", "color": "gray", "italic": false},
-    {"text": "At 100% Heat: Enter Overdrive — attacks ignite ground into Molten Lava Fissures.", "color": "gray", "italic": false},
-    {"text": "Jump + Attack: Magma Slam causes an eruptive shockwave in front of you.", "color": "gray", "italic": false}
+    {"text": "Hits build Heat (0–100%) and burn for +1 fire damage, +2 at 50%+.", "color": "gray", "italic": false},
+    {"text": "At 100%: Overdrive — Speed, and every swing erupts.", "color": "gray", "italic": false},
+    {"text": "Sneak + jump-attack: Magma Fissure tears the ground ahead.", "color": "gold", "italic": false},
+    {"text": "Overdrive ends in Overheat: slowed, no Fire Resistance for 4s.", "color": "red", "italic": false}
   ]
   ```
 
@@ -25,8 +26,8 @@
 ## 2. Crafting & Forging
 
 ### Step 1: Crafting the Core
-- **Item Name:** **Pyroclast Core** (`minecraft:magma_block[custom_data={core:"pyroclast"}]`)
-- **Unlock Trigger:** Obtaining a **Lava Bucket** in the Nether or killing a **Magma Cube**
+- **Item Name:** **Pyroclast Core** (shown as `minecraft:magma_block` via `item_model`; the real item is an unobtainable `minecraft:structure_block` template, so a plain magma block can't forge it)
+- **Unlock Trigger:** Getting a **Lava Bucket** in the Nether or killing a **Magma Cube**
 - **3x3 Crafting Table Grid:**
   - **Center:** `minecraft:respawn_anchor`
   - **Sides (N, S, E, W):** 4× `minecraft:magma_cream`
@@ -35,16 +36,16 @@
 ### Step 2: Forging at the Smithing Table
 - **Template:** `Pyroclast Core`
 - **Base Weapon:** `minecraft:netherite_axe`
-- **Addition Catalyst:** `minecraft:fire_charge` (or `minecraft:lava_bucket`)
+- **Addition Catalyst:** `minecraft:fire_charge`
 
 ---
 
 ## 3. Weapon Attributes & Stat Profile
 
-- **Attack Damage:** +11 (Heavy single-target damage)
-- **Attack Speed:** 0.9 (Heavy, deliberate blows)
-- **Shield Disabling:** Disables shields for 6 seconds on hit (heavy axe trait)
-- **Passive Fire Resistance:** Holding this weapon grants immunity to fire and lava damage while drawn.
+- **Attack Damage:** 10
+- **Attack Speed:** 0.9
+- **Shield Disabling:** disables shields for 6 seconds on hit
+- **Fire Resistance:** while held (paused during Overheat)
 - **Durability:** Unbreakable (`unbreakable={}`)
 
 ---
@@ -52,40 +53,29 @@
 ## 4. Skills & Powers
 
 ### Passive: Heat Gauge & Overdrive
-- **Description:** Landing hits feeds the cleaver thermal energy, tracked via a **Heat Meter (0–100%)**.
+- **Trigger:** Fully charged, unblocked hits.
 - **Mechanic:**
-  - **+20% Heat** per melee hit. Heat decays by 5% every second if not hitting enemies.
-  - **Below 50% Heat:** Regular fiery strikes dealing +2 bonus fire damage and setting targets ablaze for 4 seconds.
-  - **Above 50% Heat:** Weapon begins smoking heavily with `flame` and `lava` droplets; +4 bonus fire damage.
-  - **At 100% Heat (Overdrive - lasts 8 seconds):**
-    - The blade turns molten white.
-    - Grants the wielder **Strength I** and **Speed I**.
-    - Cleaves in a 180° sweep hitting all enemies in front, leaving burning floor fire (`block.fire`).
-    - Every hit triggers a mini-explosion dealing **6 blast damage** without destroying terrain.
+  - Each hit adds **+10% Heat**. Heat never cools down on its own; it's only spent by Overdrive or Magma Fissure.
+  - Hits burn for **+1 fire damage**, or **+2 at 50%+ Heat**.
+  - **At 100% Heat: Overdrive for 6 seconds.** You get **Speed I**, swings cleave everything in front of you, hits deal **+3 fire damage**, and every victim **erupts for 4 damage** around it and sets the floor alight.
 
 ### Active Skill: Magma Fissure (Ground Eruption)
-- **Trigger:** Jump-Attack or Sprint-Attack while holding Sneak.
-- **Cooldown:** 6.0 seconds (consumes 50% Heat if available for double damage).
+- **Trigger:** A charged attack while **sneaking and in the air** (sneak + jump-attack; sneaking cancels sprinting, so sprint-attacks don't count).
+- **Cooldown:** 10 seconds.
 - **Mechanic:**
-  - The wielder drives the heavy cleaver into the bedrock, tearing open a linear **Magma Fissure** 10 blocks forward in the facing direction.
-  - Erupts jagged columns of `lava` particles, `flame`, and `campfire_cosy_smoke`.
-  - Any entity standing over the fissure is launched into the air, dealt **12 fire/physical damage**, and inflicted with `Melt Armor` (reduces armor rating by 20% for 5 seconds).
-  - Sound: `entity.generic.explode` followed by sizzling `block.lava.extinguish`.
+  - Tears a **10-block** fissure along the ground ahead, following the terrain one block up or down per step and stopping at walls.
+  - Everything over it takes **8 damage**, is launched, and gets **Melt Armor** (-20% armor for 5s).
+  - Spends **50% Heat** (if you have that much) for **double damage (16)**. During Overdrive it always doubles for free.
+
+### Downside: Overheat
+- When Overdrive ends: **Slowness I** and **Mining Fatigue** for **4 seconds**, and the cleaver's Fire Resistance stops for that time.
 
 ---
 
-## 5. Technical Implementation Blueprint (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Heat Meter Tracking:**
-  - Objective: `scoreboard objectives add kandy.heat dummy`
-  - Displayed on actionbar when holding weapon:
-    `title @s actionbar [{"text":"HEAT: ","color":"gold"},{"score":{"name":"@s","objective":"kandy.heat"},"color":"red"},{"text":"%","color":"dark_red"}]`
-- **Linear Fissure Raycast:**
-  - Function `kandy:pyroclast/fissure_step`:
-    Uses `execute positioned ^ ^ ^1` for 10 iterations.
-    At each step:
-    - Spawns lava/flame particles.
-    - Checks ground block and plays `particle block magma_block ~ ~ ~`.
-    - Damages `@e[dx=1,dy=2,dz=1,type=!#kandy:friendly_types] 12 kandy:magma`.
-- **Custom Damage Type:**
-  - `kandy:magma` with fire death message `"was incinerated by Pyroclast Cleaver"`.
+- **Hits:** `advancement/hit/pyroclast.json` → `pyroclast/hit`; the pack's own bonus damage counts as a hit too, so hits made while one is being resolved are ignored.
+- **Same-tick damage:** custom damage type `kandy:magma` is in `#minecraft:bypasses_cooldown` (so it lands on the same tick as the hit) and `#minecraft:is_fire`. Death messages use vanilla "burned to a crisp" text.
+- **Scoreboards:** `pyro_heat` (0–100), `pyro_od` (120-tick Overdrive), `pyro_oh` (80-tick Overheat), `pyro_cd` (200-tick Fissure cooldown), `pyro_melt` (100-tick Melt Armor).
+- **Melt Armor:** `armor` modifier `kandy:melt` (-20%), removed when `pyro_melt` runs out and in uninstall.
+- **Molten blade:** shown with particles; a custom texture would need a resource pack.

@@ -15,7 +15,7 @@
   ```json
   [
     {"text": "Projectiles that hit you reflect 30% of their damage back at the shooter.", "color": "gray", "italic": false},
-    {"text": "Every 15s, the next arrow that would hit you is deflected outright.", "color": "gray", "italic": false},
+    {"text": "Every 15s, the next projectile hit on you is negated.", "color": "gray", "italic": false},
     {"text": "Brittle: melee hits against you deal +1 damage.", "color": "red", "italic": false}
   ]
   ```
@@ -45,10 +45,10 @@ Following the Kandy Custom Weapons two-step system:
 
 ### Passive: Reflection
 - **Trigger:** Being hit by a projectile (arrow, trident, fireball...).
-- **Mechanic:** The shooter takes **30% of the damage you took** as magic damage. Works on mobs (skeletons) and players.
+- **Mechanic:** The shooter takes **30% of the damage you took** as magic damage, credited to you. Works on mobs (skeletons) and players, but never reflects your own projectiles.
 
 ### Passive: Glancing Facet
-- **Mechanic:** Every **15 seconds** the charm is primed; the next projectile that hits you deals **no damage** (instant heal-back of the damage taken) with a glassy chime. Shown on the boss bar while recharging.
+- **Mechanic:** Every **15 seconds** the charm is primed; the next projectile that hits you is **healed straight back** (Instant Health I/II/III for 4/8/16 HP, matched to the damage taken) with a glassy chime. Shown on the boss bar while recharging.
 
 ### Downside
 - **Brittle:** melee hits against you deal **+1 extra damage**.
@@ -60,5 +60,5 @@ Following the Kandy Custom Weapons two-step system:
 - **Inventory Detection:** `holders.mcfunction` tags carriers `kandy.charm.<key>` from `container.*` and `weapon.offhand` using `custom_data~{charm:"PrismMirror"}`.
 - **Cooldowns:** shown on the per-skill boss bar HUD while recharging, like the other charms.
 - **Detection:** `entity_hurt_player` with `damage.type` tag `#minecraft:is_projectile`, reading `damage.taken`; the shooter via `execute on attacker` (that worked for the Bulwark's parry; `on owner` does not work for projectiles).
-- **Reflect amount:** the advancement can't pass the number, so read the player's health before/after (like Decay Dart's health tracking) or use tiered advancements (taken 1-3, 4-6, 7+).
-- **Downside:** `entity_hurt_player` with `is_projectile:false` and a direct entity → `damage @s 1 minecraft:generic`.
+- **Reflect amount:** the advancement can't pass the number, so each carrier's health (in tenths) is remembered at the start of the tick and the hit is measured from it.
+- **Downside:** `entity_hurt_player` with `is_projectile:false` and a direct entity → `damage @s 1 kandy:prism_mirror_brittle`.
