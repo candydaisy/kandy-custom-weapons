@@ -32,3 +32,5 @@ function kandy:abyssal_pearl/tick
 function kandy:molten_core/tick
 function kandy:void_talisman/tick
 function kandy:alchemist/tick
+
+function kandy:hud/tick

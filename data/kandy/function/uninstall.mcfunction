@@ -1,4 +1,5 @@
 # Run this, then disable the pack with /datapack disable
+function kandy:hud/uninstall
 execute as @a run attribute @s minecraft:attack_speed modifier remove kandy:momentum
 execute as @a run attribute @s minecraft:entity_interaction_range modifier remove kandy:momentum
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

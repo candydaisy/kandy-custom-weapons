@@ -34,6 +34,8 @@ Weapon abilities only trigger on fully charged hits that aren't blocked by a shi
 
 ## Weapons
 
+Holding a weapon shows its meter and cooldowns in a boss bar at the top of your screen (only you see it); it hides when you put the weapon away. The Abyssal Bulwark shows it from either hand.
+
 | Weapon | Command | Ability |
 | --- | --- | --- |
 | **Swiftwind** (diamond sword) | `kandy:swiftwind/give` | 9 attack damage and +1 reach. Sprinting builds Momentum (0–1000). 250+: Speed while carried. 500+: another +1 reach while held. 750+: +0.3 attack speed while held. Momentum slowly drains when you stop. **Downside:** Taking a hit drains 250 Momentum. |

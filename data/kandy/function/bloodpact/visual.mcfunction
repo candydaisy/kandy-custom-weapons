@@ -1,5 +1,2 @@
 execute as @a[tag=kandy.main.bloodpact] at @s run particle minecraft:block_crumble{block_state:{id:redstone_block}} ~ ~1 ~ 0.5 1.0 0.5 0.05 4 normal
-execute as @a[tag=kandy.main.bloodpact,scores={hp=11..}] run title @s actionbar [{"text":"✦ Pact Whisper ✦ ","color":"dark_gray","italic":true},{"text":"HP ","color":"gray"},{"score":{"name":"@s","objective":"hp"},"color":"red"},{"text":" — A small price… for now","color":"gray","italic":true}]
-execute as @a[tag=kandy.main.bloodpact,scores={hp=7..10}] run title @s actionbar [{"text":"✦ Blood Debt Rising ✦ ","color":"red","bold":true},{"text":"HP ","color":"dark_red"},{"score":{"name":"@s","objective":"hp"},"color":"red"},{"text":" — The cost deepens","color":"red","italic":true}]
-execute as @a[tag=kandy.main.bloodpact,scores={hp=..6}] run title @s actionbar [{"text":"✦ FINAL OFFERING ✦ ","color":"black","bold":true},{"text":"HP ","color":"dark_red"},{"score":{"name":"@s","objective":"hp"},"color":"red"},{"text":" — The blade demands EVERYTHING","color":"dark_red","bold":true}]
 execute as @a[tag=kandy.inv.bloodpact,scores={hp=..12}] at @s run particle minecraft:damage_indicator ~ ~1 ~ 0.5 0.5 0.5 0.1 1
