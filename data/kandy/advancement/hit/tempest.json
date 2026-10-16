@@ -22,7 +22,16 @@
           },
           "blocked": false,
           "type": {
-            "is_direct": true
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
+              }
+            ]
           }
         }
       }

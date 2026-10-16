@@ -5,9 +5,16 @@
       "conditions": {
         "damage": {
           "type": {
-            "is_direct": true,
             "source_entity": {},
             "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
+              },
               {
                 "id": "#minecraft:is_projectile",
                 "expected": false

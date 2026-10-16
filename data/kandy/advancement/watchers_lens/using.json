@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass",
+          "predicates": {
+            "minecraft:custom_data": "{charm:\"WatchersLens\"}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:watchers_lens/using"
+  }
+}

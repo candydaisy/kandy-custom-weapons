@@ -1,0 +1,1 @@
+give @s minecraft:glow_squid_spawn_egg[item_model="minecraft:campfire",custom_name={text:"Hearth Core",color:"#fb8500",italic:false},lore=[{text:"Smithing Table: Core + Charcoal + Baked Potato",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"Hearthstone"}]

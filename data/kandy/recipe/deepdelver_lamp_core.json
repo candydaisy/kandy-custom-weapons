@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kandy_cores",
+  "pattern": [
+    "CSC",
+    "SXS",
+    "CSC"
+  ],
+  "key": {
+    "X": "minecraft:lantern",
+    "S": "minecraft:glow_ink_sac",
+    "C": "minecraft:raw_iron"
+  },
+  "result": {
+    "id": "minecraft:salmon_spawn_egg",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:lantern",
+      "minecraft:custom_name": {
+        "text": "Delver Core",
+        "color": "#3fa7a3",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Smithing Table: Core + Glowstone Dust + Amethyst Shard",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "kandy_core": "DeepdelverLamp"
+      }
+    }
+  }
+}

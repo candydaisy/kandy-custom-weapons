@@ -1,0 +1,123 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:cod_spawn_egg",
+  "base": "minecraft:copper_ingot",
+  "addition": "minecraft:glowstone_dust",
+  "result": {
+    "id": "minecraft:copper_ingot",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "S",
+          "italic": false,
+          "color": "#f4a261"
+        },
+        {
+          "text": "t",
+          "italic": false,
+          "color": "#f1985e"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#ef8e5b"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#ec8357"
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "color": "#ea7954"
+        },
+        {
+          "text": "c",
+          "italic": false,
+          "color": "#e76f51"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#c88171"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#a99391"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#8aa5b0"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#6bb7d0"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#4cc9f0"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#4ab4f0"
+        },
+        {
+          "text": "C",
+          "italic": false,
+          "color": "#489fef"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#478bef"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#4576ee"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#4361ee"
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:lore": [
+        {
+          "text": "Sprinting builds Static (0-100%). At 100%, your next charged hit discharges:",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "+4 armor-piercing lightning damage and Slowness II for 1s.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Rain and thunder grant Speed I.",
+          "color": "aqua",
+          "italic": false
+        },
+        {
+          "text": "In a thunderstorm, the sky sometimes answers: you get struck for 3.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "charm": "StormcallerCoil",
+        "type": "talisman"
+      }
+    }
+  }
+}

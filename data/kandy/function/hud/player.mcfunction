@@ -14,3 +14,15 @@ function kandy:hud/w/berserker with storage kandy:hud
 function kandy:hud/w/abyssal_pearl with storage kandy:hud
 function kandy:hud/w/void_talisman with storage kandy:hud
 function kandy:hud/w/alchemist with storage kandy:hud
+function kandy:hud/w/deepdelver_lamp with storage kandy:hud
+function kandy:hud/w/enderbrace with storage kandy:hud
+function kandy:hud/w/hares_foot with storage kandy:hud
+function kandy:hud/w/merchant_sigil with storage kandy:hud
+function kandy:hud/w/phoenix_plume with storage kandy:hud
+function kandy:hud/w/prism_mirror with storage kandy:hud
+function kandy:hud/w/reapers_knuckle with storage kandy:hud
+function kandy:hud/w/stormcaller_coil with storage kandy:hud
+function kandy:hud/w/tinkers_whetstone with storage kandy:hud
+function kandy:hud/w/verdant_sprig with storage kandy:hud
+function kandy:hud/w/watchers_lens with storage kandy:hud
+function kandy:hud/w/wayfarers_compass with storage kandy:hud

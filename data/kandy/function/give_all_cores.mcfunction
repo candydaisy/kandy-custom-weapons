@@ -1,0 +1,34 @@
+# Give yourself every Kandy core (for testing the smithing recipes)
+function kandy:swiftwind/give_core
+function kandy:lingering_soul/give_core
+function kandy:bloodpact/give_core
+function kandy:worldbreaker/give_core
+function kandy:pyroclast/give_core
+function kandy:tempest/give_core
+function kandy:frostveil/give_core
+function kandy:eclipse/give_core
+function kandy:chronos/give_core
+function kandy:abyssal/give_core
+function kandy:zephyr/give_core
+function kandy:berserker/give_core
+function kandy:abyssal_pearl/give_core
+function kandy:molten_core/give_core
+function kandy:void_talisman/give_core
+function kandy:alchemist/give_core
+function kandy:phoenix_plume/give_core
+function kandy:merchant_sigil/give_core
+function kandy:watchers_lens/give_core
+function kandy:verdant_sprig/give_core
+function kandy:stormcaller_coil/give_core
+function kandy:deepdelver_lamp/give_core
+function kandy:reapers_knuckle/give_core
+function kandy:hares_foot/give_core
+function kandy:hearthstone/give_core
+function kandy:wayfarers_compass/give_core
+function kandy:prism_mirror/give_core
+function kandy:predators_fang/give_core
+function kandy:rimeheart/give_core
+function kandy:moonlit_pendant/give_core
+function kandy:tinkers_whetstone/give_core
+function kandy:enderbrace/give_core
+tellraw @s {"text":"Kandy: gave every core.","color":"light_purple"}

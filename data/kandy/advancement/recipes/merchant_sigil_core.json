@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "traded": {
+      "trigger": "minecraft:villager_trade"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:merchant_sigil_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "traded",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:merchant_sigil_core"
+    ]
+  }
+}

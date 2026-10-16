@@ -26,6 +26,22 @@ tag @a remove kandy.charm.abyssal_pearl
 tag @a remove kandy.charm.molten_core
 tag @a remove kandy.charm.void_talisman
 tag @a remove kandy.charm.alchemist
+tag @a remove kandy.charm.phoenix_plume
+tag @a remove kandy.charm.merchant_sigil
+tag @a remove kandy.charm.watchers_lens
+tag @a remove kandy.charm.verdant_sprig
+tag @a remove kandy.charm.stormcaller_coil
+tag @a remove kandy.charm.deepdelver_lamp
+tag @a remove kandy.charm.reapers_knuckle
+tag @a remove kandy.charm.hares_foot
+tag @a remove kandy.charm.hearthstone
+tag @a remove kandy.charm.wayfarers_compass
+tag @a remove kandy.charm.prism_mirror
+tag @a remove kandy.charm.predators_fang
+tag @a remove kandy.charm.rimeheart
+tag @a remove kandy.charm.moonlit_pendant
+tag @a remove kandy.charm.tinkers_whetstone
+tag @a remove kandy.charm.enderbrace
 tag @a remove kandy.immune
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"BloodPact"}] run tag @s add kandy.main.bloodpact
@@ -84,6 +100,39 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"VoidTalisman"
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VoidTalisman"}] run tag @s add kandy.charm.void_talisman
 execute as @a if items entity @s container.* *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
+
+execute as @a if items entity @s container.* *[custom_data~{charm:"PhoenixPlume"}] run tag @s add kandy.charm.phoenix_plume
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PhoenixPlume"}] run tag @s add kandy.charm.phoenix_plume
+execute as @a if items entity @s container.* *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
+execute as @a if items entity @s container.* *[custom_data~{charm:"WatchersLens"}] run tag @s add kandy.charm.watchers_lens
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"WatchersLens"}] run tag @s add kandy.charm.watchers_lens
+execute as @a if items entity @s container.* *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.charm.verdant_sprig
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.charm.verdant_sprig
+execute as @a if items entity @s container.* *[custom_data~{charm:"StormcallerCoil"}] run tag @s add kandy.charm.stormcaller_coil
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"StormcallerCoil"}] run tag @s add kandy.charm.stormcaller_coil
+execute as @a if items entity @s container.* *[custom_data~{charm:"DeepdelverLamp"}] run tag @s add kandy.charm.deepdelver_lamp
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"DeepdelverLamp"}] run tag @s add kandy.charm.deepdelver_lamp
+execute as @a if items entity @s container.* *[custom_data~{charm:"ReapersKnuckle"}] run tag @s add kandy.charm.reapers_knuckle
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"ReapersKnuckle"}] run tag @s add kandy.charm.reapers_knuckle
+execute as @a if items entity @s container.* *[custom_data~{charm:"HaresFoot"}] run tag @s add kandy.charm.hares_foot
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"HaresFoot"}] run tag @s add kandy.charm.hares_foot
+execute as @a if items entity @s container.* *[custom_data~{charm:"Hearthstone"}] run tag @s add kandy.charm.hearthstone
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Hearthstone"}] run tag @s add kandy.charm.hearthstone
+execute as @a if items entity @s container.* *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
+execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
+execute as @a if items entity @s container.* *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
+execute as @a if items entity @s container.* *[custom_data~{charm:"Rimeheart"}] run tag @s add kandy.charm.rimeheart
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Rimeheart"}] run tag @s add kandy.charm.rimeheart
+execute as @a if items entity @s container.* *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
+execute as @a if items entity @s container.* *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone
+execute as @a if items entity @s container.* *[custom_data~{charm:"Enderbrace"}] run tag @s add kandy.charm.enderbrace
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Enderbrace"}] run tag @s add kandy.charm.enderbrace
 
 # Creative/spectator players can't be pulled
 tag @a[gamemode=creative] add kandy.immune

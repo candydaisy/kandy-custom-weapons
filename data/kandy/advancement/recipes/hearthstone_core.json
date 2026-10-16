@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_food": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_beef",
+              "minecraft:cooked_porkchop",
+              "minecraft:cooked_chicken",
+              "minecraft:cooked_mutton",
+              "minecraft:cooked_rabbit",
+              "minecraft:cooked_cod",
+              "minecraft:cooked_salmon",
+              "minecraft:baked_potato",
+              "minecraft:dried_kelp"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:hearthstone_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cooked_food",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:hearthstone_core"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+give @s minecraft:frog_spawn_egg[item_model="minecraft:recovery_compass",custom_name={text:"Wayfarer Core",color:"#2a9d8f",italic:false},lore=[{text:"Smithing Table: Core + Compass + Ender Pearl",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"WayfarersCompass"}]

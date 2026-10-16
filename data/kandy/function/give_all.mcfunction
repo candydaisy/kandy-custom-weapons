@@ -1,0 +1,36 @@
+# Give yourself every Kandy weapon and charm (32 items; make room in your inventory first)
+# Weapons
+function kandy:swiftwind/give
+function kandy:lingering_soul/give
+function kandy:bloodpact/give
+function kandy:worldbreaker/give
+function kandy:pyroclast/give
+function kandy:tempest/give
+function kandy:frostveil/give
+function kandy:eclipse/give
+function kandy:chronos/give
+function kandy:abyssal/give
+# Charms
+function kandy:zephyr/give
+function kandy:berserker/give
+function kandy:abyssal_pearl/give
+function kandy:molten_core/give
+function kandy:void_talisman/give
+function kandy:alchemist/give
+function kandy:phoenix_plume/give
+function kandy:merchant_sigil/give
+function kandy:watchers_lens/give
+function kandy:verdant_sprig/give
+function kandy:stormcaller_coil/give
+function kandy:deepdelver_lamp/give
+function kandy:reapers_knuckle/give
+function kandy:hares_foot/give
+function kandy:hearthstone/give
+function kandy:wayfarers_compass/give
+function kandy:prism_mirror/give
+function kandy:predators_fang/give
+function kandy:rimeheart/give
+function kandy:moonlit_pendant/give
+function kandy:tinkers_whetstone/give
+function kandy:enderbrace/give
+tellraw @s {"text":"Kandy: gave every weapon and charm.","color":"light_purple"}

@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:prism_mirror/projectile"
+  }
+}

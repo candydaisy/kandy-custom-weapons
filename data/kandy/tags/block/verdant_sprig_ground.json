@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#minecraft:grass_blocks",
+    "#minecraft:moss_blocks",
+    "#minecraft:mud",
+    "minecraft:rooted_dirt",
+    "#minecraft:leaves"
+  ]
+}

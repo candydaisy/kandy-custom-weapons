@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "used_totem": {
+      "trigger": "minecraft:used_totem",
+      "conditions": {
+        "item": {
+          "items": "minecraft:totem_of_undying"
+        }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:phoenix_plume_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "used_totem",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:phoenix_plume_core"
+    ]
+  }
+}

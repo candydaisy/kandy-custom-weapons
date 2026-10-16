@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "killed_hunter": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": [
+              "minecraft:wolf",
+              "minecraft:fox",
+              "minecraft:ocelot"
+            ]
+          }
+        }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:predators_fang_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_hunter",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:predators_fang_core"
+    ]
+  }
+}

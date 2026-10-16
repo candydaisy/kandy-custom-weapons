@@ -1,0 +1,1 @@
+give @s minecraft:sheep_spawn_egg[item_model="minecraft:anvil",custom_name={text:"Tinker Core",color:"#e76f51",italic:false},lore=[{text:"Smithing Table: Core + Brick + Grindstone",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"TinkersWhetstone"}]

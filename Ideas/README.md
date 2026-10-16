@@ -10,7 +10,7 @@ Each item is crafted through the signature two-step system:
 
 **In the pack:** all six weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
 
-**Everything in this folder is now in the pack.**
+**Everything in this folder is now in the pack**, including the 16 newer charms (untested in game so far).
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -26,6 +26,21 @@ The other five weapons also changed from their docs:
 - **Eclipse Longbow:** arrows pierce up to 3 targets with vanilla damage +15% (not infinite pierce with 10 void damage); Darkness 1s on full-draw hits only; vortex 5 blocks, 2.5s, weak pull on players, 1 per pulse, 6 implosion, 12s cooldown (not 8 / 3.5s / full pull / 2 / 12 / 8s); Shadow Warp has a 10s cooldown (not 4s), only lands on safe spots, and doesn't keep momentum.
 - **Chronos Stiletto:** 6 damage at 1.8 speed (not 7 at 2.0), +5% speed (not +10%); Paradox is 1.5 per stiletto hit, max 3 stacks (not 40% of all damage taken); rewind heals up to about 4 HP (player health can't be set directly), doesn't restore hunger, and has a 20s cooldown (not 15s); stasis on players is a 1s heavy slow, and frozen projectiles / buffered damage aren't implemented.
 - **Abyssal Bulwark:** a datapack can't detect raising or releasing a shield, so Parry is "tap Sneak just before a blocked melee hit" and Tidal Surge is "Sneak + Jump"; Parry staggers with Slowness IV + Weakness II for 2s instead of a full stun, and doesn't re-enable a disabled shield (axes disable it for half as long instead); Resistance is capped at II (the doc's +1 per charge reached Resistance V, full immunity); surge 4/7/10 damage, ~90 degree cone, 7 blocks, 8s cooldown (not 6/12/20, 120 degrees, 8 blocks, no cooldown); knockback resistance +0.25, armor toughness +2 (not +0.4 / +3).
+
+The 16 newer charms mostly follow their docs; the main differences:
+- **Phoenix Plume:** the ring of fire uses vanilla `in_fire` damage, so fire-immune mobs ignore it.
+- **Merchant's Sigil:** trade XP goes straight to you; the downside uses the vanilla `#minecraft:raiders` tag (includes ravagers and witches).
+- **Watcher's Lens:** Hunter's Sense reveals any mob targeting you (angry wolves and golems too, never players); the creeper warning plays for targeting creepers within 5 blocks, since fuse state isn't readable.
+- **Verdant Sprig / Moonlit Pendant / Enderbrace / Stormcaller Coil:** "under open sky" uses `can_see_sky`; weather is global, so rain checks also pass in deserts while it rains elsewhere.
+- **Stormcaller Coil:** the discharge works on any charged hit (dealt 6+), and the storm strike is visual only.
+- **Deepdelver Lamp:** ore outlines are visible to nearby players too.
+- **Reaper's Knuckle:** stacks use Absorption II capped with a `max_absorption` modifier, so other Absorption is capped too while souls are active.
+- **Hare's Foot:** the Speed II burst is a +40% speed attribute for exactly 1.5s.
+- **Hearthstone:** Regeneration near a hearth is topped up only when absent (~1 HP per 3-4s); food is detected with a tag of vanilla foods.
+- **Rimeheart:** freeze damage is healed back after it lands rather than prevented.
+- **Prism Mirror / Predator's Fang:** damage taken is measured from health, and the extra damage is credited to you.
+- **Tinker's Whetstone:** unlocks on getting an anvil or grindstone rather than using one.
+- Cores use spawn eggs of low-value mobs (squid, bat, silverfish, endermite, cod, salmon, tropical fish, pufferfish, glow squid, frog, tadpole, chicken, rabbit, pig, sheep, axolotl) as templates.
 
 The charms also changed from their docs, mostly toned down for PvP or limited by what a datapack can do:
 - **Zephyr:** fall immunity via the fall_damage_multiplier attribute; glide via a gravity modifier while sneaking; shockwave 4 damage (not 6) with vanilla wind-charge knockback, 3s cooldown, hits players too.
@@ -63,6 +78,22 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 | **Molten Core** | Implemented | Magma Cream | Fire & Lava Immunity | **Thermal Immunity:** Complete immunity to Fire, Magma, and Lava.<br>**Thermal Surge:** Lava immersion grants Speed II and Regeneration I.<br>**Molten Retaliation:** Melee attackers are set ablaze for 6 seconds.<br>**Cinder Ward:** Burns incoming projectiles. | [charm_molten_core.md](charm_molten_core.md) |
 | **Void Talisman** | Implemented | Echo Shard | Void Protection & Stealth | **Void Rescue:** Falling into the Void (< Y -40 End, < Y -60 Overworld) teleports you back to surface safety.<br>**End Ward:** Endermen never aggro on gaze.<br>**Shadow Cloak:** Sneaking in low light (<5) grants Invisibility. | [charm_void_talisman.md](charm_void_talisman.md) |
 | **Alchemist Catalyst** | Implemented | Amethyst Shard | Status Debuff Inversion | **Toxin Transmutation:** Inverts harmful debuffs into buffs (Poison → Regen, Wither → Absorption, Slowness → Speed, Weakness → Strength).<br>**Potion Potency:** +50% duration on all beneficial potions. | [charm_alchemist_catalyst.md](charm_alchemist_catalyst.md) |
+| **Phoenix Plume** | Implemented | Blaze Powder | Last Stand & Rebirth | **Rebirth:** at 2 hearts, a healing surge (Regen III, Absorption II, Fire Resistance) and a 4-damage ring of fire (5 min cooldown).<br>**Downside:** -2 max hearts for 60s afterwards. | [charm_phoenix_plume.md](charm_phoenix_plume.md) |
+| **Merchant's Sigil** | Implemented | Emerald | Trade & Fortune | **Guild Favor:** Hero of the Village I and Luck I while carried.<br>**Haggler's Bonus:** +3 XP per villager trade.<br>**Downside:** nearby illagers get Speed I. | [charm_merchant_sigil.md](charm_merchant_sigil.md) |
+| **Watcher's Lens** | Implemented | Spyglass | Awareness & Target Marking | **Hunter's Sense:** mobs targeting you glow.<br>**Mark:** scope a creature for 1s to make it glow for 10s (20s cooldown).<br>**Downside:** marking makes you glow for 3s. | [charm_watchers_lens.md](charm_watchers_lens.md) |
+| **Verdant Sprig** | Implemented | Stick | Nature's Mending & Rooted Stance | **Photosynthesis:** 1 HP every 5s on natural ground under open sky.<br>**Rooted Stance:** sneaking there gives +50% knockback resistance.<br>**Downside:** Hunger I after 60s without sky. | [charm_verdant_sprig.md](charm_verdant_sprig.md) |
+| **Stormcaller Coil** | Implemented | Copper Ingot | Static Charge & Storm Riding | **Static:** sprinting charges your next hit for +4 armor-piercing lightning damage and Slowness II.<br>**Storm Rider:** Speed I in rain.<br>**Downside:** 20% chance per 30s of being struck for 3 in thunderstorms. | [charm_stormcaller_coil.md](charm_stormcaller_coil.md) |
+| **Deepdelver Lamp** | Implemented | Glowstone Dust | Underground Sight & Ore Pinging | **Cave Eyes:** Night Vision below Y 40 in the dark.<br>**Ore Ping:** sneak still 2s to outline ores within 6 blocks for 5s (30s cooldown).<br>**Downside:** you glow to other players while underground. | [charm_deepdelver_lamp.md](charm_deepdelver_lamp.md) |
+| **Reaper's Knuckle** | Implemented | Bone | Soul Harvest | **Soul Harvest:** each kill gives 1 heart of Absorption (max 4); player kills give all 4.<br>**Downside:** undead deal +1 damage to you. | [charm_reapers_knuckle.md](charm_reapers_knuckle.md) |
+| **Hare's Foot** | Implemented | Rabbit's Foot | Fleet-footed Agility | **Fleet Foot:** Jump Boost I and +10% speed.<br>**Hop Burst:** sprint-jumping gives Speed II for 1.5s (4s cooldown).<br>**Downside:** -2 armor. | [charm_hares_foot.md](charm_hares_foot.md) |
+| **Hearthstone** | Implemented | Charcoal | Well-fed Warmth | **Hearty Meals:** eating gives Saturation I for 2s.<br>**Hearthside:** Regeneration I near a lit campfire/furnace/smoker.<br>**Downside:** hunger drains ~20% faster. | [charm_hearthstone.md](charm_hearthstone.md) |
+| **Wayfarer's Compass** | Implemented | Compass | Homeward Recall | **Homeward Recall:** sneak still 3s to teleport to your bed/anchor in the same dimension (10 min cooldown).<br>**Downside:** each recall costs 5 levels. | [charm_wayfarers_compass.md](charm_wayfarers_compass.md) |
+| **Prism Mirror** | Implemented | Nether Quartz | Projectile Reflection | **Reflection:** shooters take 30% of the projectile damage you take.<br>**Glancing Facet:** every 15s, one projectile hit is negated.<br>**Downside:** melee hits deal +1 damage to you. | [charm_prism_mirror.md](charm_prism_mirror.md) |
+| **Predator's Fang** | Implemented | Flint | Execute the Wounded | **Execution:** +3 damage on charged hits vs targets below 30% health.<br>**Bloodscent:** execute kills give Speed I for 3s.<br>**Downside:** -2 max health. | [charm_predators_fang.md](charm_predators_fang.md) |
+| **Rimeheart** | Implemented | Prismarine Crystals | Cold Immunity & Frost Path | **Frostborn:** no freeze damage.<br>**Frost Path:** sneaking on water freezes it beneath you.<br>**Downside:** Slowness I in the Nether. | [charm_rimeheart.md](charm_rimeheart.md) |
+| **Moonlit Pendant** | Implemented | Firework Star | Night Hunter | **Moonlight:** Strength I and Night Vision at night under open sky; Speed I during a full moon.<br>**Downside:** Slowness I and -10% attack speed in daylight. | [charm_moonlit_pendant.md](charm_moonlit_pendant.md) |
+| **Tinker's Whetstone** | Implemented | Brick | Field Repairs | **Field Mending:** +1 durability every 5s on your held item.<br>**Sharpen:** sneak still 2s for +1 attack damage for 20s (60s cooldown).<br>**Downside:** -10% attack speed. | [charm_tinkers_whetstone.md](charm_tinkers_whetstone.md) |
+| **Enderbrace** | Implemented | Popped Chorus Fruit | Short-range Blink | **Blink:** double-tap Sneak to teleport up to 6 blocks where you look (12s cooldown).<br>**Downside:** 1 damage every 2s in water or rain. | [charm_enderbrace.md](charm_enderbrace.md) |
 
 ---
 

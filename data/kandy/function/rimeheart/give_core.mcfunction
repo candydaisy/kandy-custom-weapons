@@ -1,0 +1,1 @@
+give @s minecraft:rabbit_spawn_egg[item_model="minecraft:blue_ice",custom_name={text:"Rime Core",color:"#90e0ef",italic:false},lore=[{text:"Smithing Table: Core + Prismarine Crystals + Powder Snow Bucket",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"Rimeheart"}]

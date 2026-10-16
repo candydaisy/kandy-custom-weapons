@@ -1,0 +1,1 @@
+give @s minecraft:pig_spawn_egg[item_model="minecraft:end_crystal",custom_name={text:"Moon Core",color:"#5e60ce",italic:false},lore=[{text:"Smithing Table: Core + Firework Star + Nether Star",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"MoonlitPendant"}]

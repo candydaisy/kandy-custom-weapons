@@ -16,6 +16,22 @@ function kandy:abyssal_pearl/setup
 function kandy:molten_core/setup
 function kandy:void_talisman/setup
 function kandy:alchemist/setup
+function kandy:phoenix_plume/setup
+function kandy:merchant_sigil/setup
+function kandy:watchers_lens/setup
+function kandy:verdant_sprig/setup
+function kandy:stormcaller_coil/setup
+function kandy:deepdelver_lamp/setup
+function kandy:reapers_knuckle/setup
+function kandy:hares_foot/setup
+function kandy:hearthstone/setup
+function kandy:wayfarers_compass/setup
+function kandy:prism_mirror/setup
+function kandy:predators_fang/setup
+function kandy:rimeheart/setup
+function kandy:moonlit_pendant/setup
+function kandy:tinkers_whetstone/setup
+function kandy:enderbrace/setup
 
 # A hit advancement stays granted if its reward function failed to run, which disables that weapon
 advancement revoke @a only kandy:hit/bloodpact

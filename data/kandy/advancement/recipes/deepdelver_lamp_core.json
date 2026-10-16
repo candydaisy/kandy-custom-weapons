@@ -1,0 +1,50 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cobbled_deepslate"
+          }
+        ]
+      }
+    },
+    "has_deepslate_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:deepslate"
+          }
+        ]
+      }
+    },
+    "mineshaft_chest": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/abandoned_mineshaft"
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:deepdelver_lamp_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate",
+      "has_deepslate_block",
+      "mineshaft_chest",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:deepdelver_lamp_core"
+    ]
+  }
+}

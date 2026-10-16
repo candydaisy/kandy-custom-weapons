@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "ate": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "#kandy:hearthstone_foods"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:hearthstone/ate"
+  }
+}

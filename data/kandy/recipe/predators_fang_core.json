@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kandy_cores",
+  "pattern": [
+    "CSC",
+    "SXS",
+    "CSC"
+  ],
+  "key": {
+    "C": "minecraft:flint",
+    "S": "minecraft:bone",
+    "X": "minecraft:goat_horn"
+  },
+  "result": {
+    "id": "minecraft:chicken_spawn_egg",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:goat_horn",
+      "minecraft:custom_name": {
+        "text": "Fang Core",
+        "color": "#b5179e",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Smithing Table: Core + Flint + Rotten Flesh",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "kandy_core": "PredatorsFang"
+      }
+    }
+  }
+}

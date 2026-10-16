@@ -1,0 +1,103 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:squid_spawn_egg",
+  "base": "minecraft:blaze_powder",
+  "addition": "minecraft:golden_apple",
+  "result": {
+    "id": "minecraft:blaze_powder",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "P",
+          "italic": false,
+          "color": "#ffd166"
+        },
+        {
+          "text": "h",
+          "italic": false,
+          "color": "#ffc454"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#ffb841"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#ffac2e"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#ff9f1c"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#fc9420"
+        },
+        {
+          "text": "x",
+          "italic": false,
+          "color": "#f98824"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#f67d28"
+        },
+        {
+          "text": "P",
+          "italic": false,
+          "color": "#f3722c"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#e65a29"
+        },
+        {
+          "text": "u",
+          "italic": false,
+          "color": "#da4226"
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "color": "#ce2a22"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#c1121f"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Falling to 2 hearts or less triggers Rebirth (5 min cooldown):",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "a healing surge and a ring of fire that scorches nearby foes.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Afterwards your body is ash: -2 max hearts for 60s.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": {
+        "charm": "PhoenixPlume",
+        "type": "talisman"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {},
+            "source_entity": {},
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:prism_mirror/brittle"
+  }
+}

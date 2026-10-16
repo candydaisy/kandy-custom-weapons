@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "traded": {
+      "trigger": "minecraft:villager_trade"
+    }
+  },
+  "rewards": {
+    "function": "kandy:merchant_sigil/haggle"
+  }
+}

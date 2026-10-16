@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lightning_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:lightning_rod"
+          }
+        ]
+      }
+    },
+    "in_thunderstorm": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:weather_check",
+          "thundering": true
+        }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:stormcaller_coil_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lightning_rod",
+      "in_thunderstorm",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:stormcaller_coil_core"
+    ]
+  }
+}

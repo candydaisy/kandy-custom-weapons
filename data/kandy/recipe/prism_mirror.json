@@ -1,0 +1,98 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:tadpole_spawn_egg",
+  "base": "minecraft:quartz",
+  "addition": "minecraft:glass_pane",
+  "result": {
+    "id": "minecraft:quartz",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "P",
+          "italic": false,
+          "color": "#ffffff"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#f7fefe"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#eefdfd"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#e6fcfd"
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "color": "#d9f6f9"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#c6e6ef"
+        },
+        {
+          "text": "M",
+          "italic": false,
+          "color": "#b2d6e6"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#9fc6dc"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#87aec9"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#6f92b1"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#567698"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#3d5a80"
+        }
+      ],
+      "minecraft:rarity": "rare",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:lore": [
+        {
+          "text": "Projectiles that hit you reflect 30% of their damage back at the shooter.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Every 15s, the next projectile hit on you is negated.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Brittle: melee hits against you deal +1 damage.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "charm": "PrismMirror",
+        "type": "talisman"
+      }
+    }
+  }
+}

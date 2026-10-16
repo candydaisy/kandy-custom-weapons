@@ -1,0 +1,82 @@
+# Run as the player, positioned at the respawn block's corner
+# A forced spawn point (/spawnpoint) is an exact spot to stand on
+execute if score @s way_forced matches 1 if function kandy:wayfarers_compass/clear run return run function kandy:wayfarers_compass/arrive
+execute if score @s way_forced matches 1 run return fail
+# Otherwise it must still be a bed or a charged respawn anchor
+execute unless block ~ ~ ~ #minecraft:beds unless block ~ ~ ~ minecraft:respawn_anchor run return fail
+execute if block ~ ~ ~ minecraft:respawn_anchor[charges=0] run return fail
+# Stand up beside it like waking up, nearest spot first, then on top of it
+execute positioned ~-1 ~ ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~ ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~ ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~ ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~ ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~ ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~ ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~ ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~ ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~ ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~ ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~ ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~ ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~ ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~ ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~ ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~ ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~ ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~ ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~ ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~ ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~ ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~ ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~ ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~-1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~-1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~-1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~-1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~-1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~-1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~-1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~-1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~-1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~-1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~-1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~-1 ~ if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~-1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~-1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~-1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-1 ~-1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~-1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~1 ~-1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~-1 ~-1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~-1 ~1 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~-1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~-2 ~-1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~-1 ~-2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~2 ~-1 ~2 if function kandy:wayfarers_compass/stand run return run function kandy:wayfarers_compass/arrive
+execute positioned ~ ~1 ~ if function kandy:wayfarers_compass/clear run return run function kandy:wayfarers_compass/arrive
+return fail

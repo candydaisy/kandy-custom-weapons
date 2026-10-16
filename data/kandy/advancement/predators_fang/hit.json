@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 6.0
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:predators_fang/hit"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "frozen": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_freezing",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:rimeheart/frozen"
+  }
+}

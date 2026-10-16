@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "slept_in_bed": {
+      "trigger": "minecraft:slept_in_bed"
+    },
+    "used_anchor": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "minecraft:respawn_anchor"
+            }
+          }
+        }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:wayfarers_compass_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "slept_in_bed",
+      "used_anchor",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:wayfarers_compass_core"
+    ]
+  }
+}

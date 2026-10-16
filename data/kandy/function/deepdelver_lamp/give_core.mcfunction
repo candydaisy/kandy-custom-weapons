@@ -1,0 +1,1 @@
+give @s minecraft:salmon_spawn_egg[item_model="minecraft:lantern",custom_name={text:"Delver Core",color:"#3fa7a3",italic:false},lore=[{text:"Smithing Table: Core + Glowstone Dust + Amethyst Shard",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"DeepdelverLamp"}]

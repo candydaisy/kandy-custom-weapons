@@ -19,3 +19,17 @@ $bossbar remove kandy:hud_$(rid)_pearl_dash
 $bossbar remove kandy:hud_$(rid)_void_rescue
 $bossbar remove kandy:hud_$(rid)_void_cloak
 $bossbar remove kandy:hud_$(rid)_alch_cleanse
+$bossbar remove kandy:hud_$(rid)_dlv_ping
+$bossbar remove kandy:hud_$(rid)_ebr_blink
+$bossbar remove kandy:hud_$(rid)_hare_hop
+$bossbar remove kandy:hud_$(rid)_mer_haggle
+$bossbar remove kandy:hud_$(rid)_phx_ash
+$bossbar remove kandy:hud_$(rid)_phx_rebirth
+$bossbar remove kandy:hud_$(rid)_prm_facet
+$bossbar remove kandy:hud_$(rid)_rpr_soul
+$bossbar remove kandy:hud_$(rid)_stc_static
+$bossbar remove kandy:hud_$(rid)_tnk_sharp
+$bossbar remove kandy:hud_$(rid)_ver_wither
+$bossbar remove kandy:hud_$(rid)_wat_mark
+$bossbar remove kandy:hud_$(rid)_way_cd
+$bossbar remove kandy:hud_$(rid)_way_charge

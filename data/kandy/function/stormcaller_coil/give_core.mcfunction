@@ -1,0 +1,1 @@
+give @s minecraft:cod_spawn_egg[item_model="minecraft:lightning_rod",custom_name={text:"Storm Core",color:"#4cc9f0",italic:false},lore=[{text:"Smithing Table: Core + Copper Ingot + Glowstone Dust",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"StormcallerCoil"}]

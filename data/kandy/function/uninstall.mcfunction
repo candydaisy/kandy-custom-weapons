@@ -44,5 +44,21 @@ function kandy:abyssal_pearl/uninstall
 function kandy:molten_core/uninstall
 function kandy:void_talisman/uninstall
 function kandy:alchemist/uninstall
+function kandy:phoenix_plume/uninstall
+function kandy:merchant_sigil/uninstall
+function kandy:watchers_lens/uninstall
+function kandy:verdant_sprig/uninstall
+function kandy:stormcaller_coil/uninstall
+function kandy:deepdelver_lamp/uninstall
+function kandy:reapers_knuckle/uninstall
+function kandy:hares_foot/uninstall
+function kandy:hearthstone/uninstall
+function kandy:wayfarers_compass/uninstall
+function kandy:prism_mirror/uninstall
+function kandy:predators_fang/uninstall
+function kandy:rimeheart/uninstall
+function kandy:moonlit_pendant/uninstall
+function kandy:tinkers_whetstone/uninstall
+function kandy:enderbrace/uninstall
 
 tellraw @a "Kandy uninstalled. Now run /datapack disable on this pack."

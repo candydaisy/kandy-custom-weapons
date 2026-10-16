@@ -1,0 +1,1 @@
+give @s minecraft:squid_spawn_egg[item_model="minecraft:fire_charge",custom_name={text:"Phoenix Core",color:"#f3722c",italic:false},lore=[{text:"Smithing Table: Core + Blaze Powder + Golden Apple",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"PhoenixPlume"}]
