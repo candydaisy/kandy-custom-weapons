@@ -1,1 +1,0 @@
-give @s minecraft:bat_spawn_egg[item_model="minecraft:iron_bars",custom_name={text:"Binding Core",color:"#5f27cd",italic:false},lore=[{text:"Smithing Table: Core + Lead + Slime Ball (makes 3)",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"EntanglementBola"}]

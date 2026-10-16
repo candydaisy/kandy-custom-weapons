@@ -2,9 +2,6 @@
   "values": [
     "kandy:echo",
     "kandy:frostveil_shatter",
-    "kandy:chronos_paradox",
-    "kandy:caltrops_puncture",
-    "kandy:decay_dart_pierce",
-    "kandy:decay_dart_rot"
+    "kandy:chronos_paradox"
   ]
 }

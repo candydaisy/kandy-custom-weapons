@@ -1,6 +1,6 @@
-# Custom Weapons, Charms & PvP Utilities (Ideas)
+# Custom Weapons & Charms (Ideas)
 
-This directory contains design documents for custom weapons, passive charms and tactical PvP utilities for the **Kandy Custom Weapons** data pack.
+This directory contains design documents for custom weapons and passive charms for the **Kandy Custom Weapons** data pack.
 
 Each item is crafted through the signature two-step system:
 1. **Core Crafting:** 3×3 crafting table grid with rare materials.
@@ -10,7 +10,7 @@ Each item is crafted through the signature two-step system:
 
 **In the pack:** all six weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all six charms.
 
-**Everything in this folder is now in the pack**, including the six Tactical PvP Utilities. The PvP utilities are **untested in game** so far.
+**Everything in this folder is now in the pack.**
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
 - 10 attack damage (not 11), 0.9 attack speed, 6s shield disable, Fire Resistance while held.
@@ -26,15 +26,6 @@ The other five weapons also changed from their docs:
 - **Eclipse Longbow:** arrows pierce up to 3 targets with vanilla damage +15% (not infinite pierce with 10 void damage); Darkness 1s on full-draw hits only; vortex 5 blocks, 2.5s, weak pull on players, 1 per pulse, 6 implosion, 12s cooldown (not 8 / 3.5s / full pull / 2 / 12 / 8s); Shadow Warp has a 10s cooldown (not 4s), only lands on safe spots, and doesn't keep momentum.
 - **Chronos Stiletto:** 6 damage at 1.8 speed (not 7 at 2.0), +5% speed (not +10%); Paradox is 1.5 per stiletto hit, max 3 stacks (not 40% of all damage taken); rewind heals up to about 4 HP (player health can't be set directly), doesn't restore hunger, and has a 20s cooldown (not 15s); stasis on players is a 1s heavy slow, and frozen projectiles / buffered damage aren't implemented.
 - **Abyssal Bulwark:** a datapack can't detect raising or releasing a shield, so Parry is "tap Sneak just before a blocked melee hit" and Tidal Surge is "Sneak + Jump"; Parry staggers with Slowness IV + Weakness II for 2s instead of a full stun, and doesn't re-enable a disabled shield (axes disable it for half as long instead); Resistance is capped at II (the doc's +1 per charge reached Resistance V, full immunity); surge 4/7/10 damage, ~90 degree cone, 7 blocks, 8s cooldown (not 6/12/20, 120 degrees, 8 blocks, no cooldown); knockback resistance +0.25, armor toughness +2 (not +0.4 / +3).
-
-The PvP utilities also changed from their docs, mostly toned down for PvP or limited by what a datapack can do (there's no team system, so "allies" means only the user):
-- **Shadow Smoke Grenade:** snowball only; 3-block radius for 5s (not 3.5 / 6s); Blindness 1s refreshed inside, no Darkness; can't hide nameplates or hit indicators; 12s item cooldown; 4 per forge.
-- **Entanglement Bola:** thrown as a snowball that looks like a lead (a lead can't be thrown); 1.5s heavy slow + no jumping instead of a 2.5s full root, with 4s re-snare immunity; elytra fliers are grounded with Levitation + Slow Falling; Pearl Lock destroys and refunds pearls for 3s, since items can't be put on cooldown by command; no bow-draw block; 14s cooldown; 3 per forge.
-- **Barbed Caltrops:** a stack of consumable caltrops (4 per forge) instead of a 3-charge pouch; 2 damage (not 3) and 1 HP/s bleed (not 2); 12s fields (not 15s), max 2 per player; -35% speed via an attribute instead of Slowness III; no boot durability loss.
-- **Bloodhound's Whistle:** 20 blocks (not 30), Glowing 5s (not 8s), 30s cooldown (not 25s); re-invisibility blocked for 4s, not permanently; the trail is a 4s straight line only you see; Pack Rush is Speed II on the user only.
-- **Decay Dart:** 3 true damage through shields (not 5); no shield disable (it can't be set by command); Necrosis lasts 4s (not 6s) and works by taking back any health regained; golden apple Absorption isn't halved; totems keep a weakened Regeneration I; 4 per forge; bow/crossbow ammo only.
-- **Repulsor Mine:** the item is a breeze rod that looks like a wind charge (a real wind charge throws on right-click); one vanilla wind burst instead of hurling targets 10 blocks; 5 damage (not 8); 3-block trigger (not 4); no Respawn Anchor trigger; ground only; max 2 per player with a 2-minute lifetime; pickup by sneaking on it; 2 per forge.
-- Utility cores are spawn eggs for low-value mobs (squid, bat, silverfish, endermite, cod, salmon), shown as the doc's item; using one as an egg loses the core.
 
 The charms also changed from their docs, mostly toned down for PvP or limited by what a datapack can do:
 - **Zephyr:** fall immunity via the fall_damage_multiplier attribute; glide via a gravity modifier while sneaking; shockwave 4 damage (not 6) with vanilla wind-charge knockback, 3s cooldown, hits players too.
@@ -75,26 +66,9 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 
 ---
 
-## Tactical PvP Utilities
-
-> **Untested:** these are implemented but haven't been tested in game yet.
-
-Specialized combat utilities engineered to disrupt enemy positioning, counter meta strategies (shields, end crystals, elytra dives, and golden apple healing spam).
-
-| Utility | Status | Base Item | PvP Role | Core Crafting | Key Mechanics & Counterplay | Document |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Shadow Smoke Grenade** | Implemented | Snowball / Potion | Obscurity & Anti-Pearl | Wither Rose + Gunpowder | **Smoke Veil:** 7×7 blind/darkness screen.<br>**Anti-Pearl:** Intercepts & kills passing ender pearls in mid-air.<br>**Cleanse:** Clears glowing effects on allies. | [pvp_smoke_grenade.md](pvp_smoke_grenade.md) |
-| **Entanglement Bola** | Implemented | Lead | Anti-Elytra & Rooting | Iron Bars + Chains | **Ground Root:** Immobility (stops sprinting/jumping) for 2.5s.<br>**Anti-Elytra Grounder:** Instantly forces gliding fliers to land.<br>**Pearl Lock:** Puts enemy ender pearls on 3s cooldown. | [pvp_entanglement_bola.md](pvp_entanglement_bola.md) |
-| **Barbed Caltrops Pouch** | Implemented | Iron Nugget / Dripstone | Area Denial & Anti-Sprint | Pointed Dripstone + Iron Bars | **Hazard Field:** 5×5 ground perimeter lasting 15s.<br>**Puncture:** 3 armor-piercing damage + Slowness III.<br>**Cripple Bleed:** Sprinting while crippled deals 2 bleed damage/sec. | [pvp_caltrops.md](pvp_caltrops.md) |
-| **Bloodhound's Whistle** | Implemented | Goat Horn | Anti-Stealth & Hunting | Sculk Sensor + Amethyst | **Sonar Scan:** Strips Invisibility and applies Glowing for 8s in a 30-block sphere.<br>**Blood Trail:** Directional particle path to lowest-HP runner.<br>**Pack Rush:** Grants allies Speed II. | [pvp_tracking_whistle.md](pvp_tracking_whistle.md) |
-| **Decay Dart** | Implemented | Spectral Arrow | Anti-Heal & Shield Piercing | Fermented Spider Eye + Poison Potato | **Shield Phasing:** Bypasses shields completely with 5 true damage and disables shield for 3s.<br>**Necrosis:** Shuts down all potion, gapple, & saturation healing for 6s.<br>**Totem Diminisher:** Halves totem bonus HP. | [pvp_decay_dart.md](pvp_decay_dart.md) |
-| **Repulsor Mine** | Implemented | Wind Charge / Plate | Anti-Crystal & Kinetic Blast | Crying Obsidian + Breeze Rods | **Anti-Crystal:** Vaporizes placed End Crystals safely.<br>**Kinetic Repulse:** Hurls rushers 10 blocks backward.<br>**Projectile Deflector:** Reflects incoming arrows back at shooters. | [pvp_repulsor_mine.md](pvp_repulsor_mine.md) |
-
----
-
 ## Datapack Technical Integration
 All items follow the same architecture:
-- Checked each tick via `data/kandy/function/holders.mcfunction` using `custom_data~{ability:"..."}`, `{charm:"..."}` or (for PvP utilities) `{utility:"..."}`.
+- Checked each tick via `data/kandy/function/holders.mcfunction` using `custom_data~{ability:"..."}` or `{charm:"..."}`.
 - Supports passive inventory carriers (`kandy.inv.*`) and active hand holders (`kandy.main.*`).
 - Hit abilities fire from a `player_hurt_entity` advancement gated on `damage.dealt` (about 85% of full-charge damage) and `blocked: false`, so only fully charged, unblocked hits count.
 - Extra damage that must land in the same tick as the hit uses a custom damage type in `#minecraft:bypasses_cooldown` (e.g. `kandy:magma`). Damage types only load when the world is opened, not on `/reload`.

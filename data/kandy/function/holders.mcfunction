@@ -17,18 +17,6 @@ tag @a remove kandy.inv.chronos
 tag @a remove kandy.main.abyssal
 tag @a remove kandy.inv.abyssal
 tag @a remove kandy.off.abyssal
-tag @a remove kandy.main.smoke
-tag @a remove kandy.inv.smoke
-tag @a remove kandy.main.bola
-tag @a remove kandy.inv.bola
-tag @a remove kandy.main.caltrops
-tag @a remove kandy.inv.caltrops
-tag @a remove kandy.main.whistle
-tag @a remove kandy.inv.whistle
-tag @a remove kandy.main.decay_dart
-tag @a remove kandy.inv.decay_dart
-tag @a remove kandy.main.repulsor
-tag @a remove kandy.inv.repulsor
 tag @a remove kandy.charm.zephyr
 tag @a remove kandy.charm.berserker
 tag @a remove kandy.charm.abyssal_pearl
@@ -73,26 +61,6 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"
 
 # Shields are usually held in the offhand
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.off.abyssal
-
-# PvP utilities
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"SmokeGrenade"}] run tag @s add kandy.main.smoke
-execute as @a if items entity @s container.* *[custom_data~{utility:"SmokeGrenade"}] run tag @s add kandy.inv.smoke
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"SmokeGrenade"}] run tag @s add kandy.inv.smoke
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"EntanglementBola"}] run tag @s add kandy.main.bola
-execute as @a if items entity @s container.* *[custom_data~{utility:"EntanglementBola"}] run tag @s add kandy.inv.bola
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"EntanglementBola"}] run tag @s add kandy.inv.bola
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"Caltrops"}] run tag @s add kandy.main.caltrops
-execute as @a if items entity @s container.* *[custom_data~{utility:"Caltrops"}] run tag @s add kandy.inv.caltrops
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"Caltrops"}] run tag @s add kandy.inv.caltrops
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"BloodhoundWhistle"}] run tag @s add kandy.main.whistle
-execute as @a if items entity @s container.* *[custom_data~{utility:"BloodhoundWhistle"}] run tag @s add kandy.inv.whistle
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"BloodhoundWhistle"}] run tag @s add kandy.inv.whistle
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"DecayDart"}] run tag @s add kandy.main.decay_dart
-execute as @a if items entity @s container.* *[custom_data~{utility:"DecayDart"}] run tag @s add kandy.inv.decay_dart
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"DecayDart"}] run tag @s add kandy.inv.decay_dart
-execute as @a if items entity @s weapon.mainhand *[custom_data~{utility:"RepulsorMine"}] run tag @s add kandy.main.repulsor
-execute as @a if items entity @s container.* *[custom_data~{utility:"RepulsorMine"}] run tag @s add kandy.inv.repulsor
-execute as @a if items entity @s weapon.offhand *[custom_data~{utility:"RepulsorMine"}] run tag @s add kandy.inv.repulsor
 
 # Charms work from anywhere in the inventory, offhand included
 execute as @a if items entity @s container.* *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr

@@ -1,8 +1,8 @@
 kill @e[type=marker,tag=ecl.tracker]
 kill @e[type=marker,tag=ecl.vortex]
-tag @e[type=arrow] remove ecl.arrow
-tag @e[type=arrow] remove ecl.singular
-tag @e[type=arrow] remove ecl.checked
+tag @e[type=#minecraft:arrows] remove ecl.arrow
+tag @e[type=#minecraft:arrows] remove ecl.singular
+tag @e[type=#minecraft:arrows] remove ecl.checked
 scoreboard objectives remove ecl_cd
 scoreboard objectives remove ecl_warp
 scoreboard objectives remove ecl_sneak

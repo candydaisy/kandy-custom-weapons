@@ -9,12 +9,6 @@ function kandy:frostveil/setup
 function kandy:eclipse/setup
 function kandy:chronos/setup
 function kandy:abyssal/setup
-function kandy:smoke/setup
-function kandy:bola/setup
-function kandy:caltrops/setup
-function kandy:whistle/setup
-function kandy:decay_dart/setup
-function kandy:repulsor/setup
 function kandy:zephyr/setup
 function kandy:berserker/setup
 function kandy:abyssal_pearl/setup

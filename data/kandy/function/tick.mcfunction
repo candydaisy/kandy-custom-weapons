@@ -26,13 +26,6 @@ function kandy:eclipse/tick
 function kandy:chronos/tick
 function kandy:abyssal/tick
 
-function kandy:smoke/tick
-function kandy:bola/tick
-function kandy:caltrops/tick
-function kandy:whistle/tick
-function kandy:decay_dart/tick
-function kandy:repulsor/tick
-
 function kandy:zephyr/tick
 function kandy:berserker/tick
 function kandy:abyssal_pearl/tick
