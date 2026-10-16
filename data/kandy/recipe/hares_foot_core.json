@@ -16,7 +16,7 @@
     "id": "minecraft:pufferfish_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_hares_foot",
+      "minecraft:item_model": "minecraft:rabbit_hide",
       "minecraft:custom_name": {
         "text": "Warren Core",
         "color": "#a7c957",

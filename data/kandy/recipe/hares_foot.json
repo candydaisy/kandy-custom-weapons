@@ -87,8 +87,7 @@
       "minecraft:custom_data": {
         "charm": "HaresFoot",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_hares_foot"
+      }
     }
   }
 }

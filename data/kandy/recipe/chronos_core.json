@@ -16,7 +16,7 @@
     "id": "minecraft:budding_amethyst",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:core_chronos",
+      "minecraft:item_model": "minecraft:clock",
       "minecraft:custom_name": {
         "text": "Chronos Core",
         "color": "#fdcb6e",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
+          "text": "Enchant the weapon first — it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

@@ -174,8 +174,7 @@
         "hidden_components": [
           "minecraft:attribute_modifiers"
         ]
-      },
-      "minecraft:item_model": "kandy:abyssal"
+      }
     }
   }
 }

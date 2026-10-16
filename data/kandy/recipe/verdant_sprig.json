@@ -97,8 +97,7 @@
       "minecraft:custom_data": {
         "charm": "VerdantSprig",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_verdant_sprig"
+      }
     }
   }
 }

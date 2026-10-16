@@ -115,8 +115,7 @@
           "operation": "add_value",
           "slot": "mainhand"
         }
-      ],
-      "minecraft:item_model": "kandy:tempest"
+      ]
     }
   }
 }

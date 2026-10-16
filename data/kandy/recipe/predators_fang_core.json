@@ -16,7 +16,7 @@
     "id": "minecraft:chicken_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_predator",
+      "minecraft:item_model": "minecraft:goat_horn",
       "minecraft:custom_name": {
         "text": "Fang Core",
         "color": "#b5179e",

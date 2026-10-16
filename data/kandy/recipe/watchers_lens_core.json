@@ -16,7 +16,7 @@
     "id": "minecraft:silverfish_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_watcher",
+      "minecraft:item_model": "minecraft:ender_eye",
       "minecraft:custom_name": {
         "text": "Watcher Core",
         "color": "#8e44ad",

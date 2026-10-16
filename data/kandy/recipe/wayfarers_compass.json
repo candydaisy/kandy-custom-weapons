@@ -122,8 +122,7 @@
       "minecraft:custom_data": {
         "charm": "WayfarersCompass",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_wayfarers_compass"
+      }
     }
   }
 }

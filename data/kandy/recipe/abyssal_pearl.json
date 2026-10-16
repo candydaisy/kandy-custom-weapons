@@ -102,8 +102,7 @@
       "minecraft:custom_data": {
         "charm": "AbyssalPearl",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_abyssal_pearl"
+      }
     }
   }
 }

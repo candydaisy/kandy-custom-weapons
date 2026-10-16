@@ -16,7 +16,7 @@
     "id": "minecraft:chain_command_block",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:core_swiftwind",
+      "minecraft:item_model": "minecraft:breeze_rod",
       "minecraft:custom_name": {
         "text": "Swiftwind Core",
         "color": "#18fac5",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
+          "text": "Enchant the weapon first — it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

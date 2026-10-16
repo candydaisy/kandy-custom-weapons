@@ -87,8 +87,7 @@
       "minecraft:custom_data": {
         "charm": "Hearthstone",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_hearthstone"
+      }
     }
   }
 }

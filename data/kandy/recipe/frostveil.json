@@ -159,8 +159,7 @@
           "operation": "add_multiplied_total",
           "slot": "mainhand"
         }
-      ],
-      "minecraft:item_model": "kandy:frostveil"
+      ]
     }
   }
 }

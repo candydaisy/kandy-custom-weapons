@@ -107,8 +107,7 @@
       "minecraft:custom_data": {
         "charm": "Berserker",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_berserker"
+      }
     }
   }
 }

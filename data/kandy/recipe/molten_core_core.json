@@ -16,7 +16,7 @@
     "id": "minecraft:spawner",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_molten",
+      "minecraft:item_model": "minecraft:blaze_powder",
       "minecraft:custom_name": {
         "text": "Ignis Core",
         "color": "#ffa751",

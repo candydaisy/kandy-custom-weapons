@@ -96,12 +96,12 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Hits build Heat (0\u2013100%) and burn for +1 fire damage, +2 at 50%+.",
+          "text": "Hits build Heat (0–100%) and burn for +1 fire damage, +2 at 50%+.",
           "color": "gray",
           "italic": false
         },
         {
-          "text": "At 100%: Overdrive \u2014 Speed, and every swing erupts.",
+          "text": "At 100%: Overdrive — Speed, and every swing erupts.",
           "color": "gray",
           "italic": false
         },
@@ -141,8 +141,7 @@
       ],
       "minecraft:weapon": {
         "disable_blocking_for_seconds": 6.0
-      },
-      "minecraft:item_model": "kandy:pyroclast"
+      }
     }
   }
 }

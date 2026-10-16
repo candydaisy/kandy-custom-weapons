@@ -107,8 +107,7 @@
       "minecraft:custom_data": {
         "charm": "DeepdelverLamp",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_deepdelver_lamp"
+      }
     }
   }
 }

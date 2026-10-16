@@ -16,7 +16,7 @@
     "id": "minecraft:debug_stick",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_abyssal_pearl",
+      "minecraft:item_model": "minecraft:conduit",
       "minecraft:custom_name": {
         "text": "Trench Core",
         "color": "#00b4db",

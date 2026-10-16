@@ -16,7 +16,7 @@
     "id": "minecraft:cod_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_stormcaller",
+      "minecraft:item_model": "minecraft:lightning_rod",
       "minecraft:custom_name": {
         "text": "Storm Core",
         "color": "#4cc9f0",

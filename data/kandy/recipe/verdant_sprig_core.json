@@ -16,7 +16,7 @@
     "id": "minecraft:endermite_spawn_egg",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_verdant",
+      "minecraft:item_model": "minecraft:moss_block",
       "minecraft:custom_name": {
         "text": "Grove Core",
         "color": "#52b788",

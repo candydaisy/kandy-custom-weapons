@@ -92,8 +92,7 @@
       "minecraft:custom_data": {
         "charm": "PrismMirror",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_prism_mirror"
+      }
     }
   }
 }

@@ -16,7 +16,7 @@
     "id": "minecraft:dirt_path",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:core_glacial",
+      "minecraft:item_model": "minecraft:blue_ice",
       "minecraft:custom_name": {
         "text": "Glacial Core",
         "color": "#7bc5eb",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
+          "text": "Enchant the weapon first — it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },

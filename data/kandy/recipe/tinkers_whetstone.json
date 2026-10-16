@@ -122,8 +122,7 @@
       "minecraft:custom_data": {
         "charm": "TinkersWhetstone",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_tinkers_whetstone"
+      }
     }
   }
 }

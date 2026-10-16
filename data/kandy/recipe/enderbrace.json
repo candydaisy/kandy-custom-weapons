@@ -82,8 +82,7 @@
       "minecraft:custom_data": {
         "charm": "Enderbrace",
         "type": "talisman"
-      },
-      "minecraft:item_model": "kandy:charm_enderbrace"
+      }
     }
   }
 }

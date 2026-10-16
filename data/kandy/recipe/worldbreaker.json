@@ -87,8 +87,7 @@
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
         "ability": "Gravity"
-      },
-      "minecraft:item_model": "kandy:worldbreaker"
+      }
     }
   }
 }

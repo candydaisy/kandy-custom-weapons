@@ -16,7 +16,7 @@
     "id": "minecraft:test_instance_block",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:charm_core_berserker",
+      "minecraft:item_model": "minecraft:nether_star",
       "minecraft:custom_name": {
         "text": "Frenzy Core",
         "color": "#e74c3c",

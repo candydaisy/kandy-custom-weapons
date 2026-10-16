@@ -16,7 +16,7 @@
     "id": "minecraft:repeating_command_block",
     "count": 1,
     "components": {
-      "minecraft:item_model": "kandy:core_soul",
+      "minecraft:item_model": "minecraft:echo_shard",
       "minecraft:custom_name": {
         "text": "Soul Core",
         "color": "#d724ff",
@@ -29,7 +29,7 @@
           "italic": false
         },
         {
-          "text": "Enchant the weapon first \u2014 it keeps its enchantments,",
+          "text": "Enchant the weapon first — it keeps its enchantments,",
           "color": "dark_gray",
           "italic": false
         },
