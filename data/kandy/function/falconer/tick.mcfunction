@@ -8,8 +8,10 @@ execute as @a[scores={fl_use=1}] at @s anchored eyes positioned ^ ^ ^ run functi
 scoreboard players set @a[scores={fl_use=0}] fl_ct 0
 scoreboard players set @a fl_use 0
 
-# The lock glows while it lasts
+# The lock glows while it lasts, and holding it costs you: Blindness and Slowness II
 execute as @a[scores={fl_lt=1..}] run function kandy:falconer/lock_glow
+effect give @a[scores={fl_lt=1..}] minecraft:blindness 1 0 true
+effect give @a[scores={fl_lt=1..}] minecraft:slowness 1 1 true
 scoreboard players set @a[scores={fl_lt=1}] fl_lock 0
 scoreboard players remove @a[scores={fl_lt=1..}] fl_lt 1
 

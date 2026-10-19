@@ -96,18 +96,23 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Blow: War Cry. Players within 16 blocks get Strength I and Speed I for 8s.",
+          "text": "Blow: War Cry. You and your team within 16 blocks get Strength III and Speed III for 10s.",
           "color": "gray",
           "italic": false
         },
         {
-          "text": "Sneak + blow: Rally. They're cleansed and get Resistance I for 6s.",
+          "text": "Sneak + blow: Rally. You and your team are cleansed and get Resistance III for 10s.",
           "color": "gold",
           "italic": false
         },
         {
-          "text": "45s cooldown, shared by both calls. Works from either hand.",
+          "text": "90s cooldown, shared by both calls. Works from either hand.",
           "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Team: /trigger kandy_team set <number>. Only your team is helped.",
+          "color": "dark_aqua",
           "italic": false
         },
         {
@@ -122,7 +127,7 @@
       "minecraft:repair_cost": 1000,
       "minecraft:instrument": "minecraft:call_goat_horn",
       "minecraft:use_cooldown": {
-        "seconds": 45.0,
+        "seconds": 90.0,
         "cooldown_group": "kandy:warhorn"
       },
       "minecraft:custom_data": {

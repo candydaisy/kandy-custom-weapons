@@ -1,6 +1,9 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "brewed_potion": {
+      "trigger": "minecraft:brewed_potion"
+    },
     "has_golden_apple": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -16,16 +19,13 @@
       "conditions": {
         "recipes": "kandy:lifebloom_core"
       }
-    },
-    "brewed_potion": {
-      "trigger": "minecraft:brewed_potion"
     }
   },
   "requirements": [
     [
+      "brewed_potion",
       "has_golden_apple",
-      "has_the_recipe",
-      "brewed_potion"
+      "has_the_recipe"
     ]
   ],
   "rewards": {

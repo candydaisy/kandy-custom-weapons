@@ -116,6 +116,11 @@
           "italic": false
         },
         {
+          "text": "While locked on you're Blinded and have Slowness II.",
+          "color": "red",
+          "italic": false
+        },
+        {
           "text": "Locking onto a player makes you glow for 3s.",
           "color": "red",
           "italic": false

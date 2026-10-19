@@ -8,6 +8,5 @@ scoreboard objectives add dg_st dummy
 scoreboard objectives add dg_lev dummy
 scoreboard objectives add dg_dive dummy
 scoreboard objectives add dg_fall dummy
-scoreboard objectives add dg_snk dummy
 scoreboard objectives add dg_jmp dummy
 scoreboard objectives add dg_tmp dummy

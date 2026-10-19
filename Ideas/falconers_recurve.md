@@ -19,6 +19,7 @@
     {"text": "Aim at a creature while drawing for 0.75s to Lock On (it glows).", "color": "gray", "italic": false},
     {"text": "Full-draw arrows curve toward your locked target, for 15% less damage.", "color": "gray", "italic": false},
     {"text": "Sneak + full draw: Falcon Volley, 3 extra homing arrows (14s cooldown).", "color": "gold", "italic": false},
+    {"text": "While locked on you're Blinded and have Slowness II.", "color": "red", "italic": false},
     {"text": "Locking onto a player makes you glow for 3s.", "color": "red", "italic": false}
   ]
   ```
@@ -66,7 +67,8 @@ Where Eclipse Longbow is crowd control (pierce, vortex, repositioning), the Recu
 - **Cooldown:** 14 seconds.
 - **Mechanic:** 3 extra spectral arrows fan out above you and dive at the target over 1s, **3 damage each**. They can't be picked up.
 
-### Downside: Two-way Sight
+### Downside: Tunnel Vision & Two-way Sight
+- While a lock is up (8s, refreshed by each homing shot) you have **Blindness** and **Slowness II**.
 - Locking onto a **player** gives **you** Glowing for 3s, so they know they're being hunted.
 
 ---

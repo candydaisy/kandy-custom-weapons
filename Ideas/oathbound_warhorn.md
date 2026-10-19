@@ -17,9 +17,10 @@
 - **Lore Text:**
   ```json
   [
-    {"text": "Blow: War Cry. Players within 16 blocks get Strength I and Speed I for 8s.", "color": "gray", "italic": false},
-    {"text": "Sneak + blow: Rally. They're cleansed and get Resistance I for 6s.", "color": "gold", "italic": false},
-    {"text": "45s cooldown, shared by both calls. Works from either hand.", "color": "gray", "italic": false},
+    {"text": "Blow: War Cry. You and your team within 16 blocks get Strength III and Speed III for 10s.", "color": "gray", "italic": false},
+    {"text": "Sneak + blow: Rally. You and your team are cleansed and get Resistance III for 10s.", "color": "gold", "italic": false},
+    {"text": "90s cooldown, shared by both calls. Works from either hand.", "color": "gray", "italic": false},
+    {"text": "Team: /trigger kandy_team set <number>. Only your team is helped.", "color": "dark_aqua", "italic": false},
     {"text": "The horn carries: monsters within 24 blocks speed up and you glow for 8s.", "color": "red", "italic": false}
   ]
   ```
@@ -46,21 +47,21 @@
 ## 3. Stat Profile
 
 - No attack stats; it's a support tool you carry next to your weapon.
-- A `use_cooldown` component gives it a visible **45s** cooldown overlay in the hotbar.
+- A `use_cooldown` component gives it a **90s** cooldown overlay in the hotbar.
 
 ---
 
 ## 4. Skills & Powers
 
-**Allies:** every other player in range (a datapack can't read scoreboard teams, so in PvP it buffs enemies too). Pets and golems aren't affected.
+**Allies:** your teammates in range. Players join a team with `/trigger kandy_team set <number>` (same number, same team) and leave with `set -1`; with no team, the horn only affects you.
 
 ### Active Skill 1: War Cry
 - **Trigger:** Blow the horn (right-click).
-- **Mechanic:** Other players within **16 blocks** get **Strength I** and **Speed I** for **8 seconds**. You get them too, but only for **4 seconds**, so the horn is strongest for a group.
+- **Mechanic:** You and teammates within **16 blocks** get **Strength III** and **Speed III** for **10 seconds**. 
 
 ### Active Skill 2: Rally
 - **Trigger:** Blow the horn while **sneaking**.
-- **Mechanic:** Players within **16 blocks** (you included) are cleansed of **Slowness, Weakness, Poison, Mining Fatigue and Darkness**, and get **Resistance I for 6 seconds**. Hostile mobs within 6 blocks of you are knocked back a few blocks. The pack's own weapon drawbacks (Blood Pact, World Breaker, Overheat) are left alone, like the Alchemist Catalyst does.
+- **Mechanic:** You and teammates within **16 blocks** are cleansed of **Slowness, Weakness, Poison, Mining Fatigue and Darkness**, and get **Resistance III for 10 seconds**. Hostile mobs within 6 blocks of you are knocked back a few blocks. The pack's own weapon drawbacks (Blood Pact, World Breaker, Overheat) are left alone, like the Alchemist Catalyst does.
 
 ### Downside: The Horn Carries
 - After either call, hostile mobs within **24 blocks** get **Speed I for 8s**, and **you glow for 8s**.
@@ -70,7 +71,8 @@
 ## 5. Technical Implementation (Datapack)
 
 - **Use detection:** the `minecraft.used:minecraft.goat_horn` statistic (`wh_used`); `warhorn/blow` only answers if a Warhorn is in either hand (`kandy.hold.warhorn`).
-- **Cooldown:** `wh_cd` = 900 ticks is the real gate. The item also carries `use_cooldown={seconds:45,cooldown_group:"kandy:warhorn"}` for the hotbar overlay, though the horn's own shorter cooldown may show instead.
+- **Cooldown:** `wh_cd` = 1800 ticks is the real gate. The item also carries `use_cooldown={seconds:90,cooldown_group:"kandy:warhorn"}` for the hotbar overlay, though the horn's own shorter cooldown may show instead.
 - **Sound:** `instrument="minecraft:call_goat_horn"`.
 - **Rally cleanse:** leaves Blood Pact, World Breaker and Pyroclast Overheat drawbacks alone, like the Alchemist Catalyst.
 - **Monsters:** the entity tag `kandy:monsters`.
+- **Teams:** `team/tag_allies` tags players with the same `kt_id` (set by the `kandy_team` trigger).

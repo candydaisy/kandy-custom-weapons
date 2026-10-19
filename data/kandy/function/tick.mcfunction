@@ -1,4 +1,5 @@
 function kandy:holders
+function kandy:team/tick
 
 function kandy:swiftwind/momentum
 function kandy:swiftwind/effects

@@ -86,18 +86,23 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Right-click: Mending Pulse heals nearby players for 2 hearts (12s).",
+          "text": "Right-click: Mending Pulse instantly heals your team within 6 blocks for 2 hearts (12s).",
           "color": "gray",
           "italic": false
         },
         {
-          "text": "Hold right-click 2s: Sanctuary, a 6s healing circle that slows mobs (30s).",
+          "text": "Hold right-click 2s: Sanctuary, a 10s healing aura that follows you and slows mobs (30s).",
           "color": "gold",
           "italic": false
         },
         {
-          "text": "Charged hits on mobs heal the most hurt player nearby.",
+          "text": "Charged hits on mobs heal your most hurt teammate nearby.",
           "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Team: /trigger kandy_team set <number>. Only your team is helped.",
+          "color": "dark_aqua",
           "italic": false
         },
         {

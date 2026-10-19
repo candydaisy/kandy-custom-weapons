@@ -1,5 +1,6 @@
 tellraw @a [{"text":"Kandy Loaded!! "},{"text":"[Open menu]","color":"light_purple","click_event":{"action":"run_command","command":"/function kandy:menu"},"hover_event":{"action":"show_text","value":"Weapons and cores, one click away"}}]
 function kandy:hud/setup
+function kandy:team/setup
 function kandy:swiftwind/setup
 function kandy:lingering_soul/setup
 function kandy:bloodpact/setup

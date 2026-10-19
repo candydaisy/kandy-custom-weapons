@@ -1,7 +1,8 @@
-# War Cry: other players within 16 blocks get Strength I + Speed I for 8s, you for 4s
-effect give @a[distance=0.01..16] minecraft:strength 8 0
-effect give @a[distance=0.01..16] minecraft:speed 8 0
-effect give @s minecraft:strength 4 0
-effect give @s minecraft:speed 4 0
+# War Cry: you and teammates within 16 blocks get Strength III + Speed III for 10s
+function kandy:team/tag_allies {r:16}
+tag @s add kandy.ally
+effect give @a[tag=kandy.ally] minecraft:strength 10 2
+effect give @a[tag=kandy.ally] minecraft:speed 10 2
+execute as @a[tag=kandy.ally] at @s run particle minecraft:crit ~ ~1 ~ 0.3 0.5 0.3 0.2 10
+tag @a remove kandy.ally
 particle minecraft:angry_villager ~ ~1.5 ~ 3 0.5 3 0 20
-execute as @a[distance=0.01..16] at @s run particle minecraft:crit ~ ~1 ~ 0.3 0.5 0.3 0.2 10

@@ -18,7 +18,7 @@
   [
     {"text": "Jabs on the same target stack Puncture: +1 damage per stack (max 3).", "color": "gray", "italic": false},
     {"text": "Charge hits Skewer: -15% armor and Slowness II for 3s.", "color": "gray", "italic": false},
-    {"text": "Sneak + Jump: Dragoon Leap. Sneak again midair to Dive (12s cooldown).", "color": "gold", "italic": false},
+    {"text": "Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (12s cooldown).", "color": "gold", "italic": false},
     {"text": "A Dive leaves you rooted: Slowness III for 2s.", "color": "red", "italic": false}
   ]
   ```
@@ -61,8 +61,8 @@
 - A spear **charge hit** (a hit landed while you're holding the right-click charge) gives the target **-15% armor** and **Slowness II for 3 seconds**.
 
 ### Active Skill: Dragoon Leap & Dive
-- **Leap (Sneak + Jump, on the ground):** launches you about **5 blocks** straight up, with fall damage cancelled until you land.
-- **Dive (press Sneak again in the air after a Leap, within 3.5s):** you plunge up to 3 blocks a tick; landing deals **6 damage** to everything within **3 blocks** and shoves mobs away.
+- **Leap (Sneak + Jump):** launches you about **5 blocks** straight up, with fall damage cancelled until you land.
+- **Dive (Sneak held once you stop rising, within 3.5s of the Leap):** keep holding Sneak to dive at the top, or press it again later; you plunge up to 3 blocks a tick; landing deals **6 damage** to everything within **3 blocks** and shoves mobs away.
 - **Cooldown:** 12 seconds, starting when you land.
 
 ### Downside: Overextended
@@ -76,7 +76,7 @@
 - **Jab vs charge:** every spear attack uses the `minecraft:spear` damage type, so it can't tell them apart. Instead `advancement/dragoon/using.json` (`using_item`) sets `dg_use` while the charge is held, and `dragoon/hit` Skewers when it's set and Punctures otherwise.
 - **Puncture:** per target `dg_ps` (stacks), `dg_pt` (40-tick window) and `dg_by` (attacker id from `ecl_pid`); the bonus is dealt on the same tick with `kandy:dragoon_pierce`, which is in `#minecraft:bypasses_cooldown`.
 - **Skewer:** `armor` modifier `kandy:skewer` (-15%) for 60 ticks (`dg_sk`).
-- **Leap:** the rising edge of Jump while sneaking and on the ground gives Levitation X for 10 ticks; `dg_st` (70 ticks) is the Dive window.
-- **Dive:** the rising edge of Sneak in the air sets `dg_dive`; `dragoon/dive_step` moves you down 1 block at a time (3 a tick) until the block below isn't passable, then `dragoon/land` runs.
+- **Leap:** the rising edge of Jump while sneaking gives (there's no on-ground check, since the server often sees the jump after you've left the ground) Levitation X for 10 ticks; `dg_st` (70 ticks) is the Dive window.
+- **Dive:** Sneak held in the air after the 10 Levitation ticks sets `dg_dive`; `dragoon/dive_step` moves you down 1 block at a time (3 a tick) until the block below isn't passable, then `dragoon/land` runs.
 - **Cooldown:** `dg_cd` = 240 ticks from landing.
 - **Fall damage:** `fall_damage_multiplier` modifier `kandy:dragoon_fall` until you land.

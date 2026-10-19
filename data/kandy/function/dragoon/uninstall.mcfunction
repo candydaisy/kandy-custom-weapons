@@ -11,8 +11,9 @@ scoreboard objectives remove dg_st
 scoreboard objectives remove dg_lev
 scoreboard objectives remove dg_dive
 scoreboard objectives remove dg_fall
-scoreboard objectives remove dg_snk
 scoreboard objectives remove dg_jmp
 scoreboard objectives remove dg_tmp
 advancement revoke @a only kandy:dragoon/using
 advancement revoke @a only kandy:hit/dragoon
+# Left over from before the Dive change
+scoreboard objectives remove dg_snk
