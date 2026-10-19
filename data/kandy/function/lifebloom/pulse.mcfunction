@@ -8,6 +8,6 @@ effect give @a[tag=kandy.ally,scores={hp=..10}] minecraft:regeneration 4 0
 execute as @a[tag=kandy.ally] at @s run particle minecraft:heart ~ ~1.8 ~ 0.3 0.2 0.3 0 3
 tag @a remove kandy.ally
 # Healer's Oath: your own share is a gentle Regeneration instead
-effect give @s minecraft:regeneration 3 0
+effect give @s minecraft:regeneration 4 1
 particle minecraft:cherry_leaves ~ ~1 ~ 3 0.5 3 0 40
 playsound minecraft:block.amethyst_block.resonate player @a[distance=..16] ~ ~ ~ 1 1.6

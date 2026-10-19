@@ -1,5 +1,5 @@
-# Dragoon Leap: about 5 blocks straight up, no fall damage until you land
-effect give @s minecraft:levitation 1 9 true
+# Dragoon Leap: about 12 blocks straight up, no fall damage until you land
+effect give @s minecraft:levitation 1 23 true
 scoreboard players set @s dg_lev 10
 scoreboard players set @s dg_st 70
 attribute @s minecraft:fall_damage_multiplier modifier add kandy:dragoon_fall -1 add_multiplied_total

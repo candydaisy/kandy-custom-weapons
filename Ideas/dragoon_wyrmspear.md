@@ -18,7 +18,7 @@
   [
     {"text": "Jabs on the same target stack Puncture: +1 damage per stack (max 3).", "color": "gray", "italic": false},
     {"text": "Charge hits Skewer: -15% armor and Slowness II for 3s.", "color": "gray", "italic": false},
-    {"text": "Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (12s cooldown).", "color": "gold", "italic": false},
+    {"text": "Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (23s cooldown).", "color": "gold", "italic": false},
     {"text": "A Dive leaves you rooted: Slowness III for 2s.", "color": "red", "italic": false}
   ]
   ```
@@ -78,5 +78,5 @@
 - **Skewer:** `armor` modifier `kandy:skewer` (-15%) for 60 ticks (`dg_sk`).
 - **Leap:** the rising edge of Jump while sneaking gives (there's no on-ground check, since the server often sees the jump after you've left the ground) Levitation X for 10 ticks; `dg_st` (70 ticks) is the Dive window.
 - **Dive:** Sneak held in the air after the 10 Levitation ticks sets `dg_dive`; `dragoon/dive_step` moves you down 1 block at a time (3 a tick) until the block below isn't passable, then `dragoon/land` runs.
-- **Cooldown:** `dg_cd` = 240 ticks from landing.
+- **Cooldown:** `dg_cd` = 460 ticks from landing.
 - **Fall damage:** `fall_damage_multiplier` modifier `kandy:dragoon_fall` until you land.
