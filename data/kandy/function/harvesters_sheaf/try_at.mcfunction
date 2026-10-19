@@ -1,0 +1,1 @@
+$execute positioned ~$(x) ~$(y) ~$(z) align xyz positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #kandy:harvesters_sheaf_crops if function kandy:harvesters_sheaf/grow run particle minecraft:happy_villager ~ ~0.5 ~ 0.3 0.3 0.3 0 4

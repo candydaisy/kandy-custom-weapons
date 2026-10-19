@@ -1,0 +1,1 @@
+give @s minecraft:armadillo_spawn_egg[item_model="minecraft:writable_book",custom_name={text:"Tally Core",color:"#a4161a",italic:false},lore=[{text:"Smithing Table: Core + Paper + Ink Sac",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"SlayersTally"}]

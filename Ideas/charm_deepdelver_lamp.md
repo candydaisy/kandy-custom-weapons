@@ -2,6 +2,8 @@
 
 > *"A miner's lamp that burns on cave air. It never runs out, and it never stops listening to the stone."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

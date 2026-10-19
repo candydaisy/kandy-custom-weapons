@@ -2,6 +2,8 @@
 
 > *"A coal from a hearth that never went cold. Meals taste better next to it."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

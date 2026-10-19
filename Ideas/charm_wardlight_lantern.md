@@ -2,7 +2,7 @@
 
 > *"Its flame was lit from a church candle. Nothing that crawls out of the dark wants to be near it."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** affects hostile mobs only
+**Status:** Implemented · **PvE-only:** affects hostile mobs only
 
 ---
 
@@ -60,3 +60,4 @@
 - **Spawn suppression:** each tick, hostile mobs (`#kandy:hostile`) within 16 blocks of a carrier that don't have the `kandy.seen` tag yet are checked once, then tagged. A datapack can't read how a mob spawned, so the check excludes mobs with `PersistenceRequired:1b` (named or summoned with it), raid mobs (raid data on the entity), and mobs within 5 blocks of a `spawner` or `trial_spawner` block. The rest are removed with `tp ~ -1000 ~` then `kill`, so nothing drops. The spawner check is the expensive part; test it on a busy server.
 - **Searing Light:** every 40 ticks, `damage @e[type=#minecraft:undead,distance=..6] 1 minecraft:magic`.
 - **Glare:** `effect clear @s minecraft:night_vision` each tick for carriers.
+- **As built:** the list of hostiles is `#kandy:wardlight_lantern_hostiles`; Withers, Wardens, Elder Guardians, Vexes and Creaking are left out so summoned or structure mobs are never removed. Every hostile in the world is tagged `kandy.wdl_seen` on its first tick, so only mobs that appear inside the 16 blocks are judged. The spawner check covers 5 blocks across and 2 up or down. Small slimes that split off near you count as new spawns and are removed too.

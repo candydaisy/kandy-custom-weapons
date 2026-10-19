@@ -2,6 +2,8 @@
 
 > *"Forged in the heart of the Nether's lowest magma lakes. It radiates suffocating heat that incinerates everything in its arc."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

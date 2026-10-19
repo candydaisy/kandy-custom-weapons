@@ -2,7 +2,7 @@
 
 > *"Bound from the last sheaf of a good year. Fields remember it."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** farming and animals only
+**Status:** Implemented · **PvE-only:** farming and animals only
 
 ---
 
@@ -60,3 +60,4 @@
 - **Growth:** pick random x/z offsets with `random value` and a macro, then `execute if block <pos> #kandy:sheaf_crops` and bump the `age` state with a small per-crop function (each crop has a different max age).
 - **Twins:** a `bred_animals` advancement; the reward finds the newest baby near the player (`Age` close to -24000) and summons a copy with the same variant data.
 - **Damage:** `attack_damage` modifier `kandy:sheaf_farmhand` (-1).
+- **As built:** every 2s, 3 random spots (5 blocks across, a block below to a block above your feet) are tried; `harvesters_sheaf/grow` bumps `age` by one, cocoa keeping its facing. Twins: the reward rolls 1 in 4, and the next tick the nearest newborn (Age -23980 or less) within 12 blocks of you is copied, NBT and all (colour, variant, owner), minus its UUID and position. Breedable kinds are in `#kandy:harvesters_sheaf_breedable`.

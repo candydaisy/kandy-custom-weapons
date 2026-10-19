@@ -2,6 +2,8 @@
 
 > *"A finger bone that keeps count. Every life you take, it gives a little back."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

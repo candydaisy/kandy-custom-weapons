@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "caught": {
+      "trigger": "minecraft:fishing_rod_hooked"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:anglers_lure_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "caught",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:anglers_lure_core"
+    ]
+  }
+}

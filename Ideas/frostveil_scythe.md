@@ -2,6 +2,8 @@
 
 > *"Carved from eternal permafrost, every swing chills the air until blood itself turns to crystal."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

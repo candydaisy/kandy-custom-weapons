@@ -2,6 +2,8 @@
 
 > *"Cut from a tree that grew through a ruined castle. It still remembers sunlight and stone alike."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

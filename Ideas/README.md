@@ -8,9 +8,9 @@ Each item is crafted through the signature two-step system:
 
 ## Progress
 
-**In the pack:** all eleven weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all 21 charms.
+**In the pack:** all eleven weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all 27 charms.
 
-**Everything in this folder is in the pack** except the PvE-only charms under Proposed below. The five newest weapons (Chainwarden Arbalest, Falconer's Recurve, Lifebloom Staff, Oathbound Warhorn, Dragoon's Wyrmspear) are untested in game so far.
+**Everything in this folder is in the pack.** The six PvE-only charms (Angler's Lure, Harvester's Sheaf, Plunderer's Coin, Slayer's Tally, Beastmaster's Whistle, Wardlight Lantern) never affect players or PvP damage. They and the five newest weapons (Chainwarden Arbalest, Falconer's Recurve, Lifebloom Staff, Oathbound Warhorn, Dragoon's Wyrmspear) are untested in game so far.
 
 The original weapons have no docs here; their latest changes:
 - **World Breaker:** the sneak pull (Event Horizon) now lasts up to 5s with a 25s cooldown instead of running for as long as you sneak, and the midair sneak-attack slam deals +6 damage.
@@ -102,27 +102,12 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 | **Moonlit Pendant** | Implemented | Firework Star | Night Hunter | **Moonlight:** Strength I and Night Vision at night under open sky; Speed I during a full moon.<br>**Night Vigor:** +2 max hearts through any Overworld night.<br>**Downside:** Slowness I and -10% attack speed in daylight. | [charm_moonlit_pendant.md](charm_moonlit_pendant.md) |
 | **Tinker's Whetstone** | Implemented | Brick | Field Repairs | **Field Mending:** +1 durability every 5s on your held item.<br>**Sharpen:** sneak still 2s for +1 attack damage for 20s (60s cooldown).<br>**Downside:** -10% attack speed. | [charm_tinkers_whetstone.md](charm_tinkers_whetstone.md) |
 | **Enderbrace** | Implemented | Popped Chorus Fruit | Short-range Blink | **Blink:** double-tap Sneak to teleport up to 10 blocks where you look (12s cooldown).<br>**Downside:** 2 damage every 2s in water or rain. | [charm_enderbrace.md](charm_enderbrace.md) |
-
----
-
-## Proposed (not implemented yet)
-
-New ideas waiting for review. Numbers are first drafts. Every one has a downside, like the rest of the pack.
-
-**PvE-only charms** never affect players or PvP damage, so they can't tip a fight.
-
-### PvE-only charms
-
-| Charm | Base Item | Focus | Key Powers | Downside | Document |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Angler's Lure** | Lily Pad | Fishing | Luck II with a rod; 20% chance of a second catch; catches restore hunger. | Slowness I while holding a rod | [charm_anglers_lure.md](charm_anglers_lure.md) |
-| **Harvester's Sheaf** | Wheat | Farming | Nearby crops randomly grow; 25% chance of twins when breeding. | -1 attack damage | [charm_harvesters_sheaf.md](charm_harvesters_sheaf.md) |
-| **Plunderer's Coin** | Gold Nugget | Mob loot | 25% chance a mob drops its loot twice; +50% mob XP (bosses excluded). | Each mob kill costs 1 hunger | [charm_plunderers_coin.md](charm_plunderers_coin.md) |
-| **Slayer's Tally** | Paper | Monster hunting | +2% damage per kill against that kind of mob, up to +30%; never against players. | Death resets the tally | [charm_slayers_tally.md](charm_slayers_tally.md) |
-| **Beastmaster's Whistle** | Lead | Pets | Wolves get Resistance I and +3 damage vs mobs; pets regenerate; sneak to Recall all pets (60s). | Weakness I when a pet dies | [charm_beastmasters_whistle.md](charm_beastmasters_whistle.md) |
-| **Wardlight Lantern** | Soul Lantern | Monster ward | No natural hostile spawns within 16 blocks; undead nearby burn slowly. | Night Vision doesn't work on you | [charm_wardlight_lantern.md](charm_wardlight_lantern.md) |
-
-Core templates for these use spawn eggs the pack doesn't use yet (cow, llama, fox, armadillo, camel, sniffer).
+| **Angler's Lure** | Implemented | Lily Pad | Fishing (PvE-only) | **Lucky Waters:** Luck II with a rod in hand.<br>**Double Catch:** 20% chance of a second catch.<br>**Shore Lunch:** each catch restores 1 hunger.<br>**Downside:** Slowness I while holding a rod. | [charm_anglers_lure.md](charm_anglers_lure.md) |
+| **Harvester's Sheaf** | Implemented | Wheat | Farming (PvE-only) | **Green Thumb:** crops within 5 blocks grow about twice as fast.<br>**Twin Births:** 25% chance of twins when breeding.<br>**Downside:** -1 attack damage. | [charm_harvesters_sheaf.md](charm_harvesters_sheaf.md) |
+| **Plunderer's Coin** | Implemented | Gold Nugget | Mob Loot (PvE-only) | **Double Plunder:** 25% chance a mob drops its loot twice (not bosses).<br>**Spoils:** +50% mob experience.<br>**Downside:** each mob kill costs 1 hunger. | [charm_plunderers_coin.md](charm_plunderers_coin.md) |
+| **Slayer's Tally** | Implemented | Paper | Monster Hunting (PvE-only) | **Notches:** +2% damage per kill against that kind of mob, up to +30%; shown on a boss bar.<br>**Downside:** dying wipes the tally. | [charm_slayers_tally.md](charm_slayers_tally.md) |
+| **Beastmaster's Whistle** | Implemented | Lead | Pets (PvE-only) | **Pack Leader:** wolves within 24 blocks get Resistance I and +3 damage vs mobs; calm pets regenerate.<br>**Recall:** sneak still 1s to bring all your pets (60s cooldown).<br>**Downside:** Weakness I for 30s when a pet dies. | [charm_beastmasters_whistle.md](charm_beastmasters_whistle.md) |
+| **Wardlight Lantern** | Implemented | Soul Lantern | Monster Ward (PvE-only) | **Hallowed Ground:** no natural hostile spawns within 16 blocks.<br>**Searing Light:** undead within 6 blocks take 1 damage every 2s and glow.<br>**Downside:** Night Vision doesn't work on you. | [charm_wardlight_lantern.md](charm_wardlight_lantern.md) |
 
 ---
 

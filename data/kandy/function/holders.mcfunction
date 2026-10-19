@@ -52,6 +52,12 @@ tag @a remove kandy.charm.predators_fang
 tag @a remove kandy.charm.moonlit_pendant
 tag @a remove kandy.charm.tinkers_whetstone
 tag @a remove kandy.charm.enderbrace
+tag @a remove kandy.charm.anglers_lure
+tag @a remove kandy.charm.harvesters_sheaf
+tag @a remove kandy.charm.plunderers_coin
+tag @a remove kandy.charm.slayers_tally
+tag @a remove kandy.charm.beastmasters_whistle
+tag @a remove kandy.charm.wardlight_lantern
 tag @a remove kandy.immune
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"BloodPact"}] run tag @s add kandy.main.bloodpact
@@ -165,6 +171,18 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"TinkersWhetst
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone
 execute as @a if items entity @s container.* *[custom_data~{charm:"Enderbrace"}] run tag @s add kandy.charm.enderbrace
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Enderbrace"}] run tag @s add kandy.charm.enderbrace
+execute as @a if items entity @s container.* *[custom_data~{charm:"AnglersLure"}] run tag @s add kandy.charm.anglers_lure
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AnglersLure"}] run tag @s add kandy.charm.anglers_lure
+execute as @a if items entity @s container.* *[custom_data~{charm:"HarvestersSheaf"}] run tag @s add kandy.charm.harvesters_sheaf
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"HarvestersSheaf"}] run tag @s add kandy.charm.harvesters_sheaf
+execute as @a if items entity @s container.* *[custom_data~{charm:"PlunderersCoin"}] run tag @s add kandy.charm.plunderers_coin
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PlunderersCoin"}] run tag @s add kandy.charm.plunderers_coin
+execute as @a if items entity @s container.* *[custom_data~{charm:"SlayersTally"}] run tag @s add kandy.charm.slayers_tally
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"SlayersTally"}] run tag @s add kandy.charm.slayers_tally
+execute as @a if items entity @s container.* *[custom_data~{charm:"BeastmastersWhistle"}] run tag @s add kandy.charm.beastmasters_whistle
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"BeastmastersWhistle"}] run tag @s add kandy.charm.beastmasters_whistle
+execute as @a if items entity @s container.* *[custom_data~{charm:"WardlightLantern"}] run tag @s add kandy.charm.wardlight_lantern
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"WardlightLantern"}] run tag @s add kandy.charm.wardlight_lantern
 
 # Creative/spectator players can't be pulled
 tag @a[gamemode=creative] add kandy.immune

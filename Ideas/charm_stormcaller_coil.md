@@ -2,6 +2,8 @@
 
 > *"Wound from copper that was struck nine times in one night. It hums before every storm."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

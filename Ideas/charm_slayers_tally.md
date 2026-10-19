@@ -2,7 +2,7 @@
 
 > *"Every notch is a kind of monster that learned to fear you. The tally doesn't forgive forgetting."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** bonus damage against mobs only
+**Status:** Implemented · **PvE-only:** bonus damage against mobs only
 
 ---
 
@@ -59,3 +59,4 @@
 - **Kills:** one `player_killed_entity` advancement per kind (entity type tags `kandy:tally_<kind>`), each adding to a `tally_<kind>` score.
 - **Bonus damage:** a `player_hurt_entity` advancement per kind runs extra damage on the same tick with a custom type in `#minecraft:bypasses_cooldown` (Predator's Fang's pattern): `damage dealt × notches × 2%`, read from the advancement tier (e.g. dealt 1-4, 5-8, 9+) since the exact number isn't passed. Guard against our own bonus damage counting as a hit.
 - **Reset:** a `deathCount` score clears the tallies.
+- **As built:** one `player_killed_entity` and one `player_hurt_entity` advancement. The hit advancement has four criteria by damage band (under 4, 4-8, 8-12, 12+, counted as 2.5 / 6 / 10 / 14), and the reward checks which one fired. Hits from the pack's own bonus damage (anything in `#minecraft:bypasses_cooldown`) don't count. Kinds: zombies (`#minecraft:zombies`), skeletons (`#minecraft:skeletons`), spiders, creepers, endermen, blazes, piglins (with hoglins), illagers (all raiders and vexes), slimes and magma cubes, then any other `#kandy:monsters`. Victims are found within 12 blocks, so very long bow shots don't get the bonus.

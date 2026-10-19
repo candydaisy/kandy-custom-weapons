@@ -1,0 +1,123 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:llama_spawn_egg",
+  "base": "minecraft:wheat",
+  "addition": "minecraft:golden_carrot",
+  "result": {
+    "id": "minecraft:wheat",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "H",
+          "italic": false,
+          "color": "#fff3b0"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#f9e39b"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#f3d485"
+        },
+        {
+          "text": "v",
+          "italic": false,
+          "color": "#eec470"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#e8b45a"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#e2a445"
+        },
+        {
+          "text": "t",
+          "italic": false,
+          "color": "#d8903c"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#cb7a38"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#bf6434"
+        },
+        {
+          "text": "'",
+          "italic": false,
+          "color": "#b34f31"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#a6392d"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#992829"
+        },
+        {
+          "text": "S",
+          "italic": false,
+          "color": "#8c2224"
+        },
+        {
+          "text": "h",
+          "italic": false,
+          "color": "#7e1c1e"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#701719"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#621113"
+        },
+        {
+          "text": "f",
+          "italic": false,
+          "color": "#540b0e"
+        }
+      ],
+      "minecraft:rarity": "uncommon",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:lore": [
+        {
+          "text": "Crops within 5 blocks of you sometimes grow a stage.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Animals you breed have a 25% chance of twins.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "A farmer, not a fighter: -1 attack damage.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "charm": "HarvestersSheaf",
+        "type": "talisman"
+      }
+    }
+  }
+}

@@ -2,6 +2,8 @@
 
 > *"A sliver of perfectly flat quartz. Arrows meet their own reflection and remember who sent them."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

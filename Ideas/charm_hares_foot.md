@@ -2,6 +2,8 @@
 
 > *"Lucky for some. Fast for everyone. Just don't get caught."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

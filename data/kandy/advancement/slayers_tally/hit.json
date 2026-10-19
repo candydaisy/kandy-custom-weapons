@@ -1,0 +1,93 @@
+{
+  "criteria": {
+    "t1": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "max": 3.99
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:bypasses_cooldown",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "t2": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 4.0,
+            "max": 7.99
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:bypasses_cooldown",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "t3": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 8.0,
+            "max": 11.99
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:bypasses_cooldown",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "t4": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 12.0
+          },
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:bypasses_cooldown",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  ],
+  "rewards": {
+    "function": "kandy:slayers_tally/hit"
+  }
+}

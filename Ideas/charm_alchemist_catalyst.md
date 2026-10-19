@@ -2,6 +2,8 @@
 
 > *"Distilled by ancient herbalists and apothecaries. It purifies vile toxins into rejuvenating elixirs and amplifies the soul's resilience."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

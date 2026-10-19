@@ -2,7 +2,7 @@
 
 > *"Stamped with no king's face. It only ever pays the one who takes."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** works on mob kills, never on players
+**Status:** Implemented · **PvE-only:** works on mob kills, never on players
 
 ---
 
@@ -61,3 +61,4 @@
 - **Kills:** a `player_killed_entity` advancement with `type` not `minecraft:player` and not in a `kandy:bosses` tag.
 - **Second roll:** `loot spawn ~ ~ ~ kill @s` run as the dying mob in the reward (it still exists on its death tick). Check this in game, since some mob loot depends on how it died.
 - **Experience:** summon an `experience_orb` worth half the mob's base XP (a small per-type lookup), since the actual dropped amount can't be read.
+- **As built:** kills are found with `util/tag_kills` (creatures at 0 health on their death tick whose attacker is you). The second roll runs `loot spawn ~ ~ ~ kill` as you, so Looting counts. Spoils are an orb worth 10 (Ravager, Piglin Brute), 5 (Blaze, Guardian, Evoker, Breeze), 3 (other monsters) or 1 (animals); villagers and golems give none. Greed is 4 exhaustion per kill through a 1s Hunger effect, which takes saturation first, like normal hunger.

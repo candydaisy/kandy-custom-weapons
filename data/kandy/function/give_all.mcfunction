@@ -37,4 +37,10 @@ function kandy:predators_fang/give
 function kandy:moonlit_pendant/give
 function kandy:tinkers_whetstone/give
 function kandy:enderbrace/give
+function kandy:anglers_lure/give
+function kandy:harvesters_sheaf/give
+function kandy:plunderers_coin/give
+function kandy:slayers_tally/give
+function kandy:beastmasters_whistle/give
+function kandy:wardlight_lantern/give
 tellraw @s {"text":"Kandy: gave every weapon and charm.","color":"light_purple"}

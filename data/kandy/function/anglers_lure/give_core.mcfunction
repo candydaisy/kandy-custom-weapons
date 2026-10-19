@@ -1,0 +1,1 @@
+give @s minecraft:cow_spawn_egg[item_model="minecraft:fishing_rod",custom_name={text:"Tackle Core",color:"#38a3a5",italic:false},lore=[{text:"Smithing Table: Core + Lily Pad + Tropical Fish",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"AnglersLure"}]

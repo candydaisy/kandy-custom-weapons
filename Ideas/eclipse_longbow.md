@@ -2,6 +2,8 @@
 
 > *"Formed from remnants of the End's collapsed stars. Arrows shot from this bow bend space and drink the light."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

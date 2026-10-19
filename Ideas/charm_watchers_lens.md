@@ -2,6 +2,8 @@
 
 > *"Ground from the eye of something that never slept. Through it, nothing that hunts you stays hidden."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

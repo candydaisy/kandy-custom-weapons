@@ -2,6 +2,8 @@
 
 > *"Torn from something that only ever hunted the weak. It still knows the smell of blood."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

@@ -1,0 +1,1 @@
+give @s minecraft:llama_spawn_egg[item_model="minecraft:hay_block",custom_name={text:"Harvest Core",color:"#e09f3e",italic:false},lore=[{text:"Smithing Table: Core + Wheat + Golden Carrot",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"HarvestersSheaf"}]

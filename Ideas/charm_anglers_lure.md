@@ -2,7 +2,7 @@
 
 > *"A hand-tied fly that's caught more fish than its maker ever did."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** does nothing in combat
+**Status:** Implemented · **PvE-only:** does nothing in combat
 
 ---
 
@@ -64,3 +64,4 @@
 - **Catch:** a `fishing_rod_hooked` advancement (item caught, not an entity hooked).
 - **Second roll:** `loot spawn ~ ~ ~ fish minecraft:gameplay/fishing ~ ~ ~ mainhand` after a `random value 1..5` roll, so the rod's own Luck of the Sea and the Luck effect apply.
 - **Hunger:** `effect give @s minecraft:saturation 1 0 true` (one tick of Saturation I ≈ +1 food).
+- **As built:** Luck II and Slowness I are attribute modifiers (`kandy:angler_luck` +2 luck, `kandy:angler_patience` -15% speed) added while a rod is in either hand, so they end the moment you put the rod away. The second catch rolls `gameplay/fishing` at your feet with the rod's hand as the tool; treasure needs the bobber in open water, so the bonus roll only gives fish and junk.

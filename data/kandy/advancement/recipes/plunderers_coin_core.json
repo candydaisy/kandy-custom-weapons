@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "looted": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_tables": [
+          "minecraft:chests/buried_treasure",
+          "minecraft:chests/bastion_treasure",
+          "minecraft:chests/bastion_other",
+          "minecraft:chests/bastion_bridge",
+          "minecraft:chests/bastion_hoglin_stable"
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:plunderers_coin_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "looted",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:plunderers_coin_core"
+    ]
+  }
+}

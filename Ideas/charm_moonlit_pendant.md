@@ -2,6 +2,8 @@
 
 > *"Silver that only shines after dusk. By day it's just a cold weight around your neck."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

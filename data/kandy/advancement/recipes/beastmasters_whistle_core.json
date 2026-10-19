@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "tamed": {
+      "trigger": "minecraft:tame_animal"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:beastmasters_whistle_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tamed",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:beastmasters_whistle_core"
+    ]
+  }
+}

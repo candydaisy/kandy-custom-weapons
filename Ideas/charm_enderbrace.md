@@ -2,6 +2,8 @@
 
 > *"Woven from chorus that never stopped teleporting. It drags you along whenever it twitches."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

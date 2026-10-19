@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "bred": {
+      "trigger": "minecraft:bred_animals"
+    }
+  },
+  "rewards": {
+    "function": "kandy:harvesters_sheaf/bred"
+  }
+}

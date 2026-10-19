@@ -1,0 +1,1 @@
+give @s minecraft:sniffer_spawn_egg[item_model="minecraft:soul_lantern",custom_name={text:"Ward Core",color:"#80ffdb",italic:false},lore=[{text:"Smithing Table: Core + Soul Lantern + Golden Apple",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"WardlightLantern"}]

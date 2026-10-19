@@ -2,6 +2,8 @@
 
 > *"Pulled from the mantle of a submerged oceanic trench. Carries the blessing of the deepest abyssal waters."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

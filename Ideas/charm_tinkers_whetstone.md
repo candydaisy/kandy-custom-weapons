@@ -2,6 +2,8 @@
 
 > *"A worn stone with a hundred smiths' fingerprints on it. Every blade it touches comes back a little better."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

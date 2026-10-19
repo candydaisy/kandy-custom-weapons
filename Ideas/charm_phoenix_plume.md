@@ -2,6 +2,8 @@
 
 > *"A single ember-feather that refuses to go out. When your flame gutters, it burns brighter in your place."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

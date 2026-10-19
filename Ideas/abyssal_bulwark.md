@@ -2,6 +2,8 @@
 
 > *"Forged from deep oceanic trenches and elder guardian carapace. Those who strike this shield find the entire weight of the sea crashing back upon them."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

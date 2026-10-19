@@ -37,6 +37,12 @@ function kandy:predators_fang/setup
 function kandy:moonlit_pendant/setup
 function kandy:tinkers_whetstone/setup
 function kandy:enderbrace/setup
+function kandy:anglers_lure/setup
+function kandy:harvesters_sheaf/setup
+function kandy:plunderers_coin/setup
+function kandy:slayers_tally/setup
+function kandy:beastmasters_whistle/setup
+function kandy:wardlight_lantern/setup
 
 # A hit advancement stays granted if its reward function failed to run, which disables that weapon
 advancement revoke @a only kandy:hit/bloodpact

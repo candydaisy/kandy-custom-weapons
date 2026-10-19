@@ -53,5 +53,10 @@ function kandy:predators_fang/tick
 function kandy:moonlit_pendant/tick
 function kandy:tinkers_whetstone/tick
 function kandy:enderbrace/tick
+function kandy:anglers_lure/tick
+function kandy:harvesters_sheaf/tick
+function kandy:slayers_tally/tick
+function kandy:beastmasters_whistle/tick
+function kandy:wardlight_lantern/tick
 
 function kandy:hud/tick

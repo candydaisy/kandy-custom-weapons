@@ -2,6 +2,8 @@
 
 > *"A pulsating seed of living magma. It consumes external flames, converting deadly heat into surging stamina."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

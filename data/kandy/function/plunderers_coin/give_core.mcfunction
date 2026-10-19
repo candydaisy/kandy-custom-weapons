@@ -1,0 +1,1 @@
+give @s minecraft:fox_spawn_egg[item_model="minecraft:raw_gold",custom_name={text:"Coin Core",color:"#c9a227",italic:false},lore=[{text:"Smithing Table: Core + Gold Nugget + Rabbit's Foot",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"PlunderersCoin"}]

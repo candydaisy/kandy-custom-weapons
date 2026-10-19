@@ -1,0 +1,12 @@
+scoreboard players set @s tly_1 0
+scoreboard players set @s tly_2 0
+scoreboard players set @s tly_3 0
+scoreboard players set @s tly_4 0
+scoreboard players set @s tly_5 0
+scoreboard players set @s tly_6 0
+scoreboard players set @s tly_7 0
+scoreboard players set @s tly_8 0
+scoreboard players set @s tly_9 0
+scoreboard players set @s tly_10 0
+scoreboard players set @s tly_death 0
+scoreboard players set @s tly_show 0

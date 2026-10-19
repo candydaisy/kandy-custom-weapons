@@ -2,6 +2,8 @@
 
 > *"Infused with the hollow bones of phantom wings and breeze gale-force winds. Gravity loses its grip on whoever carries it."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

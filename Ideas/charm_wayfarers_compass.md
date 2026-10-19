@@ -2,6 +2,8 @@
 
 > *"Its needle doesn't point north. It points home, and it can take you there, for a price."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

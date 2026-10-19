@@ -2,7 +2,7 @@
 
 > *"Two notes, and every animal that loves you comes running."*
 
-**Status:** Proposed (not implemented) · **PvE-only:** buffs your tamed animals; in PvP your wolves are still just wolves (no bonus damage against players)
+**Status:** Implemented · **PvE-only:** buffs your tamed animals; in PvP your wolves are still just wolves (no bonus damage against players)
 
 ---
 
@@ -65,3 +65,4 @@
 - **Bonus damage:** advancements only fire for players, so check from the victim's side each tick: a non-player with `HurtTime:10s` whose `execute on attacker` is one of a carrier's tagged wolves takes +3 with a damage type in `#minecraft:bypasses_cooldown` (so it lands despite the hit's invulnerability frames).
 - **Recall:** the Wayfarer's Compass stillness check; `tp` each owned pet to the player.
 - **Bonded:** a dying owned pet (`Health` ≤ 0 or `DeathTime` > 0 on a tagged pet) triggers the effect on its owner.
+- **As built:** pets are wolves, cats and parrots (`#kandy:beastmasters_whistle_pets`). Once a second each carrier's pets get `bst_own` (their owner's id), and wolves within 24 blocks are the pack. The pack's +3 is an `attack_damage` modifier, removed on any tick the wolf's target is a player, instead of a victim-side check. Healing sets `Health` directly. A recall that finds no pets costs no cooldown.

@@ -69,5 +69,11 @@ function kandy:predators_fang/uninstall
 function kandy:moonlit_pendant/uninstall
 function kandy:tinkers_whetstone/uninstall
 function kandy:enderbrace/uninstall
+function kandy:anglers_lure/uninstall
+function kandy:harvesters_sheaf/uninstall
+function kandy:plunderers_coin/uninstall
+function kandy:slayers_tally/uninstall
+function kandy:beastmasters_whistle/uninstall
+function kandy:wardlight_lantern/uninstall
 
 tellraw @a "Kandy uninstalled. Now run /datapack disable on this pack."

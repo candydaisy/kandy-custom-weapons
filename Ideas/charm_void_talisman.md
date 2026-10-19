@@ -2,6 +2,8 @@
 
 > *"Resonating with the dark frequencies of the End. The abyss recognizes you as its own and refuses to swallow you."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

@@ -1,0 +1,1 @@
+give @s minecraft:camel_spawn_egg[item_model="minecraft:bone",custom_name={text:"Pack Core",color:"#74c69d",italic:false},lore=[{text:"Smithing Table: Core + Lead + Name Tag",color:"gray",italic:false}],rarity="rare",enchantment_glint_override=true,max_stack_size=1,custom_data={kandy_core:"BeastmastersWhistle"}]

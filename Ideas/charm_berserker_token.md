@@ -2,6 +2,8 @@
 
 > *"Forged from netherite scrap and boiled ghast tears. In death's shadow, it floods your veins with uncontrollable battle adrenaline."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

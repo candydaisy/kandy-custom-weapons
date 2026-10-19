@@ -35,4 +35,10 @@ function kandy:predators_fang/give_core
 function kandy:moonlit_pendant/give_core
 function kandy:tinkers_whetstone/give_core
 function kandy:enderbrace/give_core
+function kandy:anglers_lure/give_core
+function kandy:harvesters_sheaf/give_core
+function kandy:plunderers_coin/give_core
+function kandy:slayers_tally/give_core
+function kandy:beastmasters_whistle/give_core
+function kandy:wardlight_lantern/give_core
 tellraw @s {"text":"Kandy: gave every core.","color":"light_purple"}

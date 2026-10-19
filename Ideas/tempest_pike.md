@@ -2,6 +2,8 @@
 
 > *"Forged beneath howling clouds and charged by the fury of ancient storms."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

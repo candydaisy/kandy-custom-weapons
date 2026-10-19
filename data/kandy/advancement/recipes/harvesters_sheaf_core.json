@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "bred": {
+      "trigger": "minecraft:bred_animals"
+    },
+    "has_hay": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:hay_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:harvesters_sheaf_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bred",
+      "has_hay",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:harvesters_sheaf_core"
+    ]
+  }
+}

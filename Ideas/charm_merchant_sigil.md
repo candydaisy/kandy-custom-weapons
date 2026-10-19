@@ -2,6 +2,8 @@
 
 > *"Pressed with the seal of a guild no one remembers. Villagers still bow to it. Illagers still hunt it."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity

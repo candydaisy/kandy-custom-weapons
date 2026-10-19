@@ -2,6 +2,8 @@
 
 > *"Woven from strands of fractured timelines and desert hourglass sand. Strike today, bleed yesterday."*
 
+**Status:** Implemented
+
 ---
 
 ## 1. Overview & Identity
