@@ -1,5 +1,5 @@
 # Dive impact: 6 damage to everything within 3 blocks, shoved away; you're rooted
-scoreboard players set #steps dg_tmp 0
+attribute @s minecraft:gravity modifier remove kandy:dragoon_dive
 scoreboard players set @s dg_dive 0
 scoreboard players set @s dg_st 0
 scoreboard players set @s dg_cd 460

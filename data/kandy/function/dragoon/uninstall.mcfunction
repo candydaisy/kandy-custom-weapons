@@ -1,5 +1,6 @@
 execute as @e[scores={dg_sk=1..}] run attribute @s minecraft:armor modifier remove kandy:skewer
 execute as @a run attribute @s minecraft:fall_damage_multiplier modifier remove kandy:dragoon_fall
+execute as @a run attribute @s minecraft:gravity modifier remove kandy:dragoon_dive
 tag @a remove kandy.dg_nofall
 scoreboard objectives remove dg_use
 scoreboard objectives remove dg_ps
