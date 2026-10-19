@@ -33,3 +33,10 @@ $bossbar remove kandy:hud_$(rid)_ver_wither
 $bossbar remove kandy:hud_$(rid)_wat_mark
 $bossbar remove kandy:hud_$(rid)_way_cd
 $bossbar remove kandy:hud_$(rid)_way_charge
+$bossbar remove kandy:hud_$(rid)_cw_tether
+$bossbar remove kandy:hud_$(rid)_cw_grapple
+$bossbar remove kandy:hud_$(rid)_fl_volley
+$bossbar remove kandy:hud_$(rid)_lb_pulse
+$bossbar remove kandy:hud_$(rid)_lb_sanct
+$bossbar remove kandy:hud_$(rid)_wh_horn
+$bossbar remove kandy:hud_$(rid)_dg_leap

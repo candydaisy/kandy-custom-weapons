@@ -1,0 +1,148 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:turtle_spawn_egg",
+  "base": "minecraft:crossbow",
+  "addition": "minecraft:lead",
+  "result": {
+    "id": "minecraft:crossbow",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "C",
+          "italic": false,
+          "color": "#b5651d"
+        },
+        {
+          "text": "h",
+          "italic": false,
+          "color": "#af6628"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#a86833"
+        },
+        {
+          "text": "i",
+          "italic": false,
+          "color": "#a2693e"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#9c6b49"
+        },
+        {
+          "text": "w",
+          "italic": false,
+          "color": "#956c54"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#8f6e5f"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#886f67"
+        },
+        {
+          "text": "d",
+          "italic": false,
+          "color": "#80716d"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#787373"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#717579"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#69777f"
+        },
+        {
+          "text": "A",
+          "italic": false,
+          "color": "#617985"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#5a7786"
+        },
+        {
+          "text": "b",
+          "italic": false,
+          "color": "#536f7f"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#4b6877"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#44606f"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#3d5867"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#365060"
+        },
+        {
+          "text": "t",
+          "italic": false,
+          "color": "#2f4858"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Bolts Shackle what they hit: Slowness I for 2s.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "A bolt that hits a creature Tethers it for 4s (10s cooldown).",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak while Tethered: Reel. Light targets fly to you; heavy ones pull you in.",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "text": "Sneak within 3s of a bolt sticking in a block: Grapple to it (8s cooldown).",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "text": "Holding the chain weighs you down: -15% speed while a Tether is up.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:unbreakable": {},
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "ability": "Chainwarden"
+      }
+    }
+  }
+}

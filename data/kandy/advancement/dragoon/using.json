@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:netherite_spear",
+          "predicates": {
+            "minecraft:custom_data": "{ability:\"Dragoon\"}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:dragoon/using"
+  }
+}

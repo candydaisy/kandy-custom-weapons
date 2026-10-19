@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_goat_horn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:goat_horn"
+          }
+        ]
+      }
+    },
+    "hero": {
+      "trigger": "minecraft:hero_of_the_village"
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "kandy:warhorn_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_goat_horn",
+      "hero",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kandy:warhorn_core"
+    ]
+  }
+}

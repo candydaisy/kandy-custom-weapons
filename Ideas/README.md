@@ -8,9 +8,9 @@ Each item is crafted through the signature two-step system:
 
 ## Progress
 
-**In the pack:** all six weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all 21 charms.
+**In the pack:** all eleven weapons from this folder (plus the original Swiftwind, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all 21 charms.
 
-**Everything in this folder is now in the pack**, including the 15 newer charms (untested in game so far).
+**Everything in this folder is in the pack** except the PvE-only charms under Proposed below. The five newest weapons (Chainwarden Arbalest, Falconer's Recurve, Lifebloom Staff, Oathbound Warhorn, Dragoon's Wyrmspear) are untested in game so far.
 
 The original weapons have no docs here; their latest changes:
 - **World Breaker:** the sneak pull (Event Horizon) now lasts up to 5s with a 25s cooldown instead of running for as long as you sneak, and the midair sneak-attack slam deals +6 damage.
@@ -67,6 +67,11 @@ The charms also changed from their docs, mostly toned down for PvP or limited by
 | **Pyroclast Cleaver** | Implemented | Netherite Axe | Volcanic Rupture & Magma | Respawn Anchor + Blaze Rods + Magma Cream | Heat gauge (+10% per hit), 6s Overdrive at 100% with eruptions, sneak + jump-attack Magma Fissure (10s), Overheat crash. | [pyroclast_cleaver.md](pyroclast_cleaver.md) |
 | **Chronos Stiletto** | Implemented | Golden Sword | Time Dilation & Chronomancy | Recovery Compass + Clocks + Amethyst | Paradox delayed true damage (1.5 per stack, max 3), Temporal Anchor & Rewind (20s), crit Chrono Stasis. | [chronos_stiletto.md](chronos_stiletto.md) |
 | **Abyssal Bulwark** | Implemented | Shield | Ocean Depths & Guard Counter | Sponge + Dark Prismarine + Prismarine Crystals | Blocking stores Pressure (max 5) and Resistance, Sneak-tap Parry stagger (4s), Sneak + Jump Tidal Surge cone (8s). | [abyssal_bulwark.md](abyssal_bulwark.md) |
+| **Chainwarden Arbalest** | Implemented | Crossbow | Chains & Grappling | Lodestone + Iron Chains + Tripwire Hooks | Bolts Shackle; a bolt hit Tethers (4s), Sneak to Reel it in or yourself to heavy targets; Grapple to a bolt in a block. | [chainwarden_arbalest.md](chainwarden_arbalest.md) |
+| **Falconer's Recurve** | Implemented | Bow | Falconry & Homing | Spyglass + Arrows + Feathers | Lock On while drawing, homing full-draw arrows (-15% damage), sneak-shot Falcon Volley. | [falconers_recurve.md](falconers_recurve.md) |
+| **Lifebloom Staff** | Implemented | Golden Hoe | Healer | Golden Apple + Glistering Melon + Flowering Azalea | Right-click Mending Pulse, hold for a Sanctuary circle, charged hits on mobs heal the most hurt player. | [lifebloom_staff.md](lifebloom_staff.md) |
+| **Oathbound Warhorn** | Implemented | Goat Horn | Support / Buffer | Bell + White Banners + Gold Ingots | War Cry (Strength I + Speed I), sneak Rally (cleanse + Resistance I), 45s shared. | [oathbound_warhorn.md](oathbound_warhorn.md) |
+| **Dragoon's Wyrmspear** | Implemented | Netherite Spear | Dragoon / Spear | Dragon's Breath + Phantom Membranes + End Rods | Puncture stacks on jabs, charge hits Skewer, Sneak + Jump Leap and Sneak again to Dive. | [dragoon_wyrmspear.md](dragoon_wyrmspear.md) |
 
 ---
 
@@ -104,19 +109,7 @@ Charms are passive trinkets functioning when carried in the inventory (`containe
 
 New ideas waiting for review. Numbers are first drafts. Every one has a downside, like the rest of the pack.
 
-**Allies** (support weapons): other players on your scoreboard team plus your tamed pets. With no team, every other player counts, so in PvP put allies on a team.
-
 **PvE-only charms** never affect players or PvP damage, so they can't tip a fight.
-
-### Weapons
-
-| Weapon | Role | Base Item | Signature Skills | Downside | Document |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Chainwarden Arbalest** | Ranged / control | Crossbow | Bolts Shackle (Slowness I); charged bolt Tethers a creature, sneak to Reel it in (or yourself to heavy targets); Grapple to a bolt in a block. | -15% speed while Tethered | [chainwarden_arbalest.md](chainwarden_arbalest.md) |
-| **Falconer's Recurve** | Ranged / single target | Bow | Lock On while drawing; full-draw arrows home in for -15% damage; sneak shot Falcon Volley (3 homing arrows). | You glow to players you lock onto | [falconers_recurve.md](falconers_recurve.md) |
-| **Lifebloom Staff** | Healer | Golden Hoe | Right-click Mending Pulse (2 hearts to allies, 12s); hold for Sanctuary healing circle (30s); hits on monsters heal your most hurt ally. | 4 damage; your own healing is halved | [lifebloom_staff.md](lifebloom_staff.md) |
-| **Oathbound Warhorn** | Support / buffer | Goat Horn | War Cry: allies get Strength I + Speed I 8s; sneak Rally: cleanse + Resistance I 6s (45s shared). | Monsters nearby speed up, you glow | [oathbound_warhorn.md](oathbound_warhorn.md) |
-| **Dragoon's Wyrmspear** | Spear / melee reach | Netherite Spear | Jabs stack Puncture (+1 each, max 3); charge hits Skewer (-15% armor); Sneak + Jump Leap, attack to Dive for 6 area damage (12s). | Rooted after a Dive | [dragoon_wyrmspear.md](dragoon_wyrmspear.md) |
 
 ### PvE-only charms
 
@@ -129,7 +122,7 @@ New ideas waiting for review. Numbers are first drafts. Every one has a downside
 | **Beastmaster's Whistle** | Lead | Pets | Wolves get Resistance I and +3 damage vs mobs; pets regenerate; sneak to Recall all pets (60s). | Weakness I when a pet dies | [charm_beastmasters_whistle.md](charm_beastmasters_whistle.md) |
 | **Wardlight Lantern** | Soul Lantern | Monster ward | No natural hostile spawns within 16 blocks; undead nearby burn slowly. | Night Vision doesn't work on you | [charm_wardlight_lantern.md](charm_wardlight_lantern.md) |
 
-Core templates for these use spawn eggs the pack doesn't use yet (turtle, parrot, bee, goat, strider, cow, llama, fox, armadillo, camel, sniffer).
+Core templates for these use spawn eggs the pack doesn't use yet (cow, llama, fox, armadillo, camel, sniffer).
 
 ---
 

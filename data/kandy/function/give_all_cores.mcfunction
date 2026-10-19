@@ -9,6 +9,11 @@ function kandy:frostveil/give_core
 function kandy:eclipse/give_core
 function kandy:chronos/give_core
 function kandy:abyssal/give_core
+function kandy:chainwarden/give_core
+function kandy:falconer/give_core
+function kandy:lifebloom/give_core
+function kandy:warhorn/give_core
+function kandy:dragoon/give_core
 function kandy:zephyr/give_core
 function kandy:berserker/give_core
 function kandy:abyssal_pearl/give_core

@@ -1,0 +1,133 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:parrot_spawn_egg",
+  "base": "minecraft:bow",
+  "addition": "minecraft:phantom_membrane",
+  "result": {
+    "id": "minecraft:bow",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": [
+        {
+          "text": "F",
+          "italic": false,
+          "color": "#ffe29a"
+        },
+        {
+          "text": "a",
+          "italic": false,
+          "color": "#fdd78f"
+        },
+        {
+          "text": "l",
+          "italic": false,
+          "color": "#fbcb83"
+        },
+        {
+          "text": "c",
+          "italic": false,
+          "color": "#f9c078"
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "color": "#f7b56c"
+        },
+        {
+          "text": "n",
+          "italic": false,
+          "color": "#f5aa61"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#f19f56"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#e7954d"
+        },
+        {
+          "text": "'",
+          "italic": false,
+          "color": "#dd8c44"
+        },
+        {
+          "text": "s",
+          "italic": false,
+          "color": "#d3823a"
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "color": "#c97931"
+        },
+        {
+          "text": "R",
+          "italic": false,
+          "color": "#bf6f28"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#b26725"
+        },
+        {
+          "text": "c",
+          "italic": false,
+          "color": "#a46025"
+        },
+        {
+          "text": "u",
+          "italic": false,
+          "color": "#965825"
+        },
+        {
+          "text": "r",
+          "italic": false,
+          "color": "#885126"
+        },
+        {
+          "text": "v",
+          "italic": false,
+          "color": "#794926"
+        },
+        {
+          "text": "e",
+          "italic": false,
+          "color": "#6b4226"
+        }
+      ],
+      "minecraft:lore": [
+        {
+          "text": "Aim at a creature while drawing for 0.75s to Lock On (it glows).",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Full-draw arrows curve toward your locked target, for 15% less damage.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak + full draw: Falcon Volley, 3 extra homing arrows (14s cooldown).",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "text": "Locking onto a player makes you glow for 3s.",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "minecraft:rarity": "epic",
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:unbreakable": {},
+      "minecraft:repair_cost": 1000,
+      "minecraft:custom_data": {
+        "ability": "Falconer"
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 > *"Tipped with a scale the dragon left behind. It wants to be thrown at the sky and brought back down."*
 
-**Status:** Proposed (not implemented)
+**Status:** Implemented
 
 ---
 
@@ -18,8 +18,8 @@
   [
     {"text": "Jabs on the same target stack Puncture: +1 damage per stack (max 3).", "color": "gray", "italic": false},
     {"text": "Charge hits Skewer: -15% armor and Slowness II for 3s.", "color": "gray", "italic": false},
-    {"text": "Sneak + Jump: Dragoon Leap. Attack while falling to Dive (12s cooldown).", "color": "gold", "italic": false},
-    {"text": "A Dive leaves you rooted: Slowness III for 1.5s.", "color": "red", "italic": false}
+    {"text": "Sneak + Jump: Dragoon Leap. Sneak again midair to Dive (12s cooldown).", "color": "gold", "italic": false},
+    {"text": "A Dive leaves you rooted: Slowness III for 2s.", "color": "red", "italic": false}
   ]
   ```
 
@@ -44,8 +44,9 @@
 
 ## 3. Weapon Attributes & Stat Profile
 
-- **Attack Damage:** vanilla netherite spear **+1**
-- **Attack Speed / Reach:** vanilla netherite spear (spears already out-reach swords)
+- **Attack Damage:** 6 (vanilla netherite spear 5, +1)
+- **Attack Speed:** 0.87, same as the vanilla netherite spear (spears only attack at full charge)
+- **Reach:** vanilla spear reach
 - **Durability:** Unbreakable (`unbreakable={}`)
 - Keeps spear enchantments, including Sharpness and **Lunge**.
 
@@ -54,26 +55,28 @@
 ## 4. Skills & Powers
 
 ### Passive: Puncture
-- Fully charged **jabs** on the same target within **2 seconds** of each other stack **Puncture** (max 3). Each stack adds **+1 damage** to your next jabs on that target. The stacks fall off 2s after your last jab.
+- **Jabs** (spears can only attack at full charge) on the same target within **2 seconds** of each other stack **Puncture** (max 3). Each stack adds **+1 damage** to your next jabs on that target. The stacks fall off 2s after your last jab.
 
 ### Passive: Skewer
-- A spear **charge hit** (the held-attack that deals `minecraft:spear` damage) gives the target **-15% armor** and **Slowness II for 3 seconds**.
+- A spear **charge hit** (a hit landed while you're holding the right-click charge) gives the target **-15% armor** and **Slowness II for 3 seconds**.
 
 ### Active Skill: Dragoon Leap & Dive
-- **Leap (Sneak + Jump):** launches you about **6 blocks** straight up, with fall damage cancelled until you land.
-- **Dive (attack while falling after a Leap, within 3s):** you plunge straight down; landing deals **6 damage** to everything within **3 blocks** and knocks them away. Hitting a creature mid-dive also counts as a charged jab.
+- **Leap (Sneak + Jump, on the ground):** launches you about **5 blocks** straight up, with fall damage cancelled until you land.
+- **Dive (press Sneak again in the air after a Leap, within 3.5s):** you plunge up to 3 blocks a tick; landing deals **6 damage** to everything within **3 blocks** and shoves mobs away.
 - **Cooldown:** 12 seconds, starting when you land.
 
 ### Downside: Overextended
-- Landing a Dive roots you with **Slowness III for 1.5s**.
+- Landing a Dive roots you with **Slowness III for 2s**.
 - If you Leap and don't Dive, the cooldown still runs.
 
 ---
 
-## 5. Technical Implementation Notes (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Jab vs charge:** a `player_hurt_entity` advancement filtered on damage type `minecraft:spear` catches charge hits; a second one excluding it catches charged jabs. Check in game which damage type a jab uses before relying on this.
-- **Leap:** Sneak + Jump input (Abyssal Bulwark's Tidal Surge pattern), then Levitation for a few ticks or `tp` steps up while there's head room.
-- **Dive:** while airborne after a Leap, an attack (or the jab advancement) starts a fast downward `tp` step loop until the ground; the landing runs the area damage (a custom damage type in `#minecraft:bypasses_cooldown`).
-- **Armor shred:** an `armor` modifier `kandy:skewer` (-15%) with a 60-tick timer, like Pyroclast's Melt Armor.
-- **Scoreboards:** Puncture stacks and a 40-tick window per target; Leap/Dive state and a 240-tick cooldown per player.
+- **Jab vs charge:** every spear attack uses the `minecraft:spear` damage type, so it can't tell them apart. Instead `advancement/dragoon/using.json` (`using_item`) sets `dg_use` while the charge is held, and `dragoon/hit` Skewers when it's set and Punctures otherwise.
+- **Puncture:** per target `dg_ps` (stacks), `dg_pt` (40-tick window) and `dg_by` (attacker id from `ecl_pid`); the bonus is dealt on the same tick with `kandy:dragoon_pierce`, which is in `#minecraft:bypasses_cooldown`.
+- **Skewer:** `armor` modifier `kandy:skewer` (-15%) for 60 ticks (`dg_sk`).
+- **Leap:** the rising edge of Jump while sneaking and on the ground gives Levitation X for 10 ticks; `dg_st` (70 ticks) is the Dive window.
+- **Dive:** the rising edge of Sneak in the air sets `dg_dive`; `dragoon/dive_step` moves you down 1 block at a time (3 a tick) until the block below isn't passable, then `dragoon/land` runs.
+- **Cooldown:** `dg_cd` = 240 ticks from landing.
+- **Fall damage:** `fall_damage_multiplier` modifier `kandy:dragoon_fall` until you land.

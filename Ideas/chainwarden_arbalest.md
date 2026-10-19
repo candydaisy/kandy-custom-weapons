@@ -2,7 +2,7 @@
 
 > *"Wound with chain pulled from a drowned prison hulk. What it hits, it keeps."*
 
-**Status:** Proposed (not implemented)
+**Status:** Implemented
 
 ---
 
@@ -17,9 +17,9 @@
   ```json
   [
     {"text": "Bolts Shackle what they hit: Slowness I for 2s.", "color": "gray", "italic": false},
-    {"text": "A charged bolt that hits a creature Tethers it for 4s (10s cooldown).", "color": "gray", "italic": false},
+    {"text": "A bolt that hits a creature Tethers it for 4s (10s cooldown).", "color": "gray", "italic": false},
     {"text": "Sneak while Tethered: Reel. Light targets fly to you; heavy ones pull you in.", "color": "gold", "italic": false},
-    {"text": "Sneak within 3s of a bolt hitting a block: Grapple to it (8s cooldown).", "color": "gold", "italic": false},
+    {"text": "Sneak within 3s of a bolt sticking in a block: Grapple to it (8s cooldown).", "color": "gold", "italic": false},
     {"text": "Holding the chain weighs you down: -15% speed while a Tether is up.", "color": "red", "italic": false}
   ]
   ```
@@ -47,7 +47,7 @@
 
 - **Bolt damage:** vanilla crossbow arrows (keeps Piercing, Multishot and Quick Charge)
 - **Durability:** Unbreakable (`unbreakable={}`)
-- Multishot fires three bolts, but only the **center** bolt can Tether, so Multishot is a spread choice, not a triple Tether.
+- With Multishot, the first bolt to hit a creature Tethers it; the others only Shackle.
 
 ---
 
@@ -57,15 +57,15 @@
 - Every bolt from the Arbalest that hits a creature gives **Slowness I for 2s**.
 
 ### Active Skill 1: Tether & Reel
-- **Tether:** a bolt fired from a fully charged crossbow that hits a creature chains it to you for **4 seconds** (chain particles between you and it). **Cooldown: 10s**, starting when the Tether ends.
+- **Tether:** a bolt that hits a creature (crossbows only fire fully charged) chains the nearest creature it hit to you for **4 seconds** (chain particles between you and it). **Cooldown: 10s**, starting when the Tether ends.
 - **Reel (Sneak while a Tether is up):**
   - **Light targets** (most mobs) are yanked toward you over 0.5s, stopping at walls, and land in melee range with **Slowness II for 1s**.
-  - **Heavy targets** (players, iron golems, ravagers, wardens, bosses, anything with `knockback_resistance` ≥ 0.5) don't move; **you** are pulled to them instead, with fall damage cancelled until you land.
-- The Tether breaks if the target gets more than **24 blocks** away or out of line of sight for 1s.
+  - **Heavy targets** (players, iron golems, ravagers, wardens, the Wither, the Ender Dragon, elder guardians, giants, sniffers, happy ghasts) don't move; **you** are pulled to them instead, with fall damage cancelled until you land.
+- The Tether breaks if the target gets more than **24 blocks** away, dies, or changes dimension.
 
 ### Active Skill 2: Grapple
 - **Trigger:** Sneak within **3 seconds** of one of your bolts sticking into a block.
-- **Mechanic:** You're pulled along the chain to the bolt (up to 30 blocks), stopping before walls, and fall damage is cancelled until you land.
+- **Mechanic:** You zip along the chain to the bolt at 2 blocks a tick (up to 30 blocks), stopping before walls, and fall damage is cancelled until you land.
 - **Cooldown:** 8 seconds, separate from Tether.
 
 ### Downside: Dead Weight
@@ -73,11 +73,12 @@
 
 ---
 
-## 5. Technical Implementation Notes (Datapack)
+## 5. Technical Implementation (Datapack)
 
-- **Bolt pickup:** new arrows are checked once for `weapon.components."minecraft:custom_data"{ability:"Chainwarden"}` (Eclipse's pattern); the center bolt of a Multishot is the one whose motion matches your view most closely.
-- **Ownership:** compare the arrow's `Owner` UUID (`execute on owner` doesn't resolve projectile owners in 26.3).
-- **Tether:** a `player_hurt_entity` advancement on projectile damage tags the victim; a per-player id score links the target, and particles are drawn along the chain each tick.
-- **Reel:** step the target (or the player) 0.5 blocks per tick with `tp ^ ^ ^0.5` and passable checks, like World Breaker's pull and Tempest's Gale Surge. Player motion can't be set, so players are always moved with `tp`.
-- **Grapple:** a landed bolt (`inGround:1b`) of yours inside a 3s window becomes the target; sneak is read on the rising edge, like Eclipse's Shadow Warp.
-- **Heavy check:** an entity type tag `kandy:heavy` plus a `knockback_resistance` attribute read.
+- **Bolts:** each new arrow is checked once (`chainwarden/check_arrow`) for `weapon.components."minecraft:custom_data"{ability:"Chainwarden"}`; its shooter is found by comparing the arrow's `Owner` UUID (`execute on owner` doesn't resolve projectile owners in 26.3) and stored as their player id in `cw_by`. Player ids reuse Eclipse's `ecl_pid`, which every player gets.
+- **Hits:** `advancement/hit/chainwarden.json` (projectile damage, Arbalest in either hand) → `chainwarden/hit`: Slowness I on every victim, then `chainwarden/tether` on the nearest if `cw_cd` and `cw_tt` are 0.
+- **Tether:** the target gets the tag `kandy.cw_tethered` and the shooter's id in `cw_by`; the player gets `cw_tt` = 80 ticks and the `movement_speed` modifier `kandy:chainwarden_drag` (-15%). Chain particles are drawn each tick.
+- **Reel:** a rising edge of Sneak sets `cw_reel` = 15 ticks. Light targets are stepped 3 × 0.6 blocks a tick toward you with passable checks; heavy ones (entity tag `kandy:heavy`) pull you instead, 4 × 0.5 blocks a tick. It ends within 2.5 blocks or when the reel runs out, with Slowness II for 1s on a light target.
+- **Grapple:** with no Tether up, a rising edge of Sneak picks your nearest Arbalest bolt within 30 blocks that has been in a block for 60 ticks or less (`life`), then pulls you 2 blocks a tick for up to 15 ticks.
+- **Cooldowns:** `cw_cd` (200 ticks, from when the Tether ends), `cw_gcd` (160 ticks).
+- **Fall damage:** `fall_damage_multiplier` modifier `kandy:chainwarden_fall` (-100%) until you land.

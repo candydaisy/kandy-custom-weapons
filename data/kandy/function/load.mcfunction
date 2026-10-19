@@ -10,6 +10,11 @@ function kandy:frostveil/setup
 function kandy:eclipse/setup
 function kandy:chronos/setup
 function kandy:abyssal/setup
+function kandy:chainwarden/setup
+function kandy:falconer/setup
+function kandy:lifebloom/setup
+function kandy:warhorn/setup
+function kandy:dragoon/setup
 function kandy:zephyr/setup
 function kandy:berserker/setup
 function kandy:abyssal_pearl/setup
@@ -42,6 +47,9 @@ advancement revoke @a only kandy:hit/frostveil
 advancement revoke @a only kandy:hit/eclipse
 advancement revoke @a only kandy:hit/chronos
 advancement revoke @a only kandy:hit/abyssal
+advancement revoke @a only kandy:hit/chainwarden
+advancement revoke @a only kandy:hit/lifebloom
+advancement revoke @a only kandy:hit/dragoon
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

@@ -20,6 +20,17 @@ tag @a remove kandy.inv.chronos
 tag @a remove kandy.main.abyssal
 tag @a remove kandy.inv.abyssal
 tag @a remove kandy.off.abyssal
+tag @a remove kandy.main.chainwarden
+tag @a remove kandy.inv.chainwarden
+tag @a remove kandy.main.falconer
+tag @a remove kandy.inv.falconer
+tag @a remove kandy.main.lifebloom
+tag @a remove kandy.inv.lifebloom
+tag @a remove kandy.main.warhorn
+tag @a remove kandy.inv.warhorn
+tag @a remove kandy.main.dragoon
+tag @a remove kandy.inv.dragoon
+tag @a remove kandy.hold.warhorn
 tag @a remove kandy.charm.zephyr
 tag @a remove kandy.charm.berserker
 tag @a remove kandy.charm.abyssal_pearl
@@ -85,6 +96,30 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"
 
 # Shields are usually held in the offhand
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.off.abyssal
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.main.chainwarden
+execute as @a if items entity @s container.* *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.inv.chainwarden
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.inv.chainwarden
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Falconer"}] run tag @s add kandy.main.falconer
+execute as @a if items entity @s container.* *[custom_data~{ability:"Falconer"}] run tag @s add kandy.inv.falconer
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Falconer"}] run tag @s add kandy.inv.falconer
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Lifebloom"}] run tag @s add kandy.main.lifebloom
+execute as @a if items entity @s container.* *[custom_data~{ability:"Lifebloom"}] run tag @s add kandy.inv.lifebloom
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Lifebloom"}] run tag @s add kandy.inv.lifebloom
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.main.warhorn
+execute as @a if items entity @s container.* *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.inv.warhorn
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.inv.warhorn
+
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.main.dragoon
+execute as @a if items entity @s container.* *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.inv.dragoon
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.inv.dragoon
+
+# The Warhorn is blown from either hand
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.hold.warhorn
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.hold.warhorn
 
 # Charms work from anywhere in the inventory, offhand included
 execute as @a if items entity @s container.* *[custom_data~{charm:"Zephyr"}] run tag @s add kandy.charm.zephyr

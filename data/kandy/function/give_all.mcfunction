@@ -1,4 +1,4 @@
-# Give yourself every Kandy weapon and charm (31 items; make room in your inventory first)
+# Give yourself every Kandy weapon and charm (36 items; make room in your inventory first)
 # Weapons
 function kandy:swiftwind/give
 function kandy:lingering_soul/give
@@ -10,6 +10,11 @@ function kandy:frostveil/give
 function kandy:eclipse/give
 function kandy:chronos/give
 function kandy:abyssal/give
+function kandy:chainwarden/give
+function kandy:falconer/give
+function kandy:lifebloom/give
+function kandy:warhorn/give
+function kandy:dragoon/give
 # Charms
 function kandy:zephyr/give
 function kandy:berserker/give

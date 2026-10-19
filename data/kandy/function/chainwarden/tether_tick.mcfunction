@@ -1,0 +1,14 @@
+# Run as and at a player with a Tether up
+scoreboard players operation #id cw_tmp = @s ecl_pid
+execute as @e[tag=kandy.cw_tethered,distance=..24] if score @s cw_by = #id cw_tmp run tag @s add kandy.cw_mine
+# Out of range, dead or in another dimension: the chain snaps
+execute unless entity @e[tag=kandy.cw_mine] run return run function kandy:chainwarden/release
+
+scoreboard players set #steps cw_tmp 30
+execute positioned ~ ~1.2 ~ facing entity @e[tag=kandy.cw_mine,limit=1] eyes run function kandy:chainwarden/draw
+
+execute if score @s cw_reel matches 1.. run function kandy:chainwarden/reel_step
+# Last tick of the Tether (a finished reel has already released it)
+execute if score @s cw_tt matches 1 run function kandy:chainwarden/release
+scoreboard players remove @s[scores={cw_tt=1..}] cw_tt 1
+tag @e[tag=kandy.cw_mine] remove kandy.cw_mine
