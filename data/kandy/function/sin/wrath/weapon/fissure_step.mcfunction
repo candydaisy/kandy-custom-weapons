@@ -7,6 +7,6 @@ execute positioned ~-1 ~-0.5 ~-1 run tag @e[dx=1,dy=2,dz=1,type=!#kandy:unpullab
 # Follow the ground one block up or down per step, stop at walls
 scoreboard players remove #steps pyro_tmp 1
 execute if score #steps pyro_tmp matches ..0 run return 0
-execute unless block ^ ^ ^1 #kandy:passable if block ^ ^1 ^1 #kandy:passable positioned ^ ^1 ^1 run return run function kandy:pyroclast/fissure_step
-execute if block ^ ^ ^1 #kandy:passable if block ^ ^-1 ^1 #kandy:passable positioned ^ ^-1 ^1 run return run function kandy:pyroclast/fissure_step
-execute if block ^ ^ ^1 #kandy:passable positioned ^ ^ ^1 run function kandy:pyroclast/fissure_step
+execute unless block ^ ^ ^1 #kandy:passable if block ^ ^1 ^1 #kandy:passable positioned ^ ^1 ^1 run return run function kandy:sin/wrath/weapon/fissure_step
+execute if block ^ ^ ^1 #kandy:passable if block ^ ^-1 ^1 #kandy:passable positioned ^ ^-1 ^1 run return run function kandy:sin/wrath/weapon/fissure_step
+execute if block ^ ^ ^1 #kandy:passable positioned ^ ^ ^1 run function kandy:sin/wrath/weapon/fissure_step

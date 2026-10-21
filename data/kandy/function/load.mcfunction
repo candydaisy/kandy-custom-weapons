@@ -5,7 +5,7 @@ function kandy:swiftwind/setup
 function kandy:lingering_soul/setup
 function kandy:bloodpact/setup
 function kandy:worldbreaker/setup
-function kandy:pyroclast/setup
+function kandy:sin/setup
 function kandy:tempest/setup
 function kandy:frostveil/setup
 function kandy:eclipse/setup
@@ -17,7 +17,6 @@ function kandy:lifebloom/setup
 function kandy:warhorn/setup
 function kandy:dragoon/setup
 function kandy:zephyr/setup
-function kandy:berserker/setup
 function kandy:abyssal_pearl/setup
 function kandy:molten_core/setup
 function kandy:void_talisman/setup
@@ -48,7 +47,7 @@ function kandy:wardlight_lantern/setup
 advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/lingering_soul
 advancement revoke @a only kandy:hit/worldbreaker
-advancement revoke @a only kandy:hit/pyroclast
+advancement revoke @a only kandy:sin/wrath/hit
 advancement revoke @a only kandy:hit/tempest
 advancement revoke @a only kandy:hit/frostveil
 advancement revoke @a only kandy:hit/eclipse

@@ -1,5 +1,5 @@
 # Advancement reward: any charged, unblocked melee hit. Heals only during Frenzy, at most once every 3s
-advancement revoke @s only kandy:berserker/lifesteal
+advancement revoke @s only kandy:sin/wrath/charm/lifesteal
 execute unless score @s bers_fr matches 1.. run return 0
 execute if score @s bers_ls matches 1.. run return 0
 scoreboard players set @s bers_ls 60

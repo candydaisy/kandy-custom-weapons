@@ -17,9 +17,7 @@ function kandy:worldbreaker/pull
 function kandy:worldbreaker/skill
 function kandy:worldbreaker/visual
 
-function kandy:pyroclast/heat
-function kandy:pyroclast/effect
-function kandy:pyroclast/visual
+function kandy:sin/tick
 
 function kandy:tempest/tick
 function kandy:frostveil/tick
@@ -33,7 +31,6 @@ function kandy:warhorn/tick
 function kandy:dragoon/tick
 
 function kandy:zephyr/tick
-function kandy:berserker/tick
 function kandy:abyssal_pearl/tick
 function kandy:molten_core/tick
 function kandy:void_talisman/tick

@@ -35,7 +35,7 @@ advancement revoke @a only kandy:hit/lingering_soul
 advancement revoke @a only kandy:swiftwind/hurt
 advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:hit/bloodpact
-advancement revoke @a only kandy:hit/pyroclast
+function kandy:sin/uninstall
 
 function kandy:tempest/uninstall
 function kandy:frostveil/uninstall
@@ -49,7 +49,6 @@ function kandy:lifebloom/uninstall
 function kandy:warhorn/uninstall
 function kandy:dragoon/uninstall
 function kandy:zephyr/uninstall
-function kandy:berserker/uninstall
 function kandy:abyssal_pearl/uninstall
 function kandy:molten_core/uninstall
 function kandy:void_talisman/uninstall

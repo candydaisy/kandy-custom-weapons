@@ -4,7 +4,7 @@ function kandy:swiftwind/give
 function kandy:lingering_soul/give
 function kandy:bloodpact/give
 function kandy:worldbreaker/give
-function kandy:pyroclast/give
+function kandy:sin/wrath/weapon/give {tier:1}
 function kandy:tempest/give
 function kandy:frostveil/give
 function kandy:eclipse/give
@@ -17,7 +17,7 @@ function kandy:warhorn/give
 function kandy:dragoon/give
 # Charms
 function kandy:zephyr/give
-function kandy:berserker/give
+function kandy:sin/wrath/charm/give
 function kandy:abyssal_pearl/give
 function kandy:molten_core/give
 function kandy:void_talisman/give

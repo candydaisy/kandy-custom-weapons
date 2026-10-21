@@ -3,7 +3,7 @@ function kandy:swiftwind/give_core
 function kandy:lingering_soul/give_core
 function kandy:bloodpact/give_core
 function kandy:worldbreaker/give_core
-function kandy:pyroclast/give_core
+function kandy:sin/wrath/weapon/give_core
 function kandy:tempest/give_core
 function kandy:frostveil/give_core
 function kandy:eclipse/give_core
@@ -15,7 +15,7 @@ function kandy:lifebloom/give_core
 function kandy:warhorn/give_core
 function kandy:dragoon/give_core
 function kandy:zephyr/give_core
-function kandy:berserker/give_core
+function kandy:sin/wrath/charm/give_core
 function kandy:abyssal_pearl/give_core
 function kandy:molten_core/give_core
 function kandy:void_talisman/give_core

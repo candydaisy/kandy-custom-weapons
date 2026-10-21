@@ -13,6 +13,6 @@
     }
   },
   "rewards": {
-    "function": "kandy:berserker/lifesteal"
+    "function": "kandy:sin/wrath/charm/lifesteal"
   }
 }
