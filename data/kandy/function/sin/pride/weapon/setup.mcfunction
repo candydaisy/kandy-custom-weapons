@@ -13,3 +13,5 @@ scoreboard objectives add dg_jmp dummy
 scoreboard objectives add dg_tmp dummy
 scoreboard players set #-10 dg_tmp -10
 scoreboard players set #-10 dg_tmp -10
+scoreboard players set #600 dg_tmp 600
+scoreboard players set #-1 dg_tmp -1

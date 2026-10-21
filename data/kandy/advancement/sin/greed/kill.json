@@ -1,7 +1,16 @@
 {
   "criteria": {
     "kill": {
-      "trigger": "minecraft:player_killed_entity"
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "nbt": "{Tags:[\"kandy.cw_tethered\"]}"
+          }
+        }
+      }
     }
   },
   "rewards": {
