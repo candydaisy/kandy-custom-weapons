@@ -14,3 +14,5 @@ scoreboard objectives remove kandy.ccdmax
 scoreboard objectives remove kandy.wt
 scoreboard objectives remove kandy.deed
 scoreboard objectives remove kandy.n
+data remove storage kandy:held item
+data remove storage kandy:held slot

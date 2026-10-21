@@ -1,7 +1,8 @@
 # Run as a player holding a sin weapon, after sin/tier. The sin deepens with use, counted on the weapon itself:
 # function kandy:sin/deed {sin:"wrath",need:10,what:"Overdrives",name:"Wrath",color:"#e3261b"}
 # At $(need) deeds the weapon rises one tier through its sin's retier function, which also resets the count
-execute store result score @s kandy.deed run data get entity @s SelectedItem.components."minecraft:custom_data".deeds
+function kandy:util/held
+execute store result score @s kandy.deed run data get storage kandy:held item.components."minecraft:custom_data".deeds
 scoreboard players add @s kandy.deed 1
 scoreboard players operation #up kandy.deed = @s kandy.wt
 scoreboard players add #up kandy.deed 1
