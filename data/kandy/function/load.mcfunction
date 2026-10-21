@@ -11,7 +11,6 @@ function kandy:frostveil/setup
 function kandy:eclipse/setup
 function kandy:chronos/setup
 function kandy:abyssal/setup
-function kandy:chainwarden/setup
 function kandy:falconer/setup
 function kandy:lifebloom/setup
 function kandy:warhorn/setup
@@ -36,7 +35,6 @@ function kandy:tinkers_whetstone/setup
 function kandy:enderbrace/setup
 function kandy:anglers_lure/setup
 function kandy:harvesters_sheaf/setup
-function kandy:plunderers_coin/setup
 function kandy:slayers_tally/setup
 function kandy:beastmasters_whistle/setup
 function kandy:wardlight_lantern/setup
@@ -53,7 +51,9 @@ advancement revoke @a only kandy:hit/frostveil
 advancement revoke @a only kandy:hit/eclipse
 advancement revoke @a only kandy:hit/chronos
 advancement revoke @a only kandy:hit/abyssal
-advancement revoke @a only kandy:hit/chainwarden
+advancement revoke @a only kandy:sin/greed/hit
+advancement revoke @a only kandy:sin/greed/kill
+advancement revoke @a only kandy:sin/greed/plunder
 advancement revoke @a only kandy:hit/lifebloom
 advancement revoke @a only kandy:sin/pride/hit
 advancement revoke @a only kandy:sin/pride/using

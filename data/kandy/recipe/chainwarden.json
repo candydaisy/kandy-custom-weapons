@@ -116,6 +116,11 @@
           "italic": false
         },
         {
+          "text": "Pilfer: bolts steal a level from players; mobs drop an extra orb.",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "text": "A bolt that hits a creature Tethers it for 4s (10s cooldown).",
           "color": "gray",
           "italic": false
@@ -134,15 +139,28 @@
           "text": "Holding the chain weighs you down: -15% speed while a Tether is up.",
           "color": "red",
           "italic": false
+        },
+        {
+          "text": "Can't Let Go: putting it away snaps the chain and doubles the cooldown.",
+          "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Greed · Tier 1",
+          "color": "#ffcc00",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Reels, then kills on Tethered creatures, deepen the sin.",
+          "color": "dark_gray",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",
       "minecraft:enchantment_glint_override": true,
       "minecraft:unbreakable": {},
       "minecraft:repair_cost": 1000,
-      "minecraft:custom_data": {
-        "ability": "Chainwarden"
-      }
+      "minecraft:custom_data": "{sin:\"greed\",type:\"weapon\",tier:1}"
     }
   }
 }

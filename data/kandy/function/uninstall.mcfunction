@@ -43,7 +43,6 @@ scoreboard objectives remove frost_chill
 function kandy:eclipse/uninstall
 function kandy:chronos/uninstall
 function kandy:abyssal/uninstall
-function kandy:chainwarden/uninstall
 function kandy:falconer/uninstall
 function kandy:lifebloom/uninstall
 function kandy:warhorn/uninstall
@@ -68,7 +67,6 @@ function kandy:tinkers_whetstone/uninstall
 function kandy:enderbrace/uninstall
 function kandy:anglers_lure/uninstall
 function kandy:harvesters_sheaf/uninstall
-function kandy:plunderers_coin/uninstall
 function kandy:slayers_tally/uninstall
 function kandy:beastmasters_whistle/uninstall
 function kandy:wardlight_lantern/uninstall

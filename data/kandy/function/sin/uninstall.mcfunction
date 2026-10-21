@@ -2,6 +2,8 @@ function kandy:sin/wrath/weapon/uninstall
 function kandy:sin/wrath/charm/uninstall
 function kandy:sin/pride/weapon/uninstall
 function kandy:sin/pride/charm/uninstall
+function kandy:sin/greed/weapon/uninstall
+function kandy:sin/greed/charm/uninstall
 tag @a remove kandy.quarrel
 scoreboard objectives remove kandy.cd
 scoreboard objectives remove kandy.cdmax

@@ -24,7 +24,6 @@ function kandy:frostveil/tick
 function kandy:eclipse/tick
 function kandy:chronos/tick
 function kandy:abyssal/tick
-function kandy:chainwarden/tick
 function kandy:falconer/tick
 function kandy:lifebloom/tick
 function kandy:warhorn/tick

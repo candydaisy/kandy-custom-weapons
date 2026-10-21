@@ -104,15 +104,17 @@
           "italic": false
         },
         {
-          "text": "Greed is hungry: every mob kill costs 1 hunger point.",
+          "text": "Gilded Weight: -5% speed per 64 gold, emeralds, diamonds or netherite carried (max -25%).",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Greed",
+          "color": "#ffcc00",
           "italic": false
         }
       ],
-      "minecraft:custom_data": {
-        "charm": "PlunderersCoin",
-        "type": "talisman"
-      }
+      "minecraft:custom_data": "{sin:\"greed\",type:\"charm\",tier:1}"
     }
   }
 }

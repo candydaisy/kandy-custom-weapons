@@ -10,7 +10,7 @@ function kandy:frostveil/give
 function kandy:eclipse/give
 function kandy:chronos/give
 function kandy:abyssal/give
-function kandy:chainwarden/give
+function kandy:sin/greed/weapon/give {tier:1}
 function kandy:falconer/give
 function kandy:lifebloom/give
 function kandy:warhorn/give
@@ -39,7 +39,7 @@ function kandy:tinkers_whetstone/give
 function kandy:enderbrace/give
 function kandy:anglers_lure/give
 function kandy:harvesters_sheaf/give
-function kandy:plunderers_coin/give
+function kandy:sin/greed/charm/give
 function kandy:slayers_tally/give
 function kandy:beastmasters_whistle/give
 function kandy:wardlight_lantern/give

@@ -6,6 +6,8 @@ function kandy:sin/wrath/weapon/tick
 function kandy:sin/wrath/charm/tick
 function kandy:sin/pride/weapon/tick
 function kandy:sin/pride/charm/tick
+function kandy:sin/greed/weapon/tick
+function kandy:sin/greed/charm/tick
 
 scoreboard players remove @a[scores={kandy.cd=1..}] kandy.cd 1
 scoreboard players remove @a[scores={kandy.ccd=1..}] kandy.ccd 1

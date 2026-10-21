@@ -1,0 +1,7 @@
+# function kandy:sin/greed/weapon/retier {tier:2}: raise the held arbalest's tier, reset its progress, rewrite its lore
+# Pre-revamp arbalests pick up the new sin keys here too (their old ability key is left alongside, harmlessly)
+$item modify entity @s weapon.mainhand [{type:"minecraft:set_custom_data",tag:'{sin:"greed",type:"weapon",tier:$(tier),deeds:0}'},{type:"minecraft:set_lore",mode:"replace_all",lore:[{text:"Bolts Shackle what they hit: Slowness I for 2s.",color:"gray",italic:false},{text:"Pilfer: bolts steal a level from players; mobs drop an extra orb.",color:"gray",italic:false},{text:"A bolt that hits a creature Tethers it for 4s (10s cooldown).",color:"gray",italic:false},{text:"Sneak while Tethered: Reel. Light targets fly to you; heavy ones pull you in.",color:"gold",italic:false},{text:"Sneak within 3s of a bolt sticking in a block: Grapple to it (8s cooldown).",color:"gold",italic:false},{text:"Holding the chain weighs you down: -15% speed while a Tether is up.",color:"red",italic:false},{text:"Can't Let Go: putting it away snaps the chain and doubles the cooldown.",color:"red",italic:false},{text:"Sin of Greed · Tier $(tier)",color:"#ffcc00",italic:false},{text:"Indulge it: Reels, then kills on Tethered creatures, deepen the sin.",color:"dark_gray",italic:false}]}]
+$title @s actionbar {text:"Your Greed deepens: Tier $(tier)",color:"#ffcc00",bold:true}
+playsound minecraft:block.chain.place player @a[distance=..16] ~ ~ ~ 1 0.5
+playsound minecraft:block.anvil.use player @s ~ ~ ~ 0.6 0.6
+particle minecraft:wax_on ~ ~1 ~ 0.5 0.8 0.5 0 30

@@ -9,3 +9,5 @@ function kandy:sin/wrath/weapon/setup
 function kandy:sin/wrath/charm/setup
 function kandy:sin/pride/weapon/setup
 function kandy:sin/pride/charm/setup
+function kandy:sin/greed/weapon/setup
+function kandy:sin/greed/charm/setup

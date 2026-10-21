@@ -18,8 +18,6 @@ tag @a remove kandy.inv.chronos
 tag @a remove kandy.main.abyssal
 tag @a remove kandy.inv.abyssal
 tag @a remove kandy.off.abyssal
-tag @a remove kandy.main.chainwarden
-tag @a remove kandy.inv.chainwarden
 tag @a remove kandy.main.falconer
 tag @a remove kandy.inv.falconer
 tag @a remove kandy.main.lifebloom
@@ -48,7 +46,6 @@ tag @a remove kandy.charm.tinkers_whetstone
 tag @a remove kandy.charm.enderbrace
 tag @a remove kandy.charm.anglers_lure
 tag @a remove kandy.charm.harvesters_sheaf
-tag @a remove kandy.charm.plunderers_coin
 tag @a remove kandy.charm.slayers_tally
 tag @a remove kandy.charm.beastmasters_whistle
 tag @a remove kandy.charm.wardlight_lantern
@@ -92,10 +89,6 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"
 
 # Shields are usually held in the offhand
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.off.abyssal
-
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.main.chainwarden
-execute as @a if items entity @s container.* *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.inv.chainwarden
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.inv.chainwarden
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Falconer"}] run tag @s add kandy.main.falconer
 execute as @a if items entity @s container.* *[custom_data~{ability:"Falconer"}] run tag @s add kandy.inv.falconer
@@ -157,8 +150,6 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"AnglersLure"}
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AnglersLure"}] run tag @s add kandy.charm.anglers_lure
 execute as @a if items entity @s container.* *[custom_data~{charm:"HarvestersSheaf"}] run tag @s add kandy.charm.harvesters_sheaf
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"HarvestersSheaf"}] run tag @s add kandy.charm.harvesters_sheaf
-execute as @a if items entity @s container.* *[custom_data~{charm:"PlunderersCoin"}] run tag @s add kandy.charm.plunderers_coin
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PlunderersCoin"}] run tag @s add kandy.charm.plunderers_coin
 execute as @a if items entity @s container.* *[custom_data~{charm:"SlayersTally"}] run tag @s add kandy.charm.slayers_tally
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"SlayersTally"}] run tag @s add kandy.charm.slayers_tally
 execute as @a if items entity @s container.* *[custom_data~{charm:"BeastmastersWhistle"}] run tag @s add kandy.charm.beastmasters_whistle

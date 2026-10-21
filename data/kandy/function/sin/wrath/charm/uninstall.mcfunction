@@ -1,4 +1,4 @@
-advancement revoke @a only kandy:sin/wrath/charm/lifesteal
+advancement revoke @a only kandy:sin/wrath/lifesteal
 scoreboard objectives remove bers_hp
 scoreboard objectives remove bers_cd
 scoreboard objectives remove bers_fr

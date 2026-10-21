@@ -9,7 +9,7 @@ function kandy:frostveil/give_core
 function kandy:eclipse/give_core
 function kandy:chronos/give_core
 function kandy:abyssal/give_core
-function kandy:chainwarden/give_core
+function kandy:sin/greed/weapon/give_core
 function kandy:falconer/give_core
 function kandy:lifebloom/give_core
 function kandy:warhorn/give_core
@@ -37,7 +37,7 @@ function kandy:tinkers_whetstone/give_core
 function kandy:enderbrace/give_core
 function kandy:anglers_lure/give_core
 function kandy:harvesters_sheaf/give_core
-function kandy:plunderers_coin/give_core
+function kandy:sin/greed/charm/give_core
 function kandy:slayers_tally/give_core
 function kandy:beastmasters_whistle/give_core
 function kandy:wardlight_lantern/give_core

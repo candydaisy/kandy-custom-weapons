@@ -1,4 +1,7 @@
-# Run as a player holding a sin weapon: kandy.wt = its tier (pre-revamp items have none and count as 1)
-# Read on demand (hits, Overdrive) rather than every tick, since it reads the player's NBT
-execute store result score @s kandy.wt run data get entity @s SelectedItem.components."minecraft:custom_data".tier
-execute unless score @s kandy.wt matches 1..3 run scoreboard players set @s kandy.wt 1
+# Run as a player: kandy.wt = tier of the sin weapon in the main hand, else the offhand (pre-revamp items count as 1)
+scoreboard players set @s kandy.wt 1
+execute if items entity @s weapon.offhand *[custom_data~{type:"weapon",tier:2}] run scoreboard players set @s kandy.wt 2
+execute if items entity @s weapon.offhand *[custom_data~{type:"weapon",tier:3}] run scoreboard players set @s kandy.wt 3
+execute if items entity @s weapon.mainhand *[custom_data~{type:"weapon"}] run scoreboard players set @s kandy.wt 1
+execute if items entity @s weapon.mainhand *[custom_data~{type:"weapon",tier:2}] run scoreboard players set @s kandy.wt 2
+execute if items entity @s weapon.mainhand *[custom_data~{type:"weapon",tier:3}] run scoreboard players set @s kandy.wt 3
