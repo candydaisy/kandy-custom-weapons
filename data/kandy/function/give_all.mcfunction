@@ -4,17 +4,17 @@ function kandy:swiftwind/give
 function kandy:lingering_soul/give
 function kandy:bloodpact/give
 function kandy:worldbreaker/give
-function kandy:sin/wrath/weapon/give {tier:1}
+function kandy:sin/wrath/weapon/give
 function kandy:tempest/give
 function kandy:frostveil/give
 function kandy:eclipse/give
 function kandy:chronos/give
 function kandy:abyssal/give
-function kandy:sin/greed/weapon/give {tier:1}
+function kandy:sin/greed/weapon/give
 function kandy:falconer/give
 function kandy:lifebloom/give
 function kandy:warhorn/give
-function kandy:sin/pride/weapon/give {tier:1}
+function kandy:sin/pride/weapon/give
 # Charms
 function kandy:zephyr/give
 function kandy:sin/wrath/charm/give
