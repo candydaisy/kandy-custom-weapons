@@ -65,7 +65,7 @@ The pack is being reworked around the Seven Deadly Sins (design: `Ideas/seven_si
 
 - **Wrath** — Pyroclast Cleaver + Berserker Token.
   - **Blind Fury** (set bonus): taking damage gives +5% Heat (reaching 100% starts Overdrive), and Battle Frenzy instantly starts Overdrive.
-  - **Tiers** (`/function kandy:sin/wrath/weapon/give {tier:2}`): tier 2 makes Overdrive last 8s and eruptions deal 5. Tier 3 also chains each eruption to the nearest other creature within 4 blocks, but Overheat lasts 6s and sets you on fire.
+  - **Tiers** are earned by indulging the sin, and progress is stored on the cleaver itself (your action bar shows it). Tier 2 comes after 10 Overdrives, tier 3 after 30 kills made during Overdrive at tier 2. Operators can skip ahead with `/function kandy:sin/wrath/weapon/give {tier:2}`. Tier 2 makes Overdrive last 8s and eruptions deal 5. Tier 3 also chains each eruption to the nearest other creature within 4 blocks, but Overheat lasts 6s and sets you on fire.
   - Magma Fissure now uses the shared sin weapon cooldown, and Frenzy the shared sin charm cooldown.
 
 Cleavers and Tokens made before the rework keep working as tier 1.

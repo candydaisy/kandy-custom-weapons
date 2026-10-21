@@ -8,7 +8,7 @@ Implementation notes (where the build differs from the spec below):
 - Recipe and advancement-unlock ids (`kandy:pyroclast`, `kandy:pyroclast_core`, `kandy:berserker`...) are kept so existing worlds keep their unlocked recipes. Only the forged item's `custom_data` changed.
 - Hit advancements use two OR'd criteria (new key, old key): 26.3 rejects an `any_of` list in a criterion's `player` field.
 - The quarrel rule (one sin charm at a time) lands with the second sin; with one sin it can't trigger.
-- **Tier upgrades have no in-game source yet.** A smithing tier-up recipe can't require the *forged* weapon (ingredients match item id only), so a plain netherite axe + Core + catalyst would skip straight to tier 2. Tiers exist in `custom_data` and work; how players earn them is an open decision.
+- **Tiers are deed-based, not smithing.** A smithing tier-up recipe can't require the *forged* weapon (ingredients match item id only), so a plain item + Core + catalyst would skip to tier 2. Instead each weapon counts deeds in its own `custom_data.deeds` and rewrites its tier and lore when it levels. The per-sin "catalyst" items in section 2 are therefore unused. Wrath: tier 2 after 10 Overdrives, tier 3 after 30 Overdrive kills.
 
 Facts this is built on (read from the pack, not assumed):
 - Minecraft 26.3, `pack.mcmeta` `min_format 101` / `max_format 121`.

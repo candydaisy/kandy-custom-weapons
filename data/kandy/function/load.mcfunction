@@ -48,6 +48,8 @@ advancement revoke @a only kandy:hit/bloodpact
 advancement revoke @a only kandy:hit/lingering_soul
 advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:sin/wrath/hit
+advancement revoke @a only kandy:sin/wrath/hurt
+advancement revoke @a only kandy:sin/wrath/kill
 advancement revoke @a only kandy:hit/tempest
 advancement revoke @a only kandy:hit/frostveil
 advancement revoke @a only kandy:hit/eclipse
