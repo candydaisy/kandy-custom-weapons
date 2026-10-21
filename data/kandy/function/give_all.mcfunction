@@ -14,7 +14,7 @@ function kandy:chainwarden/give
 function kandy:falconer/give
 function kandy:lifebloom/give
 function kandy:warhorn/give
-function kandy:dragoon/give
+function kandy:sin/pride/weapon/give {tier:1}
 # Charms
 function kandy:zephyr/give
 function kandy:sin/wrath/charm/give
@@ -22,7 +22,7 @@ function kandy:abyssal_pearl/give
 function kandy:molten_core/give
 function kandy:void_talisman/give
 function kandy:alchemist/give
-function kandy:phoenix_plume/give
+function kandy:sin/pride/charm/give
 function kandy:merchant_sigil/give
 function kandy:watchers_lens/give
 function kandy:verdant_sprig/give

@@ -3,4 +3,4 @@ advancement revoke @s only kandy:sin/wrath/kill
 execute unless entity @s[tag=kandy.wrath.w] run return 0
 execute unless score @s pyro_od matches 1.. run return 0
 function kandy:sin/tier
-execute if score @s kandy.wt matches 2 run function kandy:sin/wrath/weapon/deed
+execute if score @s kandy.wt matches 2 run function kandy:sin/deed {sin:"wrath",need:30,what:"Overdrive kills",name:"Wrath",color:"#e3261b"}

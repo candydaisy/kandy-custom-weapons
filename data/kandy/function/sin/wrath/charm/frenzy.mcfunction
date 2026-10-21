@@ -1,5 +1,6 @@
 # 8s of Frenzy, recharging 60s after it starts
 scoreboard players set @s kandy.ccd 1200
+scoreboard players set @s kandy.ccdmax 1200
 scoreboard players set @s bers_fr 160
 scoreboard players set @s bers_ls 0
 effect give @s minecraft:strength 8 0 true

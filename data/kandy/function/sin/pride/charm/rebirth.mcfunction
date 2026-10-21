@@ -1,5 +1,6 @@
 # Run as and at a carrier who just fell to 2 hearts or less
-scoreboard players set @s phx_cd 6000
+scoreboard players set @s kandy.ccd 6000
+scoreboard players set @s kandy.ccdmax 6000
 scoreboard players set @s phx_ash 1200
 effect give @s minecraft:regeneration 4 2
 effect give @s minecraft:absorption 8 1
@@ -10,6 +11,10 @@ tag @s add kandy.phx_src
 execute as @e[distance=..4,type=!#kandy:unpullable,tag=!kandy.phx_src,tag=!kandy.immune] run damage @s 4 minecraft:in_fire by @p[tag=kandy.phx_src]
 execute as @e[distance=..4,type=!minecraft:player,type=!#kandy:unpullable,tag=!kandy.phx_src] run data merge entity @s {Fire:80s}
 tag @s remove kandy.phx_src
+
+# Ascendant (Wyrmspear held): rising from the ashes readies the Leap
+execute if entity @s[tag=kandy.pride.set] if score @s kandy.cd matches 1.. run playsound minecraft:entity.ender_dragon.flap player @s ~ ~ ~ 1 1.4
+scoreboard players set @s[tag=kandy.pride.set] kandy.cd 0
 
 # Ash Body: -2 max hearts for 60s
 attribute @s minecraft:max_health modifier add kandy:phoenix_ash -4 add_value

@@ -1,0 +1,71 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{sin:\"pride\",type:\"weapon\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "hit_old": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ability:\"Dragoon\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit",
+      "hit_old"
+    ]
+  ],
+  "rewards": {
+    "function": "kandy:sin/pride/weapon/hit"
+  }
+}

@@ -13,7 +13,7 @@ execute if score #fx alch_tmp matches 1 run effect give @s minecraft:regeneratio
 execute if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 
 scoreboard players set #fx alch_tmp 0
-execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker] store success score #fx alch_tmp run effect clear @s minecraft:slowness
+execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker,tag=!kandy.pride.c] store success score #fx alch_tmp run effect clear @s minecraft:slowness
 execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run effect give @s minecraft:speed 4 0
 execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 

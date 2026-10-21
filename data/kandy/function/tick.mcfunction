@@ -28,14 +28,12 @@ function kandy:chainwarden/tick
 function kandy:falconer/tick
 function kandy:lifebloom/tick
 function kandy:warhorn/tick
-function kandy:dragoon/tick
 
 function kandy:zephyr/tick
 function kandy:abyssal_pearl/tick
 function kandy:molten_core/tick
 function kandy:void_talisman/tick
 function kandy:alchemist/tick
-function kandy:phoenix_plume/tick
 function kandy:merchant_sigil/tick
 function kandy:watchers_lens/tick
 function kandy:verdant_sprig/tick

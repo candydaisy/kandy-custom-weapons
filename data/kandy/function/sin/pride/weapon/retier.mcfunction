@@ -1,0 +1,7 @@
+# function kandy:sin/pride/weapon/retier {tier:2}: raise the held spear's tier, reset its progress, rewrite its lore
+# Pre-revamp spears pick up the new sin keys here too (their old ability key is left alongside, harmlessly)
+$item modify entity @s weapon.mainhand [{type:"minecraft:set_custom_data",tag:'{sin:"pride",type:"weapon",tier:$(tier),deeds:0}'},{type:"minecraft:set_lore",mode:"replace_all",lore:[{text:"Jabs on the same target stack Puncture: +1 damage per stack (max 3).",color:"gray",italic:false},{text:"Charge hits Skewer: -15% armor and Slowness II for 3s.",color:"gray",italic:false},{text:"Above Them: +15% damage to foes 2+ blocks below you.",color:"gray",italic:false},{text:"Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (23s cooldown).",color:"gold",italic:false},{text:"A Dive leaves you rooted: Slowness III for 2s.",color:"red",italic:false},{text:"A Dive that hits nothing: you take the fall you skipped.",color:"red",italic:false},{text:"Sin of Pride · Tier $(tier)",color:"#9b59ff",italic:false},{text:"Indulge it: Dives that hit, then Dive kills, deepen the sin.",color:"dark_gray",italic:false}]}]
+$title @s actionbar {text:"Your Pride deepens: Tier $(tier)",color:"#9b59ff",bold:true}
+playsound minecraft:entity.ender_dragon.growl player @a[distance=..16] ~ ~ ~ 0.8 1.2
+playsound minecraft:block.anvil.use player @s ~ ~ ~ 0.6 0.6
+particle minecraft:end_rod ~ ~1 ~ 0.5 0.8 0.5 0.05 30

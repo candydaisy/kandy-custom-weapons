@@ -57,7 +57,7 @@ Each skill has its own boss bar at the top of your screen (only you see them). H
 | **Falconer's Recurve** (bow) | `kandy:falconer/give` | Keep your crosshair on a creature for 0.75s while drawing to Lock On (it glows; the lock lasts 8s and each homing shot refreshes it). Full-draw arrows fired while locked curve toward the target for 15% less damage. Sneak + full draw: Falcon Volley, 3 extra homing spectral arrows (14s cooldown). **Downside:** while a lock is up you have Blindness and Slowness II, and locking onto a player makes you glow for 3s. |
 | **Lifebloom Staff** (golden hoe) | `kandy:lifebloom/give` | Healer: 4 attack damage, 1.2 attack speed. Right-click: Mending Pulse, instantly heals teammates within 6 blocks for 4 HP, plus Regeneration I 4s for those at 10 HP or less (12s cooldown). Keep holding 2s: Sanctuary, a 5-block aura that follows you for 10s, giving you and teammates Regeneration II and monsters Slowness I (30s cooldown). Charged hits on mobs heal your most hurt teammate within 8 blocks by about 1 HP. Only helps your team (see Teams). **Downside:** your own Pulse is only Regeneration I for 3s. |
 | **Oathbound Warhorn** (goat horn) | `kandy:warhorn/give` | Works from either hand. Blow: War Cry, you and teammates within 16 blocks get Strength III + Speed III for 10s. Sneak + blow: Rally, you and teammates within 16 blocks are cleansed (Weakness, Poison, Slowness, Mining Fatigue, Darkness, leaving pack drawbacks alone) and get Resistance III for 10s; monsters within 6 blocks are shoved back. 90s cooldown, shared. Only helps your team (see Teams). **Downside:** monsters within 24 blocks get Speed I and you glow for 8s. |
-| **Dragoon's Wyrmspear** (netherite spear) | `kandy:dragoon/give` | 6 attack damage (+1 over netherite). Jabs on the same target within 2s stack Puncture: +1 damage per stack on your next jabs (max 3). Hits during a held charge Skewer: -15% armor and Slowness II for 3s. Sneak + Jump: Dragoon Leap (about 5 blocks, no fall damage); keep holding Sneak (or press it again) once you stop rising to Dive, landing for 6 damage within 3 blocks (23s cooldown from landing). **Downside:** Slowness III for 2s after a Dive. |
+| **Dragoon's Wyrmspear** (netherite spear) · *Sin of Pride* | `kandy:sin/pride/weapon/give {tier:1}` | 6 attack damage (+1 over netherite). Jabs on the same target within 2s stack Puncture: +1 damage per stack on your next jabs (max 3). Hits during a held charge Skewer: -15% armor and Slowness II for 3s. Sneak + Jump: Dragoon Leap (about 5 blocks, no fall damage); keep holding Sneak (or press it again) once you stop rising to Dive, landing for 6 damage within 3 blocks (23s cooldown from landing). **Downside:** Slowness III for 2s after a Dive. |
 
 ## Sins
 
@@ -68,7 +68,18 @@ The pack is being reworked around the Seven Deadly Sins (design: `Ideas/seven_si
   - **Tiers** are earned by indulging the sin, and progress is stored on the cleaver itself (your action bar shows it). Tier 2 comes after 10 Overdrives, tier 3 after 30 kills made during Overdrive at tier 2. Operators can skip ahead with `/function kandy:sin/wrath/weapon/give {tier:2}`. Tier 2 makes Overdrive last 8s and eruptions deal 5. Tier 3 also chains each eruption to the nearest other creature within 4 blocks, but Overheat lasts 6s and sets you on fire.
   - Magma Fissure now uses the shared sin weapon cooldown, and Frenzy the shared sin charm cooldown.
 
-Cleavers and Tokens made before the rework keep working as tier 1.
+- **Pride** — Dragoon's Wyrmspear + Phoenix Plume.
+  - **Above Them:** spear hits on creatures at least 2 blocks below you deal +15% damage.
+  - **The Fall:** a Dive that hits nothing deals you the fall damage you skipped.
+  - **Never Retreat** (Phoenix Plume): Slowness I while below half health.
+  - **Ascendant** (set bonus): Rebirth readies the Leap at once, and each Dive kill takes 30s off Rebirth's cooldown.
+  - **Tiers:** tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills. Tier 2 Leaps higher and Dives for 8. Tier 3 makes Above Them +25% and Dives slow what they hit for 3s, but a missed Dive's fall hurts double.
+
+**One sin at a time:** carrying charms of two different sins turns every sin charm off until you drop one.
+
+**Shared cooldowns:** every sin weapon's ability shares one cooldown, and every sin charm's another, so swapping items doesn't skip a cooldown.
+
+Items made before the rework keep working as tier 1.
 
 ## Teams
 
@@ -91,7 +102,7 @@ Charms work from anywhere in your inventory (offhand included). They're crafted 
 | **Molten Core** | Blaze Rod / Magma Blocks / Nether Bricks | Enter the Nether or get a Blaze Rod | Magma Cream + Lava Bucket | Fire Resistance. In lava: Speed II and slow Regeneration. Melee attackers take 2 fire damage and catch fire (1s cooldown). Nearby fireballs fizzle; flaming arrows are snuffed. |
 | **Void Talisman** | Sculk Catalyst / Echo Shards / Crying Obsidian | Enter the End or loot an Ancient City chest | Echo Shard + Chorus Fruit | Falling into the void returns you to safe ground (120s cooldown). Sneak in low light for 2s to turn Invisible; standing up, attacking or getting hurt breaks it. |
 | **Alchemist Catalyst** | Brewing Stand / Golden Carrots / Amethyst Clusters | Brew a potion or get an Amethyst Cluster | Amethyst Shard + Honey Bottle | Cleanses Poison, Wither, Slowness, Weakness, Mining Fatigue, Darkness and Blindness into brief buffs (15s cooldown); leaves Blood Pact / World Breaker drawbacks alone. Beneficial potions (drunk, splash or lingering) last 50% longer (max 8 min). Carrying 3+ brewed potions: +1 max heart. |
-| **Phoenix Plume** | Totem of Undying / Blaze Rods / Gold Blocks | Use a Totem of Undying | Blaze Powder + Golden Apple | At 2 hearts or less: Rebirth - Regeneration III 4s, Absorption II 8s, Fire Resistance 8s and a 4-damage ring of fire (5 min cooldown). **Downside:** -2 max hearts for 60s afterwards. |
+| **Phoenix Plume** · *Sin of Pride* | Totem of Undying / Blaze Rods / Gold Blocks | Use a Totem of Undying | Blaze Powder + Golden Apple | At 2 hearts or less: Rebirth - Regeneration III 4s, Absorption II 8s, Fire Resistance 8s and a 4-damage ring of fire (5 min cooldown). **Downside:** -2 max hearts for 60s afterwards. |
 | **Merchant's Sigil** | Emerald Block / Gold Ingots / Books | Trade with a villager | Emerald + Bell | Hero of the Village I and Luck I while carried; +3 XP per villager trade (5s cooldown). **Downside:** illagers and raiders within 16 blocks get Speed I. |
 | **Watcher's Lens** | Ender Eye / Amethyst Shards / Glass Panes | Get a Spyglass or kill an Enderman | Spyglass + Phantom Membrane | Mobs targeting you within 16 blocks glow. Scope a creature for 1s to Mark it (Glowing 10s, 20s cooldown). **Downside:** marking makes you glow for 3s. |
 | **Verdant Sprig** | Moss Block / Oak Saplings / Vines | Get Moss or a sapling | Stick + Glow Berries | On grass, moss or leaves under open sky: 1 HP every 5s. Sneaking there gives +50% knockback resistance. **Downside:** Hunger I after 60s without open sky. |

@@ -99,6 +99,11 @@
           "text": "Then an Adrenaline Crash: Slowness and Weakness for 3s. Recharges in 60s.",
           "color": "dark_red",
           "italic": false
+        },
+        {
+          "text": "Sin of Wrath",
+          "color": "#e3261b",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",

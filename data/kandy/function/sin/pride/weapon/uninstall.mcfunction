@@ -14,7 +14,10 @@ scoreboard objectives remove dg_dive
 scoreboard objectives remove dg_fall
 scoreboard objectives remove dg_jmp
 scoreboard objectives remove dg_tmp
-advancement revoke @a only kandy:dragoon/using
-advancement revoke @a only kandy:hit/dragoon
+advancement revoke @a only kandy:sin/pride/using
+advancement revoke @a only kandy:sin/pride/hit
+tag @a remove kandy.dg_struck
+scoreboard objectives remove dg_y
+scoreboard objectives remove dg_tier
 # Left over from before the Dive change
 scoreboard objectives remove dg_snk

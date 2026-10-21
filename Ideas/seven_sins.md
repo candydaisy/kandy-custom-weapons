@@ -1,13 +1,16 @@
 # Seven Deadly Sins revamp (design draft, not implemented)
 
-Status: **approved**. Implemented: **Wrath** (shared `sin/` core + Pyroclast Cleaver + Berserker Token). Other sins: not started.
+Status: **approved**. Implemented: **Wrath**, **Pride** (shared `sin/` core, quarrel rule). Other sins: not started.
 
 Implementation notes (where the build differs from the spec below):
 - Added a `kandy.<sin>.wi` tag (weapon carried anywhere) so the HUD keeps showing the cleaver's bars while it's in your inventory.
 - `kandy.wt` is read on demand (on hit / Overdrive) via `sin/tier`, not every tick, since reading it means reading the player's NBT.
 - Recipe and advancement-unlock ids (`kandy:pyroclast`, `kandy:pyroclast_core`, `kandy:berserker`...) are kept so existing worlds keep their unlocked recipes. Only the forged item's `custom_data` changed.
 - Hit advancements use two OR'd criteria (new key, old key): 26.3 rejects an `any_of` list in a criterion's `player` field.
-- The quarrel rule (one sin charm at a time) lands with the second sin; with one sin it can't trigger.
+- The quarrel rule is in (`kandy.n` counts sin charms carried); the player gets one chat message when it starts.
+- `kandy.cdmax` / `kandy.ccdmax` record the length each shared cooldown was started with, so every sin's HUD bar reads correctly whichever item started it.
+- Deeds go through one shared `sin/deed` helper. Pride: tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills.
+- Above Them's bonus is 15% / 25% of the spear's attack damage attribute (enchantments not included).
 - **Tiers are deed-based, not smithing.** A smithing tier-up recipe can't require the *forged* weapon (ingredients match item id only), so a plain item + Core + catalyst would skip to tier 2. Instead each weapon counts deeds in its own `custom_data.deeds` and rewrites its tier and lore when it levels. The per-sin "catalyst" items in section 2 are therefore unused. Wrath: tier 2 after 10 Overdrives, tier 3 after 30 Overdrive kills.
 
 Facts this is built on (read from the pack, not assumed):

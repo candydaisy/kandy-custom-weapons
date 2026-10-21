@@ -47,13 +47,11 @@ function kandy:chainwarden/uninstall
 function kandy:falconer/uninstall
 function kandy:lifebloom/uninstall
 function kandy:warhorn/uninstall
-function kandy:dragoon/uninstall
 function kandy:zephyr/uninstall
 function kandy:abyssal_pearl/uninstall
 function kandy:molten_core/uninstall
 function kandy:void_talisman/uninstall
 function kandy:alchemist/uninstall
-function kandy:phoenix_plume/uninstall
 function kandy:merchant_sigil/uninstall
 function kandy:watchers_lens/uninstall
 function kandy:verdant_sprig/uninstall

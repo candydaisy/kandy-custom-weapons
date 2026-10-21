@@ -116,13 +116,33 @@
           "italic": false
         },
         {
-          "text": "Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (12s cooldown).",
+          "text": "Above Them: +15% damage to foes 2+ blocks below you.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak + Jump: Dragoon Leap. Hold or press Sneak at the top to Dive (23s cooldown).",
           "color": "gold",
           "italic": false
         },
         {
           "text": "A Dive leaves you rooted: Slowness III for 2s.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "A Dive that hits nothing: you take the fall you skipped.",
+          "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Pride · Tier 1",
+          "color": "#9b59ff",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Dives that hit, then Dive kills, deepen the sin.",
+          "color": "dark_gray",
           "italic": false
         }
       ],
@@ -146,9 +166,7 @@
           "slot": "mainhand"
         }
       ],
-      "minecraft:custom_data": {
-        "ability": "Dragoon"
-      }
+      "minecraft:custom_data": "{sin:\"pride\",type:\"weapon\",tier:1}"
     }
   }
 }

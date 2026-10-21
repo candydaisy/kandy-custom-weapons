@@ -114,6 +114,16 @@
           "text": "Overdrive ends in Overheat: slowed, no Fire Resistance for 4s.",
           "color": "red",
           "italic": false
+        },
+        {
+          "text": "Sin of Wrath · Tier 1",
+          "color": "#e3261b",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Overdrives, then Overdrive kills, deepen the sin.",
+          "color": "dark_gray",
+          "italic": false
         }
       ],
       "minecraft:rarity": "epic",

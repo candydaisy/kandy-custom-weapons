@@ -3,3 +3,4 @@ tag @a remove kandy.phx_src
 scoreboard objectives remove phx_hp
 scoreboard objectives remove phx_cd
 scoreboard objectives remove phx_ash
+scoreboard objectives remove phx_half

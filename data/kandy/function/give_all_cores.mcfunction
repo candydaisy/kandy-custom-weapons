@@ -13,14 +13,14 @@ function kandy:chainwarden/give_core
 function kandy:falconer/give_core
 function kandy:lifebloom/give_core
 function kandy:warhorn/give_core
-function kandy:dragoon/give_core
+function kandy:sin/pride/weapon/give_core
 function kandy:zephyr/give_core
 function kandy:sin/wrath/charm/give_core
 function kandy:abyssal_pearl/give_core
 function kandy:molten_core/give_core
 function kandy:void_talisman/give_core
 function kandy:alchemist/give_core
-function kandy:phoenix_plume/give_core
+function kandy:sin/pride/charm/give_core
 function kandy:merchant_sigil/give_core
 function kandy:watchers_lens/give_core
 function kandy:verdant_sprig/give_core

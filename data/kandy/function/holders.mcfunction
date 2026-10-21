@@ -26,15 +26,12 @@ tag @a remove kandy.main.lifebloom
 tag @a remove kandy.inv.lifebloom
 tag @a remove kandy.main.warhorn
 tag @a remove kandy.inv.warhorn
-tag @a remove kandy.main.dragoon
-tag @a remove kandy.inv.dragoon
 tag @a remove kandy.hold.warhorn
 tag @a remove kandy.charm.zephyr
 tag @a remove kandy.charm.abyssal_pearl
 tag @a remove kandy.charm.molten_core
 tag @a remove kandy.charm.void_talisman
 tag @a remove kandy.charm.alchemist
-tag @a remove kandy.charm.phoenix_plume
 tag @a remove kandy.charm.merchant_sigil
 tag @a remove kandy.charm.watchers_lens
 tag @a remove kandy.charm.verdant_sprig
@@ -112,10 +109,6 @@ execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Warhorn
 execute as @a if items entity @s container.* *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.inv.warhorn
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.inv.warhorn
 
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.main.dragoon
-execute as @a if items entity @s container.* *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.inv.dragoon
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Dragoon"}] run tag @s add kandy.inv.dragoon
-
 # The Warhorn is blown from either hand
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.hold.warhorn
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Warhorn"}] run tag @s add kandy.hold.warhorn
@@ -132,8 +125,6 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VoidTalism
 execute as @a if items entity @s container.* *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AlchemistCatalyst"}] run tag @s add kandy.charm.alchemist
 
-execute as @a if items entity @s container.* *[custom_data~{charm:"PhoenixPlume"}] run tag @s add kandy.charm.phoenix_plume
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PhoenixPlume"}] run tag @s add kandy.charm.phoenix_plume
 execute as @a if items entity @s container.* *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
 execute as @a if items entity @s container.* *[custom_data~{charm:"WatchersLens"}] run tag @s add kandy.charm.watchers_lens
