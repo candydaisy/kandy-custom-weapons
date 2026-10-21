@@ -1,5 +1,5 @@
 execute store result storage kandy:hud id int 1 run scoreboard players get @s hud_id
-function kandy:hud/w/swiftwind with storage kandy:hud
+function kandy:hud/w/desire with storage kandy:hud
 function kandy:hud/w/lingering_soul with storage kandy:hud
 function kandy:hud/w/bloodpact with storage kandy:hud
 function kandy:hud/w/worldbreaker with storage kandy:hud

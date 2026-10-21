@@ -17,7 +17,6 @@ The weapon keeps its enchantments, but forged weapons can't be used in an anvil,
 
 | Core | Recipe (crafting table) | Unlocks when you get | Forge with (smithing table) |
 | --- | --- | --- | --- |
-| **Swiftwind Core** | Diamond Block center, 4 Breeze Rods on the sides, 4 Feathers in the corners | Breeze Rod | Diamond Sword + Phantom Membrane |
 | **Soul Core** | Sculk Catalyst center, 4 Ghast Tears on the sides, 4 Echo Shards in the corners | Echo Shard | Golden Sword + Block of Gold |
 | **Blood Core** | Wither Skeleton Skull center, 4 Redstone Blocks on the sides, 4 Nether Wart in the corners | Wither Skeleton Skull | Netherite Sword + Golden Apple |
 | **Gravity Core** | Nether Star center, 4 Crying Obsidian on the sides, 4 Obsidian in the corners | Nether Star | Mace + Anvil |
@@ -43,9 +42,8 @@ Each skill has its own boss bar at the top of your screen (only you see them). H
 
 | Weapon | Command | Ability |
 | --- | --- | --- |
-| **Swiftwind** (diamond sword) | `kandy:swiftwind/give` | 9 attack damage and +1 reach. Sprinting builds Momentum (0–1000). 250+: Speed while carried. 500+: another +1 reach while held. 750+: +0.3 attack speed while held. Momentum slowly drains when you stop. **Downside:** Taking a hit drains 250 Momentum. |
 | **Dagger of Lingering Souls** (golden sword) | `kandy:lingering_soul/give` | Fast dagger: 6 attack damage, 2.0 attack speed. Every charged hit leaves an echo on the target that deals 3 armor-piercing damage a second later, credited to you. Echoes stack up to 4. **Soul Spread:** when an echoed creature dies, its remaining echoes jump to the nearest other creature within 5 blocks. **Downside:** Every echo that lands costs you half a hunger point. |
-| **Blood Pact Blade** (netherite sword) | `kandy:bloodpact/give` | 10 attack damage (+2 over netherite). Charged hits grant brief Absorption (it comes back only after the last dose wears off). Carrying it at low health grants Strength I (≤4 hearts) but brings Slowness (≤5 hearts) and Darkness (≤3). At 2 hearts or less it bleeds you 1 HP per second while held, but the blade drinks too: each charged hit while bleeding heals 2 hearts. |
+| **Blood Pact Blade** (netherite sword) · *Sin of Lust* | `kandy:sin/lust/weapon/give` | 10 attack damage (+2 over netherite). Charged hits grant brief Absorption (it comes back only after the last dose wears off). Carrying it at low health grants Strength I (≤4 hearts) but brings Slowness (≤5 hearts) and Darkness (≤3). At 2 hearts or less it bleeds you 1 HP per second while held, but the blade drinks too: each charged hit while bleeding heals 2 hearts. |
 | **World Breaker** (mace) | `kandy:worldbreaker/give` | Charged hits drag enemies toward you for 3 seconds. Start sneaking while holding it for Event Horizon: everything within 10 blocks is pulled in for up to 5s while you keep sneaking, and you're heavily slowed (25s cooldown once it ends; letting go of Sneak or switching items ends it early). Sneak-attack while airborne to slam the target down for +6 damage. |
 | **Pyroclast Cleaver** (netherite axe) · *Sin of Wrath* | `kandy:sin/wrath/weapon/give` | 10 attack damage, 0.9 attack speed, disables shields for 6s, Fire Resistance while held. Charged hits build Heat (+10% per hit; it doesn't cool down) and deal +1 fire damage (+2 at 50%+ Heat). At 100% Heat: 6s of Overdrive — Speed, +3 fire damage, swings cleave everything in front, and every hit erupts for 4 damage around the target and sets the floor alight. Sneak + jump-attack: Magma Fissure (10s cooldown) tears 10 blocks of ground ahead, dealing 8 damage, launching and melting armor (-20% for 5s); spends 50% Heat for double damage. **Downside:** When Overdrive ends you Overheat: Slowness I and Mining Fatigue for 4s, and the cleaver's Fire Resistance stops for that time. |
 | **Tempest Pike** (trident) | `kandy:tempest/give` | 9 attack damage, 1.2 attack speed, +0.5 reach. Charged and thrown hits arc lightning to the 2 nearest creatures within 6 blocks (3 armor-piercing damage + Slowness II for 2s). Jump again midair: Gale Surge, a 6-block dash that hits what you pass for 3 and cancels fall damage (4s cooldown). Sneak + charged melee hit, or any thrown hit: Skyward Wrath strikes the nearest other creature within 12 blocks of the one you hit (or that one, if nobody else is near) for 8 armor-piercing damage within 3 blocks and launches targets (10s cooldown). |
@@ -82,6 +80,16 @@ The pack is being reworked around the Seven Deadly Sins (design: `Ideas/seven_si
   - **Compound Interest** (set bonus, arbalest in either hand): creatures you Tethered always drop their loot twice when you kill them, and a reeled player pays one more level.
   - **Tiers:** tier 2 after 15 Reels, tier 3 after 25 kills on creatures you Tethered (counted while the arbalest is in your main hand). Tier 2 Tethers last 6s and Pilfer takes 2 levels. Tier 3 also chains each Tether to a second creature within 4 blocks, but Gilded Weight can reach -35%.
 
+- **Lust** — Blood Pact Blade + Hare's Foot.
+  - **Desire** (Swiftwind's old Momentum): sprinting builds it, 0–1000. With the blade in hand: +1 reach at 500, Speed I at 1000. Taking a hit cools it by 250.
+  - **Embrace** (right-click the blade): lunge at the creature you're looking at, up to 6 blocks, for 500 Desire; landing it deals 4 damage. 12s cooldown.
+  - **Obsession:** the bleed at 2 hearts or less, with charged hits healing 2 hearts only while you bleed.
+  - **Bared** (Hare's Foot): its -2 armor.
+  - **Fever** (set bonus): Hare's Foot's sprint-jump burst also gives 250 Desire, and an Embrace made at full Desire starts no cooldown.
+  - **Tiers:** tier 2 after 10 Embraces that land, tier 3 after 15 kills while bleeding. Tier 2 Embraces reach 8 blocks and bleed-heals add a burst of Regeneration (about 1.5 hearts more). Tier 3 Embraces give Weakness I for 3s, but you start bleeding at 3 hearts.
+  - Blood Pact Blades made before the rework get Embrace the first time you hold them.
+- **Swiftwind is retired.** Its Momentum lives on as Lust's Desire; the item, its recipes and its effects moved to `unused/` (the game ignores that folder). Existing Swiftwinds become plain diamond swords with their old stats.
+
 **One sin at a time:** carrying charms of two different sins turns every sin charm off until you drop one.
 
 **Shared cooldowns:** every sin weapon's ability shares one cooldown, and every sin charm's another, so swapping items doesn't skip a cooldown.
@@ -116,7 +124,7 @@ Charms work from anywhere in your inventory (offhand included). They're crafted 
 | **Stormcaller Coil** | Lightning Rod / Copper Blocks / Redstone | Get a Lightning Rod or be in a thunderstorm | Copper Ingot + Glowstone Dust | Sprinting builds Static; at 100% your next charged hit adds +4 armor-piercing lightning damage and Slowness II for 1s. Speed I in the rain. **Downside:** in thunderstorms, a 1-in-5 chance every 30s of being struck for 3. |
 | **Deepdelver Lamp** | Lantern / Glow Ink Sacs / Raw Iron | Get deepslate or loot a mineshaft chest | Glowstone Dust + Amethyst Shard | Night Vision below Y 40 in the dark. Sneak still for 2s: ores within 6 blocks glow for 5s (30s cooldown). **Downside:** you glow to other players while underground. |
 | **Reaper's Knuckle** | Skeleton Skull / Bone Blocks / Soul Sand | Kill a Skeleton or Zombie | Bone + Echo Shard | Each kill adds 1 max heart (max 4, 45s) and heals it; a player kill gives all 4. **Downside:** undead deal +1 damage to you. |
-| **Hare's Foot** | Rabbit Hide / Carrots / Feathers | Get a Rabbit's Foot | Rabbit's Foot + Sugar | Jump Boost I and +10% speed; a sprint-jump gives a 1.5s Speed II burst (4s cooldown). **Downside:** -2 armor. |
+| **Hare's Foot** · *Sin of Lust* | Rabbit Hide / Carrots / Feathers | Get a Rabbit's Foot | Rabbit's Foot + Sugar | Jump Boost I and +10% speed; a sprint-jump gives a 1.5s Speed II burst (4s cooldown). **Downside:** -2 armor. |
 | **Hearthstone** | Campfire / Coal Blocks / Bread | Get cooked food | Charcoal + Baked Potato | Eating gives Saturation I for 2s; near a lit campfire, furnace or smoker you get Regeneration I. **Downside:** hunger drains ~20% faster. |
 | **Wayfarer's Compass** | Recovery Compass / Maps / Gold Ingots | Sleep in a bed or use a respawn anchor | Compass + Ender Pearl | Sneak still for 3s to recall to your bed or respawn anchor (same dimension, 10 min cooldown). **Downside:** each recall costs 5 levels. |
 | **Prism Mirror** | Glass / Quartz Blocks / Amethyst Shards | Get Nether Quartz | Nether Quartz + Glass Pane | Projectiles that hit you reflect 30% of their damage at the shooter; every 15s one projectile hit is healed straight back. **Downside:** melee hits deal +1 damage to you. |

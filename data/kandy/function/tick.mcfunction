@@ -1,17 +1,9 @@
 function kandy:holders
 function kandy:team/tick
 
-function kandy:swiftwind/momentum
-function kandy:swiftwind/effects
-function kandy:swiftwind/visual
-
 function kandy:lingering_soul/cooldown
 function kandy:lingering_soul/effect
 function kandy:lingering_soul/visual
-
-function kandy:bloodpact/price
-function kandy:bloodpact/effect
-function kandy:bloodpact/visual
 
 function kandy:worldbreaker/pull
 function kandy:worldbreaker/skill
@@ -39,7 +31,6 @@ function kandy:verdant_sprig/tick
 function kandy:stormcaller_coil/tick
 function kandy:deepdelver_lamp/tick
 function kandy:reapers_knuckle/tick
-function kandy:hares_foot/tick
 function kandy:hearthstone/tick
 function kandy:wayfarers_compass/tick
 function kandy:prism_mirror/tick

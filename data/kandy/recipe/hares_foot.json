@@ -76,18 +76,20 @@
           "italic": false
         },
         {
-          "text": "Light as a rabbit, frail as one too: -2 armor.",
+          "text": "Bared: -2 armor.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Lust",
+          "color": "#ff4fa3",
           "italic": false
         }
       ],
       "minecraft:rarity": "uncommon",
       "minecraft:enchantment_glint_override": true,
       "minecraft:max_stack_size": 1,
-      "minecraft:custom_data": {
-        "charm": "HaresFoot",
-        "type": "talisman"
-      }
+      "minecraft:custom_data": "{sin:\"lust\",type:\"charm\",tier:1}"
     }
   }
 }

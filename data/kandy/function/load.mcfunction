@@ -1,9 +1,7 @@
 tellraw @a [{"text":"Kandy Loaded!! "},{"text":"[Open menu]","color":"light_purple","click_event":{"action":"run_command","command":"/function kandy:menu"},"hover_event":{"action":"show_text","value":"Weapons and cores, one click away"}}]
 function kandy:hud/setup
 function kandy:team/setup
-function kandy:swiftwind/setup
 function kandy:lingering_soul/setup
-function kandy:bloodpact/setup
 function kandy:worldbreaker/setup
 function kandy:sin/setup
 function kandy:tempest/setup
@@ -25,7 +23,6 @@ function kandy:verdant_sprig/setup
 function kandy:stormcaller_coil/setup
 function kandy:deepdelver_lamp/setup
 function kandy:reapers_knuckle/setup
-function kandy:hares_foot/setup
 function kandy:hearthstone/setup
 function kandy:wayfarers_compass/setup
 function kandy:prism_mirror/setup
@@ -40,7 +37,10 @@ function kandy:beastmasters_whistle/setup
 function kandy:wardlight_lantern/setup
 
 # A hit advancement stays granted if its reward function failed to run, which disables that weapon
-advancement revoke @a only kandy:hit/bloodpact
+advancement revoke @a only kandy:sin/lust/hit
+advancement revoke @a only kandy:sin/lust/hurt
+advancement revoke @a only kandy:sin/lust/using
+advancement revoke @a only kandy:sin/lust/kill
 advancement revoke @a only kandy:hit/lingering_soul
 advancement revoke @a only kandy:hit/worldbreaker
 advancement revoke @a only kandy:sin/wrath/hit

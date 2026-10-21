@@ -32,9 +32,7 @@ scoreboard objectives remove pyro_tmp
 scoreboard objectives remove pyro_oh
 
 advancement revoke @a only kandy:hit/lingering_soul
-advancement revoke @a only kandy:swiftwind/hurt
 advancement revoke @a only kandy:hit/worldbreaker
-advancement revoke @a only kandy:hit/bloodpact
 function kandy:sin/uninstall
 
 function kandy:tempest/uninstall
@@ -57,7 +55,6 @@ function kandy:verdant_sprig/uninstall
 function kandy:stormcaller_coil/uninstall
 function kandy:deepdelver_lamp/uninstall
 function kandy:reapers_knuckle/uninstall
-function kandy:hares_foot/uninstall
 function kandy:hearthstone/uninstall
 function kandy:wayfarers_compass/uninstall
 function kandy:prism_mirror/uninstall

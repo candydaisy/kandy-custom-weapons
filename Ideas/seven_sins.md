@@ -1,6 +1,6 @@
 # Seven Deadly Sins revamp (design draft, not implemented)
 
-Status: **approved**. Implemented: **Wrath**, **Pride**, **Greed** (shared `sin/` core, quarrel rule). Other sins: not started.
+Status: **approved**. Implemented: **Wrath**, **Pride**, **Greed**, **Lust** (shared `sin/` core, quarrel rule). Swiftwind retired into `unused/`. Other sins: not started.
 
 Implementation notes (where the build differs from the spec below):
 - Added a `kandy.<sin>.wi` tag (weapon carried anywhere) so the HUD keeps showing the cleaver's bars while it's in your inventory.
@@ -11,6 +11,8 @@ Implementation notes (where the build differs from the spec below):
 - `kandy.cdmax` / `kandy.ccdmax` record the length each shared cooldown was started with, so every sin's HUD bar reads correctly whichever item started it.
 - Deeds go through one shared `sin/deed` helper. Pride: tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills.
 - Greed: tier 2 after 15 Reels, tier 3 after 25 kills on creatures you Tethered. Its set bonus counts the arbalest in either hand (crossbows live in the offhand a lot). Grapple keeps its own 8s cooldown; only Tether uses the shared one. Gilded Weight's tier 3 cap applies while a tier 3 arbalest is carried anywhere.
+- Lust: tier 2 after 10 Embraces that land, tier 3 after 15 kills while bleeding. Embrace lands for 4 damage (the spec gave none). Tier 2's "heal 3 hearts" is the 2-heart instant heal plus Regeneration IV for 1s (about 1.5 hearts), since instant health only heals in 2-heart steps. Old blades are migrated (sin keys + right-click component) the first time they're held. Hare's Foot's hop burst keeps its own 4s cooldown.
+- Weapon give functions take no arguments (tier 1); `give_tier {tier:N}` gives another tier.
 - `sin/tier` reads tiers with item checks (main hand first, then offhand) instead of player NBT.
 - Above Them's bonus is 15% / 25% of the spear's attack damage attribute (enchantments not included).
 - **Tiers are deed-based, not smithing.** A smithing tier-up recipe can't require the *forged* weapon (ingredients match item id only), so a plain item + Core + catalyst would skip to tier 2. Instead each weapon counts deeds in its own `custom_data.deeds` and rewrites its tier and lore when it levels. The per-sin "catalyst" items in section 2 are therefore unused. Wrath: tier 2 after 10 Overdrives, tier 3 after 30 Overdrive kills.

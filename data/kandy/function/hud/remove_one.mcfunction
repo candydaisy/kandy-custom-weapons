@@ -40,5 +40,6 @@ $bossbar remove kandy:hud_$(rid)_lb_pulse
 $bossbar remove kandy:hud_$(rid)_lb_sanct
 $bossbar remove kandy:hud_$(rid)_wh_horn
 $bossbar remove kandy:hud_$(rid)_dg_leap
+$bossbar remove kandy:hud_$(rid)_lust_embrace
 $bossbar remove kandy:hud_$(rid)_bst_recall
 $bossbar remove kandy:hud_$(rid)_tly_tally

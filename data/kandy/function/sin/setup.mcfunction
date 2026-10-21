@@ -11,3 +11,5 @@ function kandy:sin/pride/weapon/setup
 function kandy:sin/pride/charm/setup
 function kandy:sin/greed/weapon/setup
 function kandy:sin/greed/charm/setup
+function kandy:sin/lust/weapon/setup
+function kandy:sin/lust/charm/setup

@@ -6,3 +6,5 @@ attribute @s minecraft:movement_speed modifier add kandy:hare_burst 0.4 add_mult
 tag @s add kandy.hare_burst
 particle minecraft:cloud ~ ~0.1 ~ 0.3 0.05 0.3 0.02 8
 playsound minecraft:entity.rabbit.jump player @a[distance=..12] ~ ~ ~ 1 1.2
+# Fever (blade in hand): the leap stokes Desire by 250
+execute if entity @s[tag=kandy.lust.set] run scoreboard players add @s sprint 250

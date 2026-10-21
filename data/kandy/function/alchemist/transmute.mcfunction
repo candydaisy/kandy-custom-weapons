@@ -13,9 +13,9 @@ execute if score #fx alch_tmp matches 1 run effect give @s minecraft:regeneratio
 execute if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 
 scoreboard players set #fx alch_tmp 0
-execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker,tag=!kandy.pride.c] store success score #fx alch_tmp run effect clear @s minecraft:slowness
-execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run effect give @s minecraft:speed 4 0
-execute if entity @s[tag=!kandy.inv.bloodpact,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
+execute if entity @s[tag=!kandy.lust.wi,tag=!kandy.main.worldbreaker,tag=!kandy.pride.c] store success score #fx alch_tmp run effect clear @s minecraft:slowness
+execute if entity @s[tag=!kandy.lust.wi,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run effect give @s minecraft:speed 4 0
+execute if entity @s[tag=!kandy.lust.wi,tag=!kandy.main.worldbreaker] if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 
 # Weakness is only cleansed, never turned into Strength
 scoreboard players set #fx alch_tmp 0
@@ -28,9 +28,9 @@ execute if score #fx alch_tmp matches 1 run effect give @s minecraft:haste 8 0
 execute if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 
 scoreboard players set #fx alch_tmp 0
-execute if entity @s[tag=!kandy.inv.bloodpact] store success score #fx alch_tmp run effect clear @s minecraft:darkness
-execute if entity @s[tag=!kandy.inv.bloodpact] if score #fx alch_tmp matches 1 run effect give @s minecraft:night_vision 10 0
-execute if entity @s[tag=!kandy.inv.bloodpact] if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
+execute if entity @s[tag=!kandy.lust.wi] store success score #fx alch_tmp run effect clear @s minecraft:darkness
+execute if entity @s[tag=!kandy.lust.wi] if score #fx alch_tmp matches 1 run effect give @s minecraft:night_vision 10 0
+execute if entity @s[tag=!kandy.lust.wi] if score #fx alch_tmp matches 1 run scoreboard players set #any alch_tmp 1
 
 scoreboard players set #fx alch_tmp 0
 execute store success score #fx alch_tmp run effect clear @s minecraft:blindness

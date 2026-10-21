@@ -1,7 +1,6 @@
 # Give yourself every Kandy core (for testing the smithing recipes)
-function kandy:swiftwind/give_core
 function kandy:lingering_soul/give_core
-function kandy:bloodpact/give_core
+function kandy:sin/lust/weapon/give_core
 function kandy:worldbreaker/give_core
 function kandy:sin/wrath/weapon/give_core
 function kandy:tempest/give_core
@@ -27,7 +26,7 @@ function kandy:verdant_sprig/give_core
 function kandy:stormcaller_coil/give_core
 function kandy:deepdelver_lamp/give_core
 function kandy:reapers_knuckle/give_core
-function kandy:hares_foot/give_core
+function kandy:sin/lust/charm/give_core
 function kandy:hearthstone/give_core
 function kandy:wayfarers_compass/give_core
 function kandy:prism_mirror/give_core
