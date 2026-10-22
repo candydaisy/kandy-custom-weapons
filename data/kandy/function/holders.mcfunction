@@ -1,6 +1,4 @@
 # Work out once per tick who holds (main hand) or carries (anywhere) each weapon
-tag @a remove kandy.main.lingering_soul
-tag @a remove kandy.inv.lingering_soul
 tag @a remove kandy.main.worldbreaker
 tag @a remove kandy.inv.worldbreaker
 tag @a remove kandy.main.tempest
@@ -29,7 +27,6 @@ tag @a remove kandy.charm.verdant_sprig
 tag @a remove kandy.charm.stormcaller_coil
 tag @a remove kandy.charm.deepdelver_lamp
 tag @a remove kandy.charm.reapers_knuckle
-tag @a remove kandy.charm.hearthstone
 tag @a remove kandy.charm.wayfarers_compass
 tag @a remove kandy.charm.prism_mirror
 tag @a remove kandy.charm.predators_fang
@@ -43,9 +40,6 @@ tag @a remove kandy.charm.beastmasters_whistle
 tag @a remove kandy.charm.wardlight_lantern
 tag @a remove kandy.immune
 
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Echo"}] run tag @s add kandy.main.lingering_soul
-execute as @a if items entity @s container.* *[custom_data~{ability:"Echo"}] run tag @s add kandy.inv.lingering_soul
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Echo"}] run tag @s add kandy.inv.lingering_soul
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Gravity"}] run tag @s add kandy.main.worldbreaker
 execute as @a if items entity @s container.* *[custom_data~{ability:"Gravity"}] run tag @s add kandy.inv.worldbreaker
@@ -109,8 +103,6 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"DeepdelverLam
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"DeepdelverLamp"}] run tag @s add kandy.charm.deepdelver_lamp
 execute as @a if items entity @s container.* *[custom_data~{charm:"ReapersKnuckle"}] run tag @s add kandy.charm.reapers_knuckle
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"ReapersKnuckle"}] run tag @s add kandy.charm.reapers_knuckle
-execute as @a if items entity @s container.* *[custom_data~{charm:"Hearthstone"}] run tag @s add kandy.charm.hearthstone
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Hearthstone"}] run tag @s add kandy.charm.hearthstone
 execute as @a if items entity @s container.* *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
 execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror

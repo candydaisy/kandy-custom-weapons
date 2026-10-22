@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "kandy:hearthstone/ate"
+    "function": "kandy:sin/gluttony/charm/ate"
   }
 }

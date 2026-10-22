@@ -1,5 +1,6 @@
 $bossbar remove kandy:hud_$(rid)_momentum
 $bossbar remove kandy:hud_$(rid)_echoes
+$bossbar remove kandy:hud_$(rid)_soul_devour
 $bossbar remove kandy:hud_$(rid)_bloodhp
 $bossbar remove kandy:hud_$(rid)_gravity
 $bossbar remove kandy:hud_$(rid)_pyro_heat

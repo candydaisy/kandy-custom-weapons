@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:golden_sword",
+          "predicates": {
+            "minecraft:custom_data": "{sin:\"gluttony\",type:\"weapon\"}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:sin/gluttony/weapon/using"
+  }
+}

@@ -1,1 +1,0 @@
-execute as @e[scores={echo_timer=1..}] run scoreboard players remove @s echo_timer 1

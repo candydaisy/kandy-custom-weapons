@@ -13,6 +13,8 @@ scoreboard objectives add kandy.cd.lust dummy "Lust Weapon Cooldown"
 scoreboard objectives add kandy.cdmax.lust dummy "Lust Weapon Cooldown Length"
 scoreboard objectives add kandy.cd.envy dummy "Envy Weapon Cooldown"
 scoreboard objectives add kandy.cdmax.envy dummy "Envy Weapon Cooldown Length"
+scoreboard objectives add kandy.cd.gluttony dummy "Gluttony Weapon Cooldown"
+scoreboard objectives add kandy.cdmax.gluttony dummy "Gluttony Weapon Cooldown Length"
 scoreboard objectives add kandy.ccd.wrath dummy "Wrath Charm Cooldown"
 scoreboard objectives add kandy.ccdmax.wrath dummy "Wrath Charm Cooldown Length"
 scoreboard objectives add kandy.ccd.pride dummy "Pride Charm Cooldown"
@@ -30,3 +32,5 @@ function kandy:sin/lust/weapon/setup
 function kandy:sin/lust/charm/setup
 function kandy:sin/envy/weapon/setup
 function kandy:sin/envy/charm/setup
+function kandy:sin/gluttony/weapon/setup
+function kandy:sin/gluttony/charm/setup
