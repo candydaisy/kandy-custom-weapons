@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass",
+          "predicates": {
+            "minecraft:custom_data": "{sin:\"envy\",type:\"charm\"}"
+          }
+        }
+      }
+    },
+    "using_old": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass",
+          "predicates": {
+            "minecraft:custom_data": "{charm:\"WatchersLens\"}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using",
+      "using_old"
+    ]
+  ],
+  "rewards": {
+    "function": "kandy:sin/envy/charm/using"
+  }
+}

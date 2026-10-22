@@ -10,7 +10,7 @@ function kandy:eclipse/give
 function kandy:chronos/give
 function kandy:abyssal/give
 function kandy:sin/greed/weapon/give
-function kandy:falconer/give
+function kandy:sin/envy/weapon/give
 function kandy:lifebloom/give
 function kandy:warhorn/give
 function kandy:sin/pride/weapon/give
@@ -23,7 +23,7 @@ function kandy:void_talisman/give
 function kandy:alchemist/give
 function kandy:sin/pride/charm/give
 function kandy:merchant_sigil/give
-function kandy:watchers_lens/give
+function kandy:sin/envy/charm/give
 function kandy:verdant_sprig/give
 function kandy:stormcaller_coil/give
 function kandy:deepdelver_lamp/give

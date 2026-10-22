@@ -111,18 +111,33 @@
           "italic": false
         },
         {
+          "text": "Covet: hitting the player you're locked on steals a buff for 5s.",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "text": "Sneak + full draw: Falcon Volley, 3 extra homing arrows (14s cooldown).",
           "color": "gold",
           "italic": false
         },
         {
-          "text": "While locked on you're Blinded and have Slowness II.",
+          "text": "Tunnel Vision: while locked on you're Blinded and have Slowness II.",
           "color": "red",
           "italic": false
         },
         {
           "text": "Locking onto a player makes you glow for 3s.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Envy · Tier 1",
+          "color": "#4caf50",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: hits on your lock, then kills on it, deepen the sin.",
+          "color": "dark_gray",
           "italic": false
         }
       ],
@@ -131,7 +146,9 @@
       "minecraft:unbreakable": {},
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
-        "ability": "Falconer"
+        "sin": "envy",
+        "type": "weapon",
+        "tier": 1
       }
     }
   }

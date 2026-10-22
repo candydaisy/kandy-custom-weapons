@@ -9,7 +9,7 @@ function kandy:eclipse/give_core
 function kandy:chronos/give_core
 function kandy:abyssal/give_core
 function kandy:sin/greed/weapon/give_core
-function kandy:falconer/give_core
+function kandy:sin/envy/weapon/give_core
 function kandy:lifebloom/give_core
 function kandy:warhorn/give_core
 function kandy:sin/pride/weapon/give_core
@@ -21,7 +21,7 @@ function kandy:void_talisman/give_core
 function kandy:alchemist/give_core
 function kandy:sin/pride/charm/give_core
 function kandy:merchant_sigil/give_core
-function kandy:watchers_lens/give_core
+function kandy:sin/envy/charm/give_core
 function kandy:verdant_sprig/give_core
 function kandy:stormcaller_coil/give_core
 function kandy:deepdelver_lamp/give_core

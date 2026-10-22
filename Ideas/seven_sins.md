@@ -1,6 +1,6 @@
 # Seven Deadly Sins revamp (design draft, not implemented)
 
-Status: **approved**. Implemented: **Wrath**, **Pride**, **Greed**, **Lust** (shared `sin/` core, quarrel rule). Swiftwind retired into `unused/`. Other sins: not started.
+Status: **approved**. Implemented: **Wrath**, **Pride**, **Greed**, **Lust**, **Envy** (shared `sin/` core, quarrel rule). Swiftwind retired into `unused/`. Other sins: not started.
 
 Implementation notes (where the build differs from the spec below):
 - Added a `kandy.<sin>.wi` tag (weapon carried anywhere) so the HUD keeps showing the cleaver's bars while it's in your inventory.
@@ -12,6 +12,7 @@ Implementation notes (where the build differs from the spec below):
 - Deeds go through one shared `sin/deed` helper. Pride: tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills.
 - Greed: tier 2 after 15 Reels, tier 3 after 25 kills on creatures you Tethered. Its set bonus counts the arbalest in either hand (crossbows live in the offhand a lot). Grapple keeps its own 8s cooldown; only Tether uses `kandy.cd.greed`. Gilded Weight's tier 3 cap applies while a tier 3 arbalest is carried anywhere.
 - Lust: tier 2 after 10 Embraces that land, tier 3 after 15 kills while bleeding. Embrace lands for 4 damage (the spec gave none). Tier 2's "heal 3 hearts" is the 2-heart instant heal plus Regeneration IV for 1s (about 1.5 hearts), since instant health only heals in 2-heart steps. Old blades are migrated (sin keys + right-click component) the first time they're held. Hare's Foot's hop burst keeps its own 4s cooldown.
+- Envy: tier 2 after 20 hits on your locked target, tier 3 after 10 kills on it (deeds need the bow in the main hand). Covet reads the stolen effect's level and gives it to you at that level. T3's mob Covet steals their buffs too and drains 1 HP (armor-ignoring `kandy:envy_covet` damage; you heal through Regeneration III for 1s, which is exactly 1 HP). Spite's "Lens-Marked" means Marked by you in the last 10s. Mark keeps its own 20s cooldown (`wat_cd`); only Falcon Volley uses `kandy.cd.envy`. A kill deed only checks that the corpse was someone's lock and that you had one up.
 - Weapon give functions take no arguments (tier 1); `give_tier {tier:N}` gives another tier.
 - `sin/tier` reads tiers with item checks (main hand first, then offhand) instead of player NBT.
 - Above Them's bonus is 15% / 25% of the spear's attack damage attribute (enchantments not included).

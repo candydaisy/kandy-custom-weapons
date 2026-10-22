@@ -16,7 +16,6 @@ function kandy:frostveil/tick
 function kandy:eclipse/tick
 function kandy:chronos/tick
 function kandy:abyssal/tick
-function kandy:falconer/tick
 function kandy:lifebloom/tick
 function kandy:warhorn/tick
 
@@ -26,7 +25,6 @@ function kandy:molten_core/tick
 function kandy:void_talisman/tick
 function kandy:alchemist/tick
 function kandy:merchant_sigil/tick
-function kandy:watchers_lens/tick
 function kandy:verdant_sprig/tick
 function kandy:stormcaller_coil/tick
 function kandy:deepdelver_lamp/tick

@@ -9,7 +9,6 @@ function kandy:frostveil/setup
 function kandy:eclipse/setup
 function kandy:chronos/setup
 function kandy:abyssal/setup
-function kandy:falconer/setup
 function kandy:lifebloom/setup
 function kandy:warhorn/setup
 function kandy:zephyr/setup
@@ -18,7 +17,6 @@ function kandy:molten_core/setup
 function kandy:void_talisman/setup
 function kandy:alchemist/setup
 function kandy:merchant_sigil/setup
-function kandy:watchers_lens/setup
 function kandy:verdant_sprig/setup
 function kandy:stormcaller_coil/setup
 function kandy:deepdelver_lamp/setup
@@ -57,6 +55,8 @@ advancement revoke @a only kandy:sin/greed/plunder
 advancement revoke @a only kandy:hit/lifebloom
 advancement revoke @a only kandy:sin/pride/hit
 advancement revoke @a only kandy:sin/pride/using
+advancement revoke @a only kandy:sin/envy/hit
+advancement revoke @a only kandy:sin/envy/kill
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

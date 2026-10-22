@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "nbt": "{Tags:[\"kandy.fl_locked\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:sin/envy/weapon/kill"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "criteria": {
+    "mainhand_new": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{sin:\"envy\",type:\"weapon\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "blocked": false
+        }
+      }
+    },
+    "mainhand_old": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ability:\"Falconer\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "blocked": false
+        }
+      }
+    },
+    "offhand_new": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "offhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{sin:\"envy\",type:\"weapon\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "blocked": false
+        }
+      }
+    },
+    "offhand_old": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "offhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ability:\"Falconer\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "#minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mainhand_new",
+      "mainhand_old",
+      "offhand_new",
+      "offhand_old"
+    ]
+  ],
+  "rewards": {
+    "function": "kandy:sin/envy/weapon/hit"
+  }
+}
