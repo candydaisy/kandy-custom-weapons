@@ -14,6 +14,8 @@ function kandy:sin/sloth/weapon/uninstall
 function kandy:sin/sloth/charm/uninstall
 function kandy:sin/melancholy/weapon/uninstall
 function kandy:sin/melancholy/charm/uninstall
+function kandy:sin/vanity/weapon/uninstall
+function kandy:sin/vanity/charm/uninstall
 tag @a remove kandy.quarrel
 scoreboard objectives remove kandy.cd.wrath
 scoreboard objectives remove kandy.cdmax.wrath
@@ -31,6 +33,9 @@ scoreboard objectives remove kandy.cd.sloth
 scoreboard objectives remove kandy.cdmax.sloth
 scoreboard objectives remove kandy.cd.melancholy
 scoreboard objectives remove kandy.cdmax.melancholy
+scoreboard objectives remove kandy.cd.vanity
+scoreboard objectives remove kandy.cdmax.vanity
+scoreboard objectives remove kandy.vain
 scoreboard objectives remove kandy.ccd.wrath
 scoreboard objectives remove kandy.ccdmax.wrath
 scoreboard objectives remove kandy.ccd.pride

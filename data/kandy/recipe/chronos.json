@@ -96,6 +96,11 @@
           "italic": false
         },
         {
+          "text": "Flawless: at full health, +2 damage and +10% speed.",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "text": "Right-click: set a Temporal Anchor for 6s.",
           "color": "gray",
           "italic": false
@@ -111,8 +116,23 @@
           "italic": false
         },
         {
+          "text": "Blemished: hurt from full health, no Flawless for 10s and Weakness I for 3s.",
+          "color": "red",
+          "italic": false
+        },
+        {
           "text": "Rewinding leaves you weakened for 3s.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Vanity · Tier 1",
+          "color": "#f2c6de",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Rewinds, then Flawless kills, deepen the sin.",
+          "color": "dark_gray",
           "italic": false
         }
       ],
@@ -121,7 +141,9 @@
       "minecraft:unbreakable": {},
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
-        "ability": "Chronos"
+        "sin": "vanity",
+        "type": "weapon",
+        "tier": 1
       },
       "minecraft:attribute_modifiers": [
         {

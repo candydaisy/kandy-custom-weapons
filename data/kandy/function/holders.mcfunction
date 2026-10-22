@@ -5,8 +5,6 @@ tag @a remove kandy.main.tempest
 tag @a remove kandy.inv.tempest
 tag @a remove kandy.main.eclipse
 tag @a remove kandy.inv.eclipse
-tag @a remove kandy.main.chronos
-tag @a remove kandy.inv.chronos
 tag @a remove kandy.main.lifebloom
 tag @a remove kandy.inv.lifebloom
 tag @a remove kandy.main.warhorn
@@ -22,7 +20,6 @@ tag @a remove kandy.charm.stormcaller_coil
 tag @a remove kandy.charm.deepdelver_lamp
 tag @a remove kandy.charm.reapers_knuckle
 tag @a remove kandy.charm.wayfarers_compass
-tag @a remove kandy.charm.prism_mirror
 tag @a remove kandy.charm.predators_fang
 tag @a remove kandy.charm.tinkers_whetstone
 tag @a remove kandy.charm.enderbrace
@@ -47,9 +44,6 @@ execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Eclipse
 execute as @a if items entity @s container.* *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.inv.eclipse
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.inv.eclipse
 
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.main.chronos
-execute as @a if items entity @s container.* *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
 
 
 
@@ -88,8 +82,6 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"ReapersKnuckl
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"ReapersKnuckle"}] run tag @s add kandy.charm.reapers_knuckle
 execute as @a if items entity @s container.* *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"WayfarersCompass"}] run tag @s add kandy.charm.wayfarers_compass
-execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
 execute as @a if items entity @s container.* *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
 execute as @a if items entity @s container.* *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone

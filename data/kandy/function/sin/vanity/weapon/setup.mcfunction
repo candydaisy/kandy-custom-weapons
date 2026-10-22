@@ -4,7 +4,10 @@ scoreboard objectives add chr_id dummy
 scoreboard objectives add chr_hp health "Chronos HP"
 scoreboard objectives add chr_ahp dummy "Anchored HP"
 scoreboard objectives add chr_anc dummy "Anchor Timer"
-scoreboard objectives add chr_cd dummy "Rewind Cooldown"
+scoreboard objectives add chr_amax dummy
+scoreboard objectives add chr_afull dummy
+scoreboard objectives add vain_bl dummy "Blemished"
+scoreboard objectives add vain_max dummy
 scoreboard objectives add chr_death deathCount
 scoreboard objectives add chr_pt dummy "Paradox Timer"
 scoreboard objectives add chr_ps dummy "Paradox Stacks"

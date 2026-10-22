@@ -1,0 +1,7 @@
+# function kandy:sin/vanity/weapon/retier {tier:2}: raise the held stiletto's tier, reset its progress, rewrite its lore
+# Pre-revamp stilettos pick up the new sin keys here too (their old ability key is left alongside, harmlessly)
+$item modify entity @s weapon.mainhand [{type:"minecraft:set_custom_data",tag:'{sin:"vanity",type:"weapon",tier:$(tier),deeds:0}'},{type:"minecraft:set_lore",mode:"replace_all",lore:[{text:"Charged hits leave a Paradox: +1.5 damage per hit (max 3) strikes 3s later.",color:"gray",italic:false},{text:"Flawless: at full health, +2 damage and +10% speed.",color:"gray",italic:false},{text:"Right-click: set a Temporal Anchor for 6s.",color:"gray",italic:false},{text:"Sneak + right-click: rewind to it and recover some health (20s cooldown).",color:"gray",italic:false},{text:"Critical hits freeze the target in time (10s per target).",color:"gold",italic:false},{text:"Blemished: hurt from full health, no Flawless for 10s and Weakness I for 3s.",color:"red",italic:false},{text:"Rewinding leaves you weakened for 3s.",color:"red",italic:false},{text:"Sin of Vanity · Tier $(tier)",color:"#f2c6de",italic:false},{text:"Indulge it: Rewinds, then Flawless kills, deepen the sin.",color:"dark_gray",italic:false}]}]
+$title @s actionbar {text:"Your Vanity deepens: Tier $(tier)",color:"#f2c6de",bold:true}
+playsound minecraft:block.amethyst_block.resonate player @a[distance=..16] ~ ~ ~ 1 1.2
+playsound minecraft:block.anvil.use player @s ~ ~ ~ 0.6 0.6
+particle minecraft:end_rod ~ ~1 ~ 0.5 0.8 0.5 0.05 30

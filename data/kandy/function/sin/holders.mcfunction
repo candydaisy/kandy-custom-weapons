@@ -34,6 +34,10 @@ tag @a remove kandy.melancholy.wi
 tag @a remove kandy.melancholy.c
 tag @a remove kandy.melancholy.set
 tag @a remove kandy.melancholy.t3
+tag @a remove kandy.vanity.w
+tag @a remove kandy.vanity.wi
+tag @a remove kandy.vanity.c
+tag @a remove kandy.vanity.set
 
 # Wrath: Pyroclast Cleaver + Berserker Token
 execute as @a if items entity @s weapon.mainhand *[custom_data~{sin:"wrath",type:"weapon"}] run tag @s add kandy.wrath.w
@@ -134,6 +138,18 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"MoonlitPendan
 execute as @a if items entity @s weapon.offhand *[custom_data~{sin:"melancholy",type:"charm"}] run tag @s add kandy.melancholy.c
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.melancholy.c
 
+# Vanity (hidden): Chronos Stiletto + Prism Mirror
+execute as @a if items entity @s weapon.mainhand *[custom_data~{sin:"vanity",type:"weapon"}] run tag @s add kandy.vanity.w
+execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.vanity.w
+execute as @a if items entity @s container.* *[custom_data~{sin:"vanity",type:"weapon"}] run tag @s add kandy.vanity.wi
+execute as @a if items entity @s container.* *[custom_data~{ability:"Chronos"}] run tag @s add kandy.vanity.wi
+execute as @a if items entity @s weapon.offhand *[custom_data~{sin:"vanity",type:"weapon"}] run tag @s add kandy.vanity.wi
+execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.vanity.wi
+execute as @a if items entity @s container.* *[custom_data~{sin:"vanity",type:"charm"}] run tag @s add kandy.vanity.c
+execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.vanity.c
+execute as @a if items entity @s weapon.offhand *[custom_data~{sin:"vanity",type:"charm"}] run tag @s add kandy.vanity.c
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.vanity.c
+
 # The sins quarrel: carrying charms of two different sins turns every sin charm off
 scoreboard players set @a kandy.n 0
 scoreboard players add @a[tag=kandy.wrath.c] kandy.n 1
@@ -144,6 +160,7 @@ scoreboard players add @a[tag=kandy.envy.c] kandy.n 1
 scoreboard players add @a[tag=kandy.gluttony.c] kandy.n 1
 scoreboard players add @a[tag=kandy.sloth.c] kandy.n 1
 scoreboard players add @a[tag=kandy.melancholy.c] kandy.n 1
+scoreboard players add @a[tag=kandy.vanity.c] kandy.n 1
 tellraw @a[scores={kandy.n=2..},tag=!kandy.quarrel] {text:"Your sins quarrel: no sin charm works while you carry two different sins.",color:"dark_red"}
 tag @a[scores={kandy.n=2..}] add kandy.quarrel
 tag @a[scores={kandy.n=..1}] remove kandy.quarrel
@@ -155,6 +172,7 @@ tag @a[tag=kandy.quarrel] remove kandy.envy.c
 tag @a[tag=kandy.quarrel] remove kandy.gluttony.c
 tag @a[tag=kandy.quarrel] remove kandy.sloth.c
 tag @a[tag=kandy.quarrel] remove kandy.melancholy.c
+tag @a[tag=kandy.quarrel] remove kandy.vanity.c
 
 tag @a[tag=kandy.wrath.w,tag=kandy.wrath.c] add kandy.wrath.set
 tag @a[tag=kandy.pride.w,tag=kandy.pride.c] add kandy.pride.set
@@ -163,6 +181,7 @@ tag @a[tag=kandy.envy.w,tag=kandy.envy.c] add kandy.envy.set
 tag @a[tag=kandy.gluttony.w,tag=kandy.gluttony.c] add kandy.gluttony.set
 tag @a[tag=kandy.sloth.w,tag=kandy.sloth.c] add kandy.sloth.set
 tag @a[tag=kandy.melancholy.w,tag=kandy.melancholy.c] add kandy.melancholy.set
+tag @a[tag=kandy.vanity.w,tag=kandy.vanity.c] add kandy.vanity.set
 # Crossbows are often held in the offhand, so Greed's set counts either hand
 execute as @a[tag=kandy.greed.c] if items entity @s weapon.* *[custom_data~{sin:"greed",type:"weapon"}] run tag @s add kandy.greed.set
 execute as @a[tag=kandy.greed.c] if items entity @s weapon.* *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.greed.set

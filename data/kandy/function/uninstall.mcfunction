@@ -37,7 +37,6 @@ function kandy:sin/uninstall
 function kandy:tempest/uninstall
 scoreboard objectives remove frost_chill
 function kandy:eclipse/uninstall
-function kandy:chronos/uninstall
 function kandy:lifebloom/uninstall
 function kandy:warhorn/uninstall
 function kandy:zephyr/uninstall
@@ -50,7 +49,6 @@ function kandy:stormcaller_coil/uninstall
 function kandy:deepdelver_lamp/uninstall
 function kandy:reapers_knuckle/uninstall
 function kandy:wayfarers_compass/uninstall
-function kandy:prism_mirror/uninstall
 function kandy:predators_fang/uninstall
 function kandy:tinkers_whetstone/uninstall
 function kandy:enderbrace/uninstall

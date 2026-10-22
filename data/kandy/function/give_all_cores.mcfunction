@@ -5,7 +5,6 @@ function kandy:worldbreaker/give_core
 function kandy:sin/wrath/weapon/give_core
 function kandy:tempest/give_core
 function kandy:eclipse/give_core
-function kandy:chronos/give_core
 function kandy:sin/sloth/weapon/give_core
 function kandy:sin/greed/weapon/give_core
 function kandy:sin/envy/weapon/give_core
@@ -28,7 +27,6 @@ function kandy:reapers_knuckle/give_core
 function kandy:sin/lust/charm/give_core
 function kandy:sin/gluttony/charm/give_core
 function kandy:wayfarers_compass/give_core
-function kandy:prism_mirror/give_core
 function kandy:predators_fang/give_core
 function kandy:tinkers_whetstone/give_core
 function kandy:enderbrace/give_core

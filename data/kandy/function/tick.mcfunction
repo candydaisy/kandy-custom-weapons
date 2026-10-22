@@ -10,7 +10,6 @@ function kandy:sin/tick
 
 function kandy:tempest/tick
 function kandy:eclipse/tick
-function kandy:chronos/tick
 function kandy:lifebloom/tick
 function kandy:warhorn/tick
 
@@ -24,7 +23,6 @@ function kandy:stormcaller_coil/tick
 function kandy:deepdelver_lamp/tick
 function kandy:reapers_knuckle/tick
 function kandy:wayfarers_compass/tick
-function kandy:prism_mirror/tick
 function kandy:predators_fang/tick
 function kandy:tinkers_whetstone/tick
 function kandy:enderbrace/tick

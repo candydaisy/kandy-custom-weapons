@@ -87,11 +87,17 @@
           "text": "Brittle: melee hits against you deal +1 damage.",
           "color": "red",
           "italic": false
+        },
+        {
+          "text": "Sin of Vanity",
+          "color": "#f2c6de",
+          "italic": false
         }
       ],
       "minecraft:custom_data": {
-        "charm": "PrismMirror",
-        "type": "talisman"
+        "sin": "vanity",
+        "type": "charm",
+        "tier": 1
       }
     }
   }

@@ -6,10 +6,16 @@
         "damage": {
           "blocked": false,
           "type": {
+            "direct_entity": {},
+            "source_entity": {},
             "tags": [
               {
                 "id": "#minecraft:is_projectile",
-                "expected": true
+                "expected": false
+              },
+              {
+                "id": "#minecraft:is_explosion",
+                "expected": false
               }
             ]
           }
@@ -18,6 +24,6 @@
     }
   },
   "rewards": {
-    "function": "kandy:prism_mirror/projectile"
+    "function": "kandy:sin/vanity/charm/brittle"
   }
 }
