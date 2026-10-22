@@ -23,7 +23,6 @@ function kandy:hud/w/prism_mirror with storage kandy:hud
 function kandy:hud/w/reapers_knuckle with storage kandy:hud
 function kandy:hud/w/stormcaller_coil with storage kandy:hud
 function kandy:hud/w/tinkers_whetstone with storage kandy:hud
-function kandy:hud/w/verdant_sprig with storage kandy:hud
 function kandy:hud/w/watchers_lens with storage kandy:hud
 function kandy:hud/w/wayfarers_compass with storage kandy:hud
 function kandy:hud/w/beastmasters_whistle with storage kandy:hud

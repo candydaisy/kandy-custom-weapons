@@ -25,6 +25,10 @@ tag @a remove kandy.gluttony.w
 tag @a remove kandy.gluttony.wi
 tag @a remove kandy.gluttony.c
 tag @a remove kandy.gluttony.set
+tag @a remove kandy.sloth.w
+tag @a remove kandy.sloth.wi
+tag @a remove kandy.sloth.c
+tag @a remove kandy.sloth.set
 
 # Wrath: Pyroclast Cleaver + Berserker Token
 execute as @a if items entity @s weapon.mainhand *[custom_data~{sin:"wrath",type:"weapon"}] run tag @s add kandy.wrath.w
@@ -100,6 +104,17 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"Hearthstone"}
 execute as @a if items entity @s weapon.offhand *[custom_data~{sin:"gluttony",type:"charm"}] run tag @s add kandy.gluttony.c
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"Hearthstone"}] run tag @s add kandy.gluttony.c
 
+# Sloth: Abyssal Bulwark (held in either hand) + Verdant Sprig
+execute as @a if items entity @s weapon.* *[custom_data~{sin:"sloth",type:"weapon"}] run tag @s add kandy.sloth.w
+execute as @a if items entity @s weapon.* *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.sloth.w
+execute as @a if items entity @s container.* *[custom_data~{sin:"sloth",type:"weapon"}] run tag @s add kandy.sloth.wi
+execute as @a if items entity @s container.* *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.sloth.wi
+tag @a[tag=kandy.sloth.w] add kandy.sloth.wi
+execute as @a if items entity @s container.* *[custom_data~{sin:"sloth",type:"charm"}] run tag @s add kandy.sloth.c
+execute as @a if items entity @s container.* *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.sloth.c
+execute as @a if items entity @s weapon.offhand *[custom_data~{sin:"sloth",type:"charm"}] run tag @s add kandy.sloth.c
+execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.sloth.c
+
 # The sins quarrel: carrying charms of two different sins turns every sin charm off
 scoreboard players set @a kandy.n 0
 scoreboard players add @a[tag=kandy.wrath.c] kandy.n 1
@@ -108,6 +123,7 @@ scoreboard players add @a[tag=kandy.greed.c] kandy.n 1
 scoreboard players add @a[tag=kandy.lust.c] kandy.n 1
 scoreboard players add @a[tag=kandy.envy.c] kandy.n 1
 scoreboard players add @a[tag=kandy.gluttony.c] kandy.n 1
+scoreboard players add @a[tag=kandy.sloth.c] kandy.n 1
 tellraw @a[scores={kandy.n=2..},tag=!kandy.quarrel] {text:"Your sins quarrel: no sin charm works while you carry two different sins.",color:"dark_red"}
 tag @a[scores={kandy.n=2..}] add kandy.quarrel
 tag @a[scores={kandy.n=..1}] remove kandy.quarrel
@@ -117,12 +133,14 @@ tag @a[tag=kandy.quarrel] remove kandy.greed.c
 tag @a[tag=kandy.quarrel] remove kandy.lust.c
 tag @a[tag=kandy.quarrel] remove kandy.envy.c
 tag @a[tag=kandy.quarrel] remove kandy.gluttony.c
+tag @a[tag=kandy.quarrel] remove kandy.sloth.c
 
 tag @a[tag=kandy.wrath.w,tag=kandy.wrath.c] add kandy.wrath.set
 tag @a[tag=kandy.pride.w,tag=kandy.pride.c] add kandy.pride.set
 tag @a[tag=kandy.lust.w,tag=kandy.lust.c] add kandy.lust.set
 tag @a[tag=kandy.envy.w,tag=kandy.envy.c] add kandy.envy.set
 tag @a[tag=kandy.gluttony.w,tag=kandy.gluttony.c] add kandy.gluttony.set
+tag @a[tag=kandy.sloth.w,tag=kandy.sloth.c] add kandy.sloth.set
 # Crossbows are often held in the offhand, so Greed's set counts either hand
 execute as @a[tag=kandy.greed.c] if items entity @s weapon.* *[custom_data~{sin:"greed",type:"weapon"}] run tag @s add kandy.greed.set
 execute as @a[tag=kandy.greed.c] if items entity @s weapon.* *[custom_data~{ability:"Chainwarden"}] run tag @s add kandy.greed.set

@@ -10,6 +10,8 @@ function kandy:sin/envy/weapon/uninstall
 function kandy:sin/envy/charm/uninstall
 function kandy:sin/gluttony/weapon/uninstall
 function kandy:sin/gluttony/charm/uninstall
+function kandy:sin/sloth/weapon/uninstall
+function kandy:sin/sloth/charm/uninstall
 tag @a remove kandy.quarrel
 scoreboard objectives remove kandy.cd.wrath
 scoreboard objectives remove kandy.cdmax.wrath
@@ -23,6 +25,8 @@ scoreboard objectives remove kandy.cd.envy
 scoreboard objectives remove kandy.cdmax.envy
 scoreboard objectives remove kandy.cd.gluttony
 scoreboard objectives remove kandy.cdmax.gluttony
+scoreboard objectives remove kandy.cd.sloth
+scoreboard objectives remove kandy.cdmax.sloth
 scoreboard objectives remove kandy.ccd.wrath
 scoreboard objectives remove kandy.ccdmax.wrath
 scoreboard objectives remove kandy.ccd.pride

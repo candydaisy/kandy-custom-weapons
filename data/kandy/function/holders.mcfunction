@@ -9,9 +9,6 @@ tag @a remove kandy.main.eclipse
 tag @a remove kandy.inv.eclipse
 tag @a remove kandy.main.chronos
 tag @a remove kandy.inv.chronos
-tag @a remove kandy.main.abyssal
-tag @a remove kandy.inv.abyssal
-tag @a remove kandy.off.abyssal
 tag @a remove kandy.main.lifebloom
 tag @a remove kandy.inv.lifebloom
 tag @a remove kandy.main.warhorn
@@ -23,7 +20,6 @@ tag @a remove kandy.charm.molten_core
 tag @a remove kandy.charm.void_talisman
 tag @a remove kandy.charm.alchemist
 tag @a remove kandy.charm.merchant_sigil
-tag @a remove kandy.charm.verdant_sprig
 tag @a remove kandy.charm.stormcaller_coil
 tag @a remove kandy.charm.deepdelver_lamp
 tag @a remove kandy.charm.reapers_knuckle
@@ -61,12 +57,7 @@ execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Chronos
 execute as @a if items entity @s container.* *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Chronos"}] run tag @s add kandy.inv.chronos
 
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.main.abyssal
-execute as @a if items entity @s container.* *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.inv.abyssal
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.inv.abyssal
 
-# Shields are usually held in the offhand
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Abyssal"}] run tag @s add kandy.off.abyssal
 
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Lifebloom"}] run tag @s add kandy.main.lifebloom
@@ -95,8 +86,6 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"AlchemistC
 
 execute as @a if items entity @s container.* *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MerchantSigil"}] run tag @s add kandy.charm.merchant_sigil
-execute as @a if items entity @s container.* *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.charm.verdant_sprig
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"VerdantSprig"}] run tag @s add kandy.charm.verdant_sprig
 execute as @a if items entity @s container.* *[custom_data~{charm:"StormcallerCoil"}] run tag @s add kandy.charm.stormcaller_coil
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"StormcallerCoil"}] run tag @s add kandy.charm.stormcaller_coil
 execute as @a if items entity @s container.* *[custom_data~{charm:"DeepdelverLamp"}] run tag @s add kandy.charm.deepdelver_lamp

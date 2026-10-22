@@ -8,7 +8,7 @@ function kandy:tempest/give
 function kandy:frostveil/give
 function kandy:eclipse/give
 function kandy:chronos/give
-function kandy:abyssal/give
+function kandy:sin/sloth/weapon/give
 function kandy:sin/greed/weapon/give
 function kandy:sin/envy/weapon/give
 function kandy:lifebloom/give
@@ -24,7 +24,7 @@ function kandy:alchemist/give
 function kandy:sin/pride/charm/give
 function kandy:merchant_sigil/give
 function kandy:sin/envy/charm/give
-function kandy:verdant_sprig/give
+function kandy:sin/sloth/charm/give
 function kandy:stormcaller_coil/give
 function kandy:deepdelver_lamp/give
 function kandy:reapers_knuckle/give

@@ -1,6 +1,7 @@
-# Tidal Surge: spend all Pressure in a ~90 degree wave reaching 7 blocks ahead
+# Active: Tidal Surge, spend all Pressure in a ~90 degree wave reaching 7 blocks ahead (9 from tier 2)
 tag @s add kandy.bulw_src
-scoreboard players set @s bulw_scd 160
+scoreboard players set @s kandy.cd.sloth 160
+scoreboard players set @s kandy.cdmax.sloth 160
 # Recoil: Slowness II for 2s
 effect give @s minecraft:slowness 2 1 true
 execute rotated ~ 0 positioned ^ ^ ^1 run tag @e[distance=..1.2,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
@@ -10,6 +11,8 @@ execute rotated ~ 0 positioned ^ ^ ^4 run tag @e[distance=..2.4,type=!#kandy:unp
 execute rotated ~ 0 positioned ^ ^ ^5 run tag @e[distance=..2.8,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
 execute rotated ~ 0 positioned ^ ^ ^6 run tag @e[distance=..3.2,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
 execute rotated ~ 0 positioned ^ ^ ^7 run tag @e[distance=..3.4,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
+execute if score @s bulw_t matches 2.. rotated ~ 0 positioned ^ ^ ^8 run tag @e[distance=..3.6,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
+execute if score @s bulw_t matches 2.. rotated ~ 0 positioned ^ ^ ^9 run tag @e[distance=..3.8,type=!#kandy:unpullable,tag=!kandy.bulw_src,tag=!kandy.immune] add kandy.bulw_wave
 execute rotated ~ 0 positioned ^ ^0.6 ^1 run particle minecraft:splash ~ ~ ~ 0.6 0.3 0.6 0.2 12
 execute rotated ~ 0 positioned ^ ^0.6 ^2 run particle minecraft:splash ~ ~ ~ 0.8 0.3 0.8 0.2 16
 execute rotated ~ 0 positioned ^ ^0.6 ^3 run particle minecraft:splash ~ ~ ~ 1.0 0.3 1.0 0.2 20
@@ -17,6 +20,8 @@ execute rotated ~ 0 positioned ^ ^0.6 ^4 run particle minecraft:splash ~ ~ ~ 1.2
 execute rotated ~ 0 positioned ^ ^0.6 ^5 run particle minecraft:splash ~ ~ ~ 1.4 0.3 1.4 0.2 28
 execute rotated ~ 0 positioned ^ ^0.6 ^6 run particle minecraft:splash ~ ~ ~ 1.6 0.3 1.6 0.2 32
 execute rotated ~ 0 positioned ^ ^0.6 ^7 run particle minecraft:splash ~ ~ ~ 1.7 0.3 1.7 0.2 36
+execute if score @s bulw_t matches 2.. rotated ~ 0 positioned ^ ^0.6 ^8 run particle minecraft:splash ~ ~ ~ 1.8 0.3 1.8 0.2 40
+execute if score @s bulw_t matches 2.. rotated ~ 0 positioned ^ ^0.6 ^9 run particle minecraft:splash ~ ~ ~ 1.9 0.3 1.9 0.2 44
 execute rotated ~ 0 positioned ^ ^0.4 ^1 run particle minecraft:bubble_pop ~ ~ ~ 0.6 0.3 0.6 0.05 6
 execute rotated ~ 0 positioned ^ ^0.4 ^2 run particle minecraft:bubble_pop ~ ~ ~ 0.8 0.3 0.8 0.05 8
 execute rotated ~ 0 positioned ^ ^0.4 ^3 run particle minecraft:bubble_pop ~ ~ ~ 1.0 0.3 1.0 0.05 10
@@ -37,17 +42,22 @@ scoreboard players operation #dx bulw_tmp -= #px bulw_tmp
 scoreboard players operation #dz bulw_tmp -= #pz bulw_tmp
 kill @e[type=minecraft:marker,tag=kandy.bulw_dir]
 
-# 1-2 charges: 4 damage, 3-4: 7, 5: 10 plus Slowness II, Mining Fatigue II and a launch
+# Full-Pressure Surges that hit deepen a tier 2 shield (tier 3 after 10)
+scoreboard players operation @s kandy.wt = @s bulw_t
+execute if score @s bulw_t matches 2 if score @s bulw_chg matches 5.. if entity @e[tag=kandy.bulw_wave] run function kandy:sin/deed {sin:"sloth",need:10,what:"full-Pressure Surges",name:"Sloth",color:"#7a9bb5"}
+
+# 1-2 charges: 4 damage, 3-4: 7, 5: 10 (6: 12) plus Slowness II, Mining Fatigue II and a launch
 execute if score @s bulw_chg matches 1..2 as @e[tag=kandy.bulw_wave] run damage @s 4 kandy:abyssal_surge by @p[tag=kandy.bulw_src]
 execute if score @s bulw_chg matches 3..4 as @e[tag=kandy.bulw_wave] run damage @s 7 kandy:abyssal_surge by @p[tag=kandy.bulw_src]
-execute if score @s bulw_chg matches 5.. as @e[tag=kandy.bulw_wave] run damage @s 10 kandy:abyssal_surge by @p[tag=kandy.bulw_src]
+execute if score @s bulw_chg matches 5 as @e[tag=kandy.bulw_wave] run damage @s 10 kandy:abyssal_surge by @p[tag=kandy.bulw_src]
+execute if score @s bulw_chg matches 6.. as @e[tag=kandy.bulw_wave] run damage @s 12 kandy:abyssal_surge by @p[tag=kandy.bulw_src]
 execute if score @s bulw_chg matches 5.. run effect give @e[tag=kandy.bulw_wave] minecraft:slowness 4 1
 execute if score @s bulw_chg matches 5.. run effect give @e[tag=kandy.bulw_wave] minecraft:mining_fatigue 4 1
 
 # Extra push for mobs (players only get the damage knockback, their motion can't be set)
-execute if score @s bulw_chg matches 1..2 as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:abyssal/push {scale:0.0008,up:0.3}
-execute if score @s bulw_chg matches 3..4 as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:abyssal/push {scale:0.0014,up:0.35}
-execute if score @s bulw_chg matches 5.. as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:abyssal/push {scale:0.0012,up:0.7}
+execute if score @s bulw_chg matches 1..2 as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:sin/sloth/weapon/push {scale:0.0008,up:0.3}
+execute if score @s bulw_chg matches 3..4 as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:sin/sloth/weapon/push {scale:0.0014,up:0.35}
+execute if score @s bulw_chg matches 5.. as @e[tag=kandy.bulw_wave,type=!minecraft:player] run function kandy:sin/sloth/weapon/push {scale:0.0012,up:0.7}
 execute if score @s bulw_chg matches 5.. run effect give @e[tag=kandy.bulw_wave,type=minecraft:player] minecraft:levitation 1 1 true
 
 scoreboard players set @s bulw_chg 0

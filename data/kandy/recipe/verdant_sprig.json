@@ -76,7 +76,7 @@
       ],
       "minecraft:lore": [
         {
-          "text": "Standing on grass, moss or leaves under open sky heals 1 HP every 5s.",
+          "text": "Idle: after 2s standing still, Resistance I and 1 HP every 3s (2s on grass under open sky).",
           "color": "gray",
           "italic": false
         },
@@ -86,8 +86,13 @@
           "italic": false
         },
         {
-          "text": "Too long without sunlight withers it: Hunger I.",
+          "text": "Inertia: after 5s still, your first 2s of moving are Slowness II.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Sloth",
+          "color": "#7a9bb5",
           "italic": false
         }
       ],
@@ -95,8 +100,9 @@
       "minecraft:enchantment_glint_override": true,
       "minecraft:max_stack_size": 1,
       "minecraft:custom_data": {
-        "charm": "VerdantSprig",
-        "type": "talisman"
+        "sin": "sloth",
+        "type": "charm",
+        "tier": 1
       }
     }
   }

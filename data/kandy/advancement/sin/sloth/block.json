@@ -31,6 +31,32 @@
                   }
                 }
               }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "mainhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{sin:\"sloth\",type:\"weapon\"}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:equipment": {
+                  "offhand": {
+                    "predicates": {
+                      "minecraft:custom_data": "{sin:\"sloth\",type:\"weapon\"}"
+                    }
+                  }
+                }
+              }
             }
           ]
         },
@@ -41,6 +67,6 @@
     }
   },
   "rewards": {
-    "function": "kandy:abyssal/block"
+    "function": "kandy:sin/sloth/weapon/block"
   }
 }

@@ -96,13 +96,23 @@
           "italic": false
         },
         {
-          "text": "Sneak + Jump: Tidal Surge spends all Pressure in a crushing wave.",
+          "text": "Sneak + Jump: Tidal Surge spends all Pressure in a crushing wave (8s cooldown).",
           "color": "aqua",
           "italic": false
         },
         {
           "text": "Heavy: -10% speed while held. Tidal Surge's recoil slows you.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Sloth · Tier 1",
+          "color": "#7a9bb5",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Parries, then full-Pressure Surges, deepen the sin.",
+          "color": "dark_gray",
           "italic": false
         }
       ],
@@ -111,7 +121,9 @@
       "minecraft:unbreakable": {},
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
-        "ability": "Abyssal"
+        "sin": "sloth",
+        "type": "weapon",
+        "tier": 1
       },
       "minecraft:attribute_modifiers": [
         {
