@@ -8,9 +8,9 @@ Implementation notes (where the build differs from the spec below):
 - Recipe and advancement-unlock ids (`kandy:pyroclast`, `kandy:pyroclast_core`, `kandy:berserker`...) are kept so existing worlds keep their unlocked recipes. Only the forged item's `custom_data` changed.
 - Hit advancements use two OR'd criteria (new key, old key): 26.3 rejects an `any_of` list in a criterion's `player` field.
 - The quarrel rule is in (`kandy.n` counts sin charms carried); the player gets one chat message when it starts.
-- `kandy.cdmax` / `kandy.ccdmax` record the length each shared cooldown was started with, so every sin's HUD bar reads correctly whichever item started it.
+- Each sin weapon has its own active cooldown (`kandy.cd.<sin>`, with `kandy.cdmax.<sin>` holding the length it was started with, for the HUD bar), so swapping sin weapons gives you another ready active. Charm procs work the same way: `kandy.ccd.<sin>` / `kandy.ccdmax.<sin>` (Rebirth, Frenzy).
 - Deeds go through one shared `sin/deed` helper. Pride: tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills.
-- Greed: tier 2 after 15 Reels, tier 3 after 25 kills on creatures you Tethered. Its set bonus counts the arbalest in either hand (crossbows live in the offhand a lot). Grapple keeps its own 8s cooldown; only Tether uses the shared one. Gilded Weight's tier 3 cap applies while a tier 3 arbalest is carried anywhere.
+- Greed: tier 2 after 15 Reels, tier 3 after 25 kills on creatures you Tethered. Its set bonus counts the arbalest in either hand (crossbows live in the offhand a lot). Grapple keeps its own 8s cooldown; only Tether uses `kandy.cd.greed`. Gilded Weight's tier 3 cap applies while a tier 3 arbalest is carried anywhere.
 - Lust: tier 2 after 10 Embraces that land, tier 3 after 15 kills while bleeding. Embrace lands for 4 damage (the spec gave none). Tier 2's "heal 3 hearts" is the 2-heart instant heal plus Regeneration IV for 1s (about 1.5 hearts), since instant health only heals in 2-heart steps. Old blades are migrated (sin keys + right-click component) the first time they're held. Hare's Foot's hop burst keeps its own 4s cooldown.
 - Weapon give functions take no arguments (tier 1); `give_tier {tier:N}` gives another tier.
 - `sin/tier` reads tiers with item checks (main hand first, then offhand) instead of player NBT.
@@ -233,12 +233,12 @@ Both are **sidegrades of their twin**: same slot, different job. Neither beats i
 ### Scoreboards
 | Objective | Use |
 | --- | --- |
-| `kandy.cd` | **The** active-ability cooldown, in ticks, one per player. All sin weapons share it, so swapping weapons can't dodge cooldowns. |
-| `kandy.ccd` | Charm proc cooldowns (Rebirth, Frenzy). This has to be a second objective: one score can't count two timers at once. |
+| `kandy.cd.<sin>` | Active-ability cooldown in ticks, one per sin weapon (`kandy.cd.wrath`, `kandy.cd.pride`...). Changed from one shared `kandy.cd`: each weapon now cools down on its own. |
+| `kandy.ccd.<sin>` | Charm proc cooldown, one per sin charm (`kandy.ccd.pride` for Rebirth, `kandy.ccd.wrath` for Frenzy). Changed from one shared `kandy.ccd`. |
 | `kandy.wt` / `kandy.ct` | Held weapon tier / carried charm tier (0 = none). |
 | `kandy.vain` | Vanity unlock streak. |
 
-Per-sin *state* (Heat, Desire, Pressure, Puncture...) keeps its existing objective. Those aren't cooldowns, and renaming them buys nothing. Old per-skill cooldown objectives (`pyro_cd`, `dg_cd`...) are replaced by `kandy.cd` and removed in `uninstall`.
+Per-sin *state* (Heat, Desire, Pressure, Puncture...) keeps its existing objective. Those aren't cooldowns, and renaming them buys nothing. Old per-skill cooldown objectives (`pyro_cd`, `dg_cd`...) are replaced by `kandy.cd.<sin>` and removed in `uninstall`.
 
 ### Tags
 | Tag | Meaning |
@@ -252,9 +252,9 @@ Per-sin *state* (Heat, Desire, Pressure, Puncture...) keeps its existing objecti
 
 ### Dispatcher
 - **Tick:** `kandy:tick` calls `kandy:sin/tick`. That runs `sin/holders` (sets tags and tiers), then for each sin `execute as @a[tag=kandy.<sin>.w] run function kandy:sin/<sin>/weapon/tick`, the same for `.c` → `charm/tick`, and `.set` → `set`. 9 sins × 3 lines.
-- **Active:** every right-click and sneak-combo trigger calls `kandy:sin/active`. It checks `kandy.cd`, reads the held item's `sin` into storage, and calls one macro line: `$function kandy:sin/$(sin)/weapon/active`. It then sets `kandy.cd` from that sin's cooldown (scaled by tier).
+- **Active:** every right-click and sneak-combo trigger calls `kandy:sin/active`. It checks `kandy.cd.<sin>`, reads the held item's `sin` into storage, and calls one macro line: `$function kandy:sin/$(sin)/weapon/active`. It then sets `kandy.cd.<sin>` from that sin's cooldown (scaled by tier).
 - **Hit:** stays as **one advancement per sin** (`advancement/sin/<sin>/hit.json`), because each weapon needs its own minimum damage to count as charged. One advancement can't hold nine thresholds. Each reward points straight at `sin/<sin>/weapon/hit`.
-- **HUD:** one boss bar per player for `kandy.cd` plus one for `kandy.ccd`, replacing the per-skill bars for sin items. Relics keep theirs.
+- **HUD:** one boss bar per sin weapon for its `kandy.cd.<sin>` plus one per sin charm for its `kandy.ccd.<sin>`, replacing the per-skill bars for sin items. Relics keep theirs.
 
 ### Layout
 ```
@@ -264,7 +264,7 @@ data/kandy/
       tick.mcfunction          # dispatcher
       holders.mcfunction       # tags, tiers, quarrel, old-key back-compat
       active.mcfunction        # cooldown gate + macro route
-      setup.mcfunction         # kandy.cd, kandy.ccd, kandy.wt, kandy.ct
+      setup.mcfunction         # kandy.cd.<sin>, kandy.ccd.<sin>, kandy.wt, kandy.ct
       uninstall.mcfunction
       unlock/
         melancholy.mcfunction
@@ -292,8 +292,8 @@ Moves are done with `git mv` so file history follows the code.
 
 | Existing | Action | Notes |
 | --- | --- | --- |
-| `function/dragoon/` | **rename** → `sin/pride/weapon/` + **modify** | `give` custom_data/lore. Cooldown → `kandy.cd`. Add Above Them and the missed-Dive self-damage. |
-| `function/phoenix_plume/` | **rename** → `sin/pride/charm/` + **modify** | Add Never Retreat. Cooldown → `kandy.ccd`. |
+| `function/dragoon/` | **rename** → `sin/pride/weapon/` + **modify** | `give` custom_data/lore. Cooldown → `kandy.cd.<sin>`. Add Above Them and the missed-Dive self-damage. |
+| `function/phoenix_plume/` | **rename** → `sin/pride/charm/` + **modify** | Add Never Retreat. Cooldown → `kandy.ccd.pride`. |
 | `function/chainwarden/` | **rename** → `sin/greed/weapon/` + **modify** | Add Pilfer and the snap-on-switch rule. |
 | `function/plunderers_coin/` | **rename** → `sin/greed/charm/` + **modify** | Swap the hunger cost for Gilded Weight. |
 | `function/bloodpact/` | **rename** → `sin/lust/weapon/` + **modify** | Add Embrace. |
@@ -304,9 +304,9 @@ Moves are done with `git mv` so file history follows the code.
 | `function/lingering_soul/` | **rename** → `sin/gluttony/weapon/` + **modify** | Add Devour (needs a `consumable` component plus `using.json`). |
 | `function/hearthstone/` | **rename** → `sin/gluttony/charm/` | Keep as-is apart from custom_data. |
 | `function/reapers_knuckle/` | **keep** | The item stays a Trinket. Its heart logic is **copied** into `sin/gluttony/set`. |
-| `function/pyroclast/` | **rename** → `sin/wrath/weapon/` + **modify** | Fissure cooldown → `kandy.cd`. |
-| `function/berserker/` | **rename** → `sin/wrath/charm/` + **modify** | Frenzy cooldown → `kandy.ccd`. |
-| `function/abyssal/` | **rename** → `sin/sloth/weapon/` + **modify** | Surge cooldown → `kandy.cd`. |
+| `function/pyroclast/` | **rename** → `sin/wrath/weapon/` + **modify** | Fissure cooldown → `kandy.cd.<sin>`. |
+| `function/berserker/` | **rename** → `sin/wrath/charm/` + **modify** | Frenzy cooldown → `kandy.ccd.wrath`. |
+| `function/abyssal/` | **rename** → `sin/sloth/weapon/` + **modify** | Surge cooldown → `kandy.cd.<sin>`. |
 | `function/verdant_sprig/` | **rename** → `sin/sloth/charm/` + **modify** | Grass-only → Idle. Hunger → Inertia. |
 | `function/frostveil/` | **rename** → `sin/melancholy/weapon/` + **modify** | Add Solitude. |
 | `function/moonlit_pendant/` | **rename** → `sin/melancholy/charm/` | Keep as-is apart from custom_data. |
@@ -320,7 +320,7 @@ Moves are done with `git mv` so file history follows the code.
 | `load.mcfunction` | **modify** | Moved items' setups → `sin/setup` + each sin's setup. Hit revokes → `advancement/sin/*`. |
 | `uninstall.mcfunction` | **modify** | Add `sin/uninstall`. Drop the per-skill cooldown objectives. |
 | `menu`, `give_all`, `give_all_cores` | **modify** | Group the menu by sin / Relics / Trinkets. Hidden sins aren't in `give_all`. |
-| `hud/` | **modify** | Add the `kandy.cd` / `kandy.ccd` bars. Drop the moved items' per-skill bars. |
+| `hud/` | **modify** | Add the `kandy.cd.<sin>` / `kandy.ccd.<sin>` bars. Drop the moved items' per-skill bars. |
 | `util/` | **keep as-is** | |
 | `advancement/hit/<moved>.json`, `advancement/<moved>/` | **rename** → `advancement/sin/<sin>/` + **modify** | Predicate matches `{sin:"x",type:"weapon"}` **or** the old key. |
 | `recipe/` for moved items | **modify** | Forge result gets the new custom_data. Add tier2/tier3 recipes. |
@@ -347,5 +347,5 @@ Moves are done with `git mv` so file history follows the code.
 Things to watch in testing:
 - **Lust** has the highest risk *and* highest sustain. If bleed-healing outpaces bleed at T3, drop the T3 heal back to 2 hearts.
 - **Wrath + Blind Fury** can chain Frenzy into Overdrive. That's 100% intended, but check Overdrive's damage against T3 Pride's Dive.
-- **Shared `kandy.cd`** nerfs anyone who carried two sin weapons to swap actives. That's on purpose.
+- **Per-item cooldowns** (`kandy.cd.<sin>`, `kandy.ccd.<sin>`) let someone carrying two sin weapons swap between actives, and two sin charms proc independently. The quarrel rule is what limits stacking sins.
 - **Quarrel rule** is what keeps the table honest. Without it, Wrath charm + Lust weapon (Frenzy + bleed-heal) breaks the numbers.

@@ -1,6 +1,6 @@
 # Active: tear a 10-block Magma Fissure along the ground in the facing direction (10s cooldown)
-scoreboard players set @s kandy.cd 200
-scoreboard players set @s kandy.cdmax 200
+scoreboard players set @s kandy.cd.wrath 200
+scoreboard players set @s kandy.cdmax.wrath 200
 
 # Spend 50% heat (if there is that much) for double damage; Overdrive always doubles for free
 execute if score @s pyro_od matches 1.. run tag @s add kandy.pyro_double

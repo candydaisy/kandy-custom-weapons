@@ -9,8 +9,8 @@ execute unless entity @e[tag=kandy.lust_target] run tag @s remove kandy.lust_sel
 execute unless entity @e[tag=kandy.lust_target] run return run function kandy:sin/lust/weapon/fizzle
 
 # Fever (Hare's Foot carried): an Embrace made at full Desire starts no cooldown
-execute unless entity @s[tag=kandy.lust.set,scores={sprint=1000..}] run scoreboard players set @s kandy.cd 240
-execute unless entity @s[tag=kandy.lust.set,scores={sprint=1000..}] run scoreboard players set @s kandy.cdmax 240
+execute unless entity @s[tag=kandy.lust.set,scores={sprint=1000..}] run scoreboard players set @s kandy.cd.lust 240
+execute unless entity @s[tag=kandy.lust.set,scores={sprint=1000..}] run scoreboard players set @s kandy.cdmax.lust 240
 scoreboard players remove @s sprint 500
 
 playsound minecraft:entity.player.breath player @a[distance=..16] ~ ~ ~ 1 1.4

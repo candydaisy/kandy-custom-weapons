@@ -7,10 +7,18 @@ function kandy:sin/greed/charm/uninstall
 function kandy:sin/lust/weapon/uninstall
 function kandy:sin/lust/charm/uninstall
 tag @a remove kandy.quarrel
-scoreboard objectives remove kandy.cd
-scoreboard objectives remove kandy.cdmax
-scoreboard objectives remove kandy.ccd
-scoreboard objectives remove kandy.ccdmax
+scoreboard objectives remove kandy.cd.wrath
+scoreboard objectives remove kandy.cdmax.wrath
+scoreboard objectives remove kandy.cd.pride
+scoreboard objectives remove kandy.cdmax.pride
+scoreboard objectives remove kandy.cd.greed
+scoreboard objectives remove kandy.cdmax.greed
+scoreboard objectives remove kandy.cd.lust
+scoreboard objectives remove kandy.cdmax.lust
+scoreboard objectives remove kandy.ccd.wrath
+scoreboard objectives remove kandy.ccdmax.wrath
+scoreboard objectives remove kandy.ccd.pride
+scoreboard objectives remove kandy.ccdmax.pride
 scoreboard objectives remove kandy.wt
 scoreboard objectives remove kandy.deed
 scoreboard objectives remove kandy.n

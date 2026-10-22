@@ -21,8 +21,8 @@ scoreboard players add @a pyro_oh 0
 scoreboard players remove @a[scores={pyro_oh=1..}] pyro_oh 1
 scoreboard players remove @a[scores={pyro_od=1..}] pyro_od 1
 
-# Fissure ready again (the shared kandy.cd counts down in sin/tick, right after this)
-execute as @a[scores={kandy.cd=1},tag=kandy.wrath.w] at @s run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 1.5
+# Fissure ready again (kandy.cd.wrath counts down in sin/tick, right after this)
+execute as @a[scores={kandy.cd.wrath=1},tag=kandy.wrath.w] at @s run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 1.5
 
 # Melt Armor wears off
 scoreboard players remove @e[scores={pyro_melt=1..}] pyro_melt 1

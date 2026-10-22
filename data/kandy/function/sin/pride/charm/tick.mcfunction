@@ -1,8 +1,8 @@
-# Rebirth ready again (the shared kandy.ccd counts down in sin/tick, right after this)
-execute as @a[tag=kandy.pride.c,scores={kandy.ccd=1},tag=!kandy.immune] at @s run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 1.4
+# Rebirth ready again (kandy.ccd.pride counts down in sin/tick, right after this)
+execute as @a[tag=kandy.pride.c,scores={kandy.ccd.pride=1},tag=!kandy.immune] at @s run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 1 1.4
 
 # Rebirth: at 2 hearts or less (alive), once per 5 minutes
-execute as @a[tag=kandy.pride.c,tag=!kandy.immune,scores={kandy.ccd=0,phx_hp=1..4}] at @s run function kandy:sin/pride/charm/rebirth
+execute as @a[tag=kandy.pride.c,tag=!kandy.immune,scores={kandy.ccd.pride=0,phx_hp=1..4}] at @s run function kandy:sin/pride/charm/rebirth
 
 # Never Retreat: below half health, Pride won't run
 execute as @a[tag=kandy.pride.c] store result score @s phx_half run attribute @s minecraft:max_health get 0.5

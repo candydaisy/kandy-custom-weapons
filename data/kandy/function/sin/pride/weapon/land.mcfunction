@@ -2,8 +2,8 @@
 attribute @s minecraft:gravity modifier remove kandy:dragoon_dive
 scoreboard players set @s dg_dive 0
 scoreboard players set @s dg_st 0
-scoreboard players set @s kandy.cd 460
-scoreboard players set @s kandy.cdmax 460
+scoreboard players set @s kandy.cd.pride 460
+scoreboard players set @s kandy.cdmax.pride 460
 tag @s add kandy.dg_lander
 execute at @s run tag @e[distance=0.01..3,type=!#kandy:unpullable,tag=!kandy.immune] add kandy.dg_struck
 # Count before the damage: a creature the Dive kills can't be selected afterwards
@@ -26,8 +26,8 @@ execute if score #hit dg_tmp matches 0 run function kandy:sin/pride/weapon/fall
 # Ascendant (Phoenix Plume carried): each Dive kill takes 30s off Rebirth's cooldown
 scoreboard players operation #cut dg_tmp = #kills dg_tmp
 scoreboard players operation #cut dg_tmp *= #600 dg_tmp
-execute if entity @s[tag=kandy.pride.set] run scoreboard players operation @s kandy.ccd -= #cut dg_tmp
-scoreboard players set @s[scores={kandy.ccd=..-1}] kandy.ccd 0
+execute if entity @s[tag=kandy.pride.set] run scoreboard players operation @s kandy.ccd.pride -= #cut dg_tmp
+scoreboard players set @s[scores={kandy.ccd.pride=..-1}] kandy.ccd.pride 0
 
 # The sin deepens (spear still in hand): tier 2 after 15 Dives that hit, tier 3 after 10 Dive kills
 execute if entity @s[tag=kandy.pride.w] run function kandy:sin/tier

@@ -2,8 +2,8 @@ scoreboard players add @a[tag=kandy.greed.wi] cw_gcd 0
 scoreboard players add @a[tag=kandy.greed.wi] cw_tt 0
 scoreboard players add @a[tag=kandy.greed.wi] cw_reel 0
 scoreboard players add @a[tag=kandy.greed.wi] cw_grp 0
-# Tether ready again (the shared kandy.cd counts down in sin/tick, right after this)
-execute as @a[scores={kandy.cd=1},tag=kandy.greed.wi] at @s run playsound minecraft:block.chain.place player @s ~ ~ ~ 0.6 1.4
+# Tether ready again (kandy.cd.greed counts down in sin/tick, right after this)
+execute as @a[scores={kandy.cd.greed=1},tag=kandy.greed.wi] at @s run playsound minecraft:block.chain.place player @s ~ ~ ~ 0.6 1.4
 scoreboard players remove @a[scores={cw_gcd=1..}] cw_gcd 1
 
 # New bolts: pick out the ones fired from the Arbalest and remember who shot them

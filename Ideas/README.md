@@ -16,6 +16,7 @@ Design docs for items already reworked into the Seven Sins are in [unused/](unus
 
 The original weapons have no docs here; their latest changes:
 - **World Breaker:** the sneak pull (Event Horizon) now lasts up to 5s with a 25s cooldown instead of running for as long as you sneak, and the midair sneak-attack slam deals +6 damage.
+- **Sin weapons** (Pyroclast, Dragoon's Wyrmspear, Chainwarden Arbalest, Blood Pact Blade): each active ability now has its own cooldown instead of one shared by all sin weapons. Sin charms too: Phoenix Plume's Rebirth and Berserker Token's Frenzy no longer share a cooldown.
 - **Blood Pact Blade:** while it bleeds you (2 hearts or less), each charged hit heals 2 hearts.
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:

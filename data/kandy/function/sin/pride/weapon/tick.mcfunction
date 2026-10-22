@@ -1,7 +1,7 @@
 scoreboard players add @a[tag=kandy.pride.w] dg_st 0
 scoreboard players remove @a[scores={dg_use=1..}] dg_use 1
-# Leap ready again (the shared kandy.cd counts down in sin/tick, right after this)
-execute as @a[scores={kandy.cd=1},tag=kandy.pride.wi] at @s run playsound minecraft:entity.ender_dragon.flap player @s ~ ~ ~ 0.5 1.4
+# Leap ready again (kandy.cd.pride counts down in sin/tick, right after this)
+execute as @a[scores={kandy.cd.pride=1},tag=kandy.pride.wi] at @s run playsound minecraft:entity.ender_dragon.flap player @s ~ ~ ~ 0.5 1.4
 
 # Puncture window and Skewer wear off
 scoreboard players remove @e[scores={dg_pt=1..}] dg_pt 1
