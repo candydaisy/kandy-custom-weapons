@@ -59,7 +59,7 @@ Each skill has its own boss bar at the top of your screen (only you see them). H
 
 ## Sins
 
-The pack is being reworked around the Seven Deadly Sins (design: `Ideas/seven_sins.md`). Each sin pairs a weapon (held) with a charm (carried); having both gives a set bonus. Done so far:
+The pack is being reworked around the Seven Deadly Sins (design: `Ideas/seven_sins.md`). Each sin pairs a weapon (held) with a charm (carried); having both gives a set bonus. All nine are in (the seven, plus the hidden Melancholy and Vanity):
 
 - **Wrath** — Pyroclast Cleaver + Berserker Token.
   - **Blind Fury** (set bonus): taking damage gives +5% Heat (reaching 100% starts Overdrive), and Battle Frenzy instantly starts Overdrive.

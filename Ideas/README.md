@@ -10,13 +10,29 @@ Each item is crafted through the signature two-step system:
 
 Design docs for items already reworked into the Seven Sins are in [unused/](unused/); the current design is [seven_sins.md](seven_sins.md).
 
+**Seven Sins: all nine are in the pack** (the seven, plus the two hidden ones). Each pairs a weapon and a charm with a set bonus, deed-based tiers 1-3, and its own active cooldown (`kandy.cd.<sin>`):
+
+| Sin | Weapon | Charm |
+| --- | --- | --- |
+| Pride | Dragoon's Wyrmspear | Phoenix Plume |
+| Greed | Chainwarden Arbalest | Plunderer's Coin |
+| Lust | Blood Pact Blade | Hare's Foot |
+| Envy | Falconer's Recurve | Watcher's Lens |
+| Gluttony | Dagger of Lingering Souls | Hearthstone |
+| Wrath | Pyroclast Cleaver | Berserker Token |
+| Sloth | Abyssal Bulwark | Verdant Sprig |
+| *Melancholy* (hidden) | Frostveil Scythe | Moonlit Pendant |
+| *Vanity* (hidden) | Chronos Stiletto | Prism Mirror |
+
+The hidden sins' recipes unlock only through their rituals (Melancholy: disc "11" in a jukebox at night, in the snow, alone, carrying a Sloth charm; Vanity: 10 hostile kills in a row untouched, carrying a Pride charm) and they're left out of `give_all`. Swiftwind is retired into Lust's Desire. Where the build differs from the spec is listed at the top of [seven_sins.md](seven_sins.md). Envy, Gluttony, Sloth, Melancholy and Vanity have only been tested on a server without players so far; their player-facing parts (deeds, set bonuses, the unlocks) still need an in-game pass.
+
 **In the pack:** all eleven weapons from this folder (plus the original Swiftwind, now retired, Dagger of Lingering Souls, Blood Pact Blade and World Breaker) and all 27 charms.
 
 **Everything in this folder is in the pack.** The six PvE-only charms (Angler's Lure, Harvester's Sheaf, Plunderer's Coin, Slayer's Tally, Beastmaster's Whistle, Wardlight Lantern) never affect players or PvP damage. They and the five newest weapons (Chainwarden Arbalest, Falconer's Recurve, Lifebloom Staff, Oathbound Warhorn, Dragoon's Wyrmspear) are untested in game so far.
 
 The original weapons have no docs here; their latest changes:
 - **World Breaker:** the sneak pull (Event Horizon) now lasts up to 5s with a 25s cooldown instead of running for as long as you sneak, and the midair sneak-attack slam deals +6 damage.
-- **Sin weapons** (Pyroclast, Dragoon's Wyrmspear, Chainwarden Arbalest, Blood Pact Blade): each active ability now has its own cooldown instead of one shared by all sin weapons. Sin charms too: Phoenix Plume's Rebirth and Berserker Token's Frenzy no longer share a cooldown.
+- **Sin weapons:** each one's active ability has its own cooldown instead of one shared by all sin weapons. Sin charms too: Phoenix Plume's Rebirth and Berserker Token's Frenzy no longer share a cooldown.
 - **Blood Pact Blade:** while it bleeds you (2 hearts or less), each charged hit heals 2 hearts.
 
 Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP balance:
@@ -27,7 +43,7 @@ Pyroclast Cleaver shipped with a few changes from its design doc, mostly for PvP
 - The Core is a structure block that looks like a magma block, so a plain magma block can't be used to forge it.
 - Death message uses vanilla "burned to a crisp" text, and the molten blade is shown with particles; custom text or textures would need a resource pack.
 
-The other five weapons also changed from their docs:
+The other five weapons also changed from their docs (Frostveil, Chronos and the Bulwark have since been reworked again as sins; these notes are their pre-sin versions):
 - **Tempest Pike:** chain hits 2 targets within 6 blocks for 3 (not 3 / 8 / 4); Skyward Wrath is called with a sneaking charged melee hit or any thrown hit (detecting a sneak-throw wasn't reliable, so every throw counts while it's ready) and strikes the nearest other creature near your target instead of an aimed spot; Gale Surge is a fresh Jump press after 0.2s in the air (a trident's right-click is the throw), 6 blocks with a 4s cooldown (not 10 blocks / 3s); Skyward Wrath does 8 within 3 blocks on a 10s cooldown (not 14 / 4 / 6s) and the bolt is particles and thunder only, since a real bolt starts fires and converts mobs; +0.5 reach (not +1).
 - **Frostveil Scythe:** diamond hoe only; 8 damage (not 8.5), +0.5 entity reach; -10% speed per stack instead of Slowness I-IV; Frozen Solid lasts 1.5s (not 2.5s) with a 5s re-freeze immunity, and frozen targets can still attack; Shatter is a flat 6 true damage + 3 splash (not +150% + 5); Frost Nova 5 blocks, 4 damage, +2 stacks, 8s cooldown (not 6 / 6 / +3 / 5s); ice spikes are particles only.
 - **Eclipse Longbow:** arrows pierce up to 3 targets with vanilla damage +15% (not infinite pierce with 10 void damage); Darkness 1s on full-draw hits only; vortex 5 blocks, 2.5s, weak pull on players, 1 per pulse, 6 implosion, 12s cooldown (not 8 / 3.5s / full pull / 2 / 12 / 8s); Shadow Warp has a 10s cooldown (not 4s), only lands on safe spots, and doesn't keep momentum.
