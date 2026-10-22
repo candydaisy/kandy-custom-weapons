@@ -106,13 +106,28 @@
           "italic": false
         },
         {
-          "text": "Sneak-attack: Frost Nova chills everything within 5 blocks.",
+          "text": "Solitude: +1 damage while no other player is within 16 blocks.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Sneak-attack: Frost Nova chills everything within 5 blocks (8s cooldown).",
           "color": "aqua",
           "italic": false
         },
         {
           "text": "Its chill slows you 5%, and powder snow bites harder.",
           "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Melancholy · Tier 1",
+          "color": "#afc4e8",
+          "italic": false
+        },
+        {
+          "text": "Indulge it: Shatters, then kills made alone, deepen the sin.",
+          "color": "dark_gray",
           "italic": false
         }
       ],
@@ -121,7 +136,9 @@
       "minecraft:unbreakable": {},
       "minecraft:repair_cost": 1000,
       "minecraft:custom_data": {
-        "ability": "Frostveil"
+        "sin": "melancholy",
+        "type": "weapon",
+        "tier": 1
       },
       "minecraft:attribute_modifiers": [
         {

@@ -35,7 +35,6 @@ advancement revoke @a only kandy:hit/worldbreaker
 function kandy:sin/uninstall
 
 function kandy:tempest/uninstall
-function kandy:frostveil/uninstall
 scoreboard objectives remove frost_chill
 function kandy:eclipse/uninstall
 function kandy:chronos/uninstall
@@ -53,7 +52,6 @@ function kandy:reapers_knuckle/uninstall
 function kandy:wayfarers_compass/uninstall
 function kandy:prism_mirror/uninstall
 function kandy:predators_fang/uninstall
-function kandy:moonlit_pendant/uninstall
 function kandy:tinkers_whetstone/uninstall
 function kandy:enderbrace/uninstall
 function kandy:anglers_lure/uninstall

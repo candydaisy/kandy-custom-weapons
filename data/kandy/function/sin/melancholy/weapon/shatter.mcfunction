@@ -1,7 +1,9 @@
 # Run as and at a Frozen Solid victim hit by the wielder: break the ice for true damage and a cold splash
 tag @s add kandy.frost_shattered
-function kandy:frostveil/unfreeze
-function kandy:frostveil/thaw
+scoreboard players add #shat frost_tmp 1
+execute if score #night frost_tmp matches 1 run function kandy:sin/melancholy/weapon/long_night
+function kandy:sin/melancholy/weapon/unfreeze
+function kandy:sin/melancholy/weapon/thaw
 damage @s 6 kandy:frostveil_shatter by @p[tag=kandy.frost_wielder]
 tag @e[distance=..4,type=!#kandy:unpullable,tag=!kandy.frost_wielder,tag=!kandy.immune,tag=!kandy.frost_shattered] add kandy.frost_splash
 execute as @e[tag=kandy.frost_splash] run damage @s 3 kandy:frostveil_frost by @p[tag=kandy.frost_wielder]

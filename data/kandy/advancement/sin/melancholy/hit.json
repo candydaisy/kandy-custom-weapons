@@ -1,0 +1,61 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{sin:\"melancholy\",type:\"weapon\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "dealt": {
+            "min": 6.8
+          },
+          "blocked": false
+        }
+      }
+    },
+    "hit_old": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ability:\"Frostveil\"}"
+                }
+              }
+            }
+          }
+        },
+        "damage": {
+          "dealt": {
+            "min": 6.8
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kandy:sin/melancholy/weapon/hit"
+  },
+  "requirements": [
+    [
+      "hit",
+      "hit_old"
+    ]
+  ]
+}

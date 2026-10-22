@@ -1,10 +1,9 @@
-# Give yourself every Kandy core (for testing the smithing recipes)
+# Give yourself every Kandy core (for testing the smithing recipes) (hidden sins excluded)
 function kandy:sin/gluttony/weapon/give_core
 function kandy:sin/lust/weapon/give_core
 function kandy:worldbreaker/give_core
 function kandy:sin/wrath/weapon/give_core
 function kandy:tempest/give_core
-function kandy:frostveil/give_core
 function kandy:eclipse/give_core
 function kandy:chronos/give_core
 function kandy:sin/sloth/weapon/give_core
@@ -31,7 +30,6 @@ function kandy:sin/gluttony/charm/give_core
 function kandy:wayfarers_compass/give_core
 function kandy:prism_mirror/give_core
 function kandy:predators_fang/give_core
-function kandy:moonlit_pendant/give_core
 function kandy:tinkers_whetstone/give_core
 function kandy:enderbrace/give_core
 function kandy:anglers_lure/give_core

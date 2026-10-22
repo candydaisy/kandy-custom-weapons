@@ -4,7 +4,6 @@ function kandy:team/setup
 function kandy:worldbreaker/setup
 function kandy:sin/setup
 function kandy:tempest/setup
-function kandy:frostveil/setup
 function kandy:eclipse/setup
 function kandy:chronos/setup
 function kandy:lifebloom/setup
@@ -21,7 +20,6 @@ function kandy:reapers_knuckle/setup
 function kandy:wayfarers_compass/setup
 function kandy:prism_mirror/setup
 function kandy:predators_fang/setup
-function kandy:moonlit_pendant/setup
 function kandy:tinkers_whetstone/setup
 function kandy:enderbrace/setup
 function kandy:anglers_lure/setup
@@ -40,7 +38,6 @@ advancement revoke @a only kandy:sin/wrath/hit
 advancement revoke @a only kandy:sin/wrath/hurt
 advancement revoke @a only kandy:sin/wrath/kill
 advancement revoke @a only kandy:hit/tempest
-advancement revoke @a only kandy:hit/frostveil
 advancement revoke @a only kandy:hit/eclipse
 advancement revoke @a only kandy:hit/chronos
 advancement revoke @a only kandy:sin/greed/hit
@@ -59,6 +56,9 @@ advancement revoke @a only kandy:sin/gluttony/feast
 advancement revoke @a only kandy:sin/gluttony/ate
 advancement revoke @a only kandy:sin/sloth/block
 advancement revoke @a only kandy:sin/sloth/parry
+advancement revoke @a only kandy:sin/melancholy/hit
+advancement revoke @a only kandy:sin/melancholy/kill
+advancement revoke @a only kandy:sin/unlock/melancholy
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

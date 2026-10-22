@@ -102,11 +102,22 @@
           "text": "By day it weighs on you: Slowness I and -10% attack speed.",
           "color": "red",
           "italic": false
+        },
+        {
+          "text": "Withdrawn: your team's support items can't reach you.",
+          "color": "red",
+          "italic": false
+        },
+        {
+          "text": "Sin of Melancholy",
+          "color": "#afc4e8",
+          "italic": false
         }
       ],
       "minecraft:custom_data": {
-        "charm": "MoonlitPendant",
-        "type": "talisman"
+        "sin": "melancholy",
+        "type": "charm",
+        "tier": 1
       }
     }
   }

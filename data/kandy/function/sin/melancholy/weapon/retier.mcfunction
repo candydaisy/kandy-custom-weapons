@@ -1,0 +1,7 @@
+# function kandy:sin/melancholy/weapon/retier {tier:2}: raise the held scythe's tier, reset its progress, rewrite its lore
+# Pre-revamp scythes pick up the new sin keys here too (their old ability key is left alongside, harmlessly)
+$item modify entity @s weapon.mainhand [{type:"minecraft:set_custom_data",tag:'{sin:"melancholy",type:"weapon",tier:$(tier),deeds:0}'},{type:"minecraft:set_lore",mode:"replace_all",lore:[{text:"Charged hits stack Hypothermia (max 5): -10% speed per stack.",color:"gray",italic:false},{text:"At 5 stacks the target is Frozen Solid for 1.5s.",color:"gray",italic:false},{text:"Hitting a Frozen target Shatters it for 6 true damage.",color:"gray",italic:false},{text:"Solitude: +1 damage while no other player is within 16 blocks.",color:"gray",italic:false},{text:"Sneak-attack: Frost Nova chills everything within 5 blocks (8s cooldown).",color:"aqua",italic:false},{text:"Its chill slows you 5%, and powder snow bites harder.",color:"red",italic:false},{text:"Sin of Melancholy · Tier $(tier)",color:"#afc4e8",italic:false},{text:"Indulge it: Shatters, then kills made alone, deepen the sin.",color:"dark_gray",italic:false}]}]
+$title @s actionbar {text:"Your Melancholy deepens: Tier $(tier)",color:"#afc4e8",bold:true}
+playsound minecraft:ambient.cave player @a[distance=..16] ~ ~ ~ 1 0.7
+playsound minecraft:block.anvil.use player @s ~ ~ ~ 0.6 0.6
+particle minecraft:snowflake ~ ~1 ~ 0.5 0.8 0.5 0.02 40

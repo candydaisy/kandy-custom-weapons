@@ -3,8 +3,6 @@ tag @a remove kandy.main.worldbreaker
 tag @a remove kandy.inv.worldbreaker
 tag @a remove kandy.main.tempest
 tag @a remove kandy.inv.tempest
-tag @a remove kandy.main.frostveil
-tag @a remove kandy.inv.frostveil
 tag @a remove kandy.main.eclipse
 tag @a remove kandy.inv.eclipse
 tag @a remove kandy.main.chronos
@@ -26,7 +24,6 @@ tag @a remove kandy.charm.reapers_knuckle
 tag @a remove kandy.charm.wayfarers_compass
 tag @a remove kandy.charm.prism_mirror
 tag @a remove kandy.charm.predators_fang
-tag @a remove kandy.charm.moonlit_pendant
 tag @a remove kandy.charm.tinkers_whetstone
 tag @a remove kandy.charm.enderbrace
 tag @a remove kandy.charm.anglers_lure
@@ -45,9 +42,6 @@ execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Tempest
 execute as @a if items entity @s container.* *[custom_data~{ability:"Tempest"}] run tag @s add kandy.inv.tempest
 execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Tempest"}] run tag @s add kandy.inv.tempest
 
-execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.main.frostveil
-execute as @a if items entity @s container.* *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.inv.frostveil
-execute as @a if items entity @s weapon.offhand *[custom_data~{ability:"Frostveil"}] run tag @s add kandy.inv.frostveil
 
 execute as @a if items entity @s weapon.mainhand *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.main.eclipse
 execute as @a if items entity @s container.* *[custom_data~{ability:"Eclipse"}] run tag @s add kandy.inv.eclipse
@@ -98,8 +92,6 @@ execute as @a if items entity @s container.* *[custom_data~{charm:"PrismMirror"}
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PrismMirror"}] run tag @s add kandy.charm.prism_mirror
 execute as @a if items entity @s container.* *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"PredatorsFang"}] run tag @s add kandy.charm.predators_fang
-execute as @a if items entity @s container.* *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
-execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"MoonlitPendant"}] run tag @s add kandy.charm.moonlit_pendant
 execute as @a if items entity @s container.* *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone
 execute as @a if items entity @s weapon.offhand *[custom_data~{charm:"TinkersWhetstone"}] run tag @s add kandy.charm.tinkers_whetstone
 execute as @a if items entity @s container.* *[custom_data~{charm:"Enderbrace"}] run tag @s add kandy.charm.enderbrace

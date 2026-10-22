@@ -1,11 +1,10 @@
-# Give yourself every Kandy weapon and charm (41 items; make room in your inventory first)
+# Give yourself every Kandy weapon and charm (39 items; hidden sins excluded; make room in your inventory first)
 # Weapons
 function kandy:sin/gluttony/weapon/give
 function kandy:sin/lust/weapon/give
 function kandy:worldbreaker/give
 function kandy:sin/wrath/weapon/give
 function kandy:tempest/give
-function kandy:frostveil/give
 function kandy:eclipse/give
 function kandy:chronos/give
 function kandy:sin/sloth/weapon/give
@@ -33,7 +32,6 @@ function kandy:sin/gluttony/charm/give
 function kandy:wayfarers_compass/give
 function kandy:prism_mirror/give
 function kandy:predators_fang/give
-function kandy:moonlit_pendant/give
 function kandy:tinkers_whetstone/give
 function kandy:enderbrace/give
 function kandy:anglers_lure/give

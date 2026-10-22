@@ -17,6 +17,8 @@ scoreboard objectives add kandy.cd.gluttony dummy "Gluttony Weapon Cooldown"
 scoreboard objectives add kandy.cdmax.gluttony dummy "Gluttony Weapon Cooldown Length"
 scoreboard objectives add kandy.cd.sloth dummy "Sloth Weapon Cooldown"
 scoreboard objectives add kandy.cdmax.sloth dummy "Sloth Weapon Cooldown Length"
+scoreboard objectives add kandy.cd.melancholy dummy "Melancholy Weapon Cooldown"
+scoreboard objectives add kandy.cdmax.melancholy dummy "Melancholy Weapon Cooldown Length"
 scoreboard objectives add kandy.ccd.wrath dummy "Wrath Charm Cooldown"
 scoreboard objectives add kandy.ccdmax.wrath dummy "Wrath Charm Cooldown Length"
 scoreboard objectives add kandy.ccd.pride dummy "Pride Charm Cooldown"
@@ -38,3 +40,5 @@ function kandy:sin/gluttony/weapon/setup
 function kandy:sin/gluttony/charm/setup
 function kandy:sin/sloth/weapon/setup
 function kandy:sin/sloth/charm/setup
+function kandy:sin/melancholy/weapon/setup
+function kandy:sin/melancholy/charm/setup
