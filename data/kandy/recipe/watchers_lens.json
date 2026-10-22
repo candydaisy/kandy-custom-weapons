@@ -86,7 +86,7 @@
           "italic": false
         },
         {
-          "text": "Look through it at a creature for 1s to Mark it: Glowing for 10s (20s cooldown).",
+          "text": "Scope a creature for 1s to Mark it for 10s: it glows, is Weakened, and takes +2 from your hits (20s cooldown).",
           "color": "gray",
           "italic": false
         },

@@ -8,16 +8,18 @@ tag @s remove kandy.attacker
 execute unless entity @e[tag=kandy.envy_prey] run return 0
 function kandy:sin/tier
 
-# Players give up one buff (two with Spite) for 5s (8s from tier 2). From tier 3 mobs too, and they lose 1 HP to you
-scoreboard players set #max envy_tmp 1
-execute if entity @s[tag=kandy.envy.set] run scoreboard players set #max envy_tmp 2
-data modify storage kandy:envy fx.t set value 5
-execute if score @s kandy.wt matches 2.. run data modify storage kandy:envy fx.t set value 8
+# Players give up every buff for 7s (10s from tier 2, doubled by Spite). From tier 3 mobs too, and they lose 1 HP to you
+scoreboard players set #t envy_tmp 7
+execute if score @s kandy.wt matches 2.. run scoreboard players set #t envy_tmp 10
+execute if entity @s[tag=kandy.envy.set] run scoreboard players operation #t envy_tmp += #t envy_tmp
+execute store result storage kandy:envy fx.t int 1 run scoreboard players get #t envy_tmp
 tag @s add kandy.envy_thief
+tag @s add kandy.wat_busy
 execute if score @s kandy.wt matches ..2 as @e[tag=kandy.envy_prey,type=minecraft:player] at @s run function kandy:sin/envy/weapon/covet
 execute if score @s kandy.wt matches 3 as @e[tag=kandy.envy_prey] at @s run function kandy:sin/envy/weapon/covet
 execute if score @s kandy.wt matches 3 as @e[tag=kandy.envy_prey,type=!minecraft:player] run function kandy:sin/envy/weapon/drain
 tag @s remove kandy.envy_thief
+tag @s remove kandy.wat_busy
 tag @e[tag=kandy.envy_prey] remove kandy.envy_prey
 
 # Hits on your lock deepen a tier 1 bow in the main hand (tier 2 after 20)

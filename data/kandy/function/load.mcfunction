@@ -57,6 +57,7 @@ advancement revoke @a only kandy:sin/pride/hit
 advancement revoke @a only kandy:sin/pride/using
 advancement revoke @a only kandy:sin/envy/hit
 advancement revoke @a only kandy:sin/envy/kill
+advancement revoke @a only kandy:sin/envy/expose
 
 # Clean up modifiers left behind by older versions of the pack
 execute as @a run attribute @s minecraft:attack_damage modifier remove minecraft:blood_dmg

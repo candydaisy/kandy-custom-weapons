@@ -1,4 +1,6 @@
 advancement revoke @a only kandy:sin/envy/scope
+advancement revoke @a only kandy:sin/envy/expose
+tag @a remove kandy.wat_busy
 execute as @a run attribute @s minecraft:armor modifier remove kandy:green_eye
 tag @a remove kandy.wat_self
 scoreboard objectives remove wat_use

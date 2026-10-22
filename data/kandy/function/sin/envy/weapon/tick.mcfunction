@@ -8,10 +8,10 @@ scoreboard players set @a[scores={fl_use=0}] fl_ct 0
 scoreboard players set @a fl_use 0
 
 # The lock glows while it lasts (and is tagged, for kill deeds), and holding it costs you:
-# Tunnel Vision, Blindness and Slowness II (III at tier 3)
+# Tunnel Vision, Darkness and Slowness II (III at tier 3). Darkness is only re-applied once it wears off, so it doesn't flicker
 tag @e[tag=kandy.fl_locked] remove kandy.fl_locked
 execute as @a[scores={fl_lt=1..}] run function kandy:sin/envy/weapon/lock_glow
-effect give @a[scores={fl_lt=1..}] minecraft:blindness 1 0 true
+execute as @a[scores={fl_lt=1..}] unless predicate kandy:has_darkness run effect give @s minecraft:darkness 4 0 true
 execute as @a[scores={fl_lt=1..}] run function kandy:sin/tier
 effect give @a[scores={fl_lt=1..,kandy.wt=..2}] minecraft:slowness 1 1 true
 effect give @a[scores={fl_lt=1..,kandy.wt=3..}] minecraft:slowness 1 2 true

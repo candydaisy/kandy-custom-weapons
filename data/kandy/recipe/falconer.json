@@ -111,7 +111,7 @@
           "italic": false
         },
         {
-          "text": "Covet: hitting the player you're locked on steals a buff for 5s.",
+          "text": "Covet: hitting the player you're locked on steals all their buffs for 7s.",
           "color": "gray",
           "italic": false
         },
@@ -121,7 +121,7 @@
           "italic": false
         },
         {
-          "text": "Tunnel Vision: while locked on you're Blinded and have Slowness II.",
+          "text": "Tunnel Vision: while locked on you have Darkness and Slowness II.",
           "color": "red",
           "italic": false
         },
